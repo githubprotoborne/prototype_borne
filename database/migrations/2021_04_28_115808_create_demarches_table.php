@@ -13,19 +13,18 @@ class CreateDemarchesTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
         Schema::create('demarches', function (Blueprint $table) {
             $table->id('demarche_id');
             $table->string('demarche_name', 100);
             $table->text('demarche_description');
             $table->text('demarche_link');
 
-            $table->unsignedBigInteger('container_id');
-            $table->foreign('container_id')
-                ->references('container_id')
-                ->on('container')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+            // $table->unsignedBigInteger('container_id');
+            // $table->foreign('container_id')
+            //     ->references('container_id')
+            //     ->on('container')
+            //     ->onDelete('restrict')
+            //     ->onUpdate('restrict');
 
             $table->timestamps();
         });
@@ -41,3 +40,7 @@ class CreateDemarchesTable extends Migration
         Schema::dropIfExists('demarches');
     }
 }
+
+
+
+
