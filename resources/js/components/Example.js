@@ -73,6 +73,7 @@ class Example extends React.Component{
               {this.display.bind(this)()}
               
               <input name="imprimer" type="file"></input>
+             
             </div>
 
     );

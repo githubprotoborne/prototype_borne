@@ -20,18 +20,18 @@ class CreateContcontsTable extends Migration
             $table->unsignedBigInteger('container_id_enfant');
             $table->foreign('container_id_enfant')
                 ->references('container_id')
-                ->on('container')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+                ->on('containers')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
 
             // Recupertation id container parent
             $table->unsignedBigInteger('container_id_parent');
             $table->foreign('container_id_parent')
                 ->references('container_id')
-                ->on('container')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+                ->on('containers')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->timestamps();
         });

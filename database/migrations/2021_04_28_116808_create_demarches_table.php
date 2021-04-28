@@ -20,12 +20,10 @@ class CreateDemarchesTable extends Migration
             $table->text('demarche_link');
 
             // $table->unsignedBigInteger('container_id');
-            // $table->foreign('container_id')
-            //     ->references('container_id')
-            //     ->on('container')
-            //     ->onDelete('restrict')
-            //     ->onUpdate('restrict');
-
+            $table->bigInteger('container_id')->unsigned()->index(); // this is working
+            $table->foreign('container_id')->references('container_id')->on('containers')->onDelete('cascade')->onUpdate('cascade');
+    
+           
             $table->timestamps();
         });
     }

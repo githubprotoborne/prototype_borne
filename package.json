@@ -25,7 +25,11 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "laravel-mix-react-css-modules": "^2.0.0",
+        "react-breadcrumbs-dynamic": "^1.2.1",
+        "react-router-breadcrumbs-hoc": "^3.3.1",
         "react-router-dom": "^5.2.0",
+        "react-through": "^1.1.4",
         "script-loader": "^0.7.2"
     }
 }

@@ -21,18 +21,18 @@ class CreateDemcontsTable extends Migration
             $table->unsignedBigInteger('container_id');
             $table->foreign('container_id')
                 ->references('container_id')
-                ->on('container')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+                ->on('containers')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
 
             // Recupertation id demarche
             $table->unsignedBigInteger('demarche_id');
             $table->foreign('demarche_id')
                 ->references('demarche_id')
-                ->on('demarche')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+                ->on('demarches')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->timestamps();
         });
