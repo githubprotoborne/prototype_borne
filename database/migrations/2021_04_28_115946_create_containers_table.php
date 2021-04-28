@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Task extends Migration
+class CreateContainersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class Task extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
-            $table->string('name');
+        Schema::create('containers', function (Blueprint $table) {
+            $table->id('container_id');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class Task extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('containers');
     }
 }
