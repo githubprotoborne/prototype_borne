@@ -14,7 +14,7 @@ class CreateContainersTable extends Migration
     public function up()
     {
         Schema::create('containers', function (Blueprint $table) {
-            $table->id('container_id');
+            $table->increments('container_id');
             $table->string('container_name',100);
             $table->timestamps();
         });

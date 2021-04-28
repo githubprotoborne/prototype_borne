@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDemcontsTable extends Migration
+class CreateContcontsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,23 +14,22 @@ class CreateDemcontsTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('demconts', function (Blueprint $table) {
-
-
-            // Recupertation id container
-            $table->unsignedBigInteger('container_id');
-            $table->foreign('container_id')
+        Schema::create('contconts', function (Blueprint $table) {
+          
+            // Recupertation id container enfant 
+            $table->unsignedBigInteger('container_id_enfant');
+            $table->foreign('container_id_enfant')
                 ->references('container_id')
                 ->on('container')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
 
 
-            // Recupertation id demarche
-            $table->unsignedBigInteger('demarche_id');
-            $table->foreign('demarche_id')
-                ->references('demarche_id')
-                ->on('demarche')
+            // Recupertation id container parent
+            $table->unsignedBigInteger('container_id_parent');
+            $table->foreign('container_id_parent')
+                ->references('container_id')
+                ->on('container')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
 
@@ -45,6 +44,6 @@ class CreateDemcontsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demconts');
+        Schema::dropIfExists('contconts');
     }
 }

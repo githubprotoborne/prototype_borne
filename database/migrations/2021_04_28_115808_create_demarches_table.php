@@ -14,7 +14,7 @@ class CreateDemarchesTable extends Migration
     public function up()
     {
         Schema::create('demarches', function (Blueprint $table) {
-            $table->id('demarche_id');
+            $table->increments('demarche_id');
             $table->string('demarche_name', 100);
             $table->text('demarche_description');
             $table->text('demarche_link');
