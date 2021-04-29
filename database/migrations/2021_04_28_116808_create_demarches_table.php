@@ -19,9 +19,7 @@ class CreateDemarchesTable extends Migration
             $table->text('demarche_description');
             $table->text('demarche_link');
 
-            // $table->unsignedBigInteger('container_id');
-            $table->bigInteger('container_id')->unsigned()->index(); // this is working
-            $table->foreign('container_id')->references('container_id')->on('containers')->onDelete('cascade')->onUpdate('cascade');
+            
     
            
             $table->timestamps();
