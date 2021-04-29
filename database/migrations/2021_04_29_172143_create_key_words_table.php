@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFournisseursTable extends Migration
+class CreateKeyWordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateFournisseursTable extends Migration
      */
     public function up()
     {
-        Schema::create('fournisseurs', function (Blueprint $table) {
-            $table->increments("fournisseur_id");
-            $table->string("fournisseur_name",100);
-            $table->text("fournisseur_phone");
-            $table->text("fournisseur_mail");
+        Schema::create('key_words', function (Blueprint $table) {
+            $table->increments("key_word_id");
+            $table->text("key_word_text");
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateFournisseursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fournisseurs');
+        Schema::dropIfExists('key_words');
     }
 }
