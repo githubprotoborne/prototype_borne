@@ -18,10 +18,15 @@ class CreateDemarchesTable extends Migration
             $table->string('demarche_name', 100);
             $table->text('demarche_description');
             $table->text('demarche_link');
+            $table->boolean('demarche_draft_mode');
+            $table->string('demarche_duration',10);
 
-            
-    
-           
+            $table->unsignedBigInteger('fournisseur_id');
+            $table->foreign('fournisseur_id')
+                ->references('fournisseur_id')
+                ->on('fournisseurs')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }
