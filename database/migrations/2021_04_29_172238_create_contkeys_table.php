@@ -14,7 +14,21 @@ class CreateContkeysTable extends Migration
     public function up()
     {
         Schema::create('contkeys', function (Blueprint $table) {
-            $table->id();
+
+            $table->unsignedBigInteger('container_id');
+            $table->foreign('container_id')
+                ->references('container_id')
+                ->on('container')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            $table->unsignedBigInteger('key_word_id');
+            $table->foreign('key_word_id')
+                ->references('key_word_id')
+                ->on('key_word')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
             $table->timestamps();
         });
     }
