@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDemcontsTable extends Migration
+class CreateProcessProvidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,23 +14,19 @@ class CreateDemcontsTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('demconts', function (Blueprint $table) {
-
-
-            // Recupertation id container
-            $table->unsignedBigInteger('container_id');
-            $table->foreign('container_id')
-                ->references('container_id')
-                ->on('containers')
+        Schema::create('process_providers', function (Blueprint $table) {
+            
+            $table->unsignedBigInteger('process_id');
+            $table->foreign('process_id')
+                ->references('process_id')
+                ->on('processes')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-
-            // Recupertation id demarche
-            $table->unsignedBigInteger('demarche_id');
-            $table->foreign('demarche_id')
-                ->references('demarche_id')
-                ->on('demarches')
+            $table->unsignedBigInteger('provider_id');
+            $table->foreign('provider_id')
+                ->references('provider_id')
+                ->on('providers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -45,6 +41,6 @@ class CreateDemcontsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demconts');
+        Schema::dropIfExists('process_providers');
     }
 }

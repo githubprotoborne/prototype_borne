@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContcontsTable extends Migration
+class CreateProcessContainersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,24 +14,27 @@ class CreateContcontsTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('contconts', function (Blueprint $table) {
-          
-            // Recupertation id container enfant 
-            $table->unsignedBigInteger('container_id_enfant');
-            $table->foreign('container_id_enfant')
+        Schema::create('process_containers', function (Blueprint $table) {
+
+
+            // Recupertation id demarche
+            $table->unsignedBigInteger('process_id');
+            $table->foreign('process_id')
+                ->references('process_id')
+                ->on('processes')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+
+            // Recupertation id container
+            $table->unsignedBigInteger('container_id');
+            $table->foreign('container_id')
                 ->references('container_id')
                 ->on('containers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
 
-            // Recupertation id container parent
-            $table->unsignedBigInteger('container_id_parent');
-            $table->foreign('container_id_parent')
-                ->references('container_id')
-                ->on('containers')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
 
             $table->timestamps();
         });
@@ -44,6 +47,6 @@ class CreateContcontsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contconts');
+        Schema::dropIfExists('process_containers');
     }
 }
