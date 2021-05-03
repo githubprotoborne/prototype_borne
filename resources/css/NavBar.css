@@ -1,0 +1,168 @@
+.accessibility,.menu{
+  color: #E5112F;
+ 
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.bloc_span{
+    display: block;
+}
+#me{
+   color: #E5112F;
+}
+#dropdownMenuButton{
+    color:#E5112F;
+    background-color: white;
+  }
+.search_input{
+    outline: none;
+}
+.asso{
+  margin-left: 13em;
+}
+
+.c{
+    background-color: white;
+    border: 7px solid;
+}
+.accessibility_button{
+    background-color: #fff;
+    color: #E5112F;
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    .bloc_span_menu{
+      font-size: 20px;
+      display: block;
+      margin-left:50px;
+    }
+    .bloc_span{
+        font-size: 20px;
+        display: block;
+        margin-left:50px;
+    }
+
+    .professional_text{
+        font-size: 20px;
+        margin-left:3%;
+    }
+    .professional_icon{
+        font-size: 20px;
+    }
+    .list_service{
+        font-size: 15px;
+    }
+    .portal_title{
+        text-align: center;
+    }
+    .portal_title{
+        background-color: #E5112F;
+        color: #FFFFFF;
+        width: 90%;
+        border-radius: 10px;
+    }
+    .professional,.association,.service,.resident,.portal_title{
+        background-color: #E5112F;
+        color :#FFFFFF;
+        width: 95%;
+        height:4em;
+        margin-right: 30%;
+    }
+    .resident,.association,.search-row{
+        margin-top: 5%;
+    }
+    .professional_text{
+        padding-top: 4%;
+    }
+    .list_service{
+        text-align: center;
+    }
+    .portail_h2{
+        margin-left: 30%;
+        margin-top: 3%;
+    }
+    ::placeholder{
+        font-size: 12px;
+    }
+    .search_back{
+        background-color: #E5112F;
+        
+        color:white;
+      
+        margin-right: 11%;
+        font-size: 10px;
+        
+    }
+    .search-icon{
+        font-size: 14px;
+        padding-top: 2%;
+    }
+    .search_input{
+         background-color:#FFE;
+         width :17em;
+         height: 100%;
+    }
+    
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .bloc_span{
+      
+    }
+    .visibility_text{
+        font-size: 10px;
+    }
+   
+    .professional_text{
+        font-size: 10px;
+        padding-left: 4em;
+    }
+    .professional_icon{
+        font-size: 2px;
+    }
+    .list_service{
+        font-size: 8px;
+    }
+    .search_input{
+     width: 4em;
+    }
+    .search-icon{
+       
+       
+      font-size: 0px;
+    }
+    .search_back,.search-icon{
+        background-color:red;
+    }
+    .input_back{
+       
+    }
+    
+    .professional,.association{
+        background-color: #E5112F;
+        color :#FFFFFF;
+    }
+    .search_button{
+        font-size: 6.1px;
+    }
+    .portal_title{
+        background-color: #E5112F;
+        color: #FFFFFF;
+    }
+    .association,.resident{
+        font-size: 2px;
+        margin-top: 10%;
+    }
+    .professional,.association,.service,.resident,.portal_title{
+        background-color: #E5112F;
+        color :#FFFFFF;
+        width: 100%;
+        height:90px;
+        margin-right: 1%;
+        text-align: justify;
+        
+    }
+  }

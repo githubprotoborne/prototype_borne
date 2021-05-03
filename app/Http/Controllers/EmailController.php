@@ -30,11 +30,11 @@ class EmailController extends Controller
       
 		$email->save();
 		
-		return $request;
-        //
+		
+       
     }
-    public function Get(Email $email){
-        $emails = $email::all();
+    public function Get(Email $email,Request $request){
+        $emails =$email::where('email',$request->input("email"))->get();
         return $emails;
 
     }

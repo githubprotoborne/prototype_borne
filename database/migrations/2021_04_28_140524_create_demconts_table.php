@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\models\Demcont;
+
 
 class CreateDemcontsTable extends Migration
 {
@@ -34,8 +36,17 @@ class CreateDemcontsTable extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->timestamps();
+       
         });
+        $data = [
+            ['demarche_id'=>1,'container_id'=>1],
+           
+            //...
+        ];
+        
+        Demcont::insert($data);
+
+
     }
 
     /**

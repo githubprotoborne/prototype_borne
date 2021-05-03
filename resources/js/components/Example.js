@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
+import NavBar from './NavBar/NavBar';
 
 class Example extends React.Component{
     constructor(props) {
@@ -22,9 +23,11 @@ class Example extends React.Component{
     
     async getEmails(){
         
-       await axios.get("/emails")
+       await axios.post("/emails",{email:"angapaydivin@gmail.com"})
        .then(
-        response => this.setState({emails:response.data})
+        (response) => {
+            alert(response.data)
+            this.setState({emails:response.data})}
         
         )
     }
@@ -57,8 +60,8 @@ class Example extends React.Component{
     }
    render(){
     return (
-        <div className="container">
-         
+        <div  >
+             
               <form onSubmit={this.handleChangeSubmit.bind(this)}>
                   <label htmlFor="email">email</label>
                   <input type="email" placeholder="email" name="email" onChange={e=>{

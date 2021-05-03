@@ -1,6 +1,8 @@
+
 import withBreadcrumbs from "react-router-breadcrumbs-hoc";
-import "./Breadcrumbs.css"
-const Breadcrumbs = withBreadcrumbs()(({ breadcrumbs }) => (
+import "../../../css/breadcrumbs.css"
+import {NavLink} from 'react-router-dom';
+const Breadcrumb= withBreadcrumbs()(({ breadcrumbs }) => (
   <div>
    
     <nav aria-label="breadcrumb">
@@ -10,10 +12,13 @@ const Breadcrumbs = withBreadcrumbs()(({ breadcrumbs }) => (
     {breadcrumbs.map(({
       match,
       breadcrumb
-    }) => (
+    },index) => (
       <span key={match.url}>
           
-          <li className="breadcrumb-item active breadcrumb-item"  aria-current="page">  <NavLink to={match.url}>{breadcrumb.props.children+" /"}</NavLink></li>
+         {
+           index===breadcrumbs.length-1? <li className="breadcrumb-item active bread-scrumbItem"  aria-current="page">  <NavLink to={match.url}>{breadcrumb.props.children}</NavLink></li>
+          : <li className="breadcrumb-item  bread-scrumbItem"  aria-current="page">  <NavLink to={match.url}>{breadcrumb.props.children+" /"}</NavLink></li>
+          }
         
       </span>
       
@@ -25,4 +30,11 @@ const Breadcrumbs = withBreadcrumbs()(({ breadcrumbs }) => (
   </div>
  
 ));
+
+const  Breadcrumbs =()=>{
+
+  return(
+    <Breadcrumb/>
+  )
+}
 export default Breadcrumbs

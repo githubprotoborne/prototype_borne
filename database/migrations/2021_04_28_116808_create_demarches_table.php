@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\models\Demarche;
 
 class CreateDemarchesTable extends Migration
 {
@@ -19,13 +20,19 @@ class CreateDemarchesTable extends Migration
             $table->text('demarche_description');
             $table->text('demarche_link');
 
-            // $table->unsignedBigInteger('container_id');
-            $table->bigInteger('container_id')->unsigned()->index(); // this is working
-            $table->foreign('container_id')->references('container_id')->on('containers')->onDelete('cascade')->onUpdate('cascade');
+           
     
            
             $table->timestamps();
         });
+        $data = [
+            ['demarche_name'=>"Renouvellement mensuel de la situation de demandeur d'emploi",'demarche_description'=>"pour cette demarche vous aurez besoin de",'demarche_link'=>"https://candidat.pole-emploi.fr/insc [ription/preambule"],
+           
+            //...
+        ];
+        
+        Demarche::insert($data); // insert data with Eloquent approach
+       // DB::table('table')->insert($data); // Query Builder approach
     }
 
     /**

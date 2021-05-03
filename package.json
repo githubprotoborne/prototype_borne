@@ -25,11 +25,16 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@types/dwt": "^16.1.1",
+        "dwt": "^17.0.2",
         "laravel-mix-react-css-modules": "^2.0.0",
         "react-breadcrumbs-dynamic": "^1.2.1",
+        "react-google-font-loader": "^1.1.0",
+        "react-google-material-icons": "^1.0.4",
         "react-router-breadcrumbs-hoc": "^3.3.1",
         "react-router-dom": "^5.2.0",
         "react-through": "^1.1.4",
+        "scanner.js": "^2.10.3",
         "script-loader": "^0.7.2"
     }
 }
