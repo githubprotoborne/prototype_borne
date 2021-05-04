@@ -8,6 +8,7 @@ import Scan from './Scan'
 
 import NavBar from './NavBar/NavBar';
 import Test from './NavBar/Test';
+import Test2 from './NavBar/Test2';
 
 class Index extends Component {
   render() {
@@ -20,6 +21,7 @@ class Index extends Component {
         <Switch>
         <Route path="/scan"  component={Scan}/>
         <Route path="/nav"  component={Test}/>
+        <Route path="/test"  component={Test2}/>
         <Route path="/"   component={Example}/></Switch>
       </BrowserRouter>
 

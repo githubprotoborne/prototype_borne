@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
 import NavBar from './NavBar/NavBar';
+import ChoiceBar from './ChoiceBar/ChoiceBar';
 
 class Example extends React.Component{
     constructor(props) {
@@ -26,7 +27,7 @@ class Example extends React.Component{
        await axios.post("/emails",{email:"angapaydivin@gmail.com"})
        .then(
         (response) => {
-            alert(response.data)
+           
             this.setState({emails:response.data})}
         
         )
@@ -61,6 +62,9 @@ class Example extends React.Component{
    render(){
     return (
         <div  >
+            <NavBar></NavBar>
+           
+            <ChoiceBar></ChoiceBar>
              
               <form onSubmit={this.handleChangeSubmit.bind(this)}>
                   <label htmlFor="email">email</label>

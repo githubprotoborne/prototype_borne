@@ -1,17 +1,33 @@
-.f{
-   
+.side-navbar {
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  margin-left: -300px;
+  background-color: #100901;
+  transition: 0.5s;
 }
-.test{
-    background-color: blue;
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  background-color: #ffffff26;
 }
-.dropdown-toggle::after {
-    display: none;
+
+.my-container {
+  transition: 0.4s;
 }
-#dropdownMenuButton{
-  color:red;
-  background-color: white;
+
+.active-nav {
+  margin-left: 0;
 }
-.c{
-  background-color: red;
-  
+
+/* for main section */
+.active-cont {
+  margin-left: 180px;
+}
+
+#menu-btn {
+  background-color: #100901;
+  color: #fff;
+  margin-left: -62px;
 }

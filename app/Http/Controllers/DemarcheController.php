@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Demarche;
+use App\models\Process;
 use App\models\Container;
 use Illuminate\Support\Facades\DB;
 /**
@@ -19,11 +19,15 @@ class DemarcheController extends Controller
        // $demarches = $demarche::where('container_id', 1)  ->get();
           
        //$demarches = $container::all();
+       $id = $request->input('id');
        $demarches   = DB::table('containers')
-       ->Join('demconts', 'containers.container_id', '=', 'demconts.container_id')
-       ->Join('demarches', 'demarches.demarche_id', '=', 'demconts.demarche_id')
-       ->select('demarches.*',"containers.*")
+       
+       ->Join('process_containers', 'containers.container_id', '=', 'process_containers.container_id')
+       ->Join('processes', 'processes.process_id', '=', 'process_containers.process_id')
+       ->select('processes.*',"containers.*")
+       ->where('containers.container_id', '=',$id)
        ->get();
+    
       return $demarches;
 
     }

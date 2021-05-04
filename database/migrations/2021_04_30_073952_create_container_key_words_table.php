@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContcontsTable extends Migration
+class CreateContainerKeyWordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,22 +14,19 @@ class CreateContcontsTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('contconts', function (Blueprint $table) {
-          
-            // Recupertation id container enfant 
-            $table->unsignedBigInteger('container_id_enfant');
-            $table->foreign('container_id_enfant')
+        Schema::create('container_key_words', function (Blueprint $table) {
+            
+            $table->unsignedBigInteger('container_id');
+            $table->foreign('container_id')
                 ->references('container_id')
                 ->on('containers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-
-            // Recupertation id container parent
-            $table->unsignedBigInteger('container_id_parent');
-            $table->foreign('container_id_parent')
-                ->references('container_id')
-                ->on('containers')
+            $table->unsignedBigInteger('key_word_id');
+            $table->foreign('key_word_id')
+                ->references('key_word_id')
+                ->on('key_words')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -44,6 +41,6 @@ class CreateContcontsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contconts');
+        Schema::dropIfExists('container_key_words');
     }
 }

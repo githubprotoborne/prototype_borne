@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\models\Container;
 
-class Demarche extends Model
+class Provider extends Model
 {
     use HasFactory;
     public function container() {

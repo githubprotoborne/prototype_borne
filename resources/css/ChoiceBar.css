@@ -1,0 +1,104 @@
+
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 768px) {
+    
+   
+   
+    .collapse.dont-collapse-sm {
+        display: block;
+        height: auto !important;
+        visibility: visible;
+      }
+      .whole_container{
+          background-color: gray;
+           color:#ffff;
+      }
+    ::placeholder{
+        font-size: 14px;
+       
+    }
+   
+    .search_icon{
+        font-size: 15px;
+    }
+    .category_button{
+       
+        font-size: 12px;
+        border-right: #ffff 1px solid;
+        color: #fff;
+
+    }
+    .category_button{
+       
+        background-color: gray;
+    }
+    .hide_search_text{
+        display: none;
+    }
+    .research{
+       outline: none;
+    }
+    .back{
+        background-color: gray;
+       
+    }
+    .search_hidden{
+        display: none;
+    }
+    .cont{
+        border-right: 3px solid #fff;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 777px) {
+      .search_hidden{
+           display: normal!important;
+           border: none;
+           text-decoration: none;
+      }
+      .whole_container{
+        background-color:#E5112F;
+         color:#ffff;
+    }
+    .research{
+        outline: none;
+     }
+     .hide_icon{
+         display: none;
+     }
+    ::placeholder{
+        font-size: 13px;
+    }
+    .container{
+        font-size: 11px;
+         
+        height: 100px;
+        word-wrap: break-word;
+        text-align: left;
+    }
+    .back{
+        width: 400px;
+        background-color: #ffff;
+    }
+    .category_button{
+        background-color: #aaab;
+        width: 350px;
+        color: #fff;
+        text-decoration: none;
+        
+    }
+    .research{
+        margin-left: 3em;
+    }
+    .cont{
+        border: 1px solid #fff;
+        height: 50px;
+    }
+    .hide_search_text{
+    
+
+    }
+  }
