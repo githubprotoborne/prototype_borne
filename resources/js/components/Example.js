@@ -2,45 +2,45 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
 
-class Example extends React.Component{
+class Example extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             email: "",
-            emails:[]
-           
-          
+            emails: []
+
+
         };
-        
+
     }
-    componentDidMount(){
+    componentDidMount() {
         this.getEmails.bind(this)()
     }
-    componentDidUpdate(){
+    componentDidUpdate() {
         this.getEmails.bind(this)()
     }
-    
-    async getEmails(){
-        
-       await axios.get("/emails")
-       .then(
-        response => this.setState({emails:response.data})
-        
-        )
+
+    async getEmails() {
+
+        await axios.get("/emails")
+            .then(
+                response => this.setState({ emails: response.data })
+
+            )
     }
-    handleChangeSubmit(e){
+    handleChangeSubmit(e) {
         e.preventDefault()
-        axios.post('/email', {email:this.state.email})
+        axios.post('/email', { email: this.state.email })
             .then(
                 //response => 
                 //alert(JSON.stringify(response.data))
-                
-                )
+
+            )
             .catch(error => {
-                console.log("ERROR:: ",error.response.data);
-                
-                });
-    
+                console.log("ERROR:: ", error.response.data);
+
+            });
+
     }
     handleChange(e) {
         this.setState({
@@ -48,36 +48,36 @@ class Example extends React.Component{
         });
         console.log('onChange', this.state.email);
     }
-    display(){
-        let d = this.state.emails.map((v,i)=><div key={i}>
+    display() {
+        let d = this.state.emails.map((v, i) => <div key={i}>
             <p>{v.email}</p>
         </div>
         )
         return d;
     }
-   render(){
-    return (
-        <div className="container">
-         
-              <form onSubmit={this.handleChangeSubmit.bind(this)}>
-                  <label htmlFor="email">email</label>
-                  <input type="email" placeholder="email" name="email" onChange={e=>{
-                      this.handleChange.bind(this)(e)
-                  }}/> 
+    render() {
+        return (
+            <div className="container">
 
-                  <button type="submit">envoyer</button>
+                <form onSubmit={this.handleChangeSubmit.bind(this)}>
+                    <label htmlFor="email">email</label>
+                    <input type="email" placeholder="email" name="email" onChange={e => {
+                        this.handleChange.bind(this)(e)
+                    }} />
 
-              </form>
+                    <button type="submit">envoyer</button>
 
-                 
-              {this.display.bind(this)()}
-              
-              <input name="imprimer" type="file"></input>
-             
+                </form>
+
+
+                {this.display.bind(this)()}
+
+                <input name="imprimer" type="file"></input>
+
             </div>
 
-    );
-}
+        );
+    }
 }
 
 export default Example;

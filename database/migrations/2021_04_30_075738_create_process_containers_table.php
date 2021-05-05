@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\ProcessContainer;
 
 class CreateProcessContainersTable extends Migration
 {
@@ -38,6 +39,11 @@ class CreateProcessContainersTable extends Migration
 
             $table->timestamps();
         });
+        $data = [
+
+            ['process_id'=>1,'container_id'=>1],
+        ];
+        ProcessContainer::insert($data);
     }
 
     /**

@@ -1,0 +1,29 @@
+.process-global{
+    display: flex;
+}
+.process{
+    width: 70%;
+    margin: auto;
+}
+.process_name-h1{
+    background-color: red ;
+    color: white;
+    text-align: center;
+}
+.process-body{
+    border: solid;
+}
+
+.process-body-text{
+    width: 90%;
+    margin: auto;
+}
+.process-buttons{
+    display:flex;
+}
+.process-button{
+    background-color: red;
+    color: white;
+    width: 25%;
+    border-radius:100px;
+}

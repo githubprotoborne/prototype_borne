@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Link, Route, Switch,Router, NavLink} from 'react-router-dom';
 
 import Example from './Example';
+import Processes from './Processes';
+import Process from './Process';
 import Scan from './Scan';
 import withBreadcrumbs from "react-router-breadcrumbs-hoc";
 import "../../css/breadcrumbs.css"
+
 const Breadcrumbs = withBreadcrumbs()(({ breadcrumbs }) => (
+  
   <div>
    
     <nav aria-label="breadcrumb">
@@ -44,7 +48,10 @@ class Index extends Component {
         <Breadcrumbs />
         <Switch>
         <Route path="/scan"  component={Scan}/>
+        <Route path="/demarches"   component={Processes}/>
+        <Route path="/demarche/:process_name"   component={Process}/>
         <Route path="/"   breadcrumb="Acceuil" component={Example}/></Switch>
+        
       </BrowserRouter>
 
       </div>

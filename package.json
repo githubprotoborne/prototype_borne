@@ -25,6 +25,7 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@material-ui/core": "^4.11.4",
         "laravel-mix-react-css-modules": "^2.0.0",
         "react-breadcrumbs-dynamic": "^1.2.1",
         "react-router-breadcrumbs-hoc": "^3.3.1",

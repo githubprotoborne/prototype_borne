@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Route::post('/email', 'App\Http\Controllers\EmailController@Create');
 Route::get('/emails', 'App\Http\Controllers\EmailController@Get');
+
+Route::get('/getprocesses', 'App\Http\Controllers\ProcessController@ImportProcess');
+Route::get('/getprocess/{process_name}', 'App\Http\Controllers\ProcessController@ProcessShow');
+
 Route::get( '/{path?}', function(){
     return view( 'welcome' );
 } )->where('path', '.*');
