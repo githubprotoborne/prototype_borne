@@ -1,0 +1,44 @@
+@media screen and (min-width: 700px) {
+.homepage_button{
+    display: block;
+}
+.state_containers{
+    width: 95%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    
+}
+.category_title{
+    margin-bottom: 3%;
+    margin-top: 3%;
+
+}
+.local_containers{
+    width: 95%;
+    margin-top: 3%;
+}
+.category_button{
+
+    width: 30%;
+    height: 90px;
+    margin-left: 3%;
+    margin-top: 1%;
+    background-color: #E5112F;
+    color:#FFF;
+}
+.line{
+    height: 3px;
+}
+.name{
+    font-size: 17px;
+}
+.description{
+    font-size: 13px;
+}
+.bread{
+    background-color: white;
+    width: 15%;
+    height: 2px;
+    margin-left: 40%;
+}
+}

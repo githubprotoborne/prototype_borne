@@ -17,11 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/get-containers"', 'App\Http\Controllers\ContainerController@Get');
 Route::get('/demarches', 'App\Http\Controllers\DemarcheController@Get');
 Route::post('/email', 'App\Http\Controllers\EmailController@Create');
 Route::post('/emails', 'App\Http\Controllers\EmailController@Get');
-Route::get('/scanner', 'App\Http\Controllers\ScannerController@page');
-Route::post('/scanner/upload', 'App\Http\Controllers\ScannerController@upload')->name('dwtupload.upload');
+Route::get('/first-containers', 'App\Http\Controllers\ContainerController@GetFourFirst');
+Route::get('/get-processes', 'App\Http\Controllers\ProcessController@GetByContainer');
+
 
  Route::get( '/{path?}', function(){
     return view( 'welcome' );

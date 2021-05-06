@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from "axios";
 import NavBar from './NavBar/NavBar';
 import ChoiceBar from './ChoiceBar/ChoiceBar';
+import Menu from './NavBar/Menu';
 
 class Example extends React.Component{
     constructor(props) {
@@ -61,25 +62,30 @@ class Example extends React.Component{
     }
    render(){
     return (
-        <div  >
-            <NavBar></NavBar>
+        <div >
+           <div id="side">
+              <Menu></Menu>
+           </div>
+           <div id="contain">
+           <NavBar></NavBar>
            
-            <ChoiceBar></ChoiceBar>
+           <ChoiceBar></ChoiceBar>
+            
+             <form onSubmit={this.handleChangeSubmit.bind(this)}>
+                 <label htmlFor="email">email</label>
+                 <input type="email" placeholder="email" name="email" onChange={e=>{
+                     this.handleChange.bind(this)(e)
+                 }}/> 
+
+                 <button type="submit">envoyer</button>
+
+             </form>
+
+                
+             {this.display.bind(this)()}
              
-              <form onSubmit={this.handleChangeSubmit.bind(this)}>
-                  <label htmlFor="email">email</label>
-                  <input type="email" placeholder="email" name="email" onChange={e=>{
-                      this.handleChange.bind(this)(e)
-                  }}/> 
-
-                  <button type="submit">envoyer</button>
-
-              </form>
-
-                 
-              {this.display.bind(this)()}
-              
-              <input name="imprimer" type="file"></input>
+             <input name="imprimer" type="file"></input>
+           </div>
              
             </div>
 

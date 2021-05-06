@@ -5,10 +5,13 @@ import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 import Example from './Example';
 import Scan from './Scan'
+import Container from "../components/Container/Container"
 
 import NavBar from './NavBar/NavBar';
 import Test from './NavBar/Test';
 import Test2 from './NavBar/Test2';
+import Home from './Home/Home';
+
 
 class Index extends Component {
   render() {
@@ -22,7 +25,11 @@ class Index extends Component {
         <Route path="/scan"  component={Scan}/>
         <Route path="/nav"  component={Test}/>
         <Route path="/test"  component={Test2}/>
-        <Route path="/"   component={Example}/></Switch>
+        <Route path="/mes-demarches"component={Container}/>
+        <Route path="/exemple"   component={Example}/>
+        <Route path="/" component={Home}/>
+        
+        </Switch>
       </BrowserRouter>
 
       </div>
