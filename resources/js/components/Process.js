@@ -8,7 +8,7 @@ import "../../css/process.css"
 const Process = function () {
 
     const [infoprocess, setinfoprocess] = useState([])
-
+    const [infoprocessAnex, setinfoprocessAnex] = useState([])
     const process_text = useParams();
 
 
@@ -17,7 +17,7 @@ const Process = function () {
     let process = function () {
         axios.get('/getprocess/' + process_text.process_name)
             .then(
-                (response) => { setinfoprocess(response.data) }
+                (response) => { setinfoprocess(response.data.processOne) , setinfoprocessAnex(response.data.processAnex) }
             )
     }
 
@@ -68,10 +68,10 @@ const Process = function () {
 
                             <div className="process_doc">
                                 <p>Pour cette démarche vous aurez besoin :</p>
-                                {value.process_name.split(' ').map((docAnnexe, i) =>
+                                {infoprocessAnex.map((docAnnexe, i) =>
                                     <div key={i}>
                                         <li>
-                                            {docAnnexe}
+                                            {docAnnexe.annex_document_name}
                                         </li>
                                     </div>
                                 )

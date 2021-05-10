@@ -1,0 +1,123 @@
+
+.back_text,.back_icon,.home_icon,.home_text,.accessibility_text,.accessibility_icon,.menu_icon,.menu_text{
+    display: block;
+}
+
+.col_margin{
+    color: #fff;
+    background-color: #E5112F;
+    border-right: #FFF 1px solid;
+    
+}
+
+
+
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+#dropdownMenuButton{
+    color:#E5112F;
+    background-color: white;
+  }
+
+
+
+
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    .page_title{
+        background-color: #E5112F;
+        background-image: -webkit-linear-gradient( -28deg, #E5112F 0%, #E5112F 50%, #Efff 60%, #FFF 50%);
+        background-image: linear-gradient( -28deg, #E5112F 0%, #E5112F 50%, #FFF 50%, #FFF 50%);
+        color:#E5112F;
+        border-right: #FFF 1px solid;
+    }
+   
+    .page_title{
+        font-size: 30px;
+    }
+    
+    ::placeholder{
+        font-size: 12px;
+    }
+    
+    
+    
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .page_title{
+      font-size: 25px;
+    }
+    .page_title{
+        background-color: #E5112F;
+        background-image: -webkit-linear-gradient( -28deg, #E5112F 0%, #E5112F 30%, #Efff 30%, #FFF 30%);
+        background-image: linear-gradient( -28deg, #E5112F 0%, #E5112F 30%, #FFF 30%, #FFF 30%);
+        color:#E5112F;
+        border-right: #FFF 1px solid;
+    }
+    .visibility_text{
+        font-size: 10px;
+    }
+    .col_margin{
+        font-size: 12px;
+      
+    }
+   .accessibility_text{
+    font-size: 8.5px;
+   
+   }
+    
+    .portal_title{
+        background-color: #E5112F;
+        color: #FFFFFF;
+    }
+    .association,.resident{
+        font-size: 2px;
+        margin-top: 10%;
+    }
+  }
+  
+.sidenav {
+    height: 100%;
+    width:0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: gray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

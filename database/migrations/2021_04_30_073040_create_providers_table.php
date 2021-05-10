@@ -19,18 +19,9 @@ class CreateProvidersTable extends Migration
             $table->string("provider_name",100);
             $table->text("provider_phone");
             $table->text("provider_mail");
+            $table->text("provider_postal_address");
             $table->timestamps();
         });
-
-        $data = [
-
-            ['provider_id'=>1,
-            'provider_name'=>"Simplici",
-            'provider_phone'=> '04 79 60 20 20',
-            'provider_mail'=> 'Simplici@mail.fr'
-        ],
-        ];
-        Provider::insert($data);
     }
 
     /**

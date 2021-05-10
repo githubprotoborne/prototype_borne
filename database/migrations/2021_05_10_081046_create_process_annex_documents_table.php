@@ -3,10 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\ProcessProvider;
 
-
-class CreateProcessProvidersTable extends Migration
+class CreateProcessAnnexDocumentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,8 +14,8 @@ class CreateProcessProvidersTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('process_providers', function (Blueprint $table) {
-            
+        Schema::create('process_annex_documents', function (Blueprint $table) {
+           
             $table->unsignedBigInteger('process_id');
             $table->foreign('process_id')
                 ->references('process_id')
@@ -25,21 +23,19 @@ class CreateProcessProvidersTable extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->unsignedBigInteger('provider_id');
-            $table->foreign('provider_id')
-                ->references('provider_id')
-                ->on('providers')
+
+            // Recupertation id container
+            $table->unsignedBigInteger('annex_document_id');
+            $table->foreign('annex_document_id')
+                ->references('annex_document_id')
+                ->on('annex_documents')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+            
+
 
             $table->timestamps();
         });
-        $data = [
-
-            ['process_id'=>1,'provider_id'=>1],
-        ];
-        ProcessProvider::insert($data);
-        
     }
 
     /**
@@ -49,6 +45,6 @@ class CreateProcessProvidersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('process_providers');
+        Schema::dropIfExists('process_annex_documents');
     }
 }

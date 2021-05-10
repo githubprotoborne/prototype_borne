@@ -2237,11 +2237,16 @@ var Process = function Process() {
       infoprocess = _useState2[0],
       setinfoprocess = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      infoprocessAnex = _useState4[0],
+      setinfoprocessAnex = _useState4[1];
+
   var process_text = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useParams)();
 
   var process = function process() {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get('/getprocess/' + process_text.process_name).then(function (response) {
-      setinfoprocess(response.data);
+      setinfoprocess(response.data.processOne), setinfoprocessAnex(response.data.processAnex);
     });
   };
 
@@ -2290,10 +2295,10 @@ var Process = function Process() {
                   className: "process_doc",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
                     children: "Pour cette d\xE9marche vous aurez besoin :"
-                  }), value.process_name.split(' ').map(function (docAnnexe, i) {
+                  }), infoprocessAnex.map(function (docAnnexe, i) {
                     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
-                        children: docAnnexe
+                        children: docAnnexe.annex_document_name
                       })
                     }, i);
                   })]
@@ -7071,7 +7076,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".process-global {\r\n    display: flex;\r\n}\r\n\r\n.process {\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process_name-title {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.process-body {\r\n    border: 10px solid;\r\n}\r\n\r\n.process-body-text {\r\n    width: 95%;\r\n    margin: auto;\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.process-icon-txt {\r\n    display: flex;\r\n}\r\n\r\n.process-buttons {\r\n    display: flex;\r\n    height: 10vh;\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process-buttons>div {\r\n    flex: 1;\r\n}\r\n\r\n.process-button {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    width: 20vw;\r\n    border-radius: 100px;\r\n    height: 100%;\r\n    margin-left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.process-scan>div {\r\n    display: flex;\r\n    height: 100%;\r\n}\r\n\r\n.process-scan>div>.process-scan-text {\r\n    margin: 0;\r\n    margin: auto;\r\n    width: 70%;\r\n}\r\n\r\n.process-scan>div>.process-scan-icon {\r\n    margin: 0;\r\n    margin: auto;\r\n}\r\n\r\n.process-demarche {\r\n    position: relative;\r\n}\r\n\r\n.process-demarche>a>div {\r\n    position: absolute;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n    width: 100%;\r\n}\r\n\r\n.process-demarche>a>div>p {\r\n    text-align: center;\r\n}\r\n\r\n.process-demarche>a>div>.process-demarche-icon {\r\n    margin: 0;\r\n}\r\n\r\n.description-icon>span {\r\n    font-size: 50px;\r\n}\r\n\r\n.process_doc {\r\n    padding-left: 5vw;\r\n}\r\n\r\n.process-icon {\r\n    width: 5vw;\r\n    text-align: center;\r\n}\r\n\r\nspan {\r\n    width: inherit;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".process-global {\r\n    display: flex;\r\n}\r\n\r\n.process {\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process_name-title {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.process-body {\r\n    border: 4px solid;\r\n}\r\n\r\n.process-body-text {\r\n    width: 95%;\r\n    margin: auto;\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.process-icon-txt {\r\n    display: flex;\r\n}\r\n\r\n.process-buttons {\r\n    display: flex;\r\n    height: 10vh;\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process-buttons>div {\r\n    flex: 1;\r\n}\r\n\r\n.process-button {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    width: 20vw;\r\n    border-radius: 100px;\r\n    height: 100%;\r\n    margin-left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.process-scan>div {\r\n    display: flex;\r\n    height: 100%;\r\n}\r\n\r\n.process-scan>div>.process-scan-text {\r\n    margin: 0;\r\n    margin: auto;\r\n    width: 70%;\r\n}\r\n\r\n.process-scan>div>.process-scan-icon {\r\n    margin: 0;\r\n    margin: auto;\r\n}\r\n\r\n.process-demarche {\r\n    position: relative;\r\n}\r\n\r\n.process-demarche>a>div {\r\n    position: absolute;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n    width: 100%;\r\n}\r\n\r\n.process-demarche>a>div>p {\r\n    text-align: center;\r\n}\r\n\r\n.process-demarche>a>div>.process-demarche-icon {\r\n    margin: 0;\r\n}\r\n\r\n.description-icon>span {\r\n    font-size: 50px;\r\n}\r\n\r\n.process_doc {\r\n    padding-left: 5vw;\r\n}\r\n\r\n.process-icon {\r\n    width: 5vw;\r\n    text-align: center;\r\n    display: flex;\r\n}\r\n.process-icon>span {\r\nmargin: auto;\r\n}\r\n\r\n/* span {\r\n    width: inherit;\r\n} */", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

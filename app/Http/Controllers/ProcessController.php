@@ -15,14 +15,18 @@ class ProcessController extends Controller
     public function ProcessShow($process_name)
     {
         $processOne = Process::select("processes.*","providers.*")
-         ->join('process_providers','process_providers.process_id','=','processes.process_id')
-         ->join('providers','providers.provider_id','=','process_providers.provider_id')
+         ->leftJoin('providers','providers.provider_id','=','processes.provider_id')
+         ->where('processes.process_name',$process_name)->get();
+
+         $processAnex = Process::select("annex_documents.*")
+         ->join('process_annex_documents','processes.process_id','=','process_annex_documents.process_id')
+         ->join('annex_documents','annex_documents.annex_document_id','=','process_annex_documents.annex_document_id')
          ->where('processes.process_name',$process_name)->get();
 
 
 
         // $processOne = Process::where('process_name',$process_name)->get();
-        return $processOne;
+        return [ 'processOne' => $processOne, 'processAnex' => $processAnex];
     }
 
 }
