@@ -2245,6 +2245,13 @@ var Process = function Process() {
     });
   };
 
+  function displayTest(text) {
+    var divStyle;
+    if (text == null || text == '') return divStyle = {
+      display: 'none'
+    };
+  }
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     process();
   }, []);
@@ -2254,13 +2261,13 @@ var Process = function Process() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "process-global",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            children: ["D\xE9marche propos\xE9 par", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+            children: ["D\xE9marche propos\xE9 par :", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
               children: value.provider_name
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: "process",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-              className: "process_name-h1",
+              className: "process_name-title",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
                 children: value.process_name
               })
@@ -2268,25 +2275,86 @@ var Process = function Process() {
               className: "process-body",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                 className: "process-body-text",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                  children: value.process_description
-                }), "Pour cette d\xE9marche vous aurez besoin :", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                  children: "jfdghkfhgkhgfkgffghdilg"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-                  children: ["Possibilit\xE9 de reprendre la d\xE9marche plus tard : ", value.process_draft_mode ? "Oui" : "Non"]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-                  children: ["Temps estim\xE9 : ", value.process_duration, " minutes"]
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "process-icon-txt",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "process-icon description-icon",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                      "class": "material-icons-outlined",
+                      children: "info"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: value.process_description
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "process_doc",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    children: "Pour cette d\xE9marche vous aurez besoin :"
+                  }), value.process_name.split(' ').map(function (docAnnexe, i) {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                        children: docAnnexe
+                      })
+                    }, i);
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "process-icon-txt",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "process-icon",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                      "class": "material-icons",
+                      children: "check_circle_outline"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+                    children: ["Possibilit\xE9 de reprendre la d\xE9marche plus tard : ", value.process_draft_mode ? "Oui" : "Non"]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "process-icon-txt",
+                  style: displayTest(value.process_duration),
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "process-icon",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                      "class": "material-icons",
+                      children: "timer"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+                    children: ["Temps estim\xE9 : ", value.process_duration, " minutes"]
+                  })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "process-buttons",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    className: "process-button",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                      children: "Je num\xE9rise un document avec le scanner"
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "process-button process-scan",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                          className: "process-scan-text",
+                          children: "Je num\xE9rise un document avec le scanner"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                          className: "process-scan-icon",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                            "class": "material-icons",
+                            children: "scanner"
+                          })
+                        })]
+                      })
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    className: "process-button",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                      children: "Je commence ma d\xE9marche"
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "process-button process-demarche",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+                        href: value.process_link,
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                            children: "Je commence ma d\xE9marche"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                            className: "process-demarche-icon",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                              "class": "material-icons",
+                              children: "arrow_forward"
+                            })
+                          })]
+                        })
+                      })
                     })
                   })]
                 })]
@@ -7003,7 +7071,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".process-global{\r\n    display: flex;\r\n}\r\n.process{\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n.process_name-h1{\r\n    background-color: red ;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n.process-body{\r\n    border: solid;\r\n}\r\n\r\n.process-body-text{\r\n    width: 90%;\r\n    margin: auto;\r\n}\r\n.process-buttons{\r\n    display:flex;\r\n}\r\n.process-button{\r\n    background-color: red;\r\n    color: white;\r\n    width: 25%;\r\n    border-radius:100px;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".process-global {\r\n    display: flex;\r\n}\r\n\r\n.process {\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process_name-title {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.process-body {\r\n    border: 10px solid;\r\n}\r\n\r\n.process-body-text {\r\n    width: 95%;\r\n    margin: auto;\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.process-icon-txt {\r\n    display: flex;\r\n}\r\n\r\n.process-buttons {\r\n    display: flex;\r\n    height: 10vh;\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process-buttons>div {\r\n    flex: 1;\r\n}\r\n\r\n.process-button {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    width: 20vw;\r\n    border-radius: 100px;\r\n    height: 100%;\r\n    margin-left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.process-scan>div {\r\n    display: flex;\r\n    height: 100%;\r\n}\r\n\r\n.process-scan>div>.process-scan-text {\r\n    margin: 0;\r\n    margin: auto;\r\n    width: 70%;\r\n}\r\n\r\n.process-scan>div>.process-scan-icon {\r\n    margin: 0;\r\n    margin: auto;\r\n}\r\n\r\n.process-demarche {\r\n    position: relative;\r\n}\r\n\r\n.process-demarche>a>div {\r\n    position: absolute;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n    width: 100%;\r\n}\r\n\r\n.process-demarche>a>div>p {\r\n    text-align: center;\r\n}\r\n\r\n.process-demarche>a>div>.process-demarche-icon {\r\n    margin: 0;\r\n}\r\n\r\n.description-icon>span {\r\n    font-size: 50px;\r\n}\r\n\r\n.process_doc {\r\n    padding-left: 5vw;\r\n}\r\n\r\n.process-icon {\r\n    width: 5vw;\r\n    text-align: center;\r\n}\r\n\r\nspan {\r\n    width: inherit;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
