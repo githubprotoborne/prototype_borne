@@ -1,46 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
+import NavBar from './NavBar/NavBar';
+import ChoiceBar from './ChoiceBar/ChoiceBar';
 
-class Example extends React.Component {
+class Example extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
             email: "",
-            emails: []
-
-
+            emails:[]
+           
+          
         };
-
+        
     }
-    componentDidMount() {
+    componentDidMount(){
         this.getEmails.bind(this)()
     }
-    componentDidUpdate() {
+    componentDidUpdate(){
         this.getEmails.bind(this)()
     }
-
-    async getEmails() {
-
-        await axios.get("/emails")
-            .then(
-                response => this.setState({ emails: response.data })
-
-            )
+    
+    async getEmails(){
+        
+       await axios.post("/emails",{email:"angapaydivin@gmail.com"})
+       .then(
+        (response) => {
+           
+            this.setState({emails:response.data})}
+        
+        )
     }
-    handleChangeSubmit(e) {
+    handleChangeSubmit(e){
         e.preventDefault()
-        axios.post('/email', { email: this.state.email })
+        axios.post('/email', {email:this.state.email})
             .then(
                 //response => 
                 //alert(JSON.stringify(response.data))
-
-            )
+                
+                )
             .catch(error => {
-                console.log("ERROR:: ", error.response.data);
-
-            });
-
+                console.log("ERROR:: ",error.response.data);
+                
+                });
+    
     }
     handleChange(e) {
         this.setState({
@@ -48,36 +52,39 @@ class Example extends React.Component {
         });
         console.log('onChange', this.state.email);
     }
-    display() {
-        let d = this.state.emails.map((v, i) => <div key={i}>
+    display(){
+        let d = this.state.emails.map((v,i)=><div key={i}>
             <p>{v.email}</p>
         </div>
         )
         return d;
     }
-    render() {
-        return (
-            <div className="container">
+   render(){
+    return (
+        <div  >
+            <NavBar></NavBar>
+           
+            <ChoiceBar></ChoiceBar>
+             
+              <form onSubmit={this.handleChangeSubmit.bind(this)}>
+                  <label htmlFor="email">email</label>
+                  <input type="email" placeholder="email" name="email" onChange={e=>{
+                      this.handleChange.bind(this)(e)
+                  }}/> 
 
-                <form onSubmit={this.handleChangeSubmit.bind(this)}>
-                    <label htmlFor="email">email</label>
-                    <input type="email" placeholder="email" name="email" onChange={e => {
-                        this.handleChange.bind(this)(e)
-                    }} />
+                  <button type="submit">envoyer</button>
 
-                    <button type="submit">envoyer</button>
+              </form>
 
-                </form>
-
-
-                {this.display.bind(this)()}
-
-                <input name="imprimer" type="file"></input>
-
+                 
+              {this.display.bind(this)()}
+              
+              <input name="imprimer" type="file"></input>
+             
             </div>
 
-        );
-    }
+    );
+}
 }
 
 export default Example;

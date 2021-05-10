@@ -1,16 +1,57 @@
-.process-global {
+.global {
+    display: flex;
+}
+.providers{
+    padding-left: 10px;
+    width: 20%;
+}
+.providers>div{
+    display: flex;
+    width: 95%;
+}
+.providers>div>p>span{
+    margin: auto;
+}
+.provider-texts{
+    width: -webkit-fill-available;
+    text-align: right;
+}
+.provider-icons{
     display: flex;
 }
 
-.process {
-    width: 70%;
-    margin: auto;
+.processes{
+    width: 80%;
+}
+
+.process{
+    width: 90%;
+}
+
+p{
+    font-size: 1.5em;
+}
+.icons{
+    font-size: 2em;
+}
+li{
+    font-size: 1.5em;
+}
+
+
+.provider-logo>img{
+    width: 100%;
 }
 
 .process_name-title {
     background-color: #E5112F;
     color: white;
     text-align: center;
+}
+.process_name-title>h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 4em;
 }
 
 .process-body {
@@ -42,7 +83,7 @@
 .process-button {
     background-color: #E5112F;
     color: white;
-    width: 20vw;
+    width: 15vw;
     border-radius: 100px;
     height: 100%;
     margin-left: 50%;
@@ -57,7 +98,7 @@
 .process-scan>div>.process-scan-text {
     margin: 0;
     margin: auto;
-    width: 70%;
+    width: 75%;
 }
 
 .process-scan>div>.process-scan-icon {
