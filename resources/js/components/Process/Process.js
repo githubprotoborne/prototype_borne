@@ -2,13 +2,13 @@ import React, { Component, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
 import { useParams } from 'react-router';
-import "../../css/process.css"
+import "../../../css/process.css"
 
 
 const Process = function () {
 
-    const [infoprocess, setinfoprocess] = useState([])
-    const [infoprocessAnex, setinfoprocessAnex] = useState([])
+    const [infoprocess, setProcess] = useState([])
+    const [infoprocessAnex, setProcessDocAnex] = useState([])
     const process_text = useParams();
 
 
@@ -17,7 +17,7 @@ const Process = function () {
     let process = function () {
         axios.get('/getprocess/' + process_text.process_name)
             .then(
-                (response) => { setinfoprocess(response.data.processOne) , setinfoprocessAnex(response.data.processAnex) }
+                (response) => { setProcess(response.data.processOne) , setProcessDocAnex(response.data.processAnex) }
             )
     }
 
@@ -36,10 +36,8 @@ const Process = function () {
 
     return (<div>
 
-        {infoprocess.map((value, index) => <div key={index}>
-            
+        {infoprocess.map((value, index) => <div key={index}>       
             <div className="process-global">
-
                 <div>
                     Démarche proposé par :
                     <h1 >{value.provider_name}</h1>

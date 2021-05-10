@@ -23,9 +23,6 @@ class ProcessController extends Controller
          ->join('annex_documents','annex_documents.annex_document_id','=','process_annex_documents.annex_document_id')
          ->where('processes.process_name',$process_name)->get();
 
-
-
-        // $processOne = Process::where('process_name',$process_name)->get();
         return [ 'processOne' => $processOne, 'processAnex' => $processAnex];
     }
 

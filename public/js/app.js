@@ -2193,10 +2193,10 @@ var Example = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Process.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/Process.js ***!
-  \********************************************/
+/***/ "./resources/js/components/Process/Process.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Process/Process.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2209,7 +2209,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _css_process_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../css/process.css */ "./resources/css/process.css");
+/* harmony import */ var _css_process_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/process.css */ "./resources/css/process.css");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -2235,18 +2235,18 @@ var Process = function Process() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       infoprocess = _useState2[0],
-      setinfoprocess = _useState2[1];
+      setProcess = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState4 = _slicedToArray(_useState3, 2),
       infoprocessAnex = _useState4[0],
-      setinfoprocessAnex = _useState4[1];
+      setProcessDocAnex = _useState4[1];
 
   var process_text = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useParams)();
 
   var process = function process() {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get('/getprocess/' + process_text.process_name).then(function (response) {
-      setinfoprocess(response.data.processOne), setinfoprocessAnex(response.data.processAnex);
+      setProcess(response.data.processOne), setProcessDocAnex(response.data.processAnex);
     });
   };
 
@@ -2376,10 +2376,10 @@ var Process = function Process() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Processes.js":
-/*!**********************************************!*\
-  !*** ./resources/js/components/Processes.js ***!
-  \**********************************************/
+/***/ "./resources/js/components/Process/Processes.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Process/Processes.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2477,8 +2477,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _Example__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Example */ "./resources/js/components/Example.js");
-/* harmony import */ var _Processes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Processes */ "./resources/js/components/Processes.js");
-/* harmony import */ var _Process__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Process */ "./resources/js/components/Process.js");
+/* harmony import */ var _Process_Processes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Process/Processes */ "./resources/js/components/Process/Processes.js");
+/* harmony import */ var _Process_Process__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Process/Process */ "./resources/js/components/Process/Process.js");
 /* harmony import */ var _Scan__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Scan */ "./resources/js/components/Scan.js");
 /* harmony import */ var react_router_breadcrumbs_hoc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-breadcrumbs-hoc */ "./node_modules/react-router-breadcrumbs-hoc/dist/es/index.js");
 /* harmony import */ var _css_breadcrumbs_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../css/breadcrumbs.css */ "./resources/css/breadcrumbs.css");
@@ -2572,10 +2572,10 @@ var Index = /*#__PURE__*/function (_Component) {
               component: _Scan__WEBPACK_IMPORTED_MODULE_5__.default
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
               path: "/demarches",
-              component: _Processes__WEBPACK_IMPORTED_MODULE_3__.default
+              component: _Process_Processes__WEBPACK_IMPORTED_MODULE_3__.default
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
               path: "/demarche/:process_name",
-              component: _Process__WEBPACK_IMPORTED_MODULE_4__.default
+              component: _Process_Process__WEBPACK_IMPORTED_MODULE_4__.default
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
               path: "/",
               breadcrumb: "Acceuil",

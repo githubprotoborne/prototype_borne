@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Link, Route, Switch,Router, NavLink} from 'react-router-dom';
 
 import Example from './Example';
-import Processes from './Processes';
-import Process from './Process';
+import Processes from './Process/Processes';
+import Process from './Process/Process';
 import Scan from './Scan';
 import withBreadcrumbs from "react-router-breadcrumbs-hoc";
 import "../../css/breadcrumbs.css"
