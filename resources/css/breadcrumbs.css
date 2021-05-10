@@ -1,10 +1,6 @@
 
-.bread-scrumbItem{
- 
-    list-style: none;
-    display: inline;
-    
-}
-.bread{
-  background-color: white;
+.bread-items{
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
 }

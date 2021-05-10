@@ -35,7 +35,9 @@ class ChoiceBar extends React.Component{
             <div className="col-md">
             <Link to={{
           pathname:"/mes-demarches",
-          id:container.container_id
+          id:container.container_id,
+          name:container.container_name,
+          icon:container.container_icon
        }} style={{ textDecoration: 'none' }}>{container.container_name}</Link>
             </div>
             <span className="material-icons-outlined col-sm-2">{container.container_icon}</span>

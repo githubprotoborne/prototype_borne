@@ -1,5 +1,4 @@
 import axios from "axios"
-
 import React from "react"
 import { Link } from "react-router-dom"
 import ChoiceBar from "../ChoiceBar/ChoiceBar"
@@ -7,6 +6,7 @@ import Menu from "../NavBar/Menu"
 import NavBar from "../NavBar/NavBar"
 import '../../../css/Home.css'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
+
 class Home extends React.Component{
     constructor(props){
         super(props)
@@ -36,18 +36,22 @@ class Home extends React.Component{
  
         return(
             <div>
-               <div id="side">
-                <Menu></Menu>
+               <div >
+                    <div id="side">
+                    <Menu></Menu>
+                    </div>
+                    <div id="contrast">
+                        
+                    </div>
                 </div>
                 <div id="contain">
                 <NavBar></NavBar>
                 <ChoiceBar></ChoiceBar>
-                <div className="bread">
-                <Breadcrumbs></Breadcrumbs>
-                </div>
+                <div className="bread"><Breadcrumbs></Breadcrumbs></div>
+              
                 <div className="presentation container-fluid">
                       <div className="state_containers row">
-                      <div className="btn category_title col-4">
+                      <div className="btn category_title col-3">
                                    <p>Vie administrative</p>
 
                                </div>
@@ -59,7 +63,9 @@ class Home extends React.Component{
                                )=><div  key={index}className="btn category_button">
                                     <Link to={{
                            pathname:"/mes-demarches",
-                          id:value.container_id
+                           id:value.container_id,
+                           name:value.container_name,
+                           icon:value.container_icon
                             }} style={{textDecoration:"none", color: "#fff" }}>
                                     <span className="homepage_button name">{value.container_name}</span>
                                      <span className="description">{value.container_description}</span>
@@ -82,7 +88,9 @@ class Home extends React.Component{
                                )=><div  key={index}className="btn category_button">
                                     <Link to={{
                               pathname:"/mes-demarches",
-                               id:value.container_id
+                              id:value.container_id,
+                              name:value.container_name,
+                              icon:value.container_icon
                                }} style={{textDecoration:"none",color: "#fff"}} >
                                     <span className="homepage_button name">{value.container_name}</span>
                                      <span className="description">{value.container_description}</span>
@@ -110,7 +118,7 @@ class Home extends React.Component{
                       </div>
                       <hr className="line"></hr>
                       <div className="local_containers row">
-                      <div className="btn category_title col-4">
+                      <div className="btn category_title col-3">
                                    <p>Vie locale</p>
 
                                </div>
@@ -121,7 +129,9 @@ class Home extends React.Component{
                                )=><div key={index} className="btn category_button">
                                     <Link to={{
                                  pathname:"/mes-demarches",
-                                  id:value.container_id
+                                 id:value.container_id,
+                              name:value.container_name,
+                              icon:value.container_icon
                                  }} style={{textDecoration:"none",color: "#fff"}}>
                                     <span className="homepage_button name">{value.container_name}</span>
                                      <span className="description">{value.container_description}</span>
@@ -145,7 +155,9 @@ class Home extends React.Component{
                                )=><div key ={index}className="btn category_button">
                                     <Link to={{
                                      pathname:"/mes-demarches",
-                                      id:value.container_id
+                                     id:value.container_id,
+                                     name:value.container_name,
+                                     icon:value.container_icon
                                     }} style={{textDecoration:"none",color: "#fff"}} >
                                     <span className="homepage_button name">{value.container_name}</span>
                                      <span className="description">{value.container_description}</span>

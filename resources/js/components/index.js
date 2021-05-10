@@ -11,6 +11,7 @@ import NavBar from './NavBar/NavBar';
 import Test from './NavBar/Test';
 import Test2 from './NavBar/Test2';
 import Home from './Home/Home';
+import Cont from './Container/Cont';
 
 
 class Index extends Component {
@@ -25,7 +26,7 @@ class Index extends Component {
         <Route path="/scan"  component={Scan}/>
         <Route path="/nav"  component={Test}/>
         <Route path="/test"  component={Test2}/>
-        <Route path="/mes-demarches"component={Container}/>
+        <Route path="/mes-demarches"component={Cont}/>
         <Route path="/exemple"   component={Example}/>
         <Route path="/" component={Home}/>
         

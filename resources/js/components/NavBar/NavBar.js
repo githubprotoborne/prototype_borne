@@ -20,6 +20,7 @@ const NavBar = ()=>{
     let goHome=()=>{
         return <Redirect to="/"></Redirect>
     }
+    // handle the menu nav opening
     let  openNav=() =>{
       
         if ($(window).width() >= 700) { 
@@ -29,19 +30,25 @@ const NavBar = ()=>{
         }
       
         $("#contain").css("filter", "brightness(30%)");
-        $("body").css("background","#555")
+        $("body").css("background","#555").css("transform","none")
+        
+        
         
      
 
        
       }
+      // handle the menu close
       let  close=() =>{
         document.getElementById("b").addEventListener("click",()=>{
-            document.getElementById("mySidenav").style.width = "0px";
+           
             
            $("#contain").css("filter", "brightness(100%)");
             $("body").css("background","")
-     
+            document.getElementById("mySidenav").style.width = "0%";
+            nav-position
+            $("#mySidenav").css("width", "0%");
+
         })
       
        
@@ -51,7 +58,7 @@ const NavBar = ()=>{
       })
      
     return(
-        <nav className="container-fluid">
+        <nav className="container-fluid sticky-top">
 
             {//sider bar code for menu 
             }
@@ -64,9 +71,9 @@ const NavBar = ()=>{
                      </button>
 
                   
-                  <button className="col-2 col_margin"  title= "Retour à l'accueil" role="button" onClick={goHome}>
-                   <span className="material-icons-outlined home_icon"  aria-hidden="true">home</span>
-                   <span className="home_text">Accueil</span>
+                  <button className="col-2 col_margin"  title= "Retour à l'accueil" role="button" >
+                  <Link to="/" style={{textDecoration:"none",color:"#fff"}}><span className="material-icons-outlined home_icon"  aria-hidden="true">home</span></Link>
+                   <Link  to="/"  style={{textDecoration:"none",color:"#fff"}} className="home_text">Accueil</Link>
                   </button>
                   <div className="col-4 page_title">
                       <p>Simpl'ici +</p>

@@ -4,6 +4,7 @@ import axios from "axios";
 import NavBar from './NavBar/NavBar';
 import ChoiceBar from './ChoiceBar/ChoiceBar';
 import Menu from './NavBar/Menu';
+import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 class Example extends React.Component{
     constructor(props) {
@@ -70,7 +71,7 @@ class Example extends React.Component{
            <NavBar></NavBar>
            
            <ChoiceBar></ChoiceBar>
-            
+            <Breadcrumbs></Breadcrumbs>
              <form onSubmit={this.handleChangeSubmit.bind(this)}>
                  <label htmlFor="email">email</label>
                  <input type="email" placeholder="email" name="email" onChange={e=>{
