@@ -17,53 +17,91 @@ const NavBar = ()=>{
     }
     //go to homepage
     
-    let goHome=()=>{
-        return <Redirect to="/"></Redirect>
-    }
+   
     // handle the menu nav opening
     let  openNav=() =>{
       
         if ($(window).width() >= 700) { 
-            document.getElementById("mySidenav").style.width = "27%";
+            document.getElementById("mySidenav").style.width = "27%";// mySidenav in Menu component
         } else {
             document.getElementById("mySidenav").style.width = "57%";
         }
-      
-        $("#contain").css("filter", "brightness(30%)");
-        $("body").css("background","#555").css("transform","none")
-        
-        
-        
-     
+      handleBright()
+       
+     //document.getElementById("menu-container").setAttribute("filter",'brightness(30%)'
 
        
       }
       // handle the menu close
+      let handleBright=()=>{
+        document.getElementById("contain").style.opacity="0.9"
+        document.getElementById("contain").style.setProperty("background","#555","important")// the div witch contain the component render except the sidebar
+       
+       
+        $("#choiseBar").css("filter", "brightness(30%)"); // set the brightness to the choice bar from Choicebar component
+        $(".desk-bread-cont").css("filter", "brightness(30%)"); //set the brightness to the breadscrum  from Cont component
+        $(".section-position").css("filter", "brightness(30%)");// set the brightness to the sections items from Cont component 
+        $(".category_button").css("filter", "brightness(30%)"); // set the brightness to the category button  items from Home component 
+        $("#menu-container").css("filter", "brightness(30%)");
+        
+          
+      }
       let  close=() =>{
         document.getElementById("b").addEventListener("click",()=>{
-           
-            
-           $("#contain").css("filter", "brightness(100%)");
-            $("body").css("background","")
-            document.getElementById("mySidenav").style.width = "0%";
-            nav-position
+           document.getElementById("mySidenav").style.width = "0%";
+          
             $("#mySidenav").css("width", "0%");
+            handleBrightSuppression()
+          
 
         })
       
        
       }
+      let contrast =()=>{
+          /*  */
+   $(".contrast-container").css({display:"block"})
+   handleBright()      
+  }
+
+  let reinforceContrast=()=>{
+      if(sessionStorage.getItem("contrast")==="reinforced"){
+        $(".category_button").css("background-color", "#FFF")
+        
+        $(".home-button").css({color:"#222"});
+        $("body").css("background-color", "#FFF")
+        $(".col_margin").css("background-color", "#222")
+        $("#title-simplici").css("color", "#222")
+        $("#title-simplici").css("background-image", "webkit-linear-gradient( -28deg, #222 0%, #222 50%, #Efff 60%, #FFF 50%)")
+        $("#title-simplici").css("background-image", " linear-gradient( -28deg, #222 0%, #222 50%, #FFF 50%, #FFF 50%)")
+
+      }
+   
+  }
+
+  
+  let handleBrightSuppression=()=>{
+    document.getElementById("contain").style.opacity="1"       
+    document.getElementById("contain").style.setProperty("background","")// the div witch contain the component render except the sidebar
+    $("#choiseBar").css("filter", "brightness(100%)"); // set the brightness to the choice bar from Choicebar component
+    $(".desk-bread-cont").css("filter", "brightness(100%)"); //set the brightness to the breadscrum  from Cont component
+    $(".section-position").css("filter", "brightness(100%)");// set the brightness to the sections items from Cont component 
+    $(".category_button").css("filter", "brightness(100%)"); // set the brightness to the category button  items from Home component 
+    $("#menu-container").css("filter", "brightness(100%)");
+  }
       useEffect(()=>{
           close()
+          reinforceContrast()
+         
       })
      
     return(
-        <nav className="container-fluid sticky-top">
+        <nav className="container-fluid sticky-top backdrop" id="menu-container">
 
             {//sider bar code for menu 
             }
     
-             <div className="row" >
+             <div className="row" id="menu-container" >
                        
                      <button className="col-2 col_margin" role="button" title="Retour en arrière" onClick={back}>
                      <span className="material-icons-outlined back_icon" aria-hidden="true">arrow_back</span>
@@ -75,7 +113,7 @@ const NavBar = ()=>{
                   <Link to="/" style={{textDecoration:"none",color:"#fff"}}><span className="material-icons-outlined home_icon"  aria-hidden="true">home</span></Link>
                    <Link  to="/"  style={{textDecoration:"none",color:"#fff"}} className="home_text">Accueil</Link>
                   </button>
-                  <div className="col-4 page_title">
+                  <div className="col-4 page_title" id="title-simplici">
                       <p>Simpl'ici +</p>
                   </div>
                 
@@ -84,7 +122,7 @@ const NavBar = ()=>{
                    <span className="menu_text">Menu</span>
                   </button>
                  
-                  <button className="col-2 col_margin"  title= "Retour à l'accueil" role="button">
+                  <button className="col-2 col_margin"  title= "Retour à l'accueil" onClick={contrast} role="button">
                    <span className="material-icons-outlined accessibility_icon"  aria-hidden="true">visibility</span>
                    <span className="accessibility_text">Accessibilité</span>
                   </button>

@@ -27,7 +27,7 @@ class ChoiceBar extends React.Component{
    render(){
 
     return(
-      <div className="container-fluid whole_container">
+      <div className="container-fluid whole_container" id="choiseBar">
       <div className="row">
        
        {this.state.containers.length!==0? this.state.containers.map((container,index)=><div key={index.toString()} className="col-md cont">

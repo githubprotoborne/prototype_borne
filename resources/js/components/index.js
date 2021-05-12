@@ -4,7 +4,7 @@ import {BrowserRouter, Link, Route, Switch,Router, NavLink} from 'react-router-d
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 import Example from './Example';
-import Scan from './Scan'
+
 import Container from "../components/Container/Container"
 
 import NavBar from './NavBar/NavBar';
@@ -12,6 +12,7 @@ import Test from './NavBar/Test';
 import Test2 from './NavBar/Test2';
 import Home from './Home/Home';
 import Cont from './Container/Cont';
+import SideBar from './NavBar/Sidebar';
 
 
 class Index extends Component {
@@ -23,9 +24,9 @@ class Index extends Component {
         
      
         <Switch>
-        <Route path="/scan"  component={Scan}/>
+        
         <Route path="/nav"  component={Test}/>
-        <Route path="/test"  component={Test2}/>
+        <Route path="/test"  component={SideBar}/>
         <Route path="/mes-demarches"component={Cont}/>
         <Route path="/exemple"   component={Example}/>
         <Route path="/" component={Home}/>

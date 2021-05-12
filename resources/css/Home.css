@@ -25,6 +25,8 @@
     margin-top: 1%;
     background-color: #E5112F;
     color:#FFF;
+    border: 1px solid;
+    border-color: #ddd;
 }
 .line{
     height: 3px;
@@ -39,4 +41,7 @@
 }
 .bread{
     height: 5%;
+    margin-right: 500px;
+   
+    
 }

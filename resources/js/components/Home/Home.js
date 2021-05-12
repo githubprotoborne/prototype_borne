@@ -6,6 +6,7 @@ import Menu from "../NavBar/Menu"
 import NavBar from "../NavBar/NavBar"
 import '../../../css/Home.css'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
+import Contrast from "../Contrast/Contrast"
 
 class Home extends React.Component{
     constructor(props){
@@ -39,17 +40,18 @@ class Home extends React.Component{
                <div >
                     <div id="side">
                     <Menu></Menu>
+                    <Contrast></Contrast>
                     </div>
                     <div id="contrast">
                         
                     </div>
                 </div>
-                <div id="contain">
+                <div id="contain" className='contain-home'>
                 <NavBar></NavBar>
                 <ChoiceBar></ChoiceBar>
-                <div className="bread"><Breadcrumbs></Breadcrumbs></div>
+                <div className="bread-home"><Breadcrumbs></Breadcrumbs></div>
               
-                <div className="presentation container-fluid">
+                <div className="presentation container-fluid presentation-home">
                       <div className="state_containers row">
                       <div className="btn category_title col-3">
                                    <p>Vie administrative</p>
@@ -61,7 +63,7 @@ class Home extends React.Component{
                                {this.state.containers_state_one.map((
                                 value,index
                                )=><div  key={index}className="btn category_button">
-                                    <Link to={{
+                                    <Link  className="home-button" to={{
                            pathname:"/mes-demarches",
                            id:value.container_id,
                            name:value.container_name,
@@ -86,7 +88,7 @@ class Home extends React.Component{
                            {this.state.containers_state_two.map((
                                 value,index
                                )=><div  key={index}className="btn category_button">
-                                    <Link to={{
+                                    <Link className="home-button" to={{
                               pathname:"/mes-demarches",
                               id:value.container_id,
                               name:value.container_name,
@@ -127,7 +129,7 @@ class Home extends React.Component{
                          {this.state.containers_local_one.map((
                                 value,index
                                )=><div key={index} className="btn category_button">
-                                    <Link to={{
+                                    <Link className="home-button" to={{
                                  pathname:"/mes-demarches",
                                  id:value.container_id,
                               name:value.container_name,
@@ -153,7 +155,7 @@ class Home extends React.Component{
                            {this.state.containers_local_two.map((
                                 value,index
                                )=><div key ={index}className="btn category_button">
-                                    <Link to={{
+                                    <Link className="home-button" to={{
                                      pathname:"/mes-demarches",
                                      id:value.container_id,
                                      name:value.container_name,

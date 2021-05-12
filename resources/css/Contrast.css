@@ -1,5 +1,47 @@
 .contrast-container{
 
+ overflow-x: hidden;
+ position: fixed;
+ z-index: 1;
+ margin-left: 35%;
+ margin-top: 10%;
+ background-color: #fff;
+ width: 40%;
+ height: 35%;
+ display:none;
+}
+.contrast-subtitle{
+    text-align: left;
+    font-size: 3vmin;
+    margin-left: 1%;
+}
+.close-button-item{
+    margin-left: 86%;
+}
+
+.contrast-title{
+  text-align: left;
+  font-size: 3vmin;
+  margin-left: 1%;
+
+}
+.standard{
+    background-color: #E5112F;
+     text-align: left;
+     width: 25%;
+     margin-left: 1%;
+     border: 1px solid;
+     height: 25%;
+    border-color: #EEE;
+    color:#fff;
+}
+.reinforced{
+    background-color: #fff;
+    border: 1px solid;
+    width: 25%;
+    height: 25%;
+    border-color: #EEE;
+    margin-left: 1%;
 }
 #contrast{
     height: 30%;

@@ -1,6 +1,14 @@
 
 .bread-items{
-  text-decoration: none;
+ text-decoration: underline;
   list-style-type: none;
   display: inline;
+  margin-left: 1%;
+  
+}
+@media screen and(min-width:(900px)){
+.bread-items{
+    font-size:10%;
+}
+  
 }

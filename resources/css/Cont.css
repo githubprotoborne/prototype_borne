@@ -7,23 +7,28 @@
   
   @media screen and (min-width: 900px) {
      .sections{
-      
+      z-index: 6;
         
      }
      .processes-position{
          overflow-y:scroll;
       
      }
+     .title{
+         margin-left: 4%;
+     }
      
      .section-position{
        transform: none;
+       
     }
     
      .phone-processes{display:none}
      .desk-bread{
         
-         margin-left: 40%;
+        
          background-color: #FFF;
+         margin-bottom: 3%;
         
      }
      .bread-text{

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Processes =({processes})=>{
     return(
         <div className="">
-        <h1 className="process_title">Démarches</h1>
+        <h1 className="process_title">Liste des démarches</h1>
   {processes.map((value,index)=>
   <ul  key ={index}id={"section"+index} className="section">
         {value.processes.map((process,i)=><div key={i} >

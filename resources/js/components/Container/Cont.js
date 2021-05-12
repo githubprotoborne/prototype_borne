@@ -6,6 +6,7 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Title from "./Title"
 import Processes from "./Processes"
 import Section from "./Section"
+import Contrast from "../Contrast/Contrast"
 export default class Cont extends Component{
     constructor(props){
         super(props)
@@ -120,16 +121,17 @@ export default class Cont extends Component{
                <div id="side" >
                    <div className="">
                    <Menu></Menu>
+                   <Contrast></Contrast>
                    </div>
                    
                     </div>
-                <div id="contain" >   
+                <div id="contain">   
                  <div className=" sticky-top ">
                    <div className="tablet-nav "> 
                      <div className="nav-position fixed ">
                      <NavBar></NavBar>
                      </div> 
-                   <div className="desk-bread">
+                   <div className="desk-bread desk-bread-cont">
                        <div className="bread-text">
                        <Breadcrumbs></Breadcrumbs>
                        </div>
@@ -140,12 +142,12 @@ export default class Cont extends Component{
               {
                   ////////////////////////////////////desktop begin
               }
-              <div className="desk-top container-fluid ">
+              <div className="desk-top ">
                 <div className="row">
-                     <div className="col sections ">
+                     <div className="col sections sections-cont" id="sec">
                          
-                            <div className="s">
-                            <div className=" title position-fixed">
+                            <div className="sticky-top">
+                            <div className=" title position-fixed " id="t">
                         
                         <Title>
 
