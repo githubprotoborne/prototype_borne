@@ -16,20 +16,21 @@ class CreateContainerKeyWordsTable extends Migration
         
         Schema::create('container_key_words', function (Blueprint $table) {
             
-            $table->unsignedBigInteger('container_id')->unsigned();
+            $table->unsignedInteger('container_id')->unsigned();
             $table->foreign('container_id')
                 ->references('container_id')
                 ->on('containers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->unsignedBigInteger('key_word_id')->unsigned();
+            $table->unsignedInteger('key_word_id')->unsigned();
             $table->foreign('key_word_id')
                 ->references('key_word_id')
                 ->on('key_words')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
+                $table->timestamps();
                 Schema::enableForeignKeyConstraints();
         });
     }

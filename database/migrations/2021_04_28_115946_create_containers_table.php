@@ -3,9 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\models\Container;
+use App\Models\Container;
 class CreateContainersTable extends Migration
-{
+{ 
     /**
      * Run the migrations.
      *
@@ -45,7 +45,7 @@ class CreateContainersTable extends Migration
         ];
         
         Container::insert($data); // insert data with Eloquent approach
-       // DB::table('table')->insert($data); // Query Builder approach
+    //    DB::table('table')->insert($data); // Query Builder approach
         
     }
 

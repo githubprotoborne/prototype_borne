@@ -16,14 +16,14 @@ class CreateProcessProvidersTable extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::create('process_providers', function (Blueprint $table) {
             
-            $table->unsignedBigInteger('process_id')->unsigned();
+            $table->unsignedInteger('process_id')->unsigned();
             $table->foreign('process_id')
                 ->references('process_id')
                 ->on('processes')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->unsignedBigInteger('provider_id');
+            $table->unsignedInteger('provider_id')->unsigned();
             $table->foreign('provider_id')
                 ->references('provider_id')
                 ->on('providers')
