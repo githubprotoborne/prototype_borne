@@ -20,7 +20,7 @@ class CreateProcessContainersTable extends Migration
 
 
             // Recupertation id demarche
-            $table->unsignedBigInteger('process_id');
+            $table->unsignedBigInteger('process_id')->unsigned();
             $table->foreign('process_id')
                 ->references('process_id')
                 ->on('processes')
@@ -29,7 +29,7 @@ class CreateProcessContainersTable extends Migration
 
 
             // Recupertation id container
-            $table->unsignedBigInteger('container_id');
+            $table->unsignedBigInteger('container_id')->unsigned();
             $table->foreign('container_id')
                 ->references('container_id')
                 ->on('containers')

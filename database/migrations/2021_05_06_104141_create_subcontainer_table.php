@@ -17,7 +17,7 @@ class CreateSubcontainerTable extends Migration
         
         Schema::create('subcontainer', function($table) {
          
-            $table->increments('subcontainer_id');
+            $table->increments('subcontainer_id')->unsigned();
             $table->integer('container_id')->unsigned();
             $table->string('subcontainer_name',200);
           

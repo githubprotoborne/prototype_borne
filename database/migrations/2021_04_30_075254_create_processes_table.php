@@ -15,7 +15,7 @@ class CreateProcessesTable extends Migration
     public function up()
     {
         Schema::create('processes', function (Blueprint $table) {
-            $table->increments('process_id');
+            $table->increments('process_id')->unsigned();
             $table->string('process_name', 100);
             $table->text('process_description');
             $table->text('process_link');

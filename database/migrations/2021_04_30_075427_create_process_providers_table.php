@@ -16,7 +16,7 @@ class CreateProcessProvidersTable extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::create('process_providers', function (Blueprint $table) {
             
-            $table->unsignedBigInteger('process_id');
+            $table->unsignedBigInteger('process_id')->unsigned();
             $table->foreign('process_id')
                 ->references('process_id')
                 ->on('processes')
@@ -30,7 +30,7 @@ class CreateProcessProvidersTable extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->timestamps();
+            Schema::enableForeignKeyConstraints();
         });
     }
 
@@ -41,6 +41,7 @@ class CreateProcessProvidersTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('process_providers');
     }
 }
