@@ -34,8 +34,8 @@
   
   
   <script src="{{ asset('js/app.js') }}"></script>
-  <script src="resources\scanner.js" type="text/javascript"></script>
-  <p> ppp</p>
+  
+ 
           
     </div>
  

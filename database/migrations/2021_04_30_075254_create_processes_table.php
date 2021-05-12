@@ -3,7 +3,11 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+<<<<<<< HEAD
 use App\models\Process;
+=======
+use App\Models\Process;
+>>>>>>> 45f5f0d327543b92a4e123a775dc30a85d6c896e
 
 class CreateProcessesTable extends Migration
 {
@@ -21,6 +25,14 @@ class CreateProcessesTable extends Migration
             $table->text('process_link');
             $table->boolean('process_draft_mode');
             $table->string('process_duration',10);
+
+            $table->unsignedBigInteger('provider_id');
+            $table->foreign('provider_id')
+                ->references('provider_id')
+                ->on('providers')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
             $table->timestamps();
         });
         $data = [

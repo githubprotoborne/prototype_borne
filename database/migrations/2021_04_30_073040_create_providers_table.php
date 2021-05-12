@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Provider;
 
 class CreateProvidersTable extends Migration
 {
@@ -18,6 +19,7 @@ class CreateProvidersTable extends Migration
             $table->string("provider_name",100);
             $table->text("provider_phone");
             $table->text("provider_mail");
+            $table->text("provider_postal_address");
             $table->timestamps();
         });
     }
