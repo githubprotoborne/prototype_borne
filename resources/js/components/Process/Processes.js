@@ -4,12 +4,14 @@ import axios from "axios";
 
 const Processes = function () {
 
-const [infoprocess,setinfoprocess] = useState([])
+const [infoprocess, setinfoprocess] = useState([])
 
 let processes = function() {
     axios.get("/getprocesses")
             .then(
-                (response) => {setinfoprocess(response.data)  }
+                (response) => {setinfoprocess(response.data) 
+               
+                }
                 // (response) => {setinfoprocess(response.data); alert(JSON.stringify(response.data))  }
             )
 }

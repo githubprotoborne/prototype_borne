@@ -1,3 +1,5 @@
+
+
 import React, { Component, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
@@ -19,7 +21,8 @@ const Process = function () {
     let process = function () {
         axios.get('/getprocess/' + process_text.process_name)
             .then(
-                (response) => { setProcess(response.data.processOne), setProcessDocAnex(response.data.processAnex) }
+                (response) => { setProcess(response.data.processOne), setProcessDocAnex(response.data.processAnex)
+                console.log(response.data) }
             )
     }
 

@@ -18,7 +18,8 @@
   
     color: #FFF;
     
-    height: 40px;
+    height: 10vh;
+      width: 34vw;
     border-radius: 10px;
     text-decoration: none;
     background-color:rgb(34, 49, 78);
@@ -63,8 +64,8 @@
       text-decoration: none;
       list-style-type: none;
       margin-bottom: 3%;
-      height: 40px;
-      width: 400px;
+      height: 10vh;
+      width: 34vw;
       border-radius: 10px;
       
   }
@@ -87,8 +88,8 @@
       text-decoration: none;
       list-style-type: none;
       margin-bottom: 3%;
-      height: 45px;
-      width: 400px;
+      height: 10vh;
+      width: 40vw;
       border-radius: 10px;
 
 }
@@ -101,7 +102,8 @@
 }
 .inactive,#inaction{
   display: block;
-  height: 40px;
+  height: 10vh;
+  width: 34vw;
   text-decoration: none;
   
 }
@@ -183,7 +185,7 @@
       
      display: inline-block;
      
-     font-size: 17px;
+    
      background-color: #fff;
      color: #000;
 
@@ -263,7 +265,7 @@
    }
  
   .process_title{
-    font-size: 20px;
+    font-size: 3vmin;
     margin-left: 10%;
     margin-bottom: 4%;
     margin-top: 3%;
@@ -295,8 +297,7 @@
       
       
      display: inline-block;
-     
-     font-size: 17px;
+    
      background-color: #fff;
      color: #000;
 

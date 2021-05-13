@@ -23,6 +23,8 @@ Route::post('/email', 'App\Http\Controllers\EmailController@Create');
 Route::post('/emails', 'App\Http\Controllers\EmailController@Get');
 Route::get('/first-containers', 'App\Http\Controllers\ContainerController@GetFourFirst');
 Route::get('/get-processes', 'App\Http\Controllers\ProcessController@GetByContainer');
+Route::get('/getprocesses', 'App\Http\Controllers\ProcessController@ImportProcess');
+Route::get('/getprocess/{process_name}', 'App\Http\Controllers\ProcessController@ProcessShow');
 
 
  Route::get( '/{path?}', function(){

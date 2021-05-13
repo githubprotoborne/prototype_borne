@@ -39,13 +39,14 @@ class CreateContainersTable extends Migration
             ['container_id'=>14,'container_name'=>"Aide et solidarité",'container_description'=>'Alimentaire,Ecoute,Accompagnement','container_icon'=>'volunteer_activism'],
             ['container_id'=>15,'container_name'=>"Activités/Evenement",'container_description'=>'Sport,Pass\'culture','container_icon'=>'sports_soccer,museum'],
             ['container_id'=>16,'container_name'=>"Autres demandes",'container_description'=>'Demandes spécifiques,Contact','container_icon'=>'pending'],
+            
            
            
             //...
         ];
         
         Container::insert($data); // insert data with Eloquent approach
-       // DB::table('table')->insert($data); // Query Builder approach
+        //DB::table('table')->insert($data); // Query Builder approach
         
     }
 

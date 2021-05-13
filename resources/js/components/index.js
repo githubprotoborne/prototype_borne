@@ -13,6 +13,9 @@ import Test2 from './NavBar/Test2';
 import Home from './Home/Home';
 import Cont from './Container/Cont';
 import SideBar from './NavBar/Sidebar';
+import Processes from './Process/Processes';
+import Process from './Process/Process';
+
 
 
 class Index extends Component {
@@ -26,8 +29,9 @@ class Index extends Component {
         <Switch>
         
         <Route path="/nav"  component={Test}/>
-        <Route path="/test"  component={SideBar}/>
+        <Route path="/test"  component={Process}/>
         <Route path="/mes-demarches"component={Cont}/>
+        <Route path="/exemple"   component={Example}/>
         <Route path="/exemple"   component={Example}/>
         <Route path="/" component={Home}/>
         

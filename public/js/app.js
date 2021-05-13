@@ -4394,6 +4394,379 @@ var Test2 = function Test2(props) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Process/Process.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Process/Process.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _css_process_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/process.css */ "./resources/css/process.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+var Process = function Process() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      infoprocess = _useState2[0],
+      setProcess = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      infoprocessAnex = _useState4[0],
+      setProcessDocAnex = _useState4[1];
+
+  var process_text = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useParams)();
+
+  var process = function process() {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().get('/getprocess/' + process_text.process_name).then(function (response) {
+      setProcess(response.data.processOne), setProcessDocAnex(response.data.processAnex);
+      console.log(response.data);
+    });
+  };
+
+  function displayTest(text) {
+    var divStyle;
+    if (text == null || text == '') return divStyle = {
+      display: 'none'
+    };
+  }
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    process();
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    children: infoprocess.map(function (value, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "container-fluid",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "row",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              className: "col-xl-2 align-self-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: "providers",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                  children: "D\xE9marche propos\xE9 par :"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                  className: "provider-logo",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                    src: "/IMAGES/Logo-simplici-chambery-baseline.png",
+                    alt: value.provider_name
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "container-fluid",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                    className: "row",
+                    style: displayTest(value.provider_phone),
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "col-xl-3 col-lg-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                        className: "provider-icons",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                          "class": "material-icons icons",
+                          children: "call"
+                        })
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "col-xl-9 col-lg-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                        className: "provider-text",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                          children: value.provider_phone
+                        })
+                      })
+                    })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                    className: "row",
+                    style: displayTest(value.provider_mail),
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "col-xl-3 col-lg-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                        className: "provider-icons",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                          "class": "material-icons icons",
+                          children: "email"
+                        })
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "col-xl-9 col-lg-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                        className: "provider-text",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                          children: value.provider_mail
+                        })
+                      })
+                    })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                    className: "row",
+                    style: displayTest(value.provider_postal_address),
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "col-xl-3 col-lg-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                        className: "provider-icons",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                          "class": "material-icons icons",
+                          children: "place"
+                        })
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "col-xl-9 col-lg-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                        className: "provider-text",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                          children: value.provider_postal_address
+                        })
+                      })
+                    })]
+                  })]
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              className: "col-xl-10",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "process",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "process_name-title",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+                      children: value.process_name
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "process-body",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                      className: "process-body-text",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                        className: "container-fluid",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                          className: "row",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-md-1",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-icon",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                                "class": "material-icons-outlined process-icon-info",
+                                children: "info"
+                              })
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-md",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-txt",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                                children: value.process_description
+                              })
+                            })
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                          className: "row",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-md-1",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-icon"
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                            className: "col-md",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                              children: "Pour cette d\xE9marche vous aurez besoin :"
+                            }), infoprocessAnex.map(function (docAnnexe, i) {
+                              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+                                  children: docAnnexe.annex_document_name
+                                })
+                              }, i);
+                            })]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                          className: "row",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-md-1",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-icon",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                                "class": "material-icons icons",
+                                children: "check_circle_outline"
+                              })
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-md",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-txt",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+                                children: ["Possibilit\xE9 de reprendre la d\xE9marche plus tard : ", value.process_draft_mode ? "Oui" : "Non"]
+                              })
+                            })
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                          className: "row",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-md-1",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-icon",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                                "class": "material-icons icons",
+                                children: "timer"
+                              })
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-md",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-txt",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+                                children: ["Temps estim\xE9 : ", value.process_duration, " minutes"]
+                              })
+                            })
+                          })]
+                        })]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                        className: "container",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                          className: "row",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-xl-6",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                              className: "process-button",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                                  className: "",
+                                  children: "Je num\xE9rise un document avec le scanner"
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                                  className: "",
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                                    "class": "material-icons-outlined icons",
+                                    children: "scanner"
+                                  })
+                                })]
+                              })
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                            className: "col-xl-6",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+                              href: value.process_link,
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                                className: "process-button",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                                    children: "Je commence ma d\xE9marche"
+                                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                                    className: "",
+                                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                                      "class": "material-icons icons",
+                                      children: "arrow_forward"
+                                    })
+                                  })]
+                                })
+                              })
+                            })
+                          })]
+                        })
+                      })]
+                    })
+                  })]
+                })
+              })
+            })]
+          })
+        })
+      }, index);
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Process);
+
+/***/ }),
+
+/***/ "./resources/js/components/Process/Processes.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Process/Processes.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var Processes = function Processes() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      infoprocess = _useState2[0],
+      setinfoprocess = _useState2[1];
+
+  var processes = function processes() {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().get("/getprocesses").then(function (response) {
+      setinfoprocess(response.data);
+    } // (response) => {setinfoprocess(response.data); alert(JSON.stringify(response.data))  }
+    );
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    processes();
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: infoprocess.map(function (value, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: value.process_name
+      });
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Processes);
+
+/***/ }),
+
 /***/ "./resources/js/components/index.js":
 /*!******************************************!*\
   !*** ./resources/js/components/index.js ***!
@@ -4404,8 +4777,8 @@ var Test2 = function Test2(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Breadcrumbs/Breadcrumbs */ "./resources/js/components/Breadcrumbs/Breadcrumbs.js");
 /* harmony import */ var _Example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Example */ "./resources/js/components/Example.js");
 /* harmony import */ var _components_Container_Container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Container/Container */ "./resources/js/components/Container/Container.js");
@@ -4415,7 +4788,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_Home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Home/Home */ "./resources/js/components/Home/Home.js");
 /* harmony import */ var _Container_Cont__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Container/Cont */ "./resources/js/components/Container/Cont.js");
 /* harmony import */ var _NavBar_Sidebar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./NavBar/Sidebar */ "./resources/js/components/NavBar/Sidebar.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Process_Processes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Process/Processes */ "./resources/js/components/Process/Processes.js");
+/* harmony import */ var _Process_Process__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Process/Process */ "./resources/js/components/Process/Process.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4453,6 +4828,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
 var Index = /*#__PURE__*/function (_Component) {
   _inherits(Index, _Component);
 
@@ -4467,23 +4844,26 @@ var Index = /*#__PURE__*/function (_Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
         className: "",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.BrowserRouter, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Switch, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.BrowserRouter, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Switch, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
               path: "/nav",
               component: _NavBar_Test__WEBPACK_IMPORTED_MODULE_6__.default
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
               path: "/test",
-              component: _NavBar_Sidebar__WEBPACK_IMPORTED_MODULE_10__.default
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+              component: _Process_Process__WEBPACK_IMPORTED_MODULE_12__.default
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
               path: "/mes-demarches",
               component: _Container_Cont__WEBPACK_IMPORTED_MODULE_9__.default
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
               path: "/exemple",
               component: _Example__WEBPACK_IMPORTED_MODULE_3__.default
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+              path: "/exemple",
+              component: _Example__WEBPACK_IMPORTED_MODULE_3__.default
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
               path: "/",
               component: _Home_Home__WEBPACK_IMPORTED_MODULE_8__.default
             })]
@@ -4496,7 +4876,7 @@ var Index = /*#__PURE__*/function (_Component) {
   return Index;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(Index, {}), document.getElementById('index'));
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(Index, {}), document.getElementById('index'));
 
 /***/ }),
 
@@ -9031,7 +9411,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n  \r\n\r\n  \r\n \r\n  \r\n  \r\n  @media screen and (min-width: 900px) {\r\n     .sections{\r\n      z-index: 6;\r\n        \r\n     }\r\n     .processes-position{\r\n         overflow-y:scroll;\r\n      \r\n     }\r\n     .title{\r\n         margin-left: 4%;\r\n     }\r\n     \r\n     .section-position{\r\n       transform: none;\r\n       \r\n    }\r\n    \r\n     .phone-processes{display:none}\r\n     .desk-bread{\r\n        \r\n        \r\n         background-color: #FFF;\r\n         margin-bottom: 3%;\r\n        \r\n     }\r\n     .bread-text{\r\n        \r\n         background-color: #fff;\r\n     }\r\n     .desk-nav{\r\n      \r\n    }\r\n    .phone-processes{\r\n        display: none;\r\n    }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n    .section-position{\r\n        position: fixed;\r\n      \r\n        \r\n        background-color: white;  \r\n        margin-top: 10%;\r\n        width: 600px;\r\n        \r\n       \r\n    \r\n    }\r\n    .sections{\r\n        z-index: 3;\r\n     height: -webkit-fit-content;\r\n     height: -moz-fit-content;\r\n     height: fit-content;\r\n     \r\n    }\r\n\r\n    .title{\r\n       \r\n        background-color: white;\r\n        width: 600px;\r\n        margin-top: -2px;\r\n       \r\n        \r\n    }\r\n    .desk-bread{\r\n        background-color: white;\r\n        padding-top: 30%;\r\n\r\n\r\n\r\n    }\r\n    .processes-position{\r\n        margin-top: 200px;\r\n        margin-right: 18%;\r\n    }\r\n    .processes{\r\n       \r\n    }\r\n  }\r\n\r\n  @media only screen and (max-width:899px) and (min-width :601px) {\r\n    .desk-top{\r\n       \r\n    }\r\n    \r\n    .phone{\r\n        margin-top: 580em;\r\n    }\r\n    .desk-bread{\r\n        display: none;\r\n    }\r\n  \r\n  }\r\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n  \r\n\r\n  \r\n \r\n  \r\n  \r\n  @media screen and (min-width: 900px) {\r\n     .sections{\r\n     \r\n        \r\n     }\r\n     .processes-position{\r\n         overflow-y:scroll;\r\n      \r\n     }\r\n     .title{\r\n         margin-left: 4%;\r\n     }\r\n     \r\n     .section-position{\r\n       transform: none;\r\n       \r\n    }\r\n    \r\n     .phone-processes{display:none}\r\n     .desk-bread{\r\n        \r\n        \r\n         background-color: #FFF;\r\n         margin-bottom: 3%;\r\n        \r\n     }\r\n     .bread-text{\r\n        \r\n         background-color: #fff;\r\n     }\r\n     .desk-nav{\r\n      \r\n    }\r\n    .phone-processes{\r\n        display: none;\r\n    }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n    .section-position{\r\n        position: fixed;\r\n      \r\n        \r\n        background-color: white;  \r\n        margin-top: 10%;\r\n        width: 600px;\r\n        \r\n       \r\n    \r\n    }\r\n    .sections{\r\n        z-index: 3;\r\n     height: -webkit-fit-content;\r\n     height: -moz-fit-content;\r\n     height: fit-content;\r\n     \r\n    }\r\n\r\n    .title{\r\n       \r\n        background-color: white;\r\n        width: 600px;\r\n        margin-top: -2px;\r\n       \r\n        \r\n    }\r\n    .desk-bread{\r\n        background-color: white;\r\n        padding-top: 30%;\r\n\r\n\r\n\r\n    }\r\n    .processes-position{\r\n        margin-top: 200px;\r\n        margin-right: 18%;\r\n    }\r\n    .processes{\r\n       \r\n    }\r\n  }\r\n\r\n  @media only screen and (max-width:899px) and (min-width :601px) {\r\n    .desk-top{\r\n       \r\n    }\r\n    \r\n    .phone{\r\n        margin-top: 580em;\r\n    }\r\n    .desk-bread{\r\n        display: none;\r\n    }\r\n  \r\n  }\r\n ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9055,7 +9435,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n  \r\n\r\n  \r\n \r\n  \r\n  \r\n  @media screen and (min-width: 900px) {\r\n  \r\n    .pos{\r\n        position: fixed;\r\n       \r\n    }\r\n    .bread{\r\n      margin-right: 100em;\r\n    }\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 40px;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:rgb(34, 49, 78);\r\n    display: block;\r\n   \r\n    \r\n  }\r\n  .c{\r\n    display: flex;\r\n    align-items: center;\r\n    margin-top: 2%;\r\n  }\r\n \r\n  .section_text{\r\n   display: inline-block;\r\n    margin-top: 2%;\r\n\r\n  }\r\n  .mobile-only-title{\r\n    margin-right: 100em;\r\n  }\r\n  .item-text{\r\n\r\n  \r\n  }\r\n  .chevron_icon{\r\n   \r\n  }\r\n  \r\n  .container_title{\r\n      font-size: 20px;\r\n      margin-top: 3%;\r\n    \r\n  }\r\n  .container_icon{\r\n     margin-left: 1%;\r\n     \r\n  }\r\n  .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 40px;\r\n      width: 400px;\r\n      border-radius: 10px;\r\n      \r\n  }\r\n  \r\n  .process_title{\r\n    font-size: 20px;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n     \r\n  \r\n \r\n#first-item{\r\n    margin-top: 10%;\r\n}\r\n.process_item{\r\n    border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 45px;\r\n      width: 400px;\r\n      border-radius: 10px;\r\n\r\n}\r\n\r\n.bread{\r\n    width:50%;\r\n    margin-left: 45%;\r\n    \r\n\r\n}\r\n.inactive,#inaction{\r\n  display: block;\r\n  height: 40px;\r\n  text-decoration: none;\r\n  \r\n}\r\n.nav-position{\r\n  position: sticky;\r\n  z-index: 1;\r\n  width: inherit;\r\n\r\n\r\n }\r\n .mobile-only-title{\r\n  position: fixed;\r\n}\r\n  }\r\n  @media screen and (max-width:600px) {\r\n  .nav-position{\r\n   position: fixed;\r\n   z-index: 1;\r\n\r\n  }\r\n  .left-side{\r\n   \r\n  }\r\n  .processes{\r\n    \r\n    width: 100%;\r\n    margin-top: 300px;\r\n   \r\n    \r\n  \r\n  }\r\n  .n{\r\n    background-color:#E5112F;\r\n  }\r\n  .mobile-only-title{\r\n    \r\n    z-index: 1;\r\n \r\n    background-color: white;\r\n    width: 100%;\r\n    margin-top: -6%;\r\n    height: auto;\r\n    color:#000\r\n  }\r\n  .pos{\r\n    \r\n    display: none;\r\n   \r\n  }\r\n  .bread{\r\n   position: relative;\r\n   position: fixed;\r\n   margin-top: 18%;\r\n   z-index: 1;\r\n  }\r\n  .desk-title{\r\n    display: none;\r\n  }\r\n  .process_title{\r\n    font-size: 3vh;\r\n    \r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n    color: #000;\r\n  }\r\n  .container_title{\r\n    font-size: 20px;\r\n  }\r\n  .process_item{\r\n    border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 10px;\r\n      border-radius: 10px;\r\n      height: 45px;\r\n      width: 290px;\r\n      \r\n      \r\n     display: inline-block;\r\n     \r\n     font-size: 17px;\r\n     background-color: #fff;\r\n     color: #000;\r\n\r\n}\r\n\r\n\r\n.active {\r\n  \r\n  color: #FFF;\r\n  \r\n  height: 40px;\r\n  border-radius: 10px;\r\n  text-decoration: none;\r\n  background-color:rgb(34, 49, 78);\r\n  display: block;\r\n \r\n  \r\n}\r\n.c{\r\n  display: flex;\r\n  align-items: center;\r\n  margin-top: 2%;\r\n}\r\n\r\n.section_text{\r\n display: inline-block;\r\n  margin-top: 2%;\r\n  \r\n\r\n}\r\n.section-mobile-section{\r\n \r\n margin-top: -3em;\r\n}\r\n\r\n.section-items{\r\n  border:1px solid;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  list-style-type: none;\r\n  margin-bottom: 3%;\r\n  height: 40px;\r\n  width: 300px;\r\n  border-radius: 10px;\r\n  \r\n}\r\n.inactive{\r\n  display: block;\r\n  height: 40px;\r\n  text-decoration: none;\r\n  color:#000\r\n}\r\n.item-text{\r\n\r\n\r\n}\r\n\r\n\r\n  }\r\n\r\n  @media only screen and (max-width:899px) and (min-width :601px) {\r\n    \r\n    .tablet-nav{\r\n     position: fixed;\r\n    }\r\n    .mobile-only-title{\r\n     position: fixed;\r\n    }\r\n   .tablet-title{\r\n     font-size: 20px;\r\n  \r\n     \r\n   }\r\n   .section-desk-section{\r\n     position: fixed;\r\n     margin-top: 50px;\r\n   }\r\n \r\n  .process_title{\r\n    font-size: 20px;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 50px;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:rgb(34, 49, 78);\r\n    display: block;\r\n    width: 300px;\r\n   \r\n    \r\n  }\r\n  \r\n  .process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 10px;\r\n      border-radius: 10px;\r\n      height: 45px;\r\n      width: 290px;\r\n      \r\n      \r\n     display: inline-block;\r\n     \r\n     font-size: 17px;\r\n     background-color: #fff;\r\n     color: #000;\r\n\r\n}\r\n  \r\n.inactive{\r\n  display: block;\r\n  height: 40px;\r\n  text-decoration: none;\r\n  color:#000\r\n}\r\n  }\r\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n  \r\n\r\n  \r\n \r\n  \r\n  \r\n  @media screen and (min-width: 900px) {\r\n  \r\n    .pos{\r\n        position: fixed;\r\n       \r\n    }\r\n    .bread{\r\n      margin-right: 100em;\r\n    }\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 10vh;\r\n      width: 34vw;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:rgb(34, 49, 78);\r\n    display: block;\r\n   \r\n    \r\n  }\r\n  .c{\r\n    display: flex;\r\n    align-items: center;\r\n    margin-top: 2%;\r\n  }\r\n \r\n  .section_text{\r\n   display: inline-block;\r\n    margin-top: 2%;\r\n\r\n  }\r\n  .mobile-only-title{\r\n    margin-right: 100em;\r\n  }\r\n  .item-text{\r\n\r\n  \r\n  }\r\n  .chevron_icon{\r\n   \r\n  }\r\n  \r\n  .container_title{\r\n      font-size: 20px;\r\n      margin-top: 3%;\r\n    \r\n  }\r\n  .container_icon{\r\n     margin-left: 1%;\r\n     \r\n  }\r\n  .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 10vh;\r\n      width: 34vw;\r\n      border-radius: 10px;\r\n      \r\n  }\r\n  \r\n  .process_title{\r\n    font-size: 20px;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n     \r\n  \r\n \r\n#first-item{\r\n    margin-top: 10%;\r\n}\r\n.process_item{\r\n    border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 10vh;\r\n      width: 40vw;\r\n      border-radius: 10px;\r\n\r\n}\r\n\r\n.bread{\r\n    width:50%;\r\n    margin-left: 45%;\r\n    \r\n\r\n}\r\n.inactive,#inaction{\r\n  display: block;\r\n  height: 10vh;\r\n  width: 34vw;\r\n  text-decoration: none;\r\n  \r\n}\r\n.nav-position{\r\n  position: sticky;\r\n  z-index: 1;\r\n  width: inherit;\r\n\r\n\r\n }\r\n .mobile-only-title{\r\n  position: fixed;\r\n}\r\n  }\r\n  @media screen and (max-width:600px) {\r\n  .nav-position{\r\n   position: fixed;\r\n   z-index: 1;\r\n\r\n  }\r\n  .left-side{\r\n   \r\n  }\r\n  .processes{\r\n    \r\n    width: 100%;\r\n    margin-top: 300px;\r\n   \r\n    \r\n  \r\n  }\r\n  .n{\r\n    background-color:#E5112F;\r\n  }\r\n  .mobile-only-title{\r\n    \r\n    z-index: 1;\r\n \r\n    background-color: white;\r\n    width: 100%;\r\n    margin-top: -6%;\r\n    height: auto;\r\n    color:#000\r\n  }\r\n  .pos{\r\n    \r\n    display: none;\r\n   \r\n  }\r\n  .bread{\r\n   position: relative;\r\n   position: fixed;\r\n   margin-top: 18%;\r\n   z-index: 1;\r\n  }\r\n  .desk-title{\r\n    display: none;\r\n  }\r\n  .process_title{\r\n    font-size: 3vh;\r\n    \r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n    color: #000;\r\n  }\r\n  .container_title{\r\n    font-size: 20px;\r\n  }\r\n  .process_item{\r\n    border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 10px;\r\n      border-radius: 10px;\r\n      height: 45px;\r\n      width: 290px;\r\n      \r\n      \r\n     display: inline-block;\r\n     \r\n    \r\n     background-color: #fff;\r\n     color: #000;\r\n\r\n}\r\n\r\n\r\n.active {\r\n  \r\n  color: #FFF;\r\n  \r\n  height: 40px;\r\n  border-radius: 10px;\r\n  text-decoration: none;\r\n  background-color:rgb(34, 49, 78);\r\n  display: block;\r\n \r\n  \r\n}\r\n.c{\r\n  display: flex;\r\n  align-items: center;\r\n  margin-top: 2%;\r\n}\r\n\r\n.section_text{\r\n display: inline-block;\r\n  margin-top: 2%;\r\n  \r\n\r\n}\r\n.section-mobile-section{\r\n \r\n margin-top: -3em;\r\n}\r\n\r\n.section-items{\r\n  border:1px solid;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  list-style-type: none;\r\n  margin-bottom: 3%;\r\n  height: 40px;\r\n  width: 300px;\r\n  border-radius: 10px;\r\n  \r\n}\r\n.inactive{\r\n  display: block;\r\n  height: 40px;\r\n  text-decoration: none;\r\n  color:#000\r\n}\r\n.item-text{\r\n\r\n\r\n}\r\n\r\n\r\n  }\r\n\r\n  @media only screen and (max-width:899px) and (min-width :601px) {\r\n    \r\n    .tablet-nav{\r\n     position: fixed;\r\n    }\r\n    .mobile-only-title{\r\n     position: fixed;\r\n    }\r\n   .tablet-title{\r\n     font-size: 20px;\r\n  \r\n     \r\n   }\r\n   .section-desk-section{\r\n     position: fixed;\r\n     margin-top: 50px;\r\n   }\r\n \r\n  .process_title{\r\n    font-size: 3vmin;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 50px;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:rgb(34, 49, 78);\r\n    display: block;\r\n    width: 300px;\r\n   \r\n    \r\n  }\r\n  \r\n  .process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 10px;\r\n      border-radius: 10px;\r\n      height: 45px;\r\n      width: 290px;\r\n      \r\n      \r\n     display: inline-block;\r\n    \r\n     background-color: #fff;\r\n     color: #000;\r\n\r\n}\r\n  \r\n.inactive{\r\n  display: block;\r\n  height: 40px;\r\n  text-decoration: none;\r\n  color:#000\r\n}\r\n  }\r\n ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9151,7 +9531,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n.back_text,.back_icon,.home_icon,.home_text,.accessibility_text,.accessibility_icon,.menu_icon,.menu_text{\r\n    display: block;\r\n}\r\n\r\n.col_margin{\r\n    color: #fff;\r\n    background-color: #E5112F;\r\n    border-right: #FFF 1px solid;\r\n    \r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n.dropdown-toggle::after {\r\n    display: none;\r\n}\r\n\r\n#dropdownMenuButton{\r\n    color:#E5112F;\r\n    background-color: white;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n\r\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\r\n@media screen and (min-width: 601px) {\r\n    .page_title{\r\n        background-color: #E5112F;\r\n        background-image: linear-gradient( -28deg, #E5112F 0%, #E5112F 50%, #FFF 50%, #FFF 50%);\r\n        color:#E5112F;\r\n        border-right: #FFF 1px solid;\r\n    }\r\n   \r\n    .page_title{\r\n        font-size: 30px;\r\n    }\r\n    \r\n    ::-moz-placeholder{\r\n        font-size: 12px;\r\n    }\r\n    \r\n    :-ms-input-placeholder{\r\n        font-size: 12px;\r\n    }\r\n    \r\n    ::placeholder{\r\n        font-size: 12px;\r\n    }\r\n    \r\n    \r\n    \r\n  }\r\n  \r\n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\r\n  @media screen and (max-width: 600px) {\r\n    .page_title{\r\n      font-size: 25px;\r\n    }\r\n    .page_title{\r\n        background-color: #E5112F;\r\n        background-image: linear-gradient( -28deg, #E5112F 0%, #E5112F 30%, #FFF 30%, #FFF 30%);\r\n        color:#E5112F;\r\n        border-right: #FFF 1px solid;\r\n    }\r\n    .visibility_text{\r\n        font-size: 10px;\r\n    }\r\n    .col_margin{\r\n        font-size: 12px;\r\n      \r\n    }\r\n   .accessibility_text{\r\n    font-size: 8.5px;\r\n   \r\n   }\r\n    \r\n    .portal_title{\r\n        background-color: #E5112F;\r\n        color: #FFFFFF;\r\n    }\r\n    .association,.resident{\r\n        font-size: 2px;\r\n        margin-top: 10%;\r\n    }\r\n  }\r\n  ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n.back_text,.back_icon,.home_icon,.home_text,.accessibility_text,.accessibility_icon,.menu_icon,.menu_text{\r\n    display: block;\r\n}\r\n\r\n.col_margin{\r\n    color: #fff;\r\n    background-color: #E5112F;\r\n    border-right: #FFF 1px solid;\r\n    \r\n}\r\n\r\n\r\n\r\n\r\n\r\n.dropdown-toggle::after {\r\n    display: none;\r\n}\r\n\r\n#dropdownMenuButton{\r\n    color:#E5112F;\r\n    background-color: white;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n\r\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\r\n@media screen and (min-width: 601px) {\r\n    .page_title{\r\n        background-color: #E5112F;\r\n        background-image: linear-gradient( -28deg, #E5112F 0%, #E5112F 50%, #FFF 50%, #FFF 50%);\r\n        color:#E5112F;\r\n        border-right: #FFF 1px solid;\r\n    }\r\n   \r\n    .page_title{\r\n        font-size: 30px;\r\n    }\r\n    \r\n    ::-moz-placeholder{\r\n        font-size: 12px;\r\n    }\r\n    \r\n    :-ms-input-placeholder{\r\n        font-size: 12px;\r\n    }\r\n    \r\n    ::placeholder{\r\n        font-size: 12px;\r\n    }\r\n    \r\n    \r\n    \r\n  }\r\n  \r\n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\r\n  @media screen and (max-width: 600px) {\r\n    .page_title{\r\n      font-size: 25px;\r\n    }\r\n    .page_title{\r\n        background-color: #E5112F;\r\n        background-image: linear-gradient( -28deg, #E5112F 0%, #E5112F 30%, #FFF 30%, #FFF 30%);\r\n        color:#E5112F;\r\n        border-right: #FFF 1px solid;\r\n    }\r\n    .visibility_text{\r\n        font-size: 10px;\r\n    }\r\n    .col_margin{\r\n        font-size: 12px;\r\n      \r\n    }\r\n   .accessibility_text{\r\n    font-size: 8.5px;\r\n   \r\n   }\r\n    \r\n    .portal_title{\r\n        background-color: #E5112F;\r\n        color: #FFFFFF;\r\n    }\r\n    .association,.resident{\r\n        font-size: 2px;\r\n        margin-top: 10%;\r\n    }\r\n  }\r\n  \r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9224,6 +9604,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\r\n.bread-items{\r\n text-decoration: underline;\r\n  list-style-type: none;\r\n  display: inline;\r\n  margin-left: 1%;\r\n  \r\n}\r\n@media screen and(min-width:(900px)){\r\n.bread-items{\r\n    font-size:10%;\r\n}\r\n  \r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/process.css":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/process.css ***!
+  \*********************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "/*---------------------------------PROVIDER---------------------------------*/\r\n.providers>p{\r\n    text-align: center;\r\n}\r\n.provider-text{\r\n    display: flex;\r\n    height: 100%;\r\n}\r\n.provider-text>p{\r\n    margin: auto;\r\n}\r\n.provider-icons{\r\n    display: flex;\r\n    height: 100%;\r\n}\r\n.provider-icons>span{\r\n    margin: auto;\r\n}\r\n.providers>div>.row{\r\n    padding-bottom: 20px;\r\n}\r\n\r\n.provider-logo>img{\r\n    width: 100%;\r\n    border: 1px solid;\r\n}\r\n/*---------------------------------PROCESS---------------------------------*/\r\n.process{\r\n    width: 95%;\r\n}\r\n\r\n.process_name-title {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    text-align: center;\r\n    margin-bottom: 40px;\r\n}\r\n.process_name-title>h1 {\r\n    padding-top: 20px;\r\n    padding-bottom: 20px;\r\n}\r\n\r\n.process-body {\r\n    border: 4px solid;\r\n}\r\n\r\n.process-txt,.process-icon{\r\n    display: flex;\r\n    height: 100%;\r\n    margin-bottom: 50px;\r\n}\r\n.process-txt,.process-icon >span,p{\r\nmargin: auto;\r\n}\r\n\r\n.process-txt>p{\r\n    width: 100%;\r\n}\r\n\r\n.process-icon-info{\r\n    font-size: 60px;\r\n}\r\n\r\n.process-body-text {\r\n    width: 95%;\r\n    margin: auto;\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\np{\r\n    font-size: 1.25em;\r\n\r\n}\r\n.icons{\r\n    font-size: 2em;\r\n}\r\nli{\r\n    font-size: 1.25em;\r\n    color: black;\r\n}\r\n\r\n/*---------------------------------BUTTONS---------------------------------*/\r\n.process-body-text>.container{\r\n    height: auto;\r\n}\r\n.process-button {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    width:  80%;\r\n    border-radius: 100px;\r\n    height: 10vh;\r\n    margin-left: 50%;\r\n    transform: translateX(-50%); \r\n    display: flex;\r\n    margin-bottom: 22px;\r\n}\r\n.process-button>div{\r\n    margin: auto;\r\n    width: 85%;\r\n}\r\n.process-button>div>p{\r\n    margin: 0;\r\n    text-align: center;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n/*---------------------------------POUR TELEPHONE---------------------------------*/\r\n @media only screen and (max-width: 1200px) {\r\n.process{\r\n    width: 100%;\r\n}\r\n} ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -78544,6 +78948,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_breadcrumbs_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/css/process.css":
+/*!***********************************!*\
+  !*** ./resources/css/process.css ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_process_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./process.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/process.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_process_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_process_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
