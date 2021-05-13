@@ -18,7 +18,7 @@ class CreateSubcontainerProcessTable extends Migration
           
             
             // Recupertation id demarche
-            $table->unsignedBigInteger('process_id');
+            $table->unsignedBigInteger('process_id')->unsigned();
             $table->foreign('process_id')
                 ->references('process_id')
                 ->on('processes')
@@ -27,12 +27,14 @@ class CreateSubcontainerProcessTable extends Migration
 
 
             // Recupertation id subcontainer
-            $table->unsignedBigInteger('subcontainer_id');
+            $table->unsignedBigInteger('subcontainer_id')->unsigned();
             $table->foreign('subcontainer_id')
                 ->references('subcontainer_id')
                 ->on('subcontainer')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+
+                Schema::enableForeignKeyConstraints();
         });
         
         $data =[
@@ -1106,6 +1108,7 @@ class CreateSubcontainerProcessTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('subcontainer_process');
     }
 }

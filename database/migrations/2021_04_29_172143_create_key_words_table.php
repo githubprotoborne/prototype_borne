@@ -14,7 +14,7 @@ class CreateKeyWordsTable extends Migration
     public function up()
     {
         Schema::create('key_words', function (Blueprint $table) {
-            $table->increments("key_word_id");
+            $table->increments("key_word_id")->unsigned();
             $table->text("key_word_text");
             $table->timestamps();
         });
