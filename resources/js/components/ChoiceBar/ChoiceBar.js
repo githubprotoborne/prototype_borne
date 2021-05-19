@@ -49,7 +49,7 @@ class ChoiceBar extends React.Component{
          <div className="row category_button_choiceBar">
             <div className=" ">
             <Link to={{
-          pathname:"/mes-demarches/"+container.container_id+"/"+container.container_name,
+          pathname:"/sous-categories/"+container.container_id+"/"+container.container_name,
           // pass data through react -router
           id:container.container_id,
           name:container.container_name,

@@ -2209,7 +2209,7 @@ var ChoiceBar = /*#__PURE__*/function (_React$Component) {
                   className: " ",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
                     to: {
-                      pathname: "/mes-demarches/" + container.container_id + "/" + container.container_name,
+                      pathname: "/sous-categories/" + container.container_id + "/" + container.container_name,
                       // pass data through react -router
                       id: container.container_id,
                       name: container.container_name,
