@@ -1,47 +1,59 @@
+
+import React, { Component, useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
 import axios from "axios";
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
-import "../../../css/app.css"
-import ScrollSpy from 'react-scrollspy-navigation';
-const Test =()=>{
-  const [categories,setCategories]=useState([{container_name:"Je suis un particulier",font:"face"}
-,{container_name:"Je suis un professionel",font:"storefront"},
-{container_name:"Je suis une association",font:"waving_hand"},
-{container_name:"Je suis un nouvel habitant"},
-{container_name:"Accès direct à un service"}])
-const [demarches,setdemarche]=useState();
+import { useParams } from 'react-router';
+import "../../../css/process.css";
 
 
-const getDemarche=()=>{
-  axios.get("/demarches",{ params: { id:1} })
-  .then ((response)=>{
+
+
+const Test = function (props) {
+
+    const [infoprocess, setProcess] = useState([])
+    let {id }= useParams()
+
+
+
+    let process = function () {
+        axios.get('/get-process',{ params: {id:id //props.location.process.process_id
+        }})
+            .then(
+                (response) => { 
+                console.log(response.data)
+                setProcess(response.data)
+              
+              }
+            )
+    }
+
+
+   
+
+
+    useEffect(() => { 
+      process()
+      console.log(id)
     
-    console.log(response.data)
-  })
-}
-useEffect(
-  ()=>{
-    getDemarche()
-  },[]
-)
-    return(
+    }, [])
 
- <div className="container">
-   
-<div  className="row">
- 
- <div className="col"> 
-   <section id="section-1">section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1
-   
-   </section>
-   <section id="section-2">section 2 section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1section 1</section>
-   <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section> <section id="section-3">section 3</section>
- </div>
-<div className="col"></div>
+    return (<div>
+      
 
-</div>
-   
- </div>
-    )
+       <div>{infoprocess.length ==1?
+         <div>
+              <p>{infoprocess[0].process_name}</p>
+              <a href={infoprocess[0].process_link}>
+                 aller
+              </a>
+
+             </div>
+       
+       
+       
+       :""}</div>
+        </div>)
+  
 }
-export default Test
+
+export default Test;

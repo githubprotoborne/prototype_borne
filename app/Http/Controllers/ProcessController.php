@@ -24,9 +24,9 @@ class ProcessController extends Controller
                     
                     ->orderBy('subcontainer.subcontainer_id')
                     ->get();
-       return $processes;
+         return $processes;
     }
-
+    
     public function ImportProcess(Process $process){
         $processes = $process::all();
         return $processes;
@@ -45,4 +45,10 @@ class ProcessController extends Controller
 
         return [ 'processOne' => $processOne, 'processAnex' => $processAnex];
     }
+    public function test(Process $process,Request $request){
+             $id = $request->input('id');
+            
+             return Process::select("*")
+             ->where("processes.process_id",$id)->get();
+       }
 }

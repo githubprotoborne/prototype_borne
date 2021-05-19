@@ -12,16 +12,19 @@ const Contrast =()=>{
     }
     let reinforceContrast=()=>{
         
-          $(".category_button").css("background-color", "#FFF")
+          $(".category_button").css("background-color", "#000")
           
-          $(".home-button").css({color:"#222"});
-          $("body").css("background-color", "#FFF")
-          $(".col_margin").css("background-color", "#222")
+          $(".home-button").css({color:"#fff"});
+          $("body").css("background-color", "#222")
+          $(".col_margin").css("background-color", "#000")
+        
           $("#title-simplici").css("color", "#222")
           $("#title-simplici").css("background-image", "webkit-linear-gradient( -28deg, #222 0%, #222 50%, #Efff 60%, #FFF 50%)")
           $("#title-simplici").css("background-image", " linear-gradient( -28deg, #222 0%, #222 50%, #FFF 50%, #FFF 50%)")
-  
-        
+          $(".category_title").css({color:"#fff"});
+          $(".bread-items").css({color:"#fff"});
+         
+          
      
     }
     let standardContrast=()=>{
@@ -31,9 +34,12 @@ const Contrast =()=>{
         $(".home-button").css({color:""});
         $("body").css("background-color", "")
         $(".col_margin").css("background-color", "")
+       
         $("#title-simplici").css("color", "")
         $("#title-simplici").css("background-image", "")
         $("#title-simplici").css("background-image", "")
+        $(".category_title").css({color:""});
+        $(".bread-items").css({color:""});
   
       
    

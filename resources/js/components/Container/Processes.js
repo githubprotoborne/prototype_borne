@@ -1,19 +1,24 @@
-import { Link } from "react-router-dom"
+import "../../../css/Cont.css"
+
+import { Link, useParams } from "react-router-dom"
 
 const Processes =({processes})=>{
+
+     let {process} =useParams()
     return(
         <div className="">
-        <h1 className="process_title">Liste des démarches</h1>
-  {processes.map((value,index)=>
+        <h1 className="process_title" >Liste des démarches</h1>
+  { processes.map((value,index)=>
   <ul  key ={index}id={"section"+index} className="section">
-        {value.processes.map((process,i)=><div key={i} >
+            <h3>{value!== undefined?value.subcontainer_name:""}</h3>
+        { value!== undefined?value.processes.map((process,i)=><div key={i} >
          
           <li className="process_item">
           
       <Link  to={{
-          pathname:"/demarche",
-          process :process
-      }} style={{height:"40px",display:"block", textDecoration:"none"}}>
+        pathname:"/demarche/"+process.process_name+"/demarche"
+        ,name:process.process_name
+        }} style={{height:"40px",display:"block", textDecoration:"none"}}>
 
           <div className="row"> 
                <div className="col-1  c">
@@ -26,7 +31,7 @@ const Processes =({processes})=>{
       </Link>
       
       </li>
-        </div>)}
+        </div>):""}
     
 
   </ul>)}

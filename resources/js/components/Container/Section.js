@@ -1,10 +1,9 @@
 import "../../../css/Cont.css"
 const Section=({sub_container,processes})=>{
     return (
+        // section begin/////////////////////////////////
         <ul className="">
         <div className="">
-           
-
 
 
 </div>
@@ -28,6 +27,7 @@ const Section=({sub_container,processes})=>{
 }
 
 </ul>
+//section end
     )
 }
 export default Section

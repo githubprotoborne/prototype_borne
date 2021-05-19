@@ -104,27 +104,27 @@ const NavBar = ()=>{
              <div className="row" id="menu-container" >
                        
                      <button className="col-2 col_margin" role="button" title="Retour en arrière" onClick={back}>
-                     <span className="material-icons-outlined back_icon" aria-hidden="true">arrow_back</span>
-                     <span className="back_text">Retour</span>
+                     <span className="material-icons-outlined  navbarspan back_icon" aria-hidden="true">arrow_back</span>
+                     <span className="back_text  navbarspan">Retour</span>
                      </button>
 
                   
                   <button className="col-2 col_margin"  title= "Retour à l'accueil" role="button" >
-                  <Link to="/" style={{textDecoration:"none",color:"#fff"}}><span className="material-icons-outlined home_icon"  aria-hidden="true">home</span></Link>
-                   <Link  to="/"  style={{textDecoration:"none",color:"#fff"}} className="home_text">Accueil</Link>
+                  <Link to="/" style={{textDecoration:"none",color:"#fff",display:"block"}}><span className="material-icons-outlined home_icon"  aria-hidden="true">home</span></Link>
+                   <Link   to="/"  style={{textDecoration:"none",color:"#fff",display:"block"}} className="home_text">Accueil</Link>
                   </button>
                   <div className="col-4 page_title" id="title-simplici">
                       <p>Simpl'ici +</p>
                   </div>
                 
                   <button className="col-2 col_margin"  onClick={openNav} title= "menu" role="button">
-                   <span className="material-icons-outlined menu_icon"  aria-hidden="true">menu</span>
-                   <span className="menu_text">Menu</span>
+                   <span className="material-icons-outlined  navbarspan menu_icon"  aria-hidden="true">menu</span>
+                   <span className="menu_text  navbarspan">Menu</span>
                   </button>
                  
                   <button className="col-2 col_margin"  title= "Retour à l'accueil" onClick={contrast} role="button">
-                   <span className="material-icons-outlined accessibility_icon"  aria-hidden="true">visibility</span>
-                   <span className="accessibility_text">Accessibilité</span>
+                   <span className="material-icons-outlined  navbarspan accessibility_icon"  aria-hidden="true">visibility</span>
+                   <span className="accessibility_text  navbarspan">Accessibilité</span>
                   </button>
              </div>
         </nav>

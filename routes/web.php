@@ -25,6 +25,7 @@ Route::get('/first-containers', 'App\Http\Controllers\ContainerController@GetFou
 Route::get('/get-processes', 'App\Http\Controllers\ProcessController@GetByContainer');
 Route::get('/getprocesses', 'App\Http\Controllers\ProcessController@ImportProcess');
 Route::get('/getprocess/{process_name}', 'App\Http\Controllers\ProcessController@ProcessShow');
+Route::get('/get-process', 'App\Http\Controllers\ProcessController@test');
 
 
  Route::get( '/{path?}', function(){

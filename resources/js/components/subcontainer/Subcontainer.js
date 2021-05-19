@@ -1,16 +1,16 @@
 import React, { Component } from "react"
 import Menu from "../NavBar/Menu"
 import NavBar from "../NavBar/NavBar"
-import "../../../css/Cont.css"
+
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
-import Title from "./Title"
-import Processes from "./Processes"
-import Section from "./Section"
+import Title from "../Container/Title"
+import "../../../css/Subcontainer.css"
 import Contrast from "../Contrast/Contrast"
-import { useParams } from "react-router"
-export default class Cont extends Component{
+
+import { NavLink,Link } from "react-router-dom"
+export default class Subcontainer extends Component{
     constructor(props){
-        super(props)
+      
         super(props)
         this.state ={
             processes:[],
@@ -22,8 +22,10 @@ export default class Cont extends Component{
     /* check if the process_id coming through the url is 
       set on the current session,if not use the session process_id
     
-    */
+    */ 
+
         if(props.location.id){
+
             sessionStorage.setItem("process_id",props.location.id) 
             sessionStorage.setItem("container_name",props.location.name)
             sessionStorage.setItem("container_icon",props.location.icon) 
@@ -80,11 +82,17 @@ export default class Cont extends Component{
           })
       }
      componentDidMount(){
+         console.log(this.
+            
+            
+            
+            
+            props.location.id)
          this.getContainerProcesses.bind(this)()
-         this.scroll.bind(this)()
+       
      }
      componentDidUpdate(){
-      this.scroll.bind(this)()
+     
      }
      componentWillUnmount() {
       // fix Warning: Can't perform a React state update on an unmounted component
@@ -93,30 +101,7 @@ export default class Cont extends Component{
       };
   }
   // handle section choose on scrolling
-  scroll(){
-      (function() {
-          'use strict';
-        
-          var section = document.querySelectorAll(".section");
-          var sections = {};
-          var i = 0;
-        
-          Array.prototype.forEach.call(section, function(e) {
-            sections[e.id] = e.offsetTop;
-          });
-        
-          window.onscroll = function() {
-            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-        
-            for (i in sections) {
-              if (sections[i] <= scrollPosition) {
-                document.querySelector('.active').setAttribute('class', 'inactive');
-                document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-              }
-            }
-          };
-        })();
-  }
+  
   render(){
       return(
           <div>
@@ -139,46 +124,56 @@ export default class Cont extends Component{
                        </div>
                        
                    </div>
+
+                   <div className="subcontainer">
+                     <div className="title-group"> 
+                             <Title></Title>
+                            
+                     
+                     </div>
+                     <h3>Choisissez une rubrique</h3>
+                       {
+                           
+                           this.state.processes.map((value,index)=>
+
+                            <button key={index.toString()} className="topic-item"> 
+                           <Link to={{
+                                 pathname:"/sous-categories/"+value.container_id+"/"+value.container_name+"/mes-demarches/rubriques"+"/"+index,
+                                 id:value.container_id,
+                                 name:value.container_name,
+                                 icon:value.container_icon,
+                                 category_index :index
+                               
+                           }}>{value.subcontainer_name}
+                           </Link>
+
+
+                            </button>
+                           )
+
+                       }
+                       {
+                        this.state.processes.length>0? <button className="topic-item"> 
+                           <Link to={{
+                                 pathname:"/sous-categories/"+this.state.processes[0].container_id+"/"+this.state.processes[0].container_name+"/mes-demarches/rubriques"+"/"+-1,
+                                 id:this.state.processes[0].container_id,
+                                 name:this.state.processes[0].container_name,
+                                 icon:this.state.processes[0].container_icon,
+                                 category_index :-1
+                               
+                           }}>Montrez moi l'ensemble des services
+                           </Link>
+
+
+                            </button>:""
+  }
+
+                   </div>
                    </div> 
               </div>
-              {
-                  ////////////////////////////////////desktop begin
-              }
-              <div className="desk-top ">
-                <div className="row cont-container">
-                     <div className="col sections sections-cont" id="sec">
-                         
-                            <div className="sticky-top">
-                            <div className=" title position-fixed " id="t">
-                        
-                        <Title>
+               
 
-                        </Title></div>
-                   <div className="section-position fixed">
-                   <Section processes={this.state.processes} sub_container={this.state.sub_container}></Section>
-                    
-                   </div>
-                            </div>
-                                 
-                     </div>
-                     <div className="col processes-position">
-                         <div className="scroll-bar">
-                         <Processes processes={this.state.processes}></Processes>
-                         </div>
-
-                   </div>
-
-          </div>
-                     
-
-     </div>
-            {
-                ///////// desktop end
-            }
-
-          {
-              //////////
-          }
+       
        
      
      </div>

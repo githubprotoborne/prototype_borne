@@ -1,0 +1,27 @@
+.subcontainer{
+  
+    height: 500px;
+    text-align: center;
+}
+.title-group{
+    text-align: center;
+    margin-left: 35%;
+}
+.container_title{
+    font-size: 30px;
+    margin-top: -2%;
+}
+.icon-title{
+   
+}
+.topic-item{
+    width: 25%;
+    height: 30%;
+    border:solid 2px;
+    margin-left:2%;
+    margin-top:2%;
+    background-color: #fff;
+    border-radius: 15px;
+    border-color: #707070;
+   
+}

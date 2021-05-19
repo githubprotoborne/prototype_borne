@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Link, Route, Switch,Router, NavLink} from 'react-router-dom';
+import {BrowserRouter,Redirect, Link, Route, Switch,Router, NavLink} from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 
 import Example from './Example';
@@ -15,6 +15,8 @@ import Cont from './Container/Cont';
 import SideBar from './NavBar/Sidebar';
 import Processes from './Process/Processes';
 import Process from './Process/Process';
+import NotFound from './NotFound/NotFound';
+import routeConfig from "./routeConfig"
 
 
 
@@ -28,12 +30,12 @@ class Index extends Component {
      
         <Switch>
         
-        <Route path="/nav"  component={Test}/>
-        <Route path="/test"  component={Process}/>
-        <Route path="/mes-demarches"component={Cont}/>
-        <Route path="/exemple"   component={Example}/>
-        <Route path="/exemple"   component={Example}/>
-        <Route path="/" component={Home}/>
+        <Switch>
+            {routeConfig.map((route, i) => (
+              <Route key={route} {...route} />
+            ))}
+          </Switch>
+       
         
         </Switch>
       </BrowserRouter>

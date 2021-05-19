@@ -2,39 +2,33 @@
 import withBreadcrumbs from "react-router-breadcrumbs-hoc";
 import "../../../css/breadcrumbs.css"
 import {Link, NavLink} from 'react-router-dom';
-const Breadcrumb= withBreadcrumbs()(({ breadcrumbs }) => (
-  <div>
-   
-    <nav aria-label="breadcrumb">
-  <ol className="bread-items">
+import routeConfig from '../routeConfig'
+
+
+const Breadcrumbs = ({ breadcrumbs }) => (
+  <ol>
+    {
+    //display breadcrumb if there is more than one item 
+    //display all breadcrumbs as links except the last one
+  
     
-   
-    {breadcrumbs.map(({
+    breadcrumbs.map(({
       match,
       breadcrumb
     },index) => (
-      <span key={match.url}>
-          
-         {
-           index===breadcrumbs.length-1? <li className="bread-items"  aria-current="page">  <Link to={match.url}>{breadcrumb.props.children ==="Home"?"Accueil":breadcrumb.props.children}</Link></li>
-          : <li className="bread-items"  aria-current="page">  <Link to={match.url}>{breadcrumb.props.children ==="Home"?"Accueil"+" >":breadcrumb.props.children+" >"}</Link></li>
-          }
+      breadcrumbs.length-1 !==index?
+      <li key={match.url} className="bread-items row">
+        <Link to={match.url}>{breadcrumb.props.children+"  >"}</Link>
+        {console.log()}
         
-      </span>
-      
-      
+      </li>:<li key={match.url} className="bread-items row">
+        <Link to={match.url}>{breadcrumb.props.children}</Link>
+        {console.log()}
+        
+      </li>
     ))}
-    
   </ol>
-</nav>
-  </div>
- 
-));
+);
 
-const  Breadcrumbs =()=>{
-
-  return(
-    <Breadcrumb/>
-  )
-}
-export default Breadcrumbs
+ export default withBreadcrumbs(routeConfig,{ disableDefaults: true })(Breadcrumbs)
+ // routeConfig contain a array with routes and bedscrumb item

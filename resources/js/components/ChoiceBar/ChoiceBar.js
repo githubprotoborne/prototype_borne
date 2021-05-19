@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "../../../css/ChoiceBar.css"
-import "../../../css/app.css"
+
 import { Link } from "react-router-dom"
 import axios from "axios"
 class ChoiceBar extends React.Component{
@@ -14,13 +14,18 @@ class ChoiceBar extends React.Component{
    }
 
   
- 
+ //get container items from the database
      async getContainers (){
     await axios.get("/first-containers")
    .then((response)=>{
-     
+      // extract the 4 first item from the response array
+   
        this.setState({containers: response.data.slice(0,4)})
    })}
+   // handle search submit
+    handleSearch (){
+       //to do
+    }
   componentDidMount(){
      this.getContainers.bind(this)()
   }
@@ -28,34 +33,60 @@ class ChoiceBar extends React.Component{
 
     return(
       <div className="container-fluid whole_container" id="choiseBar">
-      <div className="row">
+      <div className="row" >
+
+         {///////////////////////////// dites nous qui vous etes
+         }
+            <div className="col profil">
+             <p className="profil-text">Dites nous qui vous êtes</p>
+            </div>
+
+         {
+            /////////////////////////////
+         }
        
        {this.state.containers.length!==0? this.state.containers.map((container,index)=><div key={index.toString()} className="col-md cont">
-         <div className="row">
-            <div className="col-md">
+         <div className="row category_button_choiceBar">
+            <div className=" ">
             <Link to={{
-          pathname:"/mes-demarches",
+          pathname:"/mes-demarches/"+container.container_id+"/"+container.container_name,
+          // pass data through react -router
           id:container.container_id,
           name:container.container_name,
           icon:container.container_icon
-       }} style={{ textDecoration: 'none' }}>{container.container_name}</Link>
+       }} style={{ textDecoration: 'none',marginLeft:'15px'}}>{container.container_name}</Link>
             </div>
-            <span className="material-icons-outlined col-sm-2">{container.container_icon}</span>
-
+        
          </div>
          </div>):""}
-         <div  className="col-md cont">
-         <div className="row">
-            <div className="col-md">
-            <Link to={{
-          pathname:"/mes-services",
-          data:this.state.services[0].container_id
-       }} style={{ textDecoration: 'none' }}>{this.state.services[0].container_name}</Link>
-            </div>
-            <span className="material-icons-outlined col-sm-2">{this.state.services[0].container_icon}</span>
 
+         {
+            /////////////////////////////////
+         }
+         <div  className="col-md cont">
+         <div className="row category_button_choiceBar">
+            <div className=" ">
+            <Link to={{
+          pathname:"/mes-demarches/",
+          // pass data through react -router
+         
+       }} style={{ textDecoration: 'none',marginLeft:'15px'}}>
+          <span className="service-title">Accès direct à un service</span>
+          <span className="service-subtitle">Pôle emploi, caf, La poste</span>
+          </Link>
+            </div>
+        
          </div>
          </div>
+           <div className="col search">
+              <form className="row">
+                    <input type="text" placeholder="Je cherche une demarche" className="col search_input"></input>
+                   <button type="submit" className='search_submit_button col-2'>
+                   <span className="material-icons-outlined search_icon" >search</span>
+                   </button>
+              </form>
+               
+           </div>
       
       </div>
  </div>

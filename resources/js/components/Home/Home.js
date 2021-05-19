@@ -47,68 +47,70 @@ class Home extends React.Component{
                     </div>
                 </div>
                 <div id="contain" className='contain-home'>
-                <NavBar></NavBar>
-                <ChoiceBar></ChoiceBar>
+                      <NavBar></NavBar>
+                      <ChoiceBar></ChoiceBar>
                 <div className="bread-home"><Breadcrumbs></Breadcrumbs></div>
               
                 <div className="presentation container-fluid presentation-home">
                       <div className="state_containers row">
-                      <div className="btn category_title col-3">
-                                   <p>Vie administrative</p>
-
-                               </div>
+                      
                                <div className="col">
-                               <div className="state_containers_one row ">
+                                
+                                
+                               <p className="contain-title">Vie administrative</p>
+                          
+                                
+                                
+                                  <div className="state_containers_one row ">
                                
                                {this.state.containers_state_one.map((
                                 value,index
                                )=><div  key={index}className="btn category_button">
                                     <Link  className="home-button" to={{
-                           pathname:"/mes-demarches",
+                           pathname:"/sous-categories/"+value.container_id+"/"+value.container_name,
                            id:value.container_id,
                            name:value.container_name,
                            icon:value.container_icon
-                            }} style={{textDecoration:"none", color: "#fff" }}>
-                                    <span className="homepage_button name">{value.container_name}</span>
-                                     <span className="description">{value.container_description}</span>
-                                     {value.container_icon?
+                            }} style={{textDecoration:"none"}}>
+                                {value.container_icon?
                                        <div>
 
-                                           {value.container_icon.split(",").map((v,i)=><span key={i} className="material-icons-outlined" aria-hidden="true">
+                                           {value.container_icon.split(",").map((v,i)=><span key={i} className="material-icons-outlined home-icon" aria-hidden="true">
                                               {v}
                                            </span>)}
                                        </div>:""
                                      
                                      }
+                                    <span className="homepage_button name">{value.container_name}</span>
+                                     <span className="description">{value.container_description}</span>
+                                     
                                     </Link>
                                     
                                </div>)}
                            </div>
                            <div className="state_containers_two row">
+                         
                            {this.state.containers_state_two.map((
                                 value,index
                                )=><div  key={index}className="btn category_button">
                                     <Link className="home-button" to={{
-                              pathname:"/mes-demarches",
+                              pathname:"/sous-categories/"+value.container_id+"/"+value.container_name,
                               id:value.container_id,
                               name:value.container_name,
                               icon:value.container_icon
-                               }} style={{textDecoration:"none",color: "#fff"}} >
-                                    <span className="homepage_button name">{value.container_name}</span>
-                                     <span className="description">{value.container_description}</span>
+                               }} style={{textDecoration:"none"}} >
                                      {value.container_icon?
                                        <div>
 
-                                           {value.container_icon.split(",").map((v,i)=><span key={i}  aria-hidden="true" className="material-icons-outlined">
+                                           {value.container_icon.split(",").map((v,i)=><span key={i}  aria-hidden="true" className="material-icons-outlined home-icon">
                                               {v}
                                            </span>)}
                                        </div>:""
                                      
-                                       
-                                     
-                                     
-                                     
                                      }
+                                    <span className="homepage_button name">{value.container_name}</span>
+                                     <span className="description">{value.container_description}</span>
+                                   
                                     </Link>
                                     
                                </div>)}
@@ -118,35 +120,34 @@ class Home extends React.Component{
                         
 
                       </div>
-                      <hr className="line"></hr>
-                      <div className="local_containers row">
-                      <div className="btn category_title col-3">
-                                   <p>Vie locale</p>
-
-                               </div>
+                     
+                      <div className="local_containers state_containers row">
+                         
                          <div className="col">
+                         <p className="contain-title">Vie locale</p>
                          <div className="local_containers_one row">
                          {this.state.containers_local_one.map((
                                 value,index
-                               )=><div key={index} className="btn category_button">
+                               )=><div key={index} className="btn category_button" id="button-phone">
                                     <Link className="home-button" to={{
-                                 pathname:"/mes-demarches",
+                                 pathname:"/sous-categories/"+value.container_id+"/"+value.container_name,
                                  id:value.container_id,
                               name:value.container_name,
                               icon:value.container_icon
-                                 }} style={{textDecoration:"none",color: "#fff"}}>
-                                    <span className="homepage_button name">{value.container_name}</span>
-                                     <span className="description">{value.container_description}</span>
-                                     {value.container_icon?
+                                 }} style={{textDecoration:"none"}}>
+                                      {value.container_icon?
                                        <div>
 
-                                           {value.container_icon.split(",").map((v,i)=><span aria-hidden="true" key={i} className="material-icons-outlined">
+                                           {value.container_icon.split(",").map((v,i)=><span aria-hidden="true" key={i} className="material-icons-outlined home-icon">
                                               {v}
                                            </span>)}
                                        </div>:""
                                      
                                      
                                      }
+                                    <span className="homepage_button name">{value.container_name}</span>
+                                     <span className="description">{value.container_description}</span>
+                                    
                                     </Link>
                                     
                                </div>)}
@@ -154,28 +155,26 @@ class Home extends React.Component{
                            <div className="local_containers_two row">
                            {this.state.containers_local_two.map((
                                 value,index
-                               )=><div key ={index}className="btn category_button">
+                               )=><div key ={index}className="btn category_button" id="button-phone">
                                     <Link className="home-button" to={{
-                                     pathname:"/mes-demarches",
+                                     pathname:"/sous-categories/"+value.container_id+"/"+value.container_name,
                                      id:value.container_id,
                                      name:value.container_name,
                                      icon:value.container_icon
-                                    }} style={{textDecoration:"none",color: "#fff"}} >
-                                    <span className="homepage_button name">{value.container_name}</span>
-                                     <span className="description">{value.container_description}</span>
-                                     {value.container_icon?
+                                    }} style={{textDecoration:"none"}} >
+                                         {value.container_icon?
                                        <div>
 
-                                           {value.container_icon.split(",").map((v,i)=><span  aria-hidden="true" key={i} className="material-icons-outlined">
+                                           {value.container_icon.split(",").map((v,i)=><span  aria-hidden="true" key={i} className="material-icons-outlined home-icon">
                                               {v}
                                            </span>)}
                                        </div>:""
                                      
-                                       
-                                     
-                                     
                                      
                                      }
+                                    <span className="homepage_button name">{value.container_name}</span>
+                                     <span className="description">{value.container_description}</span>
+                                    
                                     </Link>
                                     
                                </div>)}

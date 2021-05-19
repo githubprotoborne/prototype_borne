@@ -2,7 +2,7 @@
 
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
     
    
    
@@ -12,22 +12,45 @@
         visibility: visible;
       }
       .whole_container{
-          background-color: gray;
+          background-color:#707070;
            color:#ffff;
+           height: 7vh;
+          
+          
       }
     ::placeholder{
-        font-size: 14px;
+        font-size: 10px;
        
     }
+   .choicebar-icon{
+       font-size: 2.6vmin;
+   }
    
-    .search_icon{
-        font-size: 15px;
+    
+    .search_input{
+        height: 7vh;
+        border:none;
+        outline: none;
     }
-    .category_button{
+    .search_submit_button{
+        height: 7vh;
+        background-color: #fff;
+      
+    }
+    
+    .search_icon{
+        margin-top: 2%;
+        margin-left: -10px;
+        font-size: 18px;
+    }
+    .category_button_choiceBar{
        
-        font-size: 12px;
-        border-right: #ffff 1px solid;
+        font-size: 13px;
+    
         color: #fff;
+        margin-top: 6%;
+        text-align: center;
+       
 
     }
     .category_button{
@@ -35,7 +58,7 @@
         background-color: gray;
     }
     .hide_search_text{
-        display: none;
+       
     }
     .research{
        outline: none;
@@ -45,23 +68,47 @@
        
     }
     .search_hidden{
-        display: none;
+    
     }
     .cont{
-        border-right: 3px solid #fff;
+        border-right: 1px solid #fff;
+
+    }
+    .profil{
+        font-size: 10px;
+        background-color: #fff;
+        color:#222;
+       
+    }
+    .services-button{
+        font-size: 10.3px;
+        text-align: center;
+       
+
+    }
+    .profil-text{
+        margin-top: 7%;
+    }
+    .service-subtitle{
+        font-size: 11px;
+        display: block;
+    }
+    .service-title{
+        font-size: 13px;
+        display: inline-block;
     }
   }
   
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 777px) {
+  @media screen and (max-width: 600px) {
       .search_hidden{
            display: normal!important;
            border: none;
            text-decoration: none;
       }
       .whole_container{
-        background-color:#E5112F;
-         color:#ffff;
+         
+     
     }
     .research{
         outline: none;
@@ -83,22 +130,33 @@
         width: 400px;
         background-color: #ffff;
     }
-    .category_button{
-        background-color: #aaab;
-        width: 350px;
-        color: #fff;
-        text-decoration: none;
-        
-    }
-    .research{
-        margin-left: 3em;
+   
+    .search{
+      z-index: 1;
+      margin-top: -378px;
+      height: 20px;
+      background-color: #ffff;
+      color: #E5112F;
     }
     .cont{
-        border: 1px solid #fff;
-        height: 50px;
+     margin-top :7%;
+     border: 1px solid;
+     margin-left: 15%;
+    
+     height: 50px;
+     border-radius: 10px;
+     width: 250px;
+     text-align: center;
     }
     .hide_search_text{
     
 
+    }
+    .category_button_choiceBar{
+       
+        
+        
+      
+        
     }
   }

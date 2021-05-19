@@ -1,157 +1,226 @@
-import axios from "axios"
-import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import "../../../css/Container.css"
+import React, { Component } from "react"
 import Menu from "../NavBar/Menu"
 import NavBar from "../NavBar/NavBar"
-import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
-import Section from "./Section"
+import "../../../css/Container.css"
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Title from "./Title"
-
-class Container extends React.Component{
-
+import Processes from "./Processes"
+import Section from "./Section"
+import Contrast from "../Contrast/Contrast"
+import { useParams } from "react-router"
+export default class Container extends Component{
     constructor(props){
+        
         super(props)
         this.state ={
             processes:[],
             id:props.location.id,
-            sub_container:[]
+            sub_container:[],
+            subcontainer_index:this.props.match.params.category_index
         }
+        console.log(this.state.subcontainer_index)
         this.extractsSubCategories=this.extractsSubCategories.bind(this)
         this.sub_container_processes.bind(this)
-    /* check if the process_id coming through the url is 
-      set on the current session,if not use the session process_id
-    
-    */
-        if(props.location.id){
-            sessionStorage.setItem("process_id",props.location.id) 
-            sessionStorage.setItem("container_name",props.location.name)
-            sessionStorage.setItem("container_icon",props.location.icon) 
-            
-        }
-           }
-    // iter on the response data array to get all sub container and return a new array
-    extractsSubCategories(data=Array()){
-      let array=[]
-      array.push({subcontainer_name:data[0].subcontainer_name,processes:[]})
-      for(let i=0;i<data.length;i++){
-          let found =false
-          for(let y =0;y<array.length;y++){
-              if(array[y].subcontainer_name===data[i].subcontainer_name){
-                  found =true;
-              }
-                 
-          }
-          if(found===false){
-              array.push({subcontainer_name:data[i].subcontainer_name,processes:[]})
-          }
-      }
-      return array
+   
+       
     }
-  // group processes by sub containers and return a new array
-    sub_container_processes(data=Array()){
-        let array = this.extractsSubCategories(data)
-        console.log(array,"array")
+    setIndex(){
+      console.log(this.state.subcontainer_index)
+      if(this.state.subcontainer_index==="-1"){
+        this.setState({subcontainer_index:-1})
+      }
+    }
+    extractsSubCategories(data=Array()){
+        let array=[]
+        array.push({subcontainer_name:data[0].subcontainer_name,processes:[]})
         for(let i=0;i<data.length;i++){
-         for(let y=0;y<array.length;y++){
-             if(data[i].subcontainer_name===array[y].subcontainer_name){
-               
-                array[y].processes.push(data[i]) 
-              
-             }
-         }
+            let found =false;
+            for(let y =0;y<array.length;y++){
+                if(array[y].subcontainer_name===data[i].subcontainer_name){
+                    found =true;
+                }
+                   
+            }
+            if(found===false){
+                array.push({subcontainer_name:data[i].subcontainer_name,processes:[]})
+            }
         }
         return array
- 
-     }
-     // get processes from the database
-    getContainerProcesses(){
-        axios.get("/get-processes",{ params: {id:sessionStorage
-            
-            
-            .getItem("process_id")} })
-        .then((response)=>{
-            
-              this.setState({
-                  processes:this.sub_container_processes(response.data),
-                  sub_container:this.extractsSubCategories(response.data)
-                })
-        })
-    }
-   componentDidMount(){
-       this.getContainerProcesses.bind(this)()
-       this.scroll.bind(this)()
-   }
-   componentDidUpdate(){
-    this.scroll.bind(this)()
-   }
-   componentWillUnmount() {
-    // fix Warning: Can't perform a React state update on an unmounted component
-    this.setState = (state,callback)=>{
-        return;
-    };
-}
-// handle section choose on scrolling
-scroll(){
-    (function() {
-        'use strict';
-      
-        var section = document.querySelectorAll(".section");
-        var sections = {};
-        var i = 0;
-      
-        Array.prototype.forEach.call(section, function(e) {
-          sections[e.id] = e.offsetTop;
-        });
-      
-        window.onscroll = function() {
-          var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-      
-          for (i in sections) {
-            if (sections[i] <= scrollPosition) {
-              document.querySelector('.active').setAttribute('class', 'inactive');
-              document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-            }
-          }
-        };
-      })();
-}
-
-    render(){
-        return(
-        <div>
-              <div id="side" >
-              
-                 <Menu></Menu>
-               
-               </div>
-             <div id="contain container-fluid">
+      }
+    // group processes by sub containers and return a new array
+      sub_container_processes(data=Array()){
+          let array = this.extractsSubCategories(data)
+          console.log(array,"array")
+          for(let i=0;i<data.length;i++){
+           for(let y=0;y<array.length;y++){
+               if(data[i].subcontainer_name===array[y].subcontainer_name){
                  
-              <div className="nav-position  ">
-                   <div className="tablet-nav fixed-top"> <NavBar></NavBar></div> 
-              </div>
-       
-                <div className="bread"><Breadcrumbs></Breadcrumbs>
-                               <div className="mobile-only-title">
-                               <Title></Title>
-                               <div  className='section-mobile-section'>  <ul className="">
-              <div className="">
-           
+                  array[y].processes.push(data[i]) 
+                
+               }
+           }
+          }
+          return array
+   
+       }
+       // get processes from the database
+      getContainerProcesses(){
+          
+          axios.get("/get-processes",{ params: {id:sessionStorage
+              
+              
+              .getItem("process_id")} })
+          .then((response)=>{
+              
+                this.setState({
+                    processes:this.sub_container_processes(response.data),
+                    sub_container:this.extractsSubCategories(response.data)
+                  })
+          })
+      }
+      handle_choice_color(index){
+      
+        
+        for(let i=-1;i<this.state.sub_container.length;i++){
+          $(".section"+i).css("background-color","")
+          $(".section"+i).css("color","")
+        }
+        //$(".section"+index).css("background-color","#577C90")
+        $(".section"+index).css("color","#fff")
+          
+        
+      }
+      firstItem(){
+        $(".section"+this.state.subcontainer_index).css("background-color","#577C90")
+        $(".section"+this.state.subcontainer_index).css("color","#fff")
+          
 
+      }
+     componentDidMount(){
+         this.getContainerProcesses.bind(this)()
+         this.firstItem.bind(this)()
+         this.setIndex.bind(this)()
+        
+        // this.scroll.bind(this)()
+        // this.setState({subcontainer_index:0})
+        //set style for the active section item
+      
+        
+     }
+     componentDidUpdate(){
+      //this.scroll.bind(this)()
+      this.firstItem.bind(this)()
+      this.setIndex.bind(this)()
+     
+     }
+     componentWillUnmount() {
+      // fix Warning: Can't perform a React state update on an unmounted component
+      this.setState = (state,callback)=>{
+          return;
+      };
+  }
+  
+  // handle section choose on scrolling
+  scroll(){
+      (function() {
+          'use strict';
+        
+          var section = document.querySelectorAll(".section");
+          var sections = {};
+          var i = 0;
+        
+          Array.prototype.forEach.call(section, function(e) {
+            sections[e.id] = e.offsetTop;
+          });
+        
+          window.onscroll = function() {
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        
+            for (i in sections) {
+              if (sections[i] <= scrollPosition) {
+                document.querySelector('.active').setAttribute('class', 'inactive');
+                document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
+              }
+            }
+          };
+        })();
+  }
+  render(){
+      return(
+          <div>
+           
+               <div id="side" >
+                   <div className="">
+                   <Menu></Menu>
+                   <Contrast></Contrast>
+                   </div>
+                   
+                    </div>
+                <div id="contain">   
+                 <div className=" sticky-top ">
+                   <div className="tablet-nav "> 
+                     <div className="nav-position fixed ">
+                     <NavBar></NavBar>
+                     </div> 
+                   <div className="desk-bread desk-bread-cont">
+                       <div className="bread-text">
+                       <Breadcrumbs></Breadcrumbs>
+                       </div>
+                       
+                   </div>
+                   </div> 
+              </div>
+              {
+                  ////////////////////////////////////desktop begin
+              }
+              <div className="desk-top ">
+                <div className="row cont-container">
+                     <div className="col sections sections-cont" id="sec">
+                         
+                            <div className="sticky-top">
+                            <div className=" title position-fixed " id="t">
+                        
+                        <Title>
+
+                        </Title></div>
+                   <div className="section-position fixed">
+               
+      {// section begin///////////////////////////////// 
+      }
+        <ul className="">
+        <div className="">
 
 
 </div>
-<li className="section-items " id="first-item">
-<a className="active"  href="#section0">
-<span className="section_text">{this.state.processes.length>0?this.state.processes[0].subcontainer_name:""}</span>
+{
+  //// ensemble des service
+}
+
+<li  className={"section-items"+" section"+-1} onClick={
+  ()=>{
+    this.setState({subcontainer_index:-1})
+    this.handle_choice_color.bind(this)(-1)
+  }
+}> 
+<a  href={"#section"+(0)} > 
+<span className="section_text">Ensemble des services</span>
 </a>
 
 </li>
 
-{this.state.sub_container.slice(1,this.state.sub_container.length).map((value,index)=>
+{
+  /////////////////////////////////
+}
 
-<li key={index} className="section-items  "> 
-<a  href={"#section"+(index+1)} className="inactive"> 
+{this.state.sub_container.map((value,index)=>
+
+<li key={index} className={"section-items"+" section"+index} onClick={
+  ()=>{
+    this.setState({subcontainer_index:index})
+    this.handle_choice_color.bind(this)(index)
+  }
+}> 
+<a  href={"#section"+(index+1)} > 
 <span className="section_text">{value.subcontainer_name}</span>
 </a>
 
@@ -160,74 +229,31 @@ scroll(){
 )
 }
 
-</ul></div>
-                               </div>
-                </div>
-                   <div className="m1 menu container">
-                 
-                      <div id="menu-center" className="row">
-                          <div className="col">
-        
-                           <div className="section-desk pos">
-                              <div  className="tablet-title">
-                               <Title className="tablet-title fixed"></Title>
-                               </div >
-                             
-                               </div>
-
-
-{
-  /////////////////////////:::::::::::
+</ul>
+{//section end
 }
-                        <div ></div>
+                    
+                   </div>
+                            </div>
+                                 
+                     </div>
+                     <div className="col processes-position">
+                         <div className="scroll-bar">
+                        {<Processes processes={this.state.subcontainer_index!==-1 ?[this.state.processes[this.state.subcontainer_index]]:this.state.processes} allProcesses={this.state.processes} ></Processes>}
+                         </div>
 
+                   </div>
 
+          </div>
+                     
 
-
+     </div>
           
-      </div>
-      <div className="false">
-        
+     
+     </div>
+                    
+          </div>  
 
-      </div>
-      <div className="col processes">
-          <h1 className="process_title">Démarches</h1>
-    {this.state.processes.map((value,index)=>
-    <ul  key ={index}id={"section"+index} className="section">
-          {value.processes.map((process,i)=><div>
-           
-            <li key={i} className="process_item">
-            
-        <Link  to={{
-            pathname:"/demarche",
-            process :process
-        }} style={{height:"40px",display:"block", textDecoration:"none"}}>
-
-            <div className="row"> 
-                 <div className="col-1  c">
-                   <span className="material-icons-outlined " aria-hidden="true">chevron_right</span> 
-                 </div>
-                 <div className="col c ">
-                 <span className=""> {process.process_name}</span>
-                 </div>
-            </div>
-        </Link>
-        
-        </li>
-          </div>)}
-      
-
-    </ul>)}
-    </div>
-    </div>
-  </div>
-
-             </div>
-   
-            </div>
-        )
-    
-        }
-
+      )
+  }
 }
-export default  Container

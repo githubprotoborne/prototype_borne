@@ -1,11 +1,27 @@
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
 .homepage_button{
     display: block;
 }
 .state_containers{
-    width: 95%;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    width: 90%;
+   
+    margin-top: 1%;
+    border:2px solid;
+   
+    margin-left: 5%;
+    height: 220px;
+    border-radius: 20px;
+    
+}
+.contain-title{
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+}
+/*
+ first group : ma vie admnistratiove
+*/
+.state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{
     
 }
 .category_title{
@@ -13,20 +29,18 @@
     margin-top: 3%;
 
 }
-.local_containers{
-    width: 95%;
-    margin-top: 2%;
-}
+
 .category_button{
 
-    width: 30%;
-    height: 90px;
+    width: 29%;
+    height: 83px;
     margin-left: 3%;
-    margin-top: 1%;
-    background-color: #E5112F;
+    margin-bottom: 1%;
+    background-color:#577C90;
     color:#FFF;
     border: 1px solid;
     border-color: #ddd;
+    border-radius: 10px;
 }
 .line{
     height: 3px;
@@ -37,6 +51,9 @@
 .description{
     font-size: 12px;
 }
+.home-icon{
+    font-size: 20px;
+}
 
 }
 .bread{
@@ -44,4 +61,41 @@
     margin-right: 500px;
    
     
+}
+@media screen and (max-width: 600px){
+     .category_button{
+         
+         width: 260px;
+         color: #000;
+        
+         margin-bottom: 5%;
+         height: 105px;
+         text-decoration: none;
+          
+     word-wrap: break-word;
+    
+      border: 1px solid;
+      border-radius: 10px;
+      margin-right: 10%;
+   
+    
+        
+    }
+    #button-phone{
+      
+     
+
+    }
+    .category_title{
+      
+       
+        display: none;
+    
+    }
+    .local_containers{
+       height: 1000px;
+    }
+    .description{
+      display:block;
+    }
 }
