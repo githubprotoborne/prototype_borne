@@ -18,11 +18,11 @@ const Breadcrumbs = ({ breadcrumbs }) => (
     },index) => (
       breadcrumbs.length-1 !==index?
       <li key={match.url} className="bread-items row">
-        <Link to={match.url}>{breadcrumb.props.children+"  >"}</Link>
+        <Link to={match.url}>{breadcrumb}{' >'}</Link>
         {console.log()}
         
       </li>:<li key={match.url} className="bread-items row">
-        <Link to={match.url}>{breadcrumb.props.children}</Link>
+        <Link to={match.url}>{breadcrumb} </Link>
         {console.log()}
         
       </li>
@@ -30,5 +30,5 @@ const Breadcrumbs = ({ breadcrumbs }) => (
   </ol>
 );
 
- export default withBreadcrumbs(routeConfig,{ disableDefaults: true })(Breadcrumbs)
+ export default withBreadcrumbs(routeConfig,{ disableDefaults: false })(Breadcrumbs)
  // routeConfig contain a array with routes and bedscrumb item

@@ -2,8 +2,14 @@
   @media screen and (min-width: 900px) {
     .section-position{
       margin-top: 5%;
+    
     }
-  
+    .container-footer{
+      margin-top: 10%;
+    }
+   .sections{
+   
+   }
     
   }
   @media screen and (max-width:600px) {

@@ -5,18 +5,20 @@
 .state_containers{
     width: 90%;
    
-    margin-top: 1%;
+    margin-top: 2%;
     border:2px solid;
    
     margin-left: 5%;
     height: 220px;
     border-radius: 20px;
+    border-color: #E5112F;
     
 }
 .contain-title{
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    color: #000;
+    color: #E5112F;
+    font-weight: bold;
 }
 /*
  first group : ma vie admnistratiove
@@ -42,6 +44,14 @@
     border-color: #ddd;
     border-radius: 10px;
 }
+.category_button:hover{
+
+   
+    background-color: #E5112F;
+    color:#fff;
+    text-decoration: none;
+   
+}
 .line{
     height: 3px;
 }
@@ -65,8 +75,8 @@
 @media screen and (max-width: 600px){
      .category_button{
          
-         width: 260px;
-         color: #000;
+         width: 305px;
+         color: #fff;
         
          margin-bottom: 5%;
          height: 105px;
@@ -77,19 +87,28 @@
       border: 1px solid;
       border-radius: 10px;
       margin-right: 10%;
+      background-color: #577C90;
    
     
         
+    }
+    .big-row-one {
+        margin-top:10%;
+    }
+    .state_containers{
+        margin-left: 10%;
     }
     #button-phone{
       
      
 
     }
-    .category_title{
+    .contain-title{
       
-       
-        display: none;
+      color: #E5112F;
+      margin-left: 15%;
+      font-weight:bold;
+       margin-bottom: 3%;
     
     }
     .local_containers{

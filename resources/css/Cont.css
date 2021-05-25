@@ -9,6 +9,7 @@
 
     .pos{
         position: fixed;
+        
        
     }
     .bread{
@@ -26,10 +27,13 @@
    
     
   }
-  .c{
-    display: flex;
+  .process-text-icon{
+    display: inline-flex;
     align-items: center;
-    margin-top: 2%;
+    text-align: center;
+    text-justify:center;
+     
+    margin-top: 4%;
   }
  
   .section_text{
@@ -68,6 +72,7 @@
       width: 34vw;
       border-radius: 10px;
       font-size: 2.7vmin;
+      display: block;
       
   }
   
@@ -92,7 +97,7 @@
       height: 11vh;
       width: 38vw;
       border-radius: 10px;
-      font-size:2.4vmin;
+      font-size:15px;
 
 }
 
@@ -125,13 +130,13 @@
      }
      .processes-position{
        
-      
+      margin-bottom: 10%;
      }
      .title{
          margin-left: 4%;
      }
      .scroll-bar{
-        overflow-y:scroll;
+       /* overflow-y:scroll;*/
         
         
      }
@@ -170,8 +175,8 @@
       
         
         background-color: white;  
-        margin-top: 10%;
-        width: 600px;
+        margin-top: 85px;
+        width: 100%;
         
        
     
@@ -179,45 +184,55 @@
     .sections{
         z-index: 3;
      height: fit-content;
-     display: none;
+    
      
     }
 
     .title{
        
-        background-color: white;
-        width: 600px;
-        margin-top: -2px;
-        display: block;
-       
-        
-    }
+      background-color: white;
+      width: 100%;
+     
+      display: block;
+      
+      text-align: center;
+      
+  }
     .desk-bread{
         background-color: white;
-        padding-top: 30%;
+        margin-top: 20%;
+      width: inherit;
+      display: none;
 
 
 
     }
     .process_item{
-        height: 73px;
+        height: 90px;
         border:1px solid;
         margin-top: 2%;
-        font-size: 4vmin;
+        font-size: 17px;
        list-style-type: none;
-       width: 290px;
+       width: 300px;
        border-radius: 10px;
-       margin-left: 3%;
-       text-align: center;
+      margin-right: 10px;
+     
 
     }
+    .process-text-icon{
+      margin-top: 3%;
+    }
     .processes-position{
-       height: 1200px; 
+       height: fit-content; 
+       margin-top: 400px;
      
     }
     .process_title{
      text-align: center;
      font-size: 5vmin;
+    }
+    .process-section-title{
+      text-align: center;
     }
     .processes{
         
@@ -226,6 +241,29 @@
     .cont-container{
        
     }
+
+
+    /* sections*/
+
+    .section-items{
+      border:1px solid;
+      text-align: center;
+      text-decoration: none;
+      list-style-type: none;
+      margin-bottom: 3%;
+      height: 40px;
+      width: 300px;
+      border-radius: 10px;
+      font-size: 20px;
+      display: block;
+      margin-top: 5%;
+     
+      
+  }
+  /*footer style */
+  .container-footer{
+    margin-top: 10%;
+  }
   }
 
   

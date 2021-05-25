@@ -14,12 +14,14 @@
       .whole_container{
           background-color:#707070;
            color:#ffff;
-           height: 7vh;
+           height: 8.5vh;
           
           
       }
     ::placeholder{
-        font-size: 10px;
+        font-size: 1.5vh;
+        height: 100%;
+        color: #fff;
        
     }
    .choicebar-icon{
@@ -28,13 +30,14 @@
    
     
     .search_input{
-        height: 7vh;
+        height: 8.5vh;
         border:none;
         outline: none;
+        background-color: #707070;
     }
     .search_submit_button{
-        height: 7vh;
-        background-color: #fff;
+        height: 8.5vh;
+        background-color: #707070;
       
     }
     
@@ -43,19 +46,32 @@
         margin-left: -10px;
         font-size: 18px;
     }
-    .category_button_choiceBar{
+    .category_button_choiceBar:hover{
        
-        font-size: 13px;
-    
-        color: #fff;
-        margin-top: 6%;
-        text-align: center;
+      
+        
+        width: 100%;
+        text-decoration: none;
        
 
     }
-    .category_button{
+    .search-engine{
+        background-color: #fff;
+        color: #222;
+        display: inline-flex;
+        text-align: center;
+        text-justify: center;
+        align-items: center;
+    }
+    #category_button_choiceBar_service:hover{
        
-        background-color: gray;
+      
+      
+      
+        text-decoration: none;
+       text-decoration-color: "";
+        
+
     }
     .hide_search_text{
        
@@ -72,6 +88,7 @@
     }
     .cont{
         border-right: 1px solid #fff;
+        font-size: 11.5px;
 
     }
     .profil{
@@ -81,9 +98,10 @@
        
     }
     .services-button{
-        font-size: 10.3px;
+        font-size: 19px;
+        
         text-align: center;
-       
+        
 
     }
     .profil-text{
@@ -92,10 +110,12 @@
     .service-subtitle{
         font-size: 11px;
         display: block;
+        text-align: center;
     }
     .service-title{
-        font-size: 13px;
+        font-size: 12px;
         display: inline-block;
+       
     }
   }
   
@@ -107,8 +127,8 @@
            text-decoration: none;
       }
       .whole_container{
-         
-     
+        
+        
     }
     .research{
         outline: none;
@@ -117,14 +137,15 @@
          display: none;
      }
     ::placeholder{
-        font-size: 13px;
+        font-size: 20px;
     }
     .container{
         font-size: 11px;
          
         height: 100px;
         word-wrap: break-word;
-        text-align: left;
+        
+    
     }
     .back{
         width: 400px;
@@ -133,30 +154,52 @@
    
     .search{
       z-index: 1;
-      margin-top: -378px;
+      margin-top: -460px;
       height: 20px;
       background-color: #ffff;
       color: #E5112F;
+      outline: none;
+    }
+    .search_input{
+       
+        border:none;
+        outline: none;
+    }
+    .search_submit_button{
+       
+        background-color: #fff;
+      
+    }
+    
+    .search_icon{
+        
+        font-size: 20px;
     }
     .cont{
      margin-top :7%;
      border: 1px solid;
-     margin-left: 15%;
-    
-     height: 50px;
+     
+    margin-left: 10%;
+     height: 60px;
      border-radius: 10px;
      width: 250px;
      text-align: center;
+     font-size: 20px;
     }
     .hide_search_text{
     
 
     }
     .category_button_choiceBar{
+       width: 80%;     
+    }
+    .services{
        
+    }
+    .search-engine{
         
-        
-      
-        
+    }
+    .profil{
+        margin-top: 20%;
     }
   }

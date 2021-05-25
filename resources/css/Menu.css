@@ -1,3 +1,5 @@
+@media screen and (min-width:900px) {
+  
 
 .sidenav {
     height: 100%;
@@ -16,8 +18,21 @@
   }
   .menu_title{
     color:#fff;
-    text-align: center;
+    
     background-color: #E5112F;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 20px;
+    height: 50px;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    display: inline-flex;
+    margin-top: -5%;
+   
+  }
+  .menu_title_text{
+    margin-left: 26%;
   }
   .menu_btn{
       background-color: #fff;
@@ -27,11 +42,8 @@
   }
   
   .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
-    display: block;
+  
+  
     transition: 0.3s;
   }
   
@@ -43,15 +55,186 @@
   }
   #contain{
     
-  }
+  }/* bouton style*/
   .sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    
+   
+    margin-top: 450px;
+    
    
   }
+  .menu_btn{
+    background-color: #E5112F;
+    color: #fff;
+    border-radius: 50%;
+    height: 40px;
+    text-justify: center;
+    align-items: center;
+    text-align: center;
+    display: inline-flex;
+  
+  
+  }
+  .menu-home-icon{
+  
+    color: #E5112F;
+    height: 90%;
+    border-radius: 100%;
+    
+  
+    
+  }
+  .menu-item{
+   
+     border:1px solid;
+     border-color: #707070;
+     margin-top: 3%;
+     width: 90%;
+     margin-left: 7%;
+     border-radius: 10px;
+     text-justify: center;
+     align-items: center;
+     text-align: left;
+     
+     height: 50px;
+     display: inline-flex;
+     
+  }
+  .engine-icon
+  {
+   
+   color: #E5112F;
+   height: 90%;
+   border-radius: 100%;
+
+ 
+
+    }
+    .engine-text,.menu_home_text,.menu_scanner_text{
+      color:#E5112F;
+      font-size: 15px;
+     
+    }
+    .menu-accueil{
+      border-top: solid 1px;
+      border-color: #707070;
+      margin-top: 10%;
+    }
+}
+/* mobile style*/
+@media only screen and (max-width:600px){
+  
+.sidenav {
+  height: 100%;
+  width:0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+
+  backdrop-filter:brightness(0%);
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color:#E5112F;
+}
+
+.menu_title{
+  color:#fff;
+  
+  background-color: #E5112F;
+  width: 40%;
+  margin-left: 30%;
+  border-radius: 20px;
+  height: 50px;
+  text-align: center;
+  text-justify: center;
+  align-items: center;
+  display: inline-flex;
+  margin-top: -5%;
+ 
+}
+.menu_title_text{
+  margin-left: 10%;
+}
+.menu_btn{
+ 
+    background-color: #E5112F;
+    color: #fff;
+    border-radius: 50%;
+    height: 40px;
+    text-justify: center;
+    align-items: center;
+    text-align: center;
+    display: inline-flex;
+    margin-top: 100px;
+    margin-left: 40%;
+  
+  
+
+}
+
+.menu-home-icon{
+  background-color: #E5112F;
+  color: #fff;
+  border-radius: 50%;
+  height: 40px;
+  text-justify: center;
+  align-items: center;
+  text-align: center;
+  display: inline-flex;
+  
+  font-size: 25px;
+
+
+  
+}
+.menu-item{
+ 
+   border:1px solid;
+   border-color: #707070;
+   margin-top: 6%;
+   width: 80%;
+   margin-left: 7%;
+   border-radius: 10px;
+  
+}
+.engine-icon
+{
+  background-color: #E5112F;
+  color: #fff;
+  border-radius: 50%;
+  height: 40px;
+  text-justify: center;
+  align-items: center;
+  text-align: center;
+  display: inline-flex;
+  font-size: 20px;
+  margin-left: 40%;
+
+  }
+  .scanner-icon{
+    margin-left: 40%;
+  }
+  .engine-text,.menu_home_text,.menu_scanner_text{
+    color:#E5112F;
+    font-size: 13px;
+    margin-right: 10%;
+    
+  
+  }
+  .menu-accueil{
+    border-top: solid 1px;
+    border-color: #707070;
+    margin-top: 10%;
+  }
+
+
+}
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}

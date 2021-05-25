@@ -1,0 +1,17 @@
+
+/*  computer footer style*/
+@media screen and (min-width:900px) {
+    .footer-container{
+     
+     margin-top: 1%;
+    }
+.footer{
+    margin-left: 10%;
+    
+}
+.footer-item{
+    margin-left: 3%;
+    font-size: 13px;
+}
+    
+}

@@ -4,14 +4,18 @@
   list-style-type: none;
   display: inline;
   margin-left: 2%;
-  font-size: 2.5vmin;
+  font-size: 2vmin;
   
 }
 @media screen and(min-width:(900px)){
 .bread-items{
     font-size:10%;
 }
-  
+  .bread-icon{
+      margin-top: 16px;
+      display:block;
+      color: red;
+  }
 }
 .bread-container{
     height: 20px;

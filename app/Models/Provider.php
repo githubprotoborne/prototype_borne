@@ -10,6 +10,7 @@ class Provider extends Model
 {
     use HasFactory;
     public function container() {
-        return $this->belongsToMany(Container::class, 'demconts', 'container_id', 'demarche_id');
+        return $this->belongsToMany(Container::class, 'demconts',
+         'container_id', 'demarche_id');
     }
 }
