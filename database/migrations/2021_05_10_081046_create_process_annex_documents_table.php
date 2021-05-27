@@ -8,7 +8,7 @@ class CreateProcessAnnexDocumentsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *S
      * @return void
      */
     public function up()
@@ -16,19 +16,17 @@ class CreateProcessAnnexDocumentsTable extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::create('process_providers', function (Blueprint $table) {
             
-            $table->unsignedBigInteger('process_id')->unsigned();
+            $table->unsignedInteger('process_id')->unsigned();
             $table->foreign('process_id')
                 ->references('process_id')
                 ->on('processes')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-
-            // Recupertation id container
-            $table->unsignedBigInteger('annex_document_id');
-            $table->foreign('annex_document_id')
-                ->references('annex_document_id')
-                ->on('annex_documents')
+            $table->unsignedInteger('provider_id')->unsigned();
+            $table->foreign('provider_id')
+                ->references('provider_id')
+                ->on('providers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             

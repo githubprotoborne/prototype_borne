@@ -116,11 +116,11 @@ export default class Subcontainer extends Component {
                 <div id="contain">
                     <div className=" sticky-top ">
                         <div className=" ">
-                            <div className="nav-position fixed ">
+                            <div className="nav-position sticky-top ">
                                 <NavBar></NavBar>
                             </div>
-                            <div className="">
-                                <div className="">
+                            <div className="desk-bread">
+                                <div className="bread-text">
                                     <Breadcrumbs></Breadcrumbs>
                                 </div>
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import MaterialIcon from 'react-google-material-icons'
 import "../../../css/NavBar.css"
-
+import Bootstrap from "bootstrap"
 import { Link, Redirect } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
 import axios from 'axios'
@@ -12,7 +12,7 @@ import { StandardContrast } from '../../Services/StandardContrast'
 import { DarkWhiteContrast } from '../../Services/DarkWhiteContrast'
 
 //import "../../../../public/css/app.css"
-const NavBar2 = () => {
+const NavBar = () => {
   //go back function
   let history = useHistory();
   let back = () => {
@@ -72,36 +72,36 @@ let setNightMode =()=>{
   })
 
   return (
-    <nav className="navbar-container sticky-top" id="">
+    <nav className="container-fluid sticky-top backdrop" id="menu-container">
 
       {//sider bar code for menu 
       }
 
       <div className="row" id="menu-container" >
 
-        <button className="nav_button" role="button" title="Retour en arrière" onClick={back}>
-          <span className="material-icons-outlined  navbarspan navbar-retour-icon" aria-hidden="true">arrow_back</span>
+        <button className="col-2 col_margin" role="button" title="Retour en arrière" onClick={back}>
+          <span className="material-icons-outlined  navbarspan back_icon navbar-icon" aria-hidden="true">arrow_back</span>
           <span className="back_text  navbarspan">Retour</span>
         </button>
 
 
-        <button className="nav_button" title="Retour à l'accueil" role="button" >
-          <Link to="/" style={{ textDecoration: "none", display: "block" }}><span className="material-icons-outlined home_icon navbar-home-icon" aria-hidden="true">home</span></Link>
+        <button className="col-2 col_margin" title="Retour à l'accueil" role="button" >
+          <Link to="/" style={{ textDecoration: "none", display: "block" }}><span className="material-icons-outlined home_icon navbar-icon" aria-hidden="true">home</span></Link>
           <Link to="/" style={{ textDecoration: "none",  display: "block" }} className="home_text">Accueil</Link>
         </button>
-        <div className="page_title" >
-          <p className="title-simplici" >Simpl'ici <sup>+</sup> </p>
+        <div className="col-4 page_title" id="title-simplici">
+          <p>Simpl'ici <sup>+</sup> </p>
         </div>
 
-        <button className="nav_tool_button" onClick={openNav} title="menu" role="button">
+        <button className="col col_margin" onClick={openNav} title="menu" role="button">
           <span className="material-icons-outlined navbar-icon navbarspan menu_icon" aria-hidden="true">menu</span>
           <span className="menu_text  navbarspan">Menu</span>
         </button>
-        <button className="nav_tool_button" title="Retour à l'accueil" onClick={setNightMode} role="button">
+        <button className="col col_margin" title="Retour à l'accueil" onClick={setNightMode} role="button">
           <span className="material-icons-outlined navbar-icon  navbarspan accessibility_icon" aria-hidden="true">dark_mode</span>
           <span className="accessibility_text  navbarspan">Mode nuit</span>
         </button>
-        <button className="nav_tool_button" title="Retour à l'accueil" onClick={contrast} role="button">
+        <button className="col col_margin" title="Retour à l'accueil" onClick={contrast} role="button">
           <span className="material-icons-outlined navbar-icon navbarspan accessibility_icon" aria-hidden="true">visibility</span>
           <span className="accessibility_text  navbarspan">Accessibilité</span>
         </button>
@@ -110,4 +110,4 @@ let setNightMode =()=>{
 
   )
 }
-export default NavBar2
+export default NavBar

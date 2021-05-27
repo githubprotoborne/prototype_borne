@@ -4,12 +4,17 @@ export function reinforceContrast() {
     // home style
     $(".home-button").css({ color: "#fff" });
     $(".category_button").css("background-color", "#222")
-    $(".col_margin").css("background-color", "#222")
+    $(".nav_tool_button").css("background-color", "#222")
+    $(".nav_tool_button").css("color", "#fff")
+     $(".nav_button").css("background-color", "#222")
+    $(".nav_button").css("color", "#fff")
+    $(".nav_button").css("color", "#fff")
     $(".state_containers").css("border-color", "#fff")
-
-    $("#title-simplici").css("color", "#fff")
-    $("#title-simplici").css("background-color", "#222")
-
+    $(".category_button").css("border-color", "#fff")
+    $(".page_title ").css("color", "#fff")
+    $(".page_title ").css("background-color", "#222")
+    $(".page_title").css("border-color", "#fff")
+   
     $(".bread-items").css({ color: "#fff" });
     $(".contain-title").css({ color: "#fff" });
     //footer style

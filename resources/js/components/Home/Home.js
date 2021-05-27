@@ -3,12 +3,14 @@ import React from "react"
 import { Link } from "react-router-dom"
 import ChoiceBar from "../ChoiceBar/ChoiceBar"
 import Menu from "../NavBar/Menu"
-import NavBar from "../NavBar/NavBar"
+
 import '../../../css/Home.css'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Contrast from "../Contrast/Contrast"
 import Footer from "../LegalInfo/Footer"
 import SessionTimeout from "../SessionTimeout"
+import SessionTimeoutDialog from "../Session/SessionTimeoutDialog"
+import NavBar from "../NavBar/NavBar"
 
 
 class Home extends React.Component {
@@ -19,8 +21,14 @@ class Home extends React.Component {
             containers_state_two: [],//
             containers_local_one: [],//locals processes
             containers_local_two: []
-
+      
         }
+    }
+ displaySession(){
+        if(sessionStorage.getItem("sessionAlert")){
+           return ""
+        }
+        else return ""
     }
     getContainers() {
         axios.get("/first-containers")
@@ -35,6 +43,7 @@ class Home extends React.Component {
             })
 
     }
+   
     componentDidMount() {
         this.getContainers.bind(this)()
     }
@@ -46,6 +55,7 @@ class Home extends React.Component {
                     <div id="side">
                         <Menu></Menu>
                         <Contrast></Contrast>
+                     
 
 
                     </div>
@@ -105,7 +115,7 @@ class Home extends React.Component {
                                             id: value.container_id,
                                             name: value.container_name,
                                             icon: value.container_icon
-                                        }} style={{ textAlign: "center" }} >
+                                        }} style={{ textAlign: "center",alignItems:"center",textJustify:"center"}} >
                                             {value.container_icon ?
                                                 <div>
 
@@ -143,11 +153,13 @@ class Home extends React.Component {
                                             icon: value.container_icon
                                         }} style={{ textAlign: "center" }}>
                                             {value.container_icon ?
-                                                <div>
+                                                <div >
 
                                                     {value.container_icon.split(",").map((v, i) => <span aria-hidden="true" key={i} className="material-icons-outlined home-icon">
                                                         {v}
                                                     </span>)}
+
+                                                    
                                                 </div> : ""
 
 

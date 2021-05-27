@@ -1,8 +1,9 @@
 
 /* computer style*/
 @media screen and (min-width:900px){
-    .contrast-container{
+    .session-container{
 
+      background-color: #fff;
         overflow-x: hidden;
         position: fixed;
         z-index: 1;

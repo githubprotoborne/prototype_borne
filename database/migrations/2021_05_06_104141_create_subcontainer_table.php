@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\models\SubContainer;
+use App\Models\SubContainer;
 
 class CreateSubcontainerTable extends Migration
 {

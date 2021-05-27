@@ -9,8 +9,13 @@ export default function (props) {
 
 
 
-    sessionStorage.removeItem("contrast")
+    //sessionStorage.removeItem("contrast")
     // window.location="/"
+    if(getRemainingTime()<=10000){
+    //  $(".session-container").css({display:"block"})
+    //  sessionStorage.setItem("sessionAlert",true)
+  location("/")
+    }
 
     console.log('user is idle', event)
     console.log('last active', getLastActiveTime())
@@ -33,7 +38,7 @@ export default function (props) {
   }
 
   const { getRemainingTime, getLastActiveTime } = useIdleTimer({
-    timeout: 1000 * 60,
+    timeout: 1000 * 20,
     onIdle: handleOnIdle,
     onActive: handleOnActive,
     onAction: handleOnAction,

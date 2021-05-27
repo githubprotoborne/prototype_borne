@@ -1,83 +1,147 @@
-@media screen  {
+@media screen and (min-width: 600px) {   
+    .navbar-container{
+            background-color: #E5112F;
+           
+        }
+        .nav_button{
+            background-color: #E5112F;
+           
+            width: 12%;
+            color:#fff;
+        }
+        .nav_button{
+            
+           
+            width: 12.5%;
+            color:#fff;
+            border-right: solid 1px;
+        }
+        .nav_tool_button{
+            width: 8%;
+            background-color: #E5112F;
+            text-align: center;
+            color:#fff;
+            border-right: solid 1px;
+          
+           
+        }
+        .navbar-retour-icon{
+           display: block;
+           margin-left: 36%;
+           font-size: 33px;
+        
+        }
+        .navbar-home-icon{
+            font-size: 33px;
     
-}
+        }
+        .navbar-icon{
+            display: block;
+            margin-left: 29%;
+            font-size: 33px;
+           
+        
+        }
+        .page_title{
+            width: 50%;
+            background-color: #FFF;
+            color:#E5112F;
+            text-align: center;
+          
+            align-items: center;
+            display: inline-flex;
+            border-right: 1px solid;
+        }
+        .title-simplici{
+            text-align: center;
+            width: 100%;
+            font-size: 35px;
+        }
+        
+    }
+    @media screen and (max-width: 600px){
 
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 900px) {
-    .page_title{
-     
-        border-right: #FFF 1px solid;
-        background-color: #FFF;
-        color: #E5112F;
-    }
-    #title-simplici{
-        text-align: center;
-    }
-    .col_margin{
-        background-color: #E5112F;
-        border: #FFF 1px solid;
-        color: #fff;
+        .navbar-container{
+            background-color: #E5112F;
+           
+        }
+        .nav_button{
+            background-color: #E5112F;
+           
+            width: 12%;
+            color:#fff;
+        }
+        .nav_button{
+            
+           
+            width: 15%;
+            color:#fff;
+            border-right: solid 1px;
+        }
+        .nav_tool_button{
+            width: 13%;
+            background-color: #E5112F;
+           
+            color:#fff;
+            border-right: solid 1px;
+          
+           
+        }
+        .navbar-retour-icon{
+           display: block;
+           margin-left: 30%;
+           font-size: 33px;
         
+        }
+        .navbar-text{
+            font-size: 12px;
+        }
+        .navbar-home-icon{
+            font-size: 33px;
+    
+        }
+        .navbar-icon{
+            display: block;
+            
+            font-size: 33px;
+           
         
-    }
-    .navbarspan{
-        display: block;
-    }
-   
-    .page_title{
-        font-size: 30px;
-        border:1px solid;
-        border-color: #FFF;
-    }
-    
-    ::placeholder{
-        font-size: 12px;
-    }
-    
-    #menu-container{
+        }
+        .menu_text{
+            margin-right: 50%;
+        }
+        .modenuit_text{
+           margin-right: 50%;
+        }
+        .accessibility_text{
+           font-size: 0px;
+        }
       
-    }
-    
-  }
-  
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 600px) {
-    .page_title{
-     
-        border-right: #FFF 1px solid;
-        background-color: #FFF;
-        color: #E5112F;
-    }
-    #title-simplici{
-        text-align: center;
-    }
-    .col_margin{
-        background-color: #E5112F;
-        border-right: #FFF 1px solid;
-        color: #fff;
-        font-size: 12px;
+        .modenuit_icon{
+            padding-top: 6px;
+            
+        }
+        .menu_icon{
+            margin-left: 10%;
+        }
+        .page_title{
+            width: 30%;
+            background-color: #FFF;
+            color:#E5112F;
+            text-align: center;
+          
+            align-items: center;
+            display: inline-flex;
+            border-right: 1px solid;
+        }
+        .title-simplici{
+            text-align: center;
+            width: 100%;
+            font-size: 20px;
+        }
         
 
     }
-    .navbarspan{
-        display: block;
-    }
-    .accessibility_text{
-        font-size: 8.8px;
 
-    }
-   
-    .page_title{
-        font-size: 20px;
-    }
-    
-    ::placeholder{
-        font-size: 12px;
-    }
-    
-    #menu-container{
-      
-    }
-    
-  }
-  
+
+

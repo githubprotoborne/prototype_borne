@@ -34,7 +34,7 @@ const routesConfig = [
 
   {
     path: "/test",
-    component: Container,
+    component: Test,
 
   },
   {

@@ -84,9 +84,9 @@ class ChoiceBar extends React.Component {
 
                   <form className=" row search">
                      <input type="text col" placeholder="Je cherche une demarche" className="col search_input"></input>
-                     <button type="submit col" className='search_submit_button col-2'>
-                        <span className="material-icons-outlined search_icon" >search</span>
-                     </button>
+                     
+                        <span className="material-icons-outlined col-1 search_icon" >search</span>
+                     
                   </form>
                </div>
 

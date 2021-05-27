@@ -8,6 +8,7 @@ import "../../../css/process.css";
 
 
 
+
 const Test = function (props) {
 
     const [infoprocess, setProcess] = useState([])
@@ -39,20 +40,7 @@ const Test = function (props) {
 
     return (<div>
       
-
-       <div>{infoprocess.length ==1?
-         <div>
-              <p>{infoprocess[0].process_name}</p>
-              <a href={infoprocess[0].process_link}>
-                 aller
-              </a>
-
-             </div>
-       
-       
-       
-       :""}</div>
-        </div>)
+      </div>)
   
 }
 
