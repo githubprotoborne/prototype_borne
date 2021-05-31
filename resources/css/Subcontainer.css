@@ -56,11 +56,12 @@
        
     }
     .desk-bread-cont{
-        margin-top: 300px;
-        background-color: lawngreen;
+        margin-top: 200px;
+       
     }
     .title-group{
         text-align: center;
+        margin-top: -60px;
        
     }
     .container_title{
@@ -73,17 +74,19 @@
         border:solid 2px;
         margin-left:2%;
         margin-top:4%;
-       
+        background-color: #577C90;;
         border-radius: 15px;
-       
-        background-color: #577C90;
-        font-weight: bold;
         color: #fff;
+        text-transform: uppercase;
        
+      
+        font-weight: bold;
+      
        
     }
-    .bread-text{
-       display: none;
+    .desk-bread{
+     
+    
     }
     .subcontainer-choose-title{
         font-size: 22px;
@@ -92,4 +95,113 @@
     .nav-position{
         z-index: 2;
     }
+    .icon-title{
+        display: none;
+    }
+}
+
+@media screen  and (min-width:601px) and (max-width:899px){
+
+    .subcontainer{
+  
+       
+        text-align: center;
+    }
+    .title-group{
+        text-align: center;
+        margin-left: 35%;
+    }
+    .container_title{
+        font-size: 30px;
+        margin-top: -2%;
+    }
+    .icon-title{
+       
+    }
+    .topic-item{
+        width: 40%;
+        height: 120px;
+        border:solid 2px;
+        margin-left:2%;
+        margin-top:2%;
+        background-color: #fff;
+        border-radius: 15px;
+        border-color: #707070;
+        font-size: 29px;
+     
+       
+       
+    }
+    .desk-bread{
+        font-size: 20px;
+    }
+    .topic-item:hover{
+       
+     
+        text-decoration-color: #E5112F;
+        text-decoration: none;
+        color: #E5112F;
+       
+        border-color: #E5112F;
+    }
+    .subcontainer-choose-title{
+        font-size: 33px;
+        margin-right: 11%;
+        margin-top: 2%;
+        
+    }
+}
+@media screen and (max-width:600px){
+    .subcontainer{
+  
+      
+        text-align: center;
+        height: fit-content;
+       
+       
+    }
+    .desk-bread-cont{
+        margin-top: 200px;
+       
+    }
+    .title-group{
+        text-align: center;
+        margin-top: -60px;
+       
+    }
+    .container_title{
+        font-size: 25px;
+        margin-top: 26%;
+    }
+    .topic-item{
+        width: 80%;
+        height: 100px;
+        border:solid 2px;
+        margin-left:2%;
+        margin-top:4%;
+        background-color: #577C90;;
+        border-radius: 15px;
+        color: #fff;
+        text-transform: uppercase;
+       
+      
+        font-weight: bold;
+      
+       
+    }
+    .desk-bread{
+     
+    
+    }
+    .subcontainer-choose-title{
+        font-size: 22px;
+        margin-top: 4%;
+    }
+    .nav-position{
+        z-index: 2;
+    }
+    .icon-title{
+        display: none;
+    }
+
 }

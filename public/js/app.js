@@ -2120,6 +2120,15 @@ function reinforceContrast() {
   $(".state_containers").css("border-color", "#fff");
   $(".category_button").css("border-color", "#fff");
   $(".page_title ").css("color", "#fff");
+  $(".profil").css("color", "#fff");
+  $(".profil").css("background-color", "#222");
+  $(".cont").css("color", "#fff");
+  $(".cont").css("background-color", "#333");
+  $("#direct-acces").css("color", "#fff");
+  $("#direct-acces").css("background-color", "#222");
+  $(".search_icon").css("background-color", "#333");
+  $(".search_input").css("background-color", "#333");
+  $(".search_icon").css("border", "none");
   $(".page_title ").css("background-color", "#222");
   $(".page_title").css("border-color", "#fff");
   $(".bread-items").css({
@@ -2133,7 +2142,10 @@ function reinforceContrast() {
 
   $(".processes-position").css("color", "#fff");
   $(".sections").css("color", "#fff");
-  $(".bread-text").css("background-color", "#333"); //subcontainer style
+  $(".bread-text").css("background-color", "#333");
+  $(".section-position").css("background-color", "#333");
+  $(".desk-bread").css("background-color", "#333");
+  $(".title").css("background-color", "#333"); //subcontainer style
 
   $(".subcontainer").css("color", "#fff");
   $(".topic-item").css("background-color", "#333"); // menu style
@@ -2172,7 +2184,17 @@ function StandardContrast() {
   });
   $(".col_margin").css("background-color", "");
   $(".state_containers").css("border-color", "");
-  $(".category_button").css("border-color", ""); //navbar
+  $(".category_button").css("border-color", "");
+  $(".cont").css("color", "#fff");
+  $(".cont").css("background-color", "");
+  $("#direct-acces").css("color", "");
+  $("#direct-acces").css("background-color", "");
+  $(".profil").css("color", "");
+  $(".profil").css("background-color", "");
+  $(".search_icon").css("background-color", "");
+  $(".search_icon").css("border", "");
+  $("#category_button_choiceBar_service").css("color", "");
+  $(".search_input").css("background-color", ""); //navbar
 
   $(".nav_tool_button").css("background-color", "");
   $(".nav_tool_button").css("color", "");
@@ -2195,7 +2217,10 @@ function StandardContrast() {
 
   $(".processes-position").css("color", "");
   $(".sections").css("color", "");
-  $(".bread-text").css("background-color", ""); //subcontainer style
+  $(".bread-text").css("background-color", "");
+  $(".section-position").css("background-color", "");
+  $(".desk-bread").css("background-color", "");
+  $(".title").css("background-color", ""); //subcontainer style
 
   $(".subcontainer").css("color", "");
   $(".topic-item").css("background-color", ""); // menu style
@@ -2243,7 +2268,12 @@ function handleBright() {
 
   $(".processes-position").css("filter", "brightness(30%)");
   $(".sections-items").css("filter", "brightness(30%)");
-  $(".bread-text").css("filter", "brightness(30%)"); //subcontainer style
+  $(".bread-text").css("filter", "brightness(30%)");
+  $(".title").css("filter", "brightness(30%)");
+  $(".section-position").css("filter", "brightness(30%)");
+  $(".desk-bread").css("filter", "brightness(30%)");
+  $(".state_containers").css("filter", "brightness(30%)");
+  $(".contain-title").css("filter", "brightness(30%)"); //subcontainer style
 
   $(".subcontainer").css("filter", "brightness(50%)"); // $(".topic-item").css("filter", "brightness(100%)");
 }
@@ -2275,11 +2305,16 @@ function handleBrightSupression() {
 
   $("#menu-container").css("filter", "brightness(100%)");
   $(".topic-item").css("filter", "brightness(100%)");
-  $(".footer-container").css("filter", "brightness(100%)"); // Container style
+  $(".footer-container").css("filter", "brightness(100%)");
+  $(".state_containers").css("filter", "brightness(100%)");
+  $(".contain-title").css("filter", "brightness(100%)"); // Container style
 
   $(".processes-position").css("filter", "brightness(100%)");
   $(".sections-items").css("filter", "brightness(100%)");
-  $(".bread-text").css("filter", "brightness(100%)"); //subcontainer style
+  $(".bread-text").css("filter", "brightness(100%)");
+  $(".title").css("filter", "brightness(100%)");
+  $(".section-position").css("filter", "brightness(100%)");
+  $(".desk-bread").css("filter", "brightness(100%)"); //subcontainer style
 
   $(".subcontainer").css("filter", "brightness(100%)");
   $(".topic-item").csscss("filter", "brightness(100%)");
@@ -2536,6 +2571,7 @@ var ChoiceBar = /*#__PURE__*/function (_React$Component) {
           className: "row  whole_container",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: "col  profil",
+            id: "tablet-profil",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
               className: "profil-text",
               children: "Je choisis mon profil"
@@ -2543,6 +2579,7 @@ var ChoiceBar = /*#__PURE__*/function (_React$Component) {
           }), this.state.containers.length !== 0 ? this.state.containers.map(function (container, index) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
               className: "col-md cont category_button_choiceBar",
+              id: "tablet-pro" + index,
               to: {
                 pathname: "/sous-categories/" + container.container_id + "/" + container.container_name,
                 // pass data through react -router
@@ -2602,6 +2639,197 @@ var ChoiceBar = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__.Component);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChoiceBar);
+
+/***/ }),
+
+/***/ "./resources/js/components/ChoiceBar/ChoiceBarTablet.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/ChoiceBar/ChoiceBarTablet.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _css_ChoiceBar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/ChoiceBar.css */ "./resources/css/ChoiceBar.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+
+var ChoiceBarTablet = /*#__PURE__*/function (_React$Component) {
+  _inherits(ChoiceBarTablet, _React$Component);
+
+  var _super = _createSuper(ChoiceBarTablet);
+
+  function ChoiceBarTablet(props) {
+    var _this;
+
+    _classCallCheck(this, ChoiceBarTablet);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      containers: [],
+      services: [{
+        container_id: 5,
+        container_name: "Accès direct à un service"
+      }]
+    };
+    return _this;
+  } //get container items from the database
+
+
+  _createClass(ChoiceBarTablet, [{
+    key: "getContainers",
+    value: function () {
+      var _getContainers = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var _this2 = this;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios__WEBPACK_IMPORTED_MODULE_3___default().get("/first-containers").then(function (response) {
+                  // extract the 4 first item from the response array
+                  _this2.setState({
+                    containers: response.data.slice(0, 3)
+                  });
+                });
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function getContainers() {
+        return _getContainers.apply(this, arguments);
+      }
+
+      return getContainers;
+    }() // handle search submit
+
+  }, {
+    key: "handleSearch",
+    value: function handleSearch() {//to do
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.getContainers.bind(this)();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "row  whole_container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "profil",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+              className: "profil-text",
+              children: "Je choisis mon profil"
+            })
+          }), this.state.containers.length !== 0 ? this.state.containers.map(function (container, index) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              className: "cont category_button_choiceBar",
+              id: "tablet-pro" + index,
+              to: {
+                pathname: "/sous-categories/" + container.container_id + "/" + container.container_name,
+                // pass data through react -router
+                id: container.container_id,
+                name: container.container_name,
+                icon: container.container_icon
+              },
+              style: {},
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "item",
+                children: container.container_name
+              })
+            }, index.toString());
+          }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+            className: "cont acces_direct  ",
+            id: "category_button_choiceBar_service",
+            href: "https://google.fr",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              className: "service-title",
+              children: "J'acc\xE8de directement \xE0 un site ou une d\xE9marche"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+            className: "category_button_choiceBar services  cont",
+            to: {
+              pathname: "/mes-demarches/" // pass data through react -router
+
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              className: "service-title",
+              children: "Site d'une administration"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              className: "service-subtitle",
+              children: "P\xF4le emploi, caf, La poste"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+            className: " row search",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+              type: "text col",
+              placeholder: "Je cherche une demarche",
+              className: "col search_input"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              className: "material-icons-outlined col-1 search_icon",
+              children: "search"
+            })]
+          })]
+        })
+      });
+    }
+  }]);
+
+  return ChoiceBarTablet;
+}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChoiceBarTablet);
 
 /***/ }),
 
@@ -3081,7 +3309,7 @@ var Container = /*#__PURE__*/function (_Component) {
                         },
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
                           className: "section_text",
-                          children: "Ensemble des services"
+                          children: "Ensemble des d\xE9marches"
                         })
                       }), this.state.sub_container.map(function (value, index) {
                         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Link, {
@@ -3657,7 +3885,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _ChoiceBar_ChoiceBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ChoiceBar/ChoiceBar */ "./resources/js/components/ChoiceBar/ChoiceBar.js");
 /* harmony import */ var _NavBar_Menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavBar/Menu */ "./resources/js/components/NavBar/Menu.js");
 /* harmony import */ var _css_Home_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/Home.css */ "./resources/css/Home.css");
@@ -3667,7 +3895,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SessionTimeout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../SessionTimeout */ "./resources/js/components/SessionTimeout.js");
 /* harmony import */ var _Session_SessionTimeoutDialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Session/SessionTimeoutDialog */ "./resources/js/components/Session/SessionTimeoutDialog.js");
 /* harmony import */ var _NavBar_NavBar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _ChoiceBar_ChoiceBarTablet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../ChoiceBar/ChoiceBarTablet */ "./resources/js/components/ChoiceBar/ChoiceBarTablet.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -3691,6 +3920,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -3759,30 +3989,33 @@ var Home = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             id: "side",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_6__.default, {})]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_6__.default, {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
             id: "contrast"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
           id: "contain",
           className: "contain-home",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_10__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_ChoiceBar_ChoiceBar__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_10__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_ChoiceBar_ChoiceBar__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
+            className: "tablet",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_ChoiceBar_ChoiceBarTablet__WEBPACK_IMPORTED_MODULE_11__.default, {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
             className: "presentation container-fluid presentation-home",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
               className: "state_containers big-row-one row",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                 className: "col",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
                   className: "contain-title",
                   children: "Vie administrative"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "state_containers_one row ",
                   children: this.state.containers_state_one.map(function (value, index) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
                       className: "home-button category_button",
                       to: {
                         pathname: "/sous-categories/" + value.container_id + "/" + value.container_name,
@@ -3793,27 +4026,27 @@ var Home = /*#__PURE__*/function (_React$Component) {
                       style: {
                         textAlign: "center"
                       },
-                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                         children: value.container_icon.split(",").map(function (v, i) {
-                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                             className: "material-icons-outlined home-icon",
                             "aria-hidden": "true",
                             children: v
                           }, i);
                         })
-                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "homepage_button name",
                         children: value.container_name
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "description",
                         children: value.container_description
                       })]
                     }, index);
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "state_containers_two row",
                   children: this.state.containers_state_two.map(function (value, index) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
                       className: "home-button category_button",
                       to: {
                         pathname: "/sous-categories/" + value.container_id + "/" + value.container_name,
@@ -3826,18 +4059,18 @@ var Home = /*#__PURE__*/function (_React$Component) {
                         alignItems: "center",
                         textJustify: "center"
                       },
-                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                         children: value.container_icon.split(",").map(function (v, i) {
-                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                             "aria-hidden": "true",
                             className: "material-icons-outlined home-icon",
                             children: v
                           }, i);
                         })
-                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "homepage_button name",
                         children: value.container_name
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "description",
                         children: value.container_description
                       })]
@@ -3845,17 +4078,17 @@ var Home = /*#__PURE__*/function (_React$Component) {
                   })
                 })]
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
               className: "local_containers state_containers row",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                 className: "col",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
                   className: "contain-title",
                   children: "Vie locale"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "local_containers_one row",
                   children: this.state.containers_local_one.map(function (value, index) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
                       className: "home-button category_button",
                       to: {
                         pathname: "/sous-categories/" + value.container_id + "/" + value.container_name,
@@ -3866,27 +4099,27 @@ var Home = /*#__PURE__*/function (_React$Component) {
                       style: {
                         textAlign: "center"
                       },
-                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                         children: value.container_icon.split(",").map(function (v, i) {
-                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                             "aria-hidden": "true",
                             className: "material-icons-outlined home-icon",
                             children: v
                           }, i);
                         })
-                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "homepage_button name",
                         children: value.container_name
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "description",
                         children: value.container_description
                       })]
                     }, index);
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "local_containers_two row",
                   children: this.state.containers_local_two.map(function (value, index) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
                       className: "home-button category_button",
                       to: {
                         pathname: "/sous-categories/" + value.container_id + "/" + value.container_name,
@@ -3897,18 +4130,18 @@ var Home = /*#__PURE__*/function (_React$Component) {
                       style: _defineProperty({
                         textAlign: "center"
                       }, "textAlign", "center"),
-                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                      children: [value.container_icon ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                         children: value.container_icon.split(",").map(function (v, i) {
-                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                             "aria-hidden": "true",
                             className: "material-icons-outlined home-icon",
                             children: v
                           }, i);
                         })
-                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "homepage_button name",
                         children: value.container_name
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
                         className: "description",
                         children: value.container_description
                       })]
@@ -3917,7 +4150,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
                 })]
               })
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_7__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_7__.default, {
             children: "     "
           })]
         })]
@@ -4385,8 +4618,10 @@ var NavBar2 = function NavBar2() {
 
 
   var openNav = function openNav() {
-    if ($(window).width() >= 700) {
+    if ($(window).width() >= 900) {
       document.getElementById("mySidenav").style.width = "30%"; // mySidenav in Menu component
+    } else if ($(window).width() >= 601 && $(window).width() <= 899) {
+      document.getElementById("mySidenav").style.width = "50%";
     } else {
       document.getElementById("mySidenav").style.width = "80%";
     }
@@ -10077,7 +10312,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n\r\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\r\n@media screen and (min-width: 900px) {\r\n    \r\n   \r\n   \r\n    .collapse.dont-collapse-sm {\r\n        display: block;\r\n        height: auto !important;\r\n        visibility: visible;\r\n      }\r\n      .whole_container{\r\n          background-color:#707070;\r\n           color:#ffff;\r\n           height: 8.5vh;\r\n          \r\n          \r\n      }\r\n    ::-moz-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    :-ms-input-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    ::placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -webkit-fit-content;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    \r\n   .choicebar-icon{\r\n       font-size: 2.6vmin;\r\n   }\r\n   \r\n    \r\n    .search_input{\r\n        height: 8.5vh;\r\n        border:none;\r\n        outline: none;\r\n        background-color: #707070;\r\n        width: 100%;\r\n    }\r\n    .search_submit_button{\r\n        height: 8.5vh;\r\n        background-color: #707070;\r\n      \r\n    }\r\n    \r\n    .search_icon{\r\n        margin-top: 8%;\r\n        margin-left: -11px;\r\n        font-size: 18px;\r\n\r\n    }\r\n    .category_button_choiceBar:hover{\r\n       \r\n      \r\n        \r\n        width: 100%;\r\n        text-decoration: none;\r\n       \r\n\r\n    }\r\n    .search-engine{\r\n        background-color: #fff;\r\n        color: #222;\r\n        display: inline-flex;\r\n        text-align: center;\r\n        text-justify: center;\r\n        align-items: center;\r\n     \r\n    }\r\n    #category_button_choiceBar_service:hover{\r\n       \r\n      \r\n      \r\n      \r\n        text-decoration: none;\r\n       -webkit-text-decoration-color: \"\";\r\n               text-decoration-color: \"\";\r\n        \r\n\r\n    }\r\n    .hide_search_text{\r\n       \r\n    }\r\n    .research{\r\n       outline: none;\r\n    }\r\n    .back{\r\n        background-color: gray;\r\n       \r\n    }\r\n    .search_hidden{\r\n    \r\n    }\r\n    .cont{\r\n        border-right: 1px solid #fff;\r\n        font-size: 11.8px;\r\n\r\n    }\r\n    .profil{\r\n        font-size: 11.8px;\r\n        background-color: #fff;\r\n        color:#222;\r\n       \r\n    }\r\n    .services-button{\r\n        font-size: 19px;\r\n        \r\n        text-align: center;\r\n        \r\n\r\n    }\r\n    .profil-text{\r\n        margin-top: 11%;\r\n    }\r\n    .service-subtitle{\r\n        font-size: 11px;\r\n        display: block;\r\n        text-align: center;\r\n    }\r\n    .service-title{\r\n        font-size: 12px;\r\n        display: inline-block;\r\n        margin-top: 15px;\r\n       \r\n    }\r\n  }\r\n  \r\n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\r\n  @media screen and (max-width: 600px) {\r\n      .search_hidden{\r\n           display: normal!important;\r\n           border: none;\r\n           text-decoration: none;\r\n      }\r\n      .whole_container{\r\n        \r\n        \r\n    }\r\n    .research{\r\n        outline: none;\r\n     }\r\n     .hide_icon{\r\n         display: none;\r\n     }\r\n    ::-moz-placeholder{\r\n        font-size: 20px;\r\n    }\r\n    :-ms-input-placeholder{\r\n        font-size: 20px;\r\n    }\r\n    ::placeholder{\r\n        font-size: 20px;\r\n    }\r\n    .container{\r\n        font-size: 11px;\r\n         \r\n        height: 100px;\r\n        word-wrap: break-word;\r\n        \r\n    \r\n    }\r\n    .back{\r\n        width: 400px;\r\n        background-color: #ffff;\r\n    }\r\n   \r\n    .search{\r\n      z-index: 1;\r\n      margin-top: -460px;\r\n      height: 20px;\r\n      background-color: #ffff;\r\n      color: #E5112F;\r\n      outline: none;\r\n    }\r\n    .search_input{\r\n       \r\n        border:none;\r\n        outline: none;\r\n    }\r\n    .search_submit_button{\r\n       \r\n        background-color: #fff;\r\n      \r\n    }\r\n    \r\n    .search_icon{\r\n        \r\n        font-size: 20px;\r\n    }\r\n    .cont{\r\n     margin-top :7%;\r\n     border: 1px solid;\r\n     \r\n    margin-left: 10%;\r\n     height: 60px;\r\n     border-radius: 10px;\r\n     width: 250px;\r\n     text-align: center;\r\n     font-size: 20px;\r\n    }\r\n    .hide_search_text{\r\n    \r\n\r\n    }\r\n    .category_button_choiceBar{\r\n       width: 80%;     \r\n    }\r\n    .services{\r\n       \r\n    }\r\n    .search-engine{\r\n        \r\n    }\r\n    .profil{\r\n        margin-top: 20%;\r\n    }\r\n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n\r\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\r\n@media screen and (min-width: 900px) {\r\n    \r\n   \r\n   \r\n    .collapse.dont-collapse-sm {\r\n        display: block;\r\n        height: auto !important;\r\n        visibility: visible;\r\n      }\r\n      .whole_container{\r\n          background-color:#707070;\r\n           color:#ffff;\r\n           height: 8.5vh;\r\n          \r\n          \r\n      }\r\n    ::-moz-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    :-ms-input-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    ::placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -webkit-fit-content;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    \r\n   .choicebar-icon{\r\n       font-size: 2.6vmin;\r\n   }\r\n   \r\n    \r\n    .search_input{\r\n        height: 8.5vh;\r\n        border:none;\r\n        outline: none;\r\n        background-color: #707070;\r\n        width: 100%;\r\n    }\r\n    .search_submit_button{\r\n        height: 8.5vh;\r\n        background-color: #707070;\r\n      \r\n    }\r\n    \r\n    .search_icon{\r\n        margin-top: 8%;\r\n        margin-left: -11px;\r\n        font-size: 18px;\r\n\r\n    }\r\n    .category_button_choiceBar:hover{\r\n       \r\n      \r\n        \r\n        width: 100%;\r\n        text-decoration: none;\r\n       \r\n\r\n    }\r\n    .search-engine{\r\n        background-color: #fff;\r\n        color: #222;\r\n        display: inline-flex;\r\n        text-align: center;\r\n        text-justify: center;\r\n        align-items: center;\r\n     \r\n    }\r\n    #category_button_choiceBar_service:hover{\r\n       \r\n      \r\n      \r\n      \r\n        text-decoration: none;\r\n       -webkit-text-decoration-color: \"\";\r\n               text-decoration-color: \"\";\r\n        \r\n\r\n    }\r\n    .hide_search_text{\r\n       \r\n    }\r\n    .research{\r\n       outline: none;\r\n    }\r\n    .back{\r\n        background-color: gray;\r\n       \r\n    }\r\n    .search_hidden{\r\n    \r\n    }\r\n    .cont{\r\n        border-right: 1px solid #fff;\r\n        font-size: 11.8px;\r\n\r\n    }\r\n    .profil{\r\n        font-size: 11.8px;\r\n        background-color: #fff;\r\n        color:#222;\r\n       \r\n    }\r\n    .services-button{\r\n        font-size: 19px;\r\n        \r\n        text-align: center;\r\n        \r\n\r\n    }\r\n    .profil-text{\r\n        margin-top: 11%;\r\n    }\r\n    .service-subtitle{\r\n        font-size: 11px;\r\n        display: block;\r\n        text-align: center;\r\n    }\r\n    .service-title{\r\n        font-size: 12px;\r\n        display: inline-block;\r\n        margin-top: 15px;\r\n       \r\n    }\r\n  }\r\n  \r\n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\r\n  @media screen and (max-width: 600px) {\r\n    .search_hidden{\r\n         display: normal!important;\r\n         border: none;\r\n         text-decoration: none;\r\n    }\r\n    .whole_container{\r\n      \r\n      \r\n  }\r\n  .research{\r\n      outline: none;\r\n   }\r\n   .hide_icon{\r\n       display: none;\r\n   }\r\n  ::-moz-placeholder{\r\n      font-size: 16px;\r\n  }\r\n  :-ms-input-placeholder{\r\n      font-size: 16px;\r\n  }\r\n  ::placeholder{\r\n      font-size: 16px;\r\n  }\r\n  .container{\r\n      font-size: 11px;\r\n       \r\n      height: 100px;\r\n      word-wrap: break-word;\r\n      \r\n  \r\n  }\r\n  .back{\r\n      width: 400px;\r\n      background-color: #ffff;\r\n  }\r\n \r\n  .search{\r\n    z-index: 1;\r\n   \r\n    height: 20px;\r\n\r\n    color: #E5112F;\r\n    outline: none;\r\n    margin-top: 5%;\r\n    width: 99%;\r\n  \r\n    height: 50px;\r\n    background-color: #eee;\r\n    margin-left: 5%;\r\n  }\r\n  .search_input{\r\n     \r\n      \r\n      outline: none;\r\n      background-color: #eee;\r\n     margin-left: 10%;\r\n  }\r\n  .search_submit_button{\r\n     \r\n     \r\n      \r\n    \r\n  }\r\n  \r\n  .search_icon{\r\n      \r\n      font-size: 20px;\r\n      background-color: #E5112F;\r\n      color: #fff;\r\n      display: block;\r\n   \r\n      \r\n\r\n  }\r\n  #search_icon-size{\r\n      display: block;\r\n      padding-right: 50px;\r\n      background-color: #E5112F;\r\n    \r\n  }\r\n  .cont{\r\n   margin-top :4%;\r\n  \r\n   \r\n  margin-left: 10%;\r\n  \r\n   height: 60px;\r\n   border-radius: 10px;\r\n   width: 250px;\r\n   text-align: center;\r\n   font-size: 16px;\r\n   text-transform: uppercase;\r\n   line-break: loose;\r\n   color: #fff;\r\n   background-color: #E5112F;\r\n  }\r\n  .service-subtitle{\r\n      font-size: 13px;\r\n      display: block;\r\n\r\n      margin-left: 12%;\r\n  }\r\n  .service-title{\r\n      font-size: 15px;\r\n      display: inline-block;\r\n      margin-top: 15px;\r\n     \r\n      \r\n     \r\n     \r\n  }\r\n  .choiceBarHelper{\r\n      font-size: 20px;\r\n      margin-left: 19%;\r\n      \r\n  }\r\n  .choiceBarHelperContainer{\r\n      text-align: center;\r\n      margin-top: 3%;\r\n\r\n  }\r\n  .hide_search_text{\r\n  \r\n\r\n  }\r\n  .category_button_choiceBar{\r\n     width: 86%;     \r\n  }\r\n  .services{\r\n     \r\n  }\r\n  .search-engine{\r\n      \r\n  }\r\n  .profil{\r\n      margin-top: 20%;\r\n      font-size: 16px;\r\n  }\r\n  .profil-text{\r\n      margin-left: 20%;\r\n      text-transform: uppercase;\r\n      \r\n  }\r\n  #direct-acces{\r\n      background-color: #fff;\r\n      color: #000;\r\n      \r\n  }\r\n  .choiceBarItemText{\r\n     margin-left: 5%;\r\n  }\r\n  #category_button_choiceBar_service{\r\n      background-color: #fff;\r\n      color: #000;\r\n  }\r\n}\r\n@media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n   #choiseBar{\r\n       display: none;\r\n   }\r\n   .category_button_choiceBar{\r\n    width: 60%;\r\n    border:1px solid;\r\n    border-radius: 10px;\r\n    height: 80px;\r\n    \r\n    margin-left: 20%;\r\n    margin-bottom: 3%;\r\n    font-size: 26px;\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n  text-align: center; \r\n   }\r\n   .item{\r\n       margin-top:3%;\r\n       display: block;\r\n       width: 100%;\r\n   }\r\n   .profil,.acces_direct {\r\n       margin-top: 4%;\r\n       width: 60%;\r\n     \r\n      \r\n       height: 80px;\r\n       text-align: center;\r\n       margin-left: 20%;\r\n       margin-bottom: 3%;\r\n       font-size: 35px;\r\n       color:#000;\r\n   }\r\n   .service-subtitle{\r\n       display: block;\r\n       margin-left: 20%;\r\n       font-size: 24px;\r\n   }\r\n   .search_input{}\r\n   .search{\r\n     \r\n       height: 80px;\r\n\r\n       color: #E5112F;\r\n       outline: none;\r\n       margin-top: 5%;\r\n       margin-bottom: 5%;\r\n       width: 60%;\r\n     \r\n       height: 50px;\r\n       background-color: #eee;\r\n       margin-left: 20%;\r\n      \r\n   }\r\n\r\n   .search_input{\r\n     \r\n      \r\n    outline: none;\r\n    background-color: #eee;\r\n   margin-left: 10%;\r\n}\r\n\r\n.search_submit_button{\r\n   \r\n   \r\n    \r\n  \r\n}\r\n\r\n.search_icon{\r\n    \r\n    font-size: 33px;\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    display: block;\r\n    padding-top: 1.5%;\r\n \r\n    \r\n\r\n}\r\n#search_icon-size{\r\n    display: block;\r\n    padding-right: 50px;\r\n    background-color: #E5112F;\r\n    font-size: 100px;\r\n  \r\n}\r\n::-moz-placeholder{\r\n    font-size: 26px;\r\n}\r\n:-ms-input-placeholder{\r\n    font-size: 26px;\r\n}\r\n::placeholder{\r\n    font-size: 26px;\r\n}\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10101,7 +10336,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n  \r\n\r\n  \r\n \r\n  \r\n  \r\n  @media screen and (min-width: 900px) {\r\n\r\n    .pos{\r\n        position: fixed;\r\n        \r\n       \r\n    }\r\n    .bread{\r\n      margin-right: 100%    }\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 8.7vh;\r\n      width: 34vw;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:#666;\r\n    display: block;\r\n   \r\n    \r\n  }\r\n  .process-text-icon{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    text-align: center;\r\n    text-justify:center;\r\n     \r\n    margin-top: 4%;\r\n  }\r\n \r\n  .section_text{\r\n   display: inline-block;\r\n    margin-top: 2%;\r\n\r\n  }\r\n  .mobile-only-title{\r\n    margin-right: 100em;\r\n  }\r\n  .item-text{\r\n\r\n  \r\n  }\r\n  .chevron_icon{\r\n   \r\n  }\r\n  \r\n  .container_title{\r\n      font-size: 3vmin;\r\n      margin-top: 3%;\r\n    \r\n  }\r\n  .container_icon{\r\n     margin-left: 1%;\r\n     font-size: 3vmin;\r\n     \r\n  }\r\n  .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 8.7vh;\r\n      width: 34vw;\r\n      border-radius: 10px;\r\n      font-size: 2.7vmin;\r\n      display: block;\r\n      \r\n  }\r\n  \r\n  .process_title{\r\n    font-size: 3vmin;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n     \r\n  \r\n \r\n#first-item{\r\n    margin-top: 10%;\r\n}\r\n.process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 11vh;\r\n      width: 38vw;\r\n      border-radius: 10px;\r\n      font-size:15px;\r\n\r\n}\r\n\r\n.bread{\r\n    width:50%;\r\n    margin-left: 45%;\r\n    \r\n\r\n}\r\n.inactive,#inaction{\r\n  display: block;\r\n  height: 8.7vh;\r\n  width: 34vw;\r\n  text-decoration: none;\r\n  \r\n}\r\n.nav-position{\r\n  position: sticky;\r\n  z-index: 1;\r\n  width: inherit;\r\n\r\n\r\n }\r\n .mobile-only-title{\r\n  position: fixed;\r\n}\r\n     .sections{\r\n        border-left: solid 1px;\r\n        \r\n     }\r\n     .processes-position{\r\n       \r\n      margin-bottom: 10%;\r\n     }\r\n     .title{\r\n         margin-left: 4%;\r\n     }\r\n     .scroll-bar{\r\n       /* overflow-y:scroll;*/\r\n        \r\n        \r\n     }\r\n     \r\n     .section-position{\r\n       transform: none;\r\n       \r\n    }\r\n    \r\n     .phone-processes{display:none}\r\n     .desk-bread{\r\n        \r\n        \r\n         background-color: #FFF;\r\n         margin-bottom: 3%;\r\n        \r\n     }\r\n     .bread-text{\r\n        \r\n         background-color: #fff;\r\n     }\r\n     .desk-nav{\r\n      \r\n    }\r\n    .phone-processes{\r\n        display: none;\r\n    }\r\n    .subcontainer_name{\r\n      font-size: 20px;\r\n    }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n    .section-position{\r\n        position: fixed;\r\n      \r\n        \r\n        background-color: white;  \r\n        margin-top: 85px;\r\n        width: 100%;\r\n        \r\n       \r\n    \r\n    }\r\n    .sections{\r\n        z-index: 3;\r\n     height: -webkit-fit-content;\r\n     height: -moz-fit-content;\r\n     height: fit-content;\r\n    \r\n     \r\n    }\r\n\r\n    .title{\r\n       \r\n      background-color: white;\r\n      width: 100%;\r\n     \r\n      display: block;\r\n      \r\n      text-align: center;\r\n      \r\n  }\r\n    .desk-bread{\r\n        background-color: white;\r\n        margin-top: 20%;\r\n      width: inherit;\r\n      display: none;\r\n\r\n\r\n\r\n    }\r\n    .process_item{\r\n        height: 90px;\r\n        border:1px solid;\r\n        margin-top: 2%;\r\n        font-size: 17px;\r\n       list-style-type: none;\r\n       width: 300px;\r\n       border-radius: 10px;\r\n      margin-right: 10px;\r\n     \r\n\r\n    }\r\n    .process-text-icon{\r\n      margin-top: 3%;\r\n    }\r\n    .processes-position{\r\n       height: -webkit-fit-content;\r\n       height: -moz-fit-content;\r\n       height: fit-content; \r\n       margin-top: 400px;\r\n     \r\n    }\r\n    .process_title{\r\n     text-align: center;\r\n     font-size: 5vmin;\r\n    }\r\n    .process-section-title{\r\n      text-align: center;\r\n    }\r\n    .processes{\r\n        \r\n       \r\n    }\r\n    .cont-container{\r\n       \r\n    }\r\n\r\n\r\n    /* sections*/\r\n\r\n    .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 40px;\r\n      width: 300px;\r\n      border-radius: 10px;\r\n      font-size: 20px;\r\n      display: block;\r\n      margin-top: 5%;\r\n     \r\n      \r\n  }\r\n  /*footer style */\r\n  .container-footer{\r\n    margin-top: 10%;\r\n  }\r\n  }\r\n\r\n  \r\n  \r\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n  \r\n\r\n  \r\n \r\n  \r\n  \r\n  @media screen and (min-width: 900px) {\r\n\r\n    .pos{\r\n        position: fixed;\r\n        \r\n       \r\n    }\r\n    .bread{\r\n      margin-right: 100%    }\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 8.7vh;\r\n      width: 34vw;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:#666;\r\n    display: block;\r\n   \r\n    \r\n  }\r\n  .process-text-icon{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    text-align: center;\r\n    text-justify:center;\r\n     \r\n    margin-top: 4%;\r\n  }\r\n \r\n  .section_text{\r\n   display: inline-block;\r\n    margin-top: 2%;\r\n\r\n  }\r\n  .mobile-only-title{\r\n    margin-right: 100em;\r\n  }\r\n  .item-text{\r\n\r\n  \r\n  }\r\n  .chevron_icon{\r\n   \r\n  }\r\n  \r\n  .container_title{\r\n      font-size: 3vmin;\r\n      margin-top: 3%;\r\n    \r\n  }\r\n  .container_icon{\r\n     margin-left: 1%;\r\n     font-size: 3vmin;\r\n     \r\n  }\r\n  .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 8.7vh;\r\n      width: 34vw;\r\n      border-radius: 10px;\r\n      font-size: 2.7vmin;\r\n      display: block;\r\n      \r\n  }\r\n  \r\n  .process_title{\r\n    font-size: 3vmin;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n     \r\n  \r\n \r\n#first-item{\r\n    margin-top: 10%;\r\n}\r\n.process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 11vh;\r\n      width: 38vw;\r\n      border-radius: 10px;\r\n      font-size:15px;\r\n\r\n}\r\n\r\n.bread{\r\n    width:50%;\r\n    margin-left: 45%;\r\n    \r\n\r\n}\r\n.inactive,#inaction{\r\n  display: block;\r\n  height: 8.7vh;\r\n  width: 34vw;\r\n  text-decoration: none;\r\n  \r\n}\r\n.nav-position{\r\n  position: sticky;\r\n  z-index: 1;\r\n  width: inherit;\r\n\r\n\r\n }\r\n .mobile-only-title{\r\n  position: fixed;\r\n}\r\n     .sections{\r\n        border-left: solid 1px;\r\n        \r\n     }\r\n     .processes-position{\r\n       \r\n      margin-bottom: 10%;\r\n     }\r\n     .title{\r\n         margin-left: 4%;\r\n     }\r\n     .scroll-bar{\r\n       /* overflow-y:scroll;*/\r\n        \r\n        \r\n     }\r\n     \r\n     .section-position{\r\n       transform: none;\r\n       \r\n    }\r\n    \r\n     .phone-processes{display:none}\r\n     .desk-bread{\r\n        \r\n        \r\n         background-color: #FFF;\r\n         margin-bottom: 3%;\r\n        \r\n     }\r\n     .bread-text{\r\n        \r\n         background-color: #fff;\r\n     }\r\n     .desk-nav{\r\n      \r\n    }\r\n    .phone-processes{\r\n        display: none;\r\n    }\r\n    .subcontainer_name{\r\n      font-size: 20px;\r\n    }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n    .section-position{\r\n        position: fixed;\r\n      \r\n        \r\n        background-color: white;  \r\n        margin-top: 85px;\r\n        width: 100%;\r\n        \r\n       \r\n    \r\n    }\r\n    .sections{\r\n        z-index: 3;\r\n     height: -webkit-fit-content;\r\n     height: -moz-fit-content;\r\n     height: fit-content;\r\n    \r\n     \r\n    }\r\n\r\n    .title{\r\n       \r\n      background-color: white;\r\n      width: 100%;\r\n     \r\n      display: block;\r\n      \r\n      text-align: center;\r\n     \r\n      margin-top: -50px;\r\n      \r\n  }\r\n    .desk-bread{\r\n        background-color: white;\r\n        padding-top: 20%;\r\n        width: inherit;\r\n        height: 50px;\r\n      \r\n\r\n       \r\n\r\n\r\n    }\r\n    .process_item{\r\n        height: 90px;\r\n        border:1px solid;\r\n        margin-top: 2%;\r\n        font-size: 17px;\r\n       list-style-type: none;\r\n       width: 300px;\r\n       border-radius: 10px;\r\n      margin-right: 40px;\r\n     \r\n\r\n    }\r\n    .process-text-icon{\r\n      margin-top: 3%;\r\n    }\r\n    .processes-position{\r\n       height: -webkit-fit-content;\r\n       height: -moz-fit-content;\r\n       height: fit-content; \r\n       margin-top: 460px;\r\n     \r\n    }\r\n    .process_title{\r\n    \r\n     font-size: 20px;\r\n     margin-left: 20%;\r\n     font-weight: bold;\r\n    }\r\n    .process-section-title{\r\n      font-size: 19px;\r\n     margin-left: 26%;\r\n     font-weight: bold;\r\n      \r\n    }\r\n    .processes{\r\n        \r\n       \r\n    }\r\n    .cont-container{\r\n       \r\n    }\r\n\r\n\r\n    /* sections*/\r\n\r\n    .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 40px;\r\n      width: 300px;\r\n      border-radius: 10px;\r\n      font-size: 20px;\r\n      display: block;\r\n      margin-top: 5%;\r\n     \r\n      \r\n  }\r\n  .nav-position{\r\n    width: 100%;\r\n  }\r\n  /*footer style */\r\n  .container-footer{\r\n    margin-top: 10%;\r\n  }\r\n  }\r\n\r\n  \r\n  \r\n  @media screen and (max-width: 899px) and (min-width: 601px){\r\n    \r\n\r\n\r\n\r\n    .pos{\r\n        position: fixed;\r\n        \r\n       \r\n    }\r\n    .bread{\r\n      margin-right: 100%    }\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 8.7vh;\r\n      width: 34vw;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:#666;\r\n    display: block;\r\n   \r\n    \r\n  }\r\n  .process-text-icon{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    text-align: center;\r\n    text-justify:center;\r\n     \r\n    margin-top: 4%;\r\n  }\r\n \r\n  .section_text{\r\n   display: inline-block;\r\n    margin-top: 2%;\r\n\r\n  }\r\n  .mobile-only-title{\r\n    margin-right: 100em;\r\n  }\r\n  .item-text{\r\n\r\n  \r\n  }\r\n  .chevron_icon{\r\n   \r\n  }\r\n  \r\n  .container_title{\r\n      font-size: 3vmin;\r\n      margin-top: 3%;\r\n    \r\n  }\r\n  .container_icon{\r\n     margin-left: 1%;\r\n     font-size: 3vmin;\r\n     \r\n  }\r\n  .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 8.7vh;\r\n      width: 34vw;\r\n      border-radius: 10px;\r\n      font-size: 2.7vmin;\r\n      display: block;\r\n      \r\n  }\r\n  \r\n  .process_title{\r\n    font-size: 3vmin;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n     \r\n  \r\n \r\n#first-item{\r\n    margin-top: 10%;\r\n}\r\n.process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 150px;\r\n      width: 38vw;\r\n      border-radius: 10px;\r\n      font-size:22px;\r\n\r\n}\r\n\r\n.bread{\r\n    width:50%;\r\n    margin-left: 45%;\r\n    \r\n\r\n}\r\n.inactive,#inaction{\r\n  display: block;\r\n  height: 8.7vh;\r\n  width: 34vw;\r\n  text-decoration: none;\r\n  \r\n}\r\n.nav-position{\r\n  position: sticky;\r\n  z-index: 1;\r\n  width: inherit;\r\n\r\n\r\n }\r\n .mobile-only-title{\r\n  position: fixed;\r\n}\r\n     .sections{\r\n        border-left: solid 1px;\r\n        \r\n     }\r\n     .processes-position{\r\n       \r\n      margin-bottom: 10%;\r\n     }\r\n     .title{\r\n         margin-left: 4%;\r\n         margin-bottom: 10%;\r\n     }\r\n     .section-1{\r\n       margin-top: 22%;\r\n     }\r\n     .scroll-bar{\r\n       /* overflow-y:scroll;*/\r\n        \r\n        \r\n     }\r\n     \r\n     .section-position{\r\n       transform: none;\r\n       \r\n    }\r\n    \r\n     .phone-processes{display:none}\r\n     .desk-bread{\r\n        \r\n        \r\n         background-color: #FFF;\r\n         margin-bottom: 3%;\r\n        \r\n     }\r\n     .bread-text{\r\n        \r\n         background-color: #fff;\r\n     }\r\n     .desk-nav{\r\n      \r\n    }\r\n    .phone-processes{\r\n        display: none;\r\n    }\r\n    .subcontainer_name{\r\n      font-size: 20px;\r\n    }\r\n    \r\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10125,7 +10360,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, " \r\n  @media screen and (min-width: 900px) {\r\n    .section-position{\r\n      margin-top: 5%;\r\n    \r\n    }\r\n    .container-footer{\r\n      margin-top: 10%;\r\n    }\r\n   .sections{\r\n   \r\n   }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n  \r\n  }\r\n\r\n  @media only screen and (max-width:899px) and (min-width :601px) {\r\n    \r\n    .tablet-nav{\r\n     position: fixed;\r\n    }\r\n    .mobile-only-title{\r\n     position: fixed;\r\n    }\r\n   .tablet-title{\r\n     font-size: 20px;\r\n  \r\n     \r\n   }\r\n   .section-desk-section{\r\n     position: fixed;\r\n     margin-top: 50px;\r\n   }\r\n \r\n  .process_title{\r\n    font-size: 3vmin;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 50px;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:rgb(34, 49, 78);\r\n    display: block;\r\n    width: 300px;\r\n   \r\n    \r\n  }\r\n  \r\n  .process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 10px;\r\n      border-radius: 10px;\r\n      height: 45px;\r\n      width: 290px;\r\n      \r\n      \r\n     display: inline-block;\r\n    \r\n     background-color: #fff;\r\n     color: #000;\r\n\r\n}\r\n  \r\n.inactive{\r\n  display: block;\r\n  height: 40px;\r\n  text-decoration: none;\r\n  color:#000\r\n}\r\n  }\r\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, " \r\n  @media screen and (min-width: 900px) {\r\n    .section-position{\r\n      margin-top: 5%;\r\n    \r\n    }\r\n    .container-footer{\r\n      margin-top: 10%;\r\n    }\r\n   .sections{\r\n   \r\n   }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n  \r\n  }\r\n\r\n  @media only screen and (max-width:899px) and (min-width :601px) {\r\n    \r\n   \r\n  }\r\n ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10149,7 +10384,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* computer style*/\r\n@media screen and (min-width:900px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}\r\n\r\n/* phone style*/\r\n\r\n\r\n@media screen and (max-width:600px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n      \r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 90%;\r\n        height: 35%;\r\n        display:none;\r\n        margin-left: 4%;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n        text-align: left;\r\n        font-size: 20px;\r\n        margin-left: 1%;\r\n    }\r\n    .close-button-item{\r\n        margin-left: 10%;\r\n        \r\n    }\r\n    .close-button-icon{\r\n        display: block;\r\n    }\r\n    \r\n    .contrast-title{\r\n    \r\n      font-size: 18px;\r\n      margin-left: 1%;\r\n      margin-top: 4%;\r\n      \r\n    \r\n    }\r\n    .standard{\r\n        background-color: #E5112F;\r\n         text-align: left;\r\n         width: 40%;\r\n         margin-left: 1%;\r\n         border: 1px solid;\r\n         height: 25%;\r\n        border-color: #EEE;\r\n        color:#fff;\r\n        font-size: 18px;\r\n    }\r\n    .reinforced{\r\n        background-color: #fff;\r\n        border: 1px solid;\r\n        width: 40%;\r\n        height: 25%;\r\n        border-color: #EEE;\r\n        margin-left: 1%;\r\n        font-size: 18px;\r\n    }\r\n    #contrast{\r\n        height: 30%;\r\n        width:10;\r\n        position: fixed;\r\n        z-index: 1;\r\n        \r\n        \r\n       \r\n        right: 0;\r\n        background-color: #f1f1f1;\r\n        overflow-x: hidden;\r\n        transition: 0.5s;\r\n        padding-top: 60px;\r\n        color:#E5112F;\r\n    }\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* computer style*/\r\n@media screen and (min-width:900px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}\r\n\r\n/* phone style*/\r\n\r\n\r\n@media screen and (max-width:600px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n      \r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 90%;\r\n        height: 35%;\r\n        display:none;\r\n        margin-left: 4%;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n        text-align: left;\r\n        font-size: 20px;\r\n        margin-left: 1%;\r\n    }\r\n    .close-button-item{\r\n        margin-left: 10%;\r\n        \r\n    }\r\n    .close-button-icon{\r\n        display: block;\r\n    }\r\n    \r\n    .contrast-title{\r\n    \r\n      font-size: 18px;\r\n      margin-left: 1%;\r\n      margin-top: 4%;\r\n      \r\n    \r\n    }\r\n    .standard{\r\n        background-color: #E5112F;\r\n         text-align: left;\r\n         width: 40%;\r\n         margin-left: 1%;\r\n         border: 1px solid;\r\n         height: 25%;\r\n        border-color: #EEE;\r\n        color:#fff;\r\n        font-size: 18px;\r\n    }\r\n    .reinforced{\r\n        background-color: #fff;\r\n        border: 1px solid;\r\n        width: 40%;\r\n        height: 25%;\r\n        border-color: #EEE;\r\n        margin-left: 1%;\r\n        font-size: 18px;\r\n    }\r\n    #contrast{\r\n        height: 30%;\r\n        width:10;\r\n        position: fixed;\r\n        z-index: 1;\r\n        \r\n        \r\n       \r\n        right: 0;\r\n        background-color: #f1f1f1;\r\n        overflow-x: hidden;\r\n        transition: 0.5s;\r\n        padding-top: 60px;\r\n        color:#E5112F;\r\n    }\r\n}\r\n\r\n\r\n@media screen and (min-width:601px) and (max-width:899px){\r\n\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10197,7 +10432,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {\r\n.homepage_button{\r\n    display: block;\r\n}\r\n.state_containers{\r\n    width: 90%;\r\n   \r\n    margin-top: 2%;\r\n    border:2px solid;\r\n   \r\n    margin-left: 5%;\r\n    height: 220px;\r\n    border-radius: 20px;\r\n    border-color: #E5112F;\r\n    \r\n}\r\n.contain-title{\r\n    font-size: 20px;\r\n    text-align: center;\r\n    color: #E5112F;\r\n    font-weight: bold;\r\n}\r\n/*\r\n first group : ma vie admnistratiove\r\n*/\r\n.state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\r\n    \r\n}\r\n.category_title{\r\n    margin-bottom: 3%;\r\n    margin-top: 3%;\r\n\r\n}\r\n\r\n.category_button{\r\n\r\n    width: 29%;\r\n    height: 75px;\r\n    margin-left: 3%;\r\n    margin-bottom: 1%;\r\n    background-color:#577C90;\r\n    color:#FFF;\r\n    border: 1px solid;\r\n    border-color: #ddd;\r\n    border-radius: 10px;\r\n}\r\n.category_button:hover{\r\n\r\n   \r\n    background-color: #E5112F;\r\n    color:#fff;\r\n    text-decoration: none;\r\n   \r\n}\r\n.line{\r\n    height: 3px;\r\n}\r\n.name{\r\n    font-size: 17px;\r\n    width: 100%;\r\n    text-align: center;\r\n    margin-top: -2%;\r\n   \r\n    \r\n     \r\n}\r\n.description{\r\n    font-size: 13px;\r\n    display: block;\r\n    width: 100%;\r\n    text-align: center;\r\n    margin-top: -2%;\r\n}\r\n.home-icon{\r\n    font-size: 25px;\r\n    margin-top: 2%;\r\n    margin-right: 1%;\r\n}\r\n\r\n}\r\n.bread{\r\n    height: 5%;\r\n    margin-right: 500px;\r\n   \r\n    \r\n}\r\n@media screen and (max-width: 600px){\r\n     .category_button{\r\n         \r\n         width: 305px;\r\n         color: #fff;\r\n        \r\n         margin-bottom: 5%;\r\n         height: 105px;\r\n         text-decoration: none;\r\n          \r\n     word-wrap: break-word;\r\n    \r\n      border: 1px solid;\r\n      border-radius: 10px;\r\n      margin-right: 10%;\r\n      background-color: #577C90;\r\n   \r\n    \r\n        \r\n    }\r\n    .big-row-one {\r\n        margin-top:10%;\r\n    }\r\n    .state_containers{\r\n        margin-left: 10%;\r\n    }\r\n    #button-phone{\r\n      \r\n     \r\n\r\n    }\r\n    .contain-title{\r\n      \r\n      color: #E5112F;\r\n      margin-left: 15%;\r\n      font-weight:bold;\r\n       margin-bottom: 3%;\r\n    \r\n    }\r\n    .local_containers{\r\n       height: 1000px;\r\n    }\r\n    .description{\r\n      display:block;\r\n    }\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {\r\n.homepage_button{\r\n    display: block;\r\n}\r\n.tablet{\r\n    display: none;\r\n}\r\n.state_containers{\r\n    width: 90%;\r\n   \r\n    margin-top: 2%;\r\n    border:2px solid;\r\n   \r\n    margin-left: 5%;\r\n    height: 220px;\r\n    border-radius: 20px;\r\n    border-color: #E5112F;\r\n    \r\n}\r\n.contain-title{\r\n    font-size: 20px;\r\n    text-align: center;\r\n    color: #E5112F;\r\n    font-weight: bold;\r\n}\r\n/*\r\n first group : ma vie admnistratiove\r\n*/\r\n.state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\r\n    \r\n}\r\n.category_title{\r\n    margin-bottom: 3%;\r\n    margin-top: 3%;\r\n\r\n}\r\n\r\n.category_button{\r\n\r\n    width: 29%;\r\n    height: 75px;\r\n    margin-left: 3%;\r\n    margin-bottom: 1%;\r\n    background-color:#577C90;\r\n    color:#FFF;\r\n    border: 1px solid;\r\n    border-color: #ddd;\r\n    border-radius: 10px;\r\n}\r\n.category_button:hover{\r\n\r\n   \r\n    background-color: #E5112F;\r\n    color:#fff;\r\n    text-decoration: none;\r\n   \r\n}\r\n.line{\r\n    height: 3px;\r\n}\r\n.name{\r\n    font-size: 17px;\r\n    width: 100%;\r\n    text-align: center;\r\n    margin-top: -2%;\r\n   \r\n    \r\n     \r\n}\r\n.description{\r\n    font-size: 13px;\r\n    display: block;\r\n    width: 100%;\r\n    text-align: center;\r\n    margin-top: -2%;\r\n}\r\n.home-icon{\r\n    font-size: 25px;\r\n    margin-top: 2%;\r\n    margin-right: 1%;\r\n}\r\n\r\n}\r\n.bread{\r\n    height: 5%;\r\n    margin-right: 500px;\r\n   \r\n    \r\n}\r\n@media screen and (max-width: 600px){\r\n     .category_button{\r\n         \r\n         width: 300px;\r\n         color: #fff;\r\n        \r\n         margin-bottom: 5%;\r\n         height: 105px;\r\n         text-decoration: none;\r\n          \r\n     word-wrap: break-word;\r\n    \r\n      border: 1px solid;\r\n      border-radius: 10px;\r\n      margin-right: 10%;\r\n      margin-left: 4%;\r\n      background-color: #577C90;\r\n        \r\n    \r\n        \r\n    }\r\n    .big-row-one {\r\n        margin-top:10%;\r\n    }\r\n    .state_containers{\r\n        margin-left: 2%;\r\n        border: 2px solid;\r\n        margin-bottom: 7%;\r\n        margin-right: 2%;\r\n        border-color: #E5112F;\r\n        border-radius: 10px;\r\n        width: 96%;\r\n    }\r\n    #button-phone{\r\n      \r\n     \r\n\r\n    }\r\n    .contain-title{\r\n      \r\n      color: #E5112F;\r\n      margin-left: 15%;\r\n      font-weight:bold;\r\n       margin-bottom: 3%;\r\n       font-size: 20px;\r\n    \r\n    }\r\n    .local_containers{\r\n      \r\n    }\r\n    .contain-home{\r\n        height: 2500px\r\n    }\r\n    .description{\r\n      display:block;\r\n    }\r\n    .home-icon{\r\n        font-size: 25px;\r\n        margin-top: 2%;\r\n        margin-right: 1%;\r\n    }\r\n    .tablet {\r\n        display: none;\r\n    }\r\n}\r\n\r\n@media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n\r\n    .homepage_button{\r\n        display: block;\r\n    }\r\n    .state_containers{\r\n        width: 90%;\r\n       \r\n        margin-top: 2%;\r\n        border:2px solid;\r\n       \r\n        margin-left: 5%;  \r\n        height: 900px;\r\n        border-radius: 20px;\r\n        border-color: #E5112F;\r\n        \r\n    }\r\n    .body{\r\n        overflow-x: scroll;\r\n    }\r\n    .contain-title{\r\n        font-size: 33px;\r\n        text-align: center;\r\n        color: #E5112F;\r\n        font-weight: bold;\r\n    }\r\n    /*\r\n     first group : ma vie admnistratiove\r\n    */\r\n    .state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\r\n        \r\n    }\r\n    .category_title{\r\n        margin-bottom: 3%;\r\n        margin-top: 3%;\r\n        \r\n    \r\n    }\r\n    \r\n    .category_button{\r\n    \r\n        width: 80%;\r\n        height: 120px;\r\n        margin-left: 9%;\r\n        margin-bottom: 2%;\r\n        background-color:#577C90;\r\n        color:#FFF;\r\n        border: 1px solid;\r\n        border-color: #ddd;\r\n        border-radius: 10px;\r\n       overflow-wrap: break-word;\r\n    }\r\n    .category_button:hover{\r\n    \r\n       \r\n        background-color: #E5112F;\r\n        color:#fff;\r\n        text-decoration: none;\r\n       \r\n    }\r\n    .line{\r\n        height: 3px;\r\n    }\r\n    .name{\r\n        font-size: 29px;\r\n        width: 100%;\r\n        text-align: center;\r\n        margin-top: -2%;\r\n       \r\n        \r\n         \r\n    }\r\n    .description{\r\n        font-size: 25px;\r\n        display: block;\r\n        width: 100%;\r\n        text-align: center;\r\n        margin-top: -2%;\r\n    }\r\n    .home-icon{\r\n        font-size: 40px;\r\n        margin-top: 2%;\r\n        margin-right: 1%;\r\n    }\r\n    \r\n    }\r\n    .bread{\r\n        height: 5%;\r\n        margin-right: 500px;\r\n       \r\n        \r\n    \r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10221,7 +10456,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width:900px) {\r\n  \r\n\r\n.sidenav {\r\n    height: 100%;\r\n    width:0px;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    right: 0;\r\n\r\n    -webkit-backdrop-filter:brightness(0%);\r\n\r\n            backdrop-filter:brightness(0%);\r\n    background-color: #f1f1f1;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 60px;\r\n    color:#E5112F;\r\n  }\r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n  .menu_title_text{\r\n    margin-left: 26%;\r\n  }\r\n  .menu_btn{\r\n      background-color: #fff;\r\n      color:#E5112F;\r\n \r\n\r\n  }\r\n  \r\n  .sidenav a {\r\n  \r\n  \r\n    transition: 0.3s;\r\n  }\r\n  \r\n  .sidenav a:hover {\r\n    color: #f1f1f1;\r\n  }\r\n  #mySidenav{\r\n  \r\n  }\r\n  #contain{\r\n    \r\n  }/* bouton style*/\r\n  .sidenav .closebtn {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 25px;\r\n    \r\n   \r\n    margin-top: 450px;\r\n    \r\n   \r\n  }\r\n  .menu_btn{\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n  \r\n  \r\n  }\r\n  .menu-home-icon{\r\n  \r\n    color: #E5112F;\r\n    height: 90%;\r\n    border-radius: 100%;  \r\n  }\r\n  .menu-item{\r\n   \r\n     border:1px solid;\r\n     border-color: #707070;\r\n     margin-top: 3%;\r\n     width: 90%;\r\n     margin-left: 7%;\r\n     border-radius: 10px;\r\n     text-justify: center;\r\n     align-items: center;\r\n     text-align: left;\r\n     \r\n     height: 50px;\r\n     display: inline-flex;\r\n     \r\n  }\r\n  .engine-icon\r\n  {\r\n   \r\n   color: #E5112F;\r\n   height: 90%;\r\n   border-radius: 100%;\r\n\r\n \r\n\r\n    }\r\n    .engine-text,.menu_home_text,.menu_scanner_text{\r\n      color:#E5112F;\r\n      font-size: 15px;\r\n     \r\n    }\r\n    .menu-accueil{\r\n      border-top: solid 1px;\r\n      border-color: #707070;\r\n      margin-top: 10%;\r\n    }\r\n}\r\n/* mobile style*/\r\n@media only screen and (max-width:600px){\r\n  \r\n.sidenav {\r\n  height: 100%;\r\n  width:0px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  right: 0;\r\n\r\n  -webkit-backdrop-filter:brightness(0%);\r\n\r\n          backdrop-filter:brightness(0%);\r\n  background-color: #f1f1f1;\r\n  overflow-x: hidden;\r\n  transition: 0.5s;\r\n  padding-top: 60px;\r\n  color:#E5112F;\r\n}\r\n\r\n.menu_title{\r\n  color:#fff;\r\n  \r\n  background-color: #E5112F;\r\n  width: 40%;\r\n  margin-left: 30%;\r\n  border-radius: 20px;\r\n  height: 50px;\r\n  text-align: center;\r\n  text-justify: center;\r\n  align-items: center;\r\n  display: inline-flex;\r\n  margin-top: -5%;\r\n \r\n}\r\n.menu_title_text{\r\n  margin-left: 10%;\r\n}\r\n.menu_btn{\r\n \r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    margin-top: 100px;\r\n    margin-left: 40%;\r\n  \r\n  \r\n\r\n}\r\n\r\n.menu-home-icon{\r\n  background-color: #E5112F;\r\n  color: #fff;\r\n  border-radius: 50%;\r\n  height: 40px;\r\n  text-justify: center;\r\n  align-items: center;\r\n  text-align: center;\r\n  display: inline-flex;\r\n  \r\n  font-size: 25px;\r\n\r\n\r\n  \r\n}\r\n.menu-item{\r\n \r\n   border:1px solid;\r\n   border-color: #707070;\r\n   margin-top: 6%;\r\n   width: 80%;\r\n   margin-left: 7%;\r\n   border-radius: 10px;\r\n  \r\n}\r\n.engine-icon\r\n{\r\n  background-color: #E5112F;\r\n  color: #fff;\r\n  border-radius: 50%;\r\n  height: 40px;\r\n  text-justify: center;\r\n  align-items: center;\r\n  text-align: center;\r\n  display: inline-flex;\r\n  font-size: 20px;\r\n  margin-left: 40%;\r\n\r\n  }\r\n  .scanner-icon{\r\n    margin-left: 40%;\r\n  }\r\n  .engine-text,.menu_home_text,.menu_scanner_text{\r\n    color:#E5112F;\r\n    font-size: 13px;\r\n    margin-right: 10%;\r\n    \r\n  \r\n  }\r\n  .menu-accueil{\r\n    border-top: solid 1px;\r\n    border-color: #707070;\r\n    margin-top: 10%;\r\n  }\r\n\r\n\r\n}\r\n  @media screen and (max-height: 450px) {\r\n    .sidenav {padding-top: 15px;}\r\n    .sidenav a {font-size: 18px;}\r\n  }\r\n  \r\n  @media only screen and (max-width:899px) and (min-width :601px){\r\n  .menu_btn{\r\n    margin-top: 50px;\r\n  }\r\n  .sidenav{\r\n    padding-top: 110px;\r\n    \r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width:900px) {\r\n  \r\n\r\n.sidenav {\r\n    height: 100%;\r\n    width:0px;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    right: 0;\r\n\r\n    -webkit-backdrop-filter:brightness(0%);\r\n\r\n            backdrop-filter:brightness(0%);\r\n    background-color: #f1f1f1;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 60px;\r\n    color:#E5112F;\r\n  }\r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n  .menu_title_text{\r\n    margin-left: 26%;\r\n  }\r\n  .menu_btn{\r\n      background-color: #fff;\r\n      color:#E5112F;\r\n \r\n\r\n  }\r\n  \r\n  .sidenav a {\r\n  \r\n  \r\n    transition: 0.3s;\r\n  }\r\n  \r\n  .sidenav a:hover {\r\n    color: #f1f1f1;\r\n  }\r\n  #mySidenav{\r\n  \r\n  }\r\n  #contain{\r\n    \r\n  }/* bouton style*/\r\n  .sidenav .closebtn {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 25px;\r\n    \r\n   \r\n    margin-top: 450px;\r\n    \r\n   \r\n  }\r\n  .menu_btn{\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    margin-right: 40%;\r\n  \r\n  \r\n  }\r\n  .menu-home-icon{\r\n  \r\n    color: #E5112F;\r\n    height: 90%;\r\n    border-radius: 100%;  \r\n  }\r\n  .menu-item{\r\n   \r\n     border:1px solid;\r\n     border-color: #707070;\r\n     margin-top: 3%;\r\n     width: 90%;\r\n     margin-left: 7%;\r\n     border-radius: 10px;\r\n     text-justify: center;\r\n     align-items: center;\r\n     text-align: left;\r\n     \r\n     height: 50px;\r\n     display: inline-flex;\r\n     \r\n  }\r\n  .engine-icon\r\n  {\r\n   \r\n   color: #E5112F;\r\n   height: 90%;\r\n   border-radius: 100%;\r\n\r\n \r\n\r\n    }\r\n    .engine-text,.menu_home_text,.menu_scanner_text{\r\n      color:#E5112F;\r\n      font-size: 15px;\r\n     \r\n    }\r\n    .menu-accueil{\r\n      border-top: solid 1px;\r\n      border-color: #707070;\r\n      margin-top: 10%;\r\n    }\r\n}\r\n/* mobile style*/\r\n@media only screen and (max-width:600px){\r\n  \r\n.sidenav {\r\n  height: 100%;\r\n  width:0px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  right: 0;\r\n\r\n  -webkit-backdrop-filter:brightness(0%);\r\n\r\n          backdrop-filter:brightness(0%);\r\n  background-color: #f1f1f1;\r\n  overflow-x: hidden;\r\n  transition: 0.5s;\r\n  padding-top: 60px;\r\n  color:#E5112F;\r\n}\r\n\r\n.menu_title{\r\n  color:#fff;\r\n  \r\n  background-color: #E5112F;\r\n  width: 40%;\r\n  margin-left: 30%;\r\n  border-radius: 20px;\r\n  height: 50px;\r\n  text-align: center;\r\n  text-justify: center;\r\n  align-items: center;\r\n  display: inline-flex;\r\n  margin-top: -5%;\r\n \r\n}\r\n.menu_title_text{\r\n  margin-left: 10%;\r\n}\r\n.menu_btn{\r\n \r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    margin-top: 100px;\r\n    margin-left: 40%;\r\n  \r\n  \r\n\r\n}\r\n\r\n.menu-home-icon{\r\n  background-color: #E5112F;\r\n  color: #fff;\r\n  border-radius: 50%;\r\n  height: 40px;\r\n  text-justify: center;\r\n  align-items: center;\r\n  text-align: center;\r\n  display: inline-flex;\r\n  \r\n  font-size: 25px;\r\n\r\n\r\n  \r\n}\r\n.menu-item{\r\n \r\n   border:1px solid;\r\n   border-color: #707070;\r\n   margin-top: 6%;\r\n   width: 80%;\r\n   margin-left: 7%;\r\n   border-radius: 10px;\r\n  \r\n}\r\n.engine-icon\r\n{\r\n  background-color: #E5112F;\r\n  color: #fff;\r\n  border-radius: 50%;\r\n  height: 40px;\r\n  text-justify: center;\r\n  align-items: center;\r\n  text-align: center;\r\n  display: inline-flex;\r\n  font-size: 20px;\r\n  margin-left: 40%;\r\n\r\n  }\r\n  .scanner-icon{\r\n    margin-left: 40%;\r\n  }\r\n  .engine-text,.menu_home_text,.menu_scanner_text{\r\n    color:#E5112F;\r\n    font-size: 13px;\r\n    margin-right: 10%;\r\n    \r\n  \r\n  }\r\n  .menu-accueil{\r\n    border-top: solid 1px;\r\n    border-color: #707070;\r\n    margin-top: 10%;\r\n  }\r\n\r\n\r\n}\r\n@media screen and (min-width:601px) and(max-with:899px){\r\n  .sidenav {\r\n    height: 100%;\r\n    width:0px;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    right: 0;\r\n\r\n    -webkit-backdrop-filter:brightness(0%);\r\n\r\n            backdrop-filter:brightness(0%);\r\n    background-color: #f1f1f1;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 60px;\r\n    color:#E5112F;\r\n  }\r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n\r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n  .menu_title_text{\r\n    margin-left: 26%;\r\n  }\r\n  .menu_btn{\r\n      background-color: #fff;\r\n      color:#E5112F;\r\n \r\n\r\n  }\r\n  \r\n  .sidenav a {\r\n  \r\n  \r\n    transition: 0.3s;\r\n  }\r\n  \r\n  .sidenav a:hover {\r\n    color: #f1f1f1;\r\n  }\r\n  #mySidenav{\r\n  \r\n  }\r\n  #contain{\r\n    \r\n  }/* bouton style*/\r\n  .sidenav .closebtn {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 25px;\r\n    \r\n   \r\n    margin-top: 450px;\r\n    \r\n   \r\n  }\r\n  .menu_btn{\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    margin-right: 40%;\r\n  \r\n  \r\n  }\r\n  .menu-home-icon{\r\n  \r\n    color: #E5112F;\r\n    height: 90%;\r\n    border-radius: 100%;  \r\n  }\r\n  .menu-item{\r\n   \r\n     border:1px solid;\r\n     border-color: #707070;\r\n     margin-top: 3%;\r\n     width: 90%;\r\n     margin-left: 7%;\r\n     border-radius: 10px;\r\n     text-justify: center;\r\n     align-items: center;\r\n     text-align: left;\r\n     \r\n     height: 50px;\r\n     display: inline-flex;\r\n     \r\n  }\r\n  .engine-icon\r\n  {\r\n   \r\n   color: #E5112F;\r\n   height: 90%;\r\n   border-radius: 100%;\r\n\r\n \r\n\r\n    }\r\n    .engine-text,.menu_home_text,.menu_scanner_text{\r\n      color:#E5112F;\r\n      font-size: 15px;\r\n     \r\n    }\r\n    .menu-accueil{\r\n      border-top: solid 1px;\r\n      border-color: #707070;\r\n      margin-top: 10%;\r\n    }\r\n}\r\n  @media screen and (max-height: 450px) {\r\n    .sidenav {padding-top: 15px;}\r\n    .sidenav a {font-size: 18px;}\r\n  }\r\n  \r\n  @media only screen and (max-width:899px) and (min-width :601px){\r\n  .menu_btn{\r\n    margin-top: 50px;\r\n  }\r\n  .sidenav{\r\n    padding-top: 110px;\r\n    \r\n  }\r\n\r\n  \r\n.sidenav {\r\n  height: 100%;\r\n  width:0px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  right: 0;\r\n\r\n  -webkit-backdrop-filter:brightness(0%);\r\n\r\n          backdrop-filter:brightness(0%);\r\n  background-color: #f1f1f1;\r\n  overflow-x: hidden;\r\n  transition: 0.5s;\r\n  padding-top: 60px;\r\n  color:#E5112F;\r\n}\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10245,7 +10480,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 600px) {   \r\n    .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 12.5%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 8%;\r\n            background-color: #E5112F;\r\n            text-align: center;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 36%;\r\n           font-size: 33px;\r\n        \r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 33px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            margin-left: 29%;\r\n            font-size: 33px;\r\n           \r\n        \r\n        }\r\n        .page_title{\r\n            width: 50%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 35px;\r\n        }\r\n        \r\n    }\r\n    @media screen and (max-width: 600px){\r\n\r\n        .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 15%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 13%;\r\n            background-color: #E5112F;\r\n           \r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 30%;\r\n           font-size: 33px;\r\n        \r\n        }\r\n        .navbar-text{\r\n            font-size: 12px;\r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 33px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            \r\n            font-size: 33px;\r\n           \r\n        \r\n        }\r\n        .menu_text{\r\n            margin-right: 50%;\r\n        }\r\n        .modenuit_text{\r\n           margin-right: 50%;\r\n        }\r\n        .accessibility_text{\r\n           font-size: 0px;\r\n        }\r\n      \r\n        .modenuit_icon{\r\n            padding-top: 6px;\r\n            \r\n        }\r\n        .menu_icon{\r\n            margin-left: 10%;\r\n        }\r\n        .page_title{\r\n            width: 30%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 20px;\r\n        }\r\n        \r\n\r\n    }\r\n\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {   \r\n    .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 12.5%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 8%;\r\n            background-color: #E5112F;\r\n            text-align: center;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 36%;\r\n           font-size: 33px;\r\n        \r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 33px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            margin-left: 29%;\r\n            font-size: 33px;\r\n           \r\n        \r\n        }\r\n        .page_title{\r\n            width: 50%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 35px;\r\n        }\r\n        \r\n    }\r\n\r\n    @media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n        .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 12.5%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 8%;\r\n            background-color: #E5112F;\r\n            text-align: center;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 36%;\r\n           font-size: 50px;\r\n        \r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 50px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            margin-left: 29%;\r\n            font-size: 50px;\r\n            margin-right:  19%;\r\n           \r\n        \r\n        }\r\n        .page_title{\r\n            width: 50%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 80px;\r\n        }\r\n        .back_text,.home_text{\r\n            font-size: 20px;\r\n        }\r\n        .menu_text{\r\n            font-size: 22px;\r\n            margin-left: 7%;\r\n        }\r\n        .accessibility_text{\r\n            font-size: 0px;\r\n        }\r\n        \r\n\r\n\r\n    }\r\n    @media screen and (max-width: 600px){\r\n\r\n        .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 15%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 13%;\r\n            background-color: #E5112F;\r\n           \r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 30%;\r\n           font-size: 33px;\r\n        \r\n        }\r\n        .navbar-text{\r\n            font-size: 12px;\r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 33px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            \r\n            font-size: 33px;\r\n           \r\n        \r\n        }\r\n        .menu_text{\r\n            margin-right: 50%;\r\n        }\r\n        .modenuit_text{\r\n           margin-right: 50%;\r\n        }\r\n        .accessibility_text{\r\n           font-size: 0px;\r\n        }\r\n      \r\n        .modenuit_icon{\r\n            padding-top: 6px;\r\n            \r\n        }\r\n        .menu_icon{\r\n            margin-left: 10%;\r\n        }\r\n        .page_title{\r\n            width: 30%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 20px;\r\n        }\r\n        \r\n\r\n    }\r\n\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10269,7 +10504,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* computer style*/\r\n\r\n@media screen  and (min-width:900px){\r\n    .subcontainer{\r\n  \r\n        height: 500px;\r\n        text-align: center;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-left: 35%;\r\n    }\r\n    .container_title{\r\n        font-size: 30px;\r\n        margin-top: -2%;\r\n    }\r\n    .icon-title{\r\n       \r\n    }\r\n    .topic-item{\r\n        width: 25%;\r\n        height: 20%;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:2%;\r\n        background-color: #fff;\r\n        border-radius: 15px;\r\n        border-color: #707070;\r\n     \r\n       \r\n       \r\n    }\r\n    .topic-item:hover{\r\n       \r\n     \r\n        -webkit-text-decoration-color: #E5112F;\r\n       \r\n     \r\n                text-decoration-color: #E5112F;\r\n        text-decoration: none;\r\n        color: #E5112F;\r\n       \r\n        border-color: #E5112F;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-right: 11%;\r\n        margin-top: 2%;\r\n        \r\n    }\r\n}\r\n@media screen and (max-width:600px){\r\n    .subcontainer{\r\n  \r\n      \r\n        text-align: center;\r\n        height: -webkit-fit-content;\r\n        height: -moz-fit-content;\r\n        height: fit-content;\r\n       \r\n       \r\n    }\r\n    .desk-bread-cont{\r\n        margin-top: 300px;\r\n        background-color: lawngreen;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n       \r\n    }\r\n    .container_title{\r\n        font-size: 25px;\r\n        margin-top: 26%;\r\n    }\r\n    .topic-item{\r\n        width: 80%;\r\n        height: 100px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:4%;\r\n       \r\n        border-radius: 15px;\r\n       \r\n        background-color: #577C90;\r\n        font-weight: bold;\r\n        color: #fff;\r\n       \r\n       \r\n    }\r\n    .bread-text{\r\n       display: none;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-top: 4%;\r\n    }\r\n    .nav-position{\r\n        z-index: 2;\r\n    }\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* computer style*/\r\n\r\n@media screen  and (min-width:900px){\r\n    .subcontainer{\r\n  \r\n        height: 500px;\r\n        text-align: center;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-left: 35%;\r\n    }\r\n    .container_title{\r\n        font-size: 30px;\r\n        margin-top: -2%;\r\n    }\r\n    .icon-title{\r\n       \r\n    }\r\n    .topic-item{\r\n        width: 25%;\r\n        height: 20%;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:2%;\r\n        background-color: #fff;\r\n        border-radius: 15px;\r\n        border-color: #707070;\r\n     \r\n       \r\n       \r\n    }\r\n    .topic-item:hover{\r\n       \r\n     \r\n        -webkit-text-decoration-color: #E5112F;\r\n       \r\n     \r\n                text-decoration-color: #E5112F;\r\n        text-decoration: none;\r\n        color: #E5112F;\r\n       \r\n        border-color: #E5112F;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-right: 11%;\r\n        margin-top: 2%;\r\n        \r\n    }\r\n}\r\n@media screen and (max-width:600px){\r\n    .subcontainer{\r\n  \r\n      \r\n        text-align: center;\r\n        height: -webkit-fit-content;\r\n        height: -moz-fit-content;\r\n        height: fit-content;\r\n       \r\n       \r\n    }\r\n    .desk-bread-cont{\r\n        margin-top: 200px;\r\n       \r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-top: -60px;\r\n       \r\n    }\r\n    .container_title{\r\n        font-size: 25px;\r\n        margin-top: 26%;\r\n    }\r\n    .topic-item{\r\n        width: 80%;\r\n        height: 100px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:4%;\r\n        background-color: #577C90;;\r\n        border-radius: 15px;\r\n        color: #fff;\r\n        text-transform: uppercase;\r\n       \r\n      \r\n        font-weight: bold;\r\n      \r\n       \r\n    }\r\n    .desk-bread{\r\n     \r\n    \r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-top: 4%;\r\n    }\r\n    .nav-position{\r\n        z-index: 2;\r\n    }\r\n    .icon-title{\r\n        display: none;\r\n    }\r\n}\r\n\r\n@media screen  and (min-width:601px) and (max-width:899px){\r\n\r\n    .subcontainer{\r\n  \r\n       \r\n        text-align: center;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-left: 35%;\r\n    }\r\n    .container_title{\r\n        font-size: 30px;\r\n        margin-top: -2%;\r\n    }\r\n    .icon-title{\r\n       \r\n    }\r\n    .topic-item{\r\n        width: 40%;\r\n        height: 120px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:2%;\r\n        background-color: #fff;\r\n        border-radius: 15px;\r\n        border-color: #707070;\r\n        font-size: 29px;\r\n     \r\n       \r\n       \r\n    }\r\n    .desk-bread{\r\n        font-size: 20px;\r\n    }\r\n    .topic-item:hover{\r\n       \r\n     \r\n        -webkit-text-decoration-color: #E5112F;\r\n       \r\n     \r\n                text-decoration-color: #E5112F;\r\n        text-decoration: none;\r\n        color: #E5112F;\r\n       \r\n        border-color: #E5112F;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 33px;\r\n        margin-right: 11%;\r\n        margin-top: 2%;\r\n        \r\n    }\r\n}\r\n@media screen and (max-width:600px){\r\n    .subcontainer{\r\n  \r\n      \r\n        text-align: center;\r\n        height: -webkit-fit-content;\r\n        height: -moz-fit-content;\r\n        height: fit-content;\r\n       \r\n       \r\n    }\r\n    .desk-bread-cont{\r\n        margin-top: 200px;\r\n       \r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-top: -60px;\r\n       \r\n    }\r\n    .container_title{\r\n        font-size: 25px;\r\n        margin-top: 26%;\r\n    }\r\n    .topic-item{\r\n        width: 80%;\r\n        height: 100px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:4%;\r\n        background-color: #577C90;;\r\n        border-radius: 15px;\r\n        color: #fff;\r\n        text-transform: uppercase;\r\n       \r\n      \r\n        font-weight: bold;\r\n      \r\n       \r\n    }\r\n    .desk-bread{\r\n     \r\n    \r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-top: 4%;\r\n    }\r\n    .nav-position{\r\n        z-index: 2;\r\n    }\r\n    .icon-title{\r\n        display: none;\r\n    }\r\n\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10293,7 +10528,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n.bread-items{\r\n text-decoration: underline;\r\n  list-style-type: none;\r\n  display: inline;\r\n  margin-left: 2%;\r\n  font-size: 2vmin;\r\n  \r\n}\r\n@media screen and(min-width:(900px)){\r\n.bread-items{\r\n    font-size:10%;\r\n}\r\n  .bread-icon{\r\n      margin-top: 16px;\r\n      display:block;\r\n      color: red;\r\n  }\r\n}\r\n.bread-container{\r\n    height: 20px;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n@media screen and(min-width:(900px)){\r\n.bread-items{\r\n    font-size:10%;\r\n}\r\n  .bread-icon{\r\n      margin-top: 16px;\r\n      display:block;\r\n      color: red;\r\n  }\r\n}\r\n\r\n\r\n.bread-items{\r\n  text-decoration: underline;\r\n   list-style-type: none;\r\n   display: inline;\r\n   margin-left: 2%;\r\n   font-size: 12px;\r\n   \r\n }\r\n.bread-container{\r\n    height: 20px;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

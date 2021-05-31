@@ -33,7 +33,7 @@ class CreateContainersTable extends Migration
             ['container_id'=>8,'container_name'=>"Transports et déplacements",'container_description'=>'Permis de conduire,Carte grise,Infraction','container_icon'=>'directions_car,directions_bike,directions_bus_filled'],
             ['container_id'=>9,'container_name'=>"Logement et constructions",'container_description'=>'Allocation logement,Urbanisme','container_icon'=>'home_work'], //to complete container_icon
             ['container_id'=>10,'container_name'=>"Finances et justice",'container_description'=>'Déclarations des revenus,Timbre fiscal,Plaintes','container_icon'=>'euro'],
-            ['container_id'=>11,'container_name'=>"Action citoyenne",'container_description'=>'Signalements,Engagements,Elections','container_icon'=>'connect_without_contact'],
+            ['container_id'=>11,'container_name'=>"Engagement, Eléctions",'container_description'=>'Signalements,Engagements,Elections','container_icon'=>'connect_without_contact'],
             ['container_id'=>12,'container_name'=>"Enfance,scolarité et études",'container_description'=>'Petite enfance,Garde,Bourse','container_icon'=>'child_care,school'],
             ['container_id'=>13,'container_name'=>"Environnement et eau potable",'container_description'=>'Déchetterie,Composte,Services des eaux','container_icon'=>'recycling,delete,water_drop'],
             ['container_id'=>14,'container_name'=>"Aide et solidarité",'container_description'=>'Alimentaire,Ecoute,Accompagnement','container_icon'=>'volunteer_activism'],
@@ -55,7 +55,7 @@ class CreateContainersTable extends Migration
      *
      * @return void
      */
-    public function down()S
+    public function down()
     {
        
         Schema::dropIfExists('containers');

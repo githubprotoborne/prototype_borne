@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import "../../../css/ChoiceBar.css"
 import { Link } from "react-router-dom"
 import axios from "axios"
-class ChoiceBar extends React.Component {
+class ChoiceBarTablet extends React.Component {
    constructor(props) {
       super(props)
       this.state = {
@@ -31,12 +31,12 @@ class ChoiceBar extends React.Component {
    render() {
 
       return (
-         <div className="container-fluid" id="choiseBar">
+         <div >
             <div className="row  whole_container" >
 
                {///////////////////////////// dites nous qui vous etes
                }
-               <div className="col  profil"  id="tablet-profil">
+               <div className="profil">
                   <p className="profil-text">Je choisis mon profil</p>
                </div>
 
@@ -47,13 +47,13 @@ class ChoiceBar extends React.Component {
                {this.state.containers.length !== 0 ? this.state.containers.map((container, index) =>
 
 
-                  <Link key={index.toString()} className="col-md cont category_button_choiceBar"  id={"tablet-pro"+index} to={{
+                  <Link key={index.toString()} className="cont category_button_choiceBar"  id={"tablet-pro"+index} to={{
                      pathname: "/sous-categories/" + container.container_id + "/" + container.container_name,
                      // pass data through react -router
                      id: container.container_id,
                      name: container.container_name,
                      icon: container.container_icon
-                  }} style={{   display: "inline-flex", textAlign: "center", textJustify: "center", alignItems: "center" }}>{container.container_name}</Link>
+                  }} style={{ }}><span className="item">{container.container_name}</span></Link>
 
                ) : ""}
 
@@ -61,7 +61,7 @@ class ChoiceBar extends React.Component {
                   ///  moteur de recherche
                }
 
-               <a className="category_button_choiceBar cont search-engine  col-md" id="category_button_choiceBar_service" href="https://google.fr" >
+               <a className="cont acces_direct  " id="category_button_choiceBar_service" href="https://google.fr" >
                   <span className="service-title">J'accède directement à un site ou une démarche</span>
 
                </a>
@@ -70,7 +70,7 @@ class ChoiceBar extends React.Component {
                   ///////////////////////////////// accès direct à un service
                }
 
-               <Link className="category_button_choiceBar services  cont col-md" to={{
+               <Link className="category_button_choiceBar services  cont" to={{
                   pathname: "/mes-demarches/",
                   // pass data through react -router
 
@@ -80,7 +80,7 @@ class ChoiceBar extends React.Component {
                </Link>
 
 
-               <div className="col-md">
+              
 
                   <form className=" row search">
                      <input type="text col" placeholder="Je cherche une demarche" className="col search_input"></input>
@@ -88,7 +88,7 @@ class ChoiceBar extends React.Component {
                         <span className="material-icons-outlined col-1 search_icon" >search</span>
                      
                   </form>
-               </div>
+             
 
             </div>
          </div>
@@ -97,4 +97,4 @@ class ChoiceBar extends React.Component {
    }
 }
 
-export default ChoiceBar
+export default ChoiceBarTablet

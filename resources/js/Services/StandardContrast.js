@@ -9,6 +9,18 @@ export function StandardContrast (){
     $(".col_margin").css("background-color", "")
     $(".state_containers").css("border-color", "")
     $(".category_button").css("border-color", "")
+    $(".cont").css("color", "#fff")
+    $(".cont").css("background-color", "")
+    $("#direct-acces").css("color", "")
+    $("#direct-acces").css("background-color", "")
+    $(".profil").css("color", "")
+    $(".profil").css("background-color", "")
+    $(".search_icon").css("background-color", "")
+    $(".search_icon").css("border", "")
+    $("#category_button_choiceBar_service").css("color", "")
+    
+    
+    $(".search_input").css("background-color", "")
     //navbar
     $(".nav_tool_button").css("background-color", "")
     $(".nav_tool_button").css("color", "")
@@ -29,6 +41,10 @@ export function StandardContrast (){
     $(".processes-position").css("color", "")
     $(".sections").css("color", "")
     $(".bread-text").css("background-color", "")
+    $(".section-position").css("background-color", "")
+    $(".desk-bread").css("background-color", "")
+    $(".title").css("background-color", "")
+    
     //subcontainer style
     $(".subcontainer").css("color", "")
     $(".topic-item").css("background-color", "")

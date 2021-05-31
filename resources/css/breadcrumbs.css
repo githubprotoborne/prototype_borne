@@ -1,12 +1,4 @@
 
-.bread-items{
- text-decoration: underline;
-  list-style-type: none;
-  display: inline;
-  margin-left: 2%;
-  font-size: 2vmin;
-  
-}
 @media screen and(min-width:(900px)){
 .bread-items{
     font-size:10%;
@@ -17,6 +9,16 @@
       color: red;
   }
 }
+
+
+.bread-items{
+  text-decoration: underline;
+   list-style-type: none;
+   display: inline;
+   margin-left: 2%;
+   font-size: 12px;
+   
+ }
 .bread-container{
     height: 20px;
 }

@@ -23,9 +23,12 @@ const NavBar2 = () => {
   // handle the menu nav opening
   let openNav = () => {
 
-    if ($(window).width() >= 700) {
+    if ($(window).width() >= 900) {
       document.getElementById("mySidenav").style.width = "30%";// mySidenav in Menu component
-    } else {
+    } else if($(window).width() >= 601 && $(window).width()<=899) {
+      document.getElementById("mySidenav").style.width = "50%";
+    }
+    else{
       document.getElementById("mySidenav").style.width = "80%";
     }
     handleBright()

@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/get-containers"', 'App\Http\Controllers\ContainerController@Get');
+Route::get('/get-containers', 'App\Http\Controllers\ContainerController@Get');
 Route::get('/demarches', 'App\Http\Controllers\DemarcheController@Get');
 Route::post('/email', 'App\Http\Controllers\EmailController@Create');
 Route::post('/emails', 'App\Http\Controllers\EmailController@Get');

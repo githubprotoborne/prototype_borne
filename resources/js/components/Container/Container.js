@@ -136,7 +136,7 @@ export default class Container extends Component {
                           }
                         }>
 
-                        <span className="section_text">Ensemble des services</span>
+                        <span className="section_text">Ensemble des démarches</span>
 
 
                       </Link>

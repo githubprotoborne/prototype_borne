@@ -12,6 +12,20 @@ export function reinforceContrast() {
     $(".state_containers").css("border-color", "#fff")
     $(".category_button").css("border-color", "#fff")
     $(".page_title ").css("color", "#fff")
+    $(".profil").css("color", "#fff")
+    $(".profil").css("background-color", "#222")
+
+   
+    $(".cont").css("color", "#fff")
+    $(".cont").css("background-color", "#333")
+    $("#direct-acces").css("color", "#fff")
+    $("#direct-acces").css("background-color", "#222")
+    $(".search_icon").css("background-color", "#333")
+    $(".search_input").css("background-color", "#333")
+    $(".search_icon").css("border", "none")
+
+    
+    
     $(".page_title ").css("background-color", "#222")
     $(".page_title").css("border-color", "#fff")
    
@@ -23,6 +37,11 @@ export function reinforceContrast() {
     $(".processes-position").css("color", "#fff")
     $(".sections").css("color", "#fff")
     $(".bread-text").css("background-color", "#333")
+    $(".section-position").css("background-color", "#333")
+    $(".desk-bread").css("background-color", "#333")
+    $(".title").css("background-color", "#333")
+    
+    
     //subcontainer style
     $(".subcontainer").css("color", "#fff")
     $(".topic-item").css("background-color", "#333")

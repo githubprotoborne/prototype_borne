@@ -11,6 +11,7 @@ import Footer from "../LegalInfo/Footer"
 import SessionTimeout from "../SessionTimeout"
 import SessionTimeoutDialog from "../Session/SessionTimeoutDialog"
 import NavBar from "../NavBar/NavBar"
+import ChoiceBarTablet from "../ChoiceBar/ChoiceBarTablet"
 
 
 class Home extends React.Component {
@@ -66,6 +67,7 @@ class Home extends React.Component {
                 <div id="contain" className='contain-home'>
                     <NavBar></NavBar>
                     <ChoiceBar></ChoiceBar>
+                    <div className="tablet"><ChoiceBarTablet></ChoiceBarTablet></div>
 
 
                     <div className="presentation container-fluid presentation-home">

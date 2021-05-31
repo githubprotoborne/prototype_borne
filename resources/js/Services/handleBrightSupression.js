@@ -8,10 +8,16 @@ export function handleBrightSupression() {
     $("#menu-container").css("filter", "brightness(100%)");
     $(".topic-item").css("filter", "brightness(100%)");
     $(".footer-container").css("filter", "brightness(100%)");
+    $(".state_containers").css("filter", "brightness(100%)");
+    $(".contain-title").css("filter", "brightness(100%)");
+   
     // Container style
     $(".processes-position").css("filter", "brightness(100%)");
     $(".sections-items").css("filter", "brightness(100%)");
     $(".bread-text").css("filter", "brightness(100%)");
+    $(".title").css("filter", "brightness(100%)");
+    $(".section-position").css("filter", "brightness(100%)");
+    $(".desk-bread").css("filter", "brightness(100%)");
     //subcontainer style
     $(".subcontainer").css("filter", "brightness(100%)");
     $(".topic-item").csscss("filter", "brightness(100%)");

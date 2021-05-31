@@ -15,6 +15,12 @@ export function handleBright() {
     $(".processes-position").css("filter", "brightness(30%)");
     $(".sections-items").css("filter", "brightness(30%)");
     $(".bread-text").css("filter", "brightness(30%)");
+    $(".title").css("filter", "brightness(30%)");
+    $(".section-position").css("filter", "brightness(30%)");
+    $(".desk-bread").css("filter", "brightness(30%)");
+    $(".state_containers").css("filter", "brightness(30%)");
+    $(".contain-title").css("filter", "brightness(30%)");
+   
     //subcontainer style
     $(".subcontainer").css("filter", "brightness(50%)");
     // $(".topic-item").css("filter", "brightness(100%)");
