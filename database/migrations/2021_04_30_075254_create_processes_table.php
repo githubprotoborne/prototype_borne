@@ -22,7 +22,7 @@ class CreateProcessesTable extends Migration
             $table->boolean('process_draft_mode')->nullable();
             $table->string('process_duration',200)->nullable();
 
-            $table->unsignedBigInteger('provider_id');
+            $table->unsignedInteger('provider_id')->unsigned();
             $table->foreign('provider_id')
                 ->references('provider_id')
                 ->on('providers')

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Email;
+use App\Models\Email;
 
 
 class EmailController extends Controller

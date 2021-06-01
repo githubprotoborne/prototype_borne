@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Process;
-use App\models\Container;
+use App\Models\Process;
+use App\Models\Container;
 use Illuminate\Support\Facades\DB;
 /**
      * Show the form for creating a new resource.

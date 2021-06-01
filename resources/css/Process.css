@@ -1,0 +1,195 @@
+.none {
+  display: none;
+}
+
+/*---------------------------------PROVIDER---------------------------------*/
+.providers {
+  border: 3px solid;
+}
+.providers > h3,
+.providers > p {
+  text-align: center;
+}
+
+.provider-text {
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+
+.provider-text > p {
+  margin: auto;
+}
+
+.provider-icons {
+  display: flex;
+  height: 100%;
+}
+
+.provider-icons > span {
+  margin: auto;
+}
+
+.providers > div > .row {
+  padding-bottom: 20px;
+}
+.provider-logo {
+  text-align: center;
+}
+.provider-logo > img {
+  width: 20%;
+  border: 1px solid;
+}
+.view-horaire {
+  display: flex;
+}
+.view-horaire > div {
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  border: 1px solid;
+  border-radius: 1000px;
+  padding: 5px 10px 5px 10px;
+}
+.view-horaire > div > span {
+  margin: auto;
+}
+.provider_phone_timetable,
+.provider_postal_address_timetable > div > li {
+  list-style: none;
+}
+
+.provider_postal_address_timetable_rdv > p {
+  font-size: 12px;
+  text-align: center;
+}
+.provider_postal_address_timetable_rdv > p > a {
+  text-decoration: underline;
+}
+.provider_write_online {
+  display: flex;
+}
+.provider_write_online > div {
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 1000px;
+  padding: 5px 10px 0px 10px;
+  background-color: #577c90;
+  color: white;
+}
+.provider_write_online > div > a > h4 {
+  text-align: center;
+}
+/*---------------------------------PROCESS---------------------------------*/
+.process {
+  width: 95%;
+}
+
+.process_name-title {
+  background-color: #e5112f;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.process_name-title > h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.process-body {
+  border: 3px solid;
+}
+
+.process-txt,
+.process-icon {
+  display: flex;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.process-txt,
+.process-icon > span,
+p {
+  margin: auto;
+}
+
+.process-txt > p {
+  width: 100%;
+}
+
+.process-icon-info {
+  font-size: 60px;
+}
+
+.process-body-text {
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.docAnnexe {
+  padding-left: inherit;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+.icons {
+  font-size: 2em;
+}
+
+li {
+  font-size: 1.25em;
+  color: black;
+}
+
+/*---------------------------------BUTTONS---------------------------------*/
+.process-body-text > .container {
+  height: auto;
+}
+
+.process-button {
+  background-color: #e5112f;
+  color: white;
+  width: 80%;
+  border-radius: 100px;
+  height: 12vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.process-button > div {
+  margin: auto;
+  width: 85%;
+}
+
+.process-button > div > p {
+  margin: 0;
+  text-align: center;
+}
+
+/*---------------------------------POUR TELEPHONE---------------------------------*/
+@media only screen and (max-width: 1200px) {
+  .providers {
+    margin-top: 0;
+  }
+  .provider-text {
+    width: 100%;
+  }
+
+  .view-horaire {
+    width: 100%;
+  }
+  .provider_postal_address_timetable_rdv {
+    width: 100%;
+  }
+
+  .process {
+    width: 100%;
+  }
+}

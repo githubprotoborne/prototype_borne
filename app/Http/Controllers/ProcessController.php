@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Process;
-use App\models\Container;
-use App\models\SubContainer;
+use App\Models\Process;
+use App\Models\Container;
+use App\Models\SubContainer;
 use Illuminate\Support\Facades\DB;
 
 class ProcessController extends Controller
@@ -33,15 +33,18 @@ class ProcessController extends Controller
         return $processes;
     }
 
-    public function ProcessShow($process_name)
+    public function ProcessShow($process_id)
     {
         $processOne = Process::select("processes.*","providers.*")
          ->leftJoin('providers','providers.provider_id','=','processes.provider_id')
-         ->where('processes.process_name',$process_name)->get();
+         ->where('processes.process_id',$process_id)->get();
 
-        
+         $processAnex = Process::select("annex_documents.*")
+         ->join('process_annex_documents','processes.process_id','=','process_annex_documents.process_id')
+         ->join('annex_documents','annex_documents.annex_document_id','=','process_annex_documents.annex_document_id')
+         ->where('processes.process_id',$process_id)->get();
 
-        return [ 'processOne' => $processOne, 'processAnex' => []];
+        return [ 'processOne' => $processOne, 'processAnex' => $processAnex];
     }
     public function test(Process $process,Request $request){
              $id = $request->input('id');

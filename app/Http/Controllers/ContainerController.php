@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Container;
+use App\Models\Container;
 class ContainerController extends Controller
 {
     public function Get( Container $container,Request $request){

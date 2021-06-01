@@ -1,6 +1,164 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _arrayLikeToArray)
+/* harmony export */ });
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _arrayWithHoles)
+/* harmony export */ });
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
+/* harmony export */ });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _asyncToGenerator)
+/* harmony export */ });
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _classCallCheck)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/createClass.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/createClass.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _createClass)
+/* harmony export */ });
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
 /*!************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
@@ -32,6 +190,56 @@ function _extends() {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _getPrototypeOf)
+/* harmony export */ });
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inherits.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inherits.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _inherits)
+/* harmony export */ });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
@@ -49,6 +257,66 @@ function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
   (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _iterableToArrayLimit)
+/* harmony export */ });
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]);
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _nonIterableRest)
+/* harmony export */ });
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 /***/ }),
@@ -81,6 +349,31 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _possibleConstructorReturn)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assertThisInitialized.js */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+
+
+function _possibleConstructorReturn(self, call) {
+  if (call && ((0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__.default)(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return (0,_assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__.default)(self);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
@@ -99,6 +392,84 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _slicedToArray)
+/* harmony export */ });
+/* harmony import */ var _arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles.js */ "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js");
+/* harmony import */ var _iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit.js */ "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js");
+/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
+/* harmony import */ var _nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableRest.js */ "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js");
+
+
+
+
+function _slicedToArray(arr, i) {
+  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr, i) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr, i) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__.default)();
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/typeof.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _typeof)
+/* harmony export */ });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _unsupportedIterableToArray)
+/* harmony export */ });
+/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);
 }
 
 /***/ }),
@@ -3402,7 +3773,8 @@ var Processes = function Processes(_ref) {
               className: "process_item",
               to: {
                 pathname: "/sous-categories/-1/" + processes[0].processes[0].container_name + "/" + process.subcontainer_name + "/0/" + process.process_name,
-                name: process.process_name
+                name: process.process_name,
+                process_id: process.process_id
               },
               style: {
                 display: "block",
@@ -4782,7 +5154,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _css_process_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/process.css */ "./resources/css/process.css");
+/* harmony import */ var _css_Process_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/Process.css */ "./resources/css/Process.css");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -4873,15 +5245,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _css_process_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/process.css */ "./resources/css/process.css");
-/* harmony import */ var _NavBar_Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../NavBar/Menu */ "./resources/js/components/NavBar/Menu.js");
-/* harmony import */ var _Contrast_Contrast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Contrast/Contrast */ "./resources/js/components/Contrast/Contrast.js");
-/* harmony import */ var _NavBar_NavBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var _Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Breadcrumbs/Breadcrumbs */ "./resources/js/components/Breadcrumbs/Breadcrumbs.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_Process_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../css/Process.css */ "./resources/css/Process.css");
+/* harmony import */ var _NavBar_Menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavBar/Menu */ "./resources/js/components/NavBar/Menu.js");
+/* harmony import */ var _NavBar_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
+/* harmony import */ var _Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Breadcrumbs/Breadcrumbs */ "./resources/js/components/Breadcrumbs/Breadcrumbs.js");
+/* harmony import */ var _Contrast_Contrast__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Contrast/Contrast */ "./resources/js/components/Contrast/Contrast.js");
+/* harmony import */ var _public_images_Assurance_retraite_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../public/images/Assurance retraite.svg */ "./public/images/Assurance retraite.svg");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -4906,8 +5277,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-var Process = function Process() {
+var Process = function Process(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       infoprocess = _useState2[0],
@@ -4918,275 +5288,413 @@ var Process = function Process() {
       infoprocessAnex = _useState4[0],
       setProcessDocAnex = _useState4[1];
 
-  var process_text = (0,react_router__WEBPACK_IMPORTED_MODULE_9__.useParams)();
+  var phone_horaire = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+
+  if (props.location.process_id) {
+    sessionStorage.setItem("Process_id", props.location.process_id);
+  }
 
   var process = function process() {
-    axios__WEBPACK_IMPORTED_MODULE_2___default().get('/getprocess/' + process_text.process_name).then(function (response) {
-      console.log(response.data + "rien");
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get('/getprocess/' + sessionStorage.getItem("Process_id")).then(function (response) {
       setProcess(response.data.processOne);
       setProcessDocAnex(response.data.processAnex);
-      console.log(response.data);
     });
   };
 
-  function displayTest(text) {
-    var divStyle;
-    if (text == null || text == '') return divStyle = {
-      display: 'none'
-    };
+  function displayProcess(text) {
+    if (text == null || text === '') {
+      return 'none';
+    } else {
+      return '';
+    }
+  }
+
+  var display_provider_horaire = function display_provider_horaire(horaire_div, icon_1, icon_2) {
+    var provider_horaire_div = document.querySelector(horaire_div);
+
+    if (provider_horaire_div.classList.contains("none")) {
+      provider_horaire_div.classList.remove("none");
+      document.querySelector(icon_1).classList.remove("none");
+      document.querySelector(icon_2).classList.add("none");
+    } else {
+      provider_horaire_div.classList.add("none");
+      document.querySelector(icon_1).classList.add("none");
+      document.querySelector(icon_2).classList.remove("none");
+    }
+  };
+
+  function position_process_body() {
+    var process_body = document.querySelector('.process-body') || false;
+    var width = window.matchMedia("(min-width: 1200px)").matches;
+
+    if (process_body && width) {
+      return {
+        marginTop: +document.querySelector('.process-body').offsetTop + "px"
+      };
+    } else {
+      return {
+        marginTop: +"0"
+      };
+    }
   }
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     process();
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         id: "side",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_5__.default, {})]
-      })
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_6__.default, {})]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        id: "contrast"
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       id: "contain",
       className: "contain-home",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_6__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "bread-text",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_7__.default, {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        children: infoprocess.map(function (value, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "container-fluid",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "row",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                  className: "col-xl-2 align-self-center",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                    className: "providers",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                      children: "D\xE9marche propos\xE9 par :"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                      className: "provider-logo",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
-                        src: "/IMAGES/Logo-simplici-chambery-baseline.png",
-                        alt: value.provider_name
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                      className: "container-fluid",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                        className: "row",
-                        style: displayTest(value.provider_phone),
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                          className: "col-xl-3 col-lg-12",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                            className: "provider-icons",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                              "class": "material-icons icons",
-                              children: "call"
-                            })
-                          })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                          className: "col-xl-9 col-lg-12",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                            className: "provider-text",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                              children: value.provider_phone
-                            })
-                          })
-                        })]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                        className: "row",
-                        style: displayTest(value.provider_mail),
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                          className: "col-xl-3 col-lg-12",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                            className: "provider-icons",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                              "class": "material-icons icons",
-                              children: "email"
-                            })
-                          })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                          className: "col-xl-9 col-lg-12",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                            className: "provider-text",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                              children: value.provider_mail
-                            })
-                          })
-                        })]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                        className: "row",
-                        style: displayTest(value.provider_postal_address),
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                          className: "col-xl-3 col-lg-12",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                            className: "provider-icons",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                              "class": "material-icons icons",
-                              children: "place"
-                            })
-                          })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                          className: "col-xl-9 col-lg-12",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                            className: "provider-text",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                              children: value.provider_postal_address
-                            })
-                          })
-                        })]
-                      })]
-                    })]
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                  className: "col-xl-10",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                    className: "",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                      className: "process",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "bread-home",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_5__.default, {})
+      }), infoprocess.map(function (value, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "container-fluid",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              className: "row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "col-xl-4 ",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                  className: "providers",
+                  style: position_process_body(),
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
+                    children: "D\xE9marche propos\xE9e par :"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
+                    className: displayProcess(value.provider_proposed_by),
+                    children: value.provider_proposed_by
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                    className: "provider-logo",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+                      src: _public_images_Assurance_retraite_svg__WEBPACK_IMPORTED_MODULE_7__.default,
+                      alt: "Logo de " + value.provider_proposed_by
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
+                    className: displayProcess(value.provider_service),
+                    children: value.provider_service
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                    className: "container-fluid",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                      className: displayProcess(value.provider_phone) + " row",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                        className: "process_name-title",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
-                          children: value.process_name
+                        className: "col-xl-3 col-lg-12",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                          className: "provider-icons",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                            "class": "material-icons-outlined icons",
+                            children: "call"
+                          })
                         })
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                        className: "process-body",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                          className: "process-body-text",
+                        className: "col-xl-6 col-lg-12",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                          className: "container",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: "row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-xl-12 col-lg-12",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "provider-text",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                                  children: value.provider_phone
+                                })
+                              })
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-xl-12 col-lg-12",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "view-horaire",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                                  onClick: function onClick() {
+                                    display_provider_horaire(".provider_phone_timetable", ".provider_phone_expand_less", ".provider_phone_expand_more");
+                                  },
+                                  children: ["Voir les horaires", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                    "class": "provider_phone_expand_less material-icons none",
+                                    children: "expand_less"
+                                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                    "class": "provider_phone_expand_more material-icons",
+                                    children: "expand_more"
+                                  })]
+                                })
+                              })
+                            })]
+                          })
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "col-xl-3 col-lg-12"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "provider_phone_timetable none container-fluid",
+                        children: value.provider_phone_timetable.split(";", 7).map(function (phone_horaire_value, phone_horaire_index) {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: "row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
+                              className: "col-4",
+                              children: phone_horaire[phone_horaire_index]
+                            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
+                              className: "col-8",
+                              children: phone_horaire_value
+                            })]
+                          }, phone_horaire_index);
+                        })
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                      className: displayProcess(value.provider_postal_address) + " row",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "col-xl-3 col-lg-12",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                          className: "provider-icons",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                            "class": "material-icons-outlined icons",
+                            children: "place"
+                          })
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "col-xl-6 col-lg-12",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                          className: "container",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: "row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-xl-12 col-lg-12",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "provider-text",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                                  children: value.provider_postal_address
+                                })
+                              })
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-xl-12 col-lg-12",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "provider_postal_address_timetable_rdv",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
+                                  children: ["(Sur rendez-vous : je prends ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
+                                    href: value.provider_postal_address_timetable_rdv,
+                                    children: "rendez-vous"
+                                  }), ")"]
+                                })
+                              })
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-xl-12 col-lg-12",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "view-horaire",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                                  onClick: function onClick() {
+                                    display_provider_horaire(".provider_postal_address_timetable", ".provider_address_timetable_expand_less", ".provider_address_timetable_expand_more");
+                                  },
+                                  children: ["Voir les horaires", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                    "class": "provider_address_timetable_expand_less material-icons none",
+                                    children: "expand_less"
+                                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                    "class": "provider_address_timetable_expand_more material-icons",
+                                    children: "expand_more"
+                                  })]
+                                })
+                              })
+                            })]
+                          })
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "col-xl-3 col-lg-12"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "provider_postal_address_timetable none container-fluid",
+                        children: value.provider_postal_address_timetable.split(";", 7).map(function (postal_address_horaire_value, postal_address_horaire_index) {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: "row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
+                              className: "col-4",
+                              children: phone_horaire[postal_address_horaire_index]
+                            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
+                              className: "col-8",
+                              children: postal_address_horaire_value
+                            })]
+                          }, postal_address_horaire_index);
+                        })
+                      })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                      className: displayProcess(value.provider_write_online) + " row",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "col-xl-3 col-lg-12",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                          className: "provider-icons",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                            "class": "material-icons-outlined icons",
+                            children: "edit"
+                          })
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "col-xl-6 col-lg-12",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                          className: "provider_write_online",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
+                              href: value.provider_write_online,
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h4", {
+                                children: "Nous \xE9crire en ligne"
+                              })
+                            })
+                          })
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                        className: "col-xl-3 col-lg-12"
+                      })]
+                    })]
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "col-xl-8",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                    className: "process",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                      className: "process_name-title",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
+                        children: value.process_name
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                      className: "process-body",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                        className: "process-body-text",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                          className: "container-fluid",
                           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                            className: "container-fluid",
-                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                              className: "row",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-md-1",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                  className: "process-icon",
-                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                                    "class": "material-icons-outlined process-icon-info",
-                                    children: "info"
-                                  })
+                            className: displayProcess(value.process_description) + " row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-md-1",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-icon",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                  "class": "material-icons-outlined process-icon-info",
+                                  children: "info"
                                 })
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-md",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                  className: "process-txt",
-                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                                    children: value.process_description
-                                  })
+                              })
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-md",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-txt",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                                  children: value.process_description
                                 })
-                              })]
+                              })
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: displayProcess(infoprocessAnex[0] ? " " : "") + " row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-md-1",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-icon"
+                              })
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                              className: "row",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-md-1",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                  className: "process-icon"
-                                })
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                                className: "col-md",
-                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                                  children: "Pour cette d\xE9marche vous aurez besoin :"
-                                }), infoprocessAnex.map(function (docAnnexe, i) {
-                                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
-                                      children: docAnnexe.annex_document_name
-                                    })
+                              className: "col-md",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                                children: "Pour cette d\xE9marche vous aurez besoin :"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("ul", {
+                                className: "docAnnexe",
+                                children: infoprocessAnex.map(function (docAnnexe, i) {
+                                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
+                                    children: docAnnexe.annex_document_name
                                   }, i);
-                                })]
-                              })]
-                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                              className: "row",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-md-1",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                  className: "process-icon",
-                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                                    "class": "material-icons icons",
-                                    children: "check_circle_outline"
-                                  })
-                                })
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-md",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                  className: "process-txt",
-                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
-                                    children: ["Possibilit\xE9 de reprendre la d\xE9marche plus tard : ", value.process_draft_mode ? "Oui" : "Non"]
-                                  })
-                                })
-                              })]
-                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                              className: "row",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-md-1",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                  className: "process-icon",
-                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                                    "class": "material-icons icons",
-                                    children: "timer"
-                                  })
-                                })
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-md",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                  className: "process-txt",
-                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
-                                    children: ["Temps estim\xE9 : ", value.process_duration, " minutes"]
-                                  })
                                 })
                               })]
                             })]
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                            className: "container",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                              className: "row",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-xl-6",
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: displayProcess(value.process_draft_mode) + " row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-md-1",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-icon",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                  "class": "material-icons icons",
+                                  children: "check_circle_outline"
+                                })
+                              })
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-md",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-txt",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
+                                  children: ["Possibilit\xE9 de reprendre la d\xE9marche plus tard : ", value.process_draft_mode ? "Oui" : "Non"]
+                                })
+                              })
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: displayProcess(value.process_duration) + " row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-md-1",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-icon",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                  "class": "material-icons icons",
+                                  children: "timer"
+                                })
+                              })
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-md",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-txt",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
+                                  children: ["Temps estim\xE9 : ", value.process_duration, " minutes"]
+                                })
+                              })
+                            })]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                          className: "container",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                            className: "row",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-xl-6",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                                className: "process-button",
+                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                                    className: "",
+                                    children: "Je num\xE9rise un document avec le scanner"
+                                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                                    className: "",
+                                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                                      "class": "material-icons-outlined icons",
+                                      children: "scanner"
+                                    })
+                                  })]
+                                })
+                              })
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                              className: "col-xl-6",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
+                                href: value.process_link,
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
                                   className: "process-button",
                                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
                                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                                      className: "",
-                                      children: "Je num\xE9rise un document avec le scanner"
+                                      children: "Je commence ma d\xE9marche"
                                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                                       className: "",
                                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                                        "class": "material-icons-outlined icons",
-                                        children: "scanner"
+                                        "class": "material-icons icons",
+                                        children: "arrow_forward"
                                       })
                                     })]
                                   })
                                 })
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                className: "col-xl-6",
-                                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
-                                  href: value.process_link,
-                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                                    className: "process-button",
-                                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                                        children: "Je commence ma d\xE9marche"
-                                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                                        className: "",
-                                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                                          "class": "material-icons icons",
-                                          children: "arrow_forward"
-                                        })
-                                      })]
-                                    })
-                                  })
-                                })
-                              })]
-                            })
-                          })]
-                        })
-                      })]
-                    })
+                              })
+                            })]
+                          })
+                        })]
+                      })
+                    })]
                   })
-                })]
-              })
+                })
+              })]
             })
-          }, index);
-        })
+          })
+        }, index);
       })]
     })]
   });
@@ -5243,6 +5751,67 @@ var Scanner = function Scanner() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Scanner);
+
+/***/ }),
+
+/***/ "./resources/js/components/Session/SessionTimeoutDialog.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/Session/SessionTimeoutDialog.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _css_SessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/SessionTimeoutDialog.css */ "./resources/css/SessionTimeoutDialog.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var SessionTimeoutDialog = function SessionTimeoutDialog(_ref) {
+  var time = _ref.time;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(time),
+      _useState2 = _slicedToArray(_useState, 2),
+      chrono = _useState2[0],
+      setChrono = _useState2[1];
+
+  var chronoUpdate = function chronoUpdate() {
+    setTimeout(function () {
+      setChrono(chrono - 1);
+      if (chrono <= 1) setChrono(20);
+    }, 500);
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    chronoUpdate();
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "session-container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      children: chrono
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SessionTimeoutDialog);
 
 /***/ }),
 
@@ -5323,67 +5892,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     })
   });
 }
-
-/***/ }),
-
-/***/ "./resources/js/components/Session/SessionTimeoutDialog.js":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/Session/SessionTimeoutDialog.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _css_sessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/sessionTimeoutDialog.css */ "./resources/css/sessionTimeoutDialog.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-var SessionTimeoutDialog = function SessionTimeoutDialog(_ref) {
-  var time = _ref.time;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(time),
-      _useState2 = _slicedToArray(_useState, 2),
-      chrono = _useState2[0],
-      setChrono = _useState2[1];
-
-  var chronoUpdate = function chronoUpdate() {
-    setTimeout(function () {
-      setChrono(chrono - 1);
-      if (chrono <= 1) setChrono(20);
-    }, 500);
-  };
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    chronoUpdate();
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "session-container",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-      children: chrono
-    })
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SessionTimeoutDialog);
 
 /***/ }),
 
@@ -10312,7 +10820,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n\r\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\r\n@media screen and (min-width: 900px) {\r\n    \r\n   \r\n   \r\n    .collapse.dont-collapse-sm {\r\n        display: block;\r\n        height: auto !important;\r\n        visibility: visible;\r\n      }\r\n      .whole_container{\r\n          background-color:#707070;\r\n           color:#ffff;\r\n           height: 8.5vh;\r\n          \r\n          \r\n      }\r\n    ::-moz-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    :-ms-input-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    ::placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -webkit-fit-content;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    \r\n   .choicebar-icon{\r\n       font-size: 2.6vmin;\r\n   }\r\n   \r\n    \r\n    .search_input{\r\n        height: 8.5vh;\r\n        border:none;\r\n        outline: none;\r\n        background-color: #707070;\r\n        width: 100%;\r\n    }\r\n    .search_submit_button{\r\n        height: 8.5vh;\r\n        background-color: #707070;\r\n      \r\n    }\r\n    \r\n    .search_icon{\r\n        margin-top: 8%;\r\n        margin-left: -11px;\r\n        font-size: 18px;\r\n\r\n    }\r\n    .category_button_choiceBar:hover{\r\n       \r\n      \r\n        \r\n        width: 100%;\r\n        text-decoration: none;\r\n       \r\n\r\n    }\r\n    .search-engine{\r\n        background-color: #fff;\r\n        color: #222;\r\n        display: inline-flex;\r\n        text-align: center;\r\n        text-justify: center;\r\n        align-items: center;\r\n     \r\n    }\r\n    #category_button_choiceBar_service:hover{\r\n       \r\n      \r\n      \r\n      \r\n        text-decoration: none;\r\n       -webkit-text-decoration-color: \"\";\r\n               text-decoration-color: \"\";\r\n        \r\n\r\n    }\r\n    .hide_search_text{\r\n       \r\n    }\r\n    .research{\r\n       outline: none;\r\n    }\r\n    .back{\r\n        background-color: gray;\r\n       \r\n    }\r\n    .search_hidden{\r\n    \r\n    }\r\n    .cont{\r\n        border-right: 1px solid #fff;\r\n        font-size: 11.8px;\r\n\r\n    }\r\n    .profil{\r\n        font-size: 11.8px;\r\n        background-color: #fff;\r\n        color:#222;\r\n       \r\n    }\r\n    .services-button{\r\n        font-size: 19px;\r\n        \r\n        text-align: center;\r\n        \r\n\r\n    }\r\n    .profil-text{\r\n        margin-top: 11%;\r\n    }\r\n    .service-subtitle{\r\n        font-size: 11px;\r\n        display: block;\r\n        text-align: center;\r\n    }\r\n    .service-title{\r\n        font-size: 12px;\r\n        display: inline-block;\r\n        margin-top: 15px;\r\n       \r\n    }\r\n  }\r\n  \r\n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\r\n  @media screen and (max-width: 600px) {\r\n    .search_hidden{\r\n         display: normal!important;\r\n         border: none;\r\n         text-decoration: none;\r\n    }\r\n    .whole_container{\r\n      \r\n      \r\n  }\r\n  .research{\r\n      outline: none;\r\n   }\r\n   .hide_icon{\r\n       display: none;\r\n   }\r\n  ::-moz-placeholder{\r\n      font-size: 16px;\r\n  }\r\n  :-ms-input-placeholder{\r\n      font-size: 16px;\r\n  }\r\n  ::placeholder{\r\n      font-size: 16px;\r\n  }\r\n  .container{\r\n      font-size: 11px;\r\n       \r\n      height: 100px;\r\n      word-wrap: break-word;\r\n      \r\n  \r\n  }\r\n  .back{\r\n      width: 400px;\r\n      background-color: #ffff;\r\n  }\r\n \r\n  .search{\r\n    z-index: 1;\r\n   \r\n    height: 20px;\r\n\r\n    color: #E5112F;\r\n    outline: none;\r\n    margin-top: 5%;\r\n    width: 99%;\r\n  \r\n    height: 50px;\r\n    background-color: #eee;\r\n    margin-left: 5%;\r\n  }\r\n  .search_input{\r\n     \r\n      \r\n      outline: none;\r\n      background-color: #eee;\r\n     margin-left: 10%;\r\n  }\r\n  .search_submit_button{\r\n     \r\n     \r\n      \r\n    \r\n  }\r\n  \r\n  .search_icon{\r\n      \r\n      font-size: 20px;\r\n      background-color: #E5112F;\r\n      color: #fff;\r\n      display: block;\r\n   \r\n      \r\n\r\n  }\r\n  #search_icon-size{\r\n      display: block;\r\n      padding-right: 50px;\r\n      background-color: #E5112F;\r\n    \r\n  }\r\n  .cont{\r\n   margin-top :4%;\r\n  \r\n   \r\n  margin-left: 10%;\r\n  \r\n   height: 60px;\r\n   border-radius: 10px;\r\n   width: 250px;\r\n   text-align: center;\r\n   font-size: 16px;\r\n   text-transform: uppercase;\r\n   line-break: loose;\r\n   color: #fff;\r\n   background-color: #E5112F;\r\n  }\r\n  .service-subtitle{\r\n      font-size: 13px;\r\n      display: block;\r\n\r\n      margin-left: 12%;\r\n  }\r\n  .service-title{\r\n      font-size: 15px;\r\n      display: inline-block;\r\n      margin-top: 15px;\r\n     \r\n      \r\n     \r\n     \r\n  }\r\n  .choiceBarHelper{\r\n      font-size: 20px;\r\n      margin-left: 19%;\r\n      \r\n  }\r\n  .choiceBarHelperContainer{\r\n      text-align: center;\r\n      margin-top: 3%;\r\n\r\n  }\r\n  .hide_search_text{\r\n  \r\n\r\n  }\r\n  .category_button_choiceBar{\r\n     width: 86%;     \r\n  }\r\n  .services{\r\n     \r\n  }\r\n  .search-engine{\r\n      \r\n  }\r\n  .profil{\r\n      margin-top: 20%;\r\n      font-size: 16px;\r\n  }\r\n  .profil-text{\r\n      margin-left: 20%;\r\n      text-transform: uppercase;\r\n      \r\n  }\r\n  #direct-acces{\r\n      background-color: #fff;\r\n      color: #000;\r\n      \r\n  }\r\n  .choiceBarItemText{\r\n     margin-left: 5%;\r\n  }\r\n  #category_button_choiceBar_service{\r\n      background-color: #fff;\r\n      color: #000;\r\n  }\r\n}\r\n@media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n   #choiseBar{\r\n       display: none;\r\n   }\r\n   .category_button_choiceBar{\r\n    width: 60%;\r\n    border:1px solid;\r\n    border-radius: 10px;\r\n    height: 80px;\r\n    \r\n    margin-left: 20%;\r\n    margin-bottom: 3%;\r\n    font-size: 26px;\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n  text-align: center; \r\n   }\r\n   .item{\r\n       margin-top:3%;\r\n       display: block;\r\n       width: 100%;\r\n   }\r\n   .profil,.acces_direct {\r\n       margin-top: 4%;\r\n       width: 60%;\r\n     \r\n      \r\n       height: 80px;\r\n       text-align: center;\r\n       margin-left: 20%;\r\n       margin-bottom: 3%;\r\n       font-size: 35px;\r\n       color:#000;\r\n   }\r\n   .service-subtitle{\r\n       display: block;\r\n       margin-left: 20%;\r\n       font-size: 24px;\r\n   }\r\n   .search_input{}\r\n   .search{\r\n     \r\n       height: 80px;\r\n\r\n       color: #E5112F;\r\n       outline: none;\r\n       margin-top: 5%;\r\n       margin-bottom: 5%;\r\n       width: 60%;\r\n     \r\n       height: 50px;\r\n       background-color: #eee;\r\n       margin-left: 20%;\r\n      \r\n   }\r\n\r\n   .search_input{\r\n     \r\n      \r\n    outline: none;\r\n    background-color: #eee;\r\n   margin-left: 10%;\r\n}\r\n\r\n.search_submit_button{\r\n   \r\n   \r\n    \r\n  \r\n}\r\n\r\n.search_icon{\r\n    \r\n    font-size: 33px;\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    display: block;\r\n    padding-top: 1.5%;\r\n \r\n    \r\n\r\n}\r\n#search_icon-size{\r\n    display: block;\r\n    padding-right: 50px;\r\n    background-color: #E5112F;\r\n    font-size: 100px;\r\n  \r\n}\r\n::-moz-placeholder{\r\n    font-size: 26px;\r\n}\r\n:-ms-input-placeholder{\r\n    font-size: 26px;\r\n}\r\n::placeholder{\r\n    font-size: 26px;\r\n}\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\n@media screen and (min-width: 900px) {\n    \n   \n   \n    .collapse.dont-collapse-sm {\n        display: block;\n        height: auto !important;\n        visibility: visible;\n      }\n      .whole_container{\n          background-color:#707070;\n           color:#ffff;\n           height: 8.5vh;\n          \n          \n      }\n    ::-moz-placeholder{\n        font-size: 10.8px;\n        height: 100%;\n        color: #fff;\n        width: -moz-fit-content;\n        width: fit-content;\n        margin-right: 10px;\n       \n    }\n    :-ms-input-placeholder{\n        font-size: 10.8px;\n        height: 100%;\n        color: #fff;\n        width: fit-content;\n        margin-right: 10px;\n       \n    }\n    ::placeholder{\n        font-size: 10.8px;\n        height: 100%;\n        color: #fff;\n        width: -webkit-fit-content;\n        width: -moz-fit-content;\n        width: fit-content;\n        margin-right: 10px;\n       \n    }\n    \n   .choicebar-icon{\n       font-size: 2.6vmin;\n   }\n   \n    \n    .search_input{\n        height: 8.5vh;\n        border:none;\n        outline: none;\n        background-color: #707070;\n        width: 100%;\n    }\n    .search_submit_button{\n        height: 8.5vh;\n        background-color: #707070;\n      \n    }\n    \n    .search_icon{\n        margin-top: 8%;\n        margin-left: -11px;\n        font-size: 18px;\n\n    }\n    .category_button_choiceBar:hover{\n       \n      \n        \n        width: 100%;\n        text-decoration: none;\n       \n\n    }\n    .search-engine{\n        background-color: #fff;\n        color: #222;\n        display: inline-flex;\n        text-align: center;\n        text-justify: center;\n        align-items: center;\n     \n    }\n    #category_button_choiceBar_service:hover{\n       \n      \n      \n      \n        text-decoration: none;\n       -webkit-text-decoration-color: \"\";\n               text-decoration-color: \"\";\n        \n\n    }\n    .hide_search_text{\n       \n    }\n    .research{\n       outline: none;\n    }\n    .back{\n        background-color: gray;\n       \n    }\n    .search_hidden{\n    \n    }\n    .cont{\n        border-right: 1px solid #fff;\n        font-size: 11.8px;\n\n    }\n    .profil{\n        font-size: 11.8px;\n        background-color: #fff;\n        color:#222;\n       \n    }\n    .services-button{\n        font-size: 19px;\n        \n        text-align: center;\n        \n\n    }\n    .profil-text{\n        margin-top: 11%;\n    }\n    .service-subtitle{\n        font-size: 11px;\n        display: block;\n        text-align: center;\n    }\n    .service-title{\n        font-size: 12px;\n        display: inline-block;\n        margin-top: 15px;\n       \n    }\n  }\n  \n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\n  @media screen and (max-width: 600px) {\n    .search_hidden{\n         display: normal!important;\n         border: none;\n         text-decoration: none;\n    }\n    .whole_container{\n      \n      \n  }\n  .research{\n      outline: none;\n   }\n   .hide_icon{\n       display: none;\n   }\n  ::-moz-placeholder{\n      font-size: 16px;\n  }\n  :-ms-input-placeholder{\n      font-size: 16px;\n  }\n  ::placeholder{\n      font-size: 16px;\n  }\n  .container{\n      font-size: 11px;\n       \n      height: 100px;\n      word-wrap: break-word;\n      \n  \n  }\n  .back{\n      width: 400px;\n      background-color: #ffff;\n  }\n \n  .search{\n    z-index: 1;\n   \n    height: 20px;\n\n    color: #E5112F;\n    outline: none;\n    margin-top: 5%;\n    width: 99%;\n  \n    height: 50px;\n    background-color: #eee;\n    margin-left: 5%;\n  }\n  .search_input{\n     \n      \n      outline: none;\n      background-color: #eee;\n     margin-left: 10%;\n  }\n  .search_submit_button{\n     \n     \n      \n    \n  }\n  \n  .search_icon{\n      \n      font-size: 20px;\n      background-color: #E5112F;\n      color: #fff;\n      display: block;\n   \n      \n\n  }\n  #search_icon-size{\n      display: block;\n      padding-right: 50px;\n      background-color: #E5112F;\n    \n  }\n  .cont{\n   margin-top :4%;\n  \n   \n  margin-left: 10%;\n  \n   height: 60px;\n   border-radius: 10px;\n   width: 250px;\n   text-align: center;\n   font-size: 16px;\n   text-transform: uppercase;\n   line-break: loose;\n   color: #fff;\n   background-color: #E5112F;\n  }\n  .service-subtitle{\n      font-size: 13px;\n      display: block;\n\n      margin-left: 12%;\n  }\n  .service-title{\n      font-size: 15px;\n      display: inline-block;\n      margin-top: 15px;\n     \n      \n     \n     \n  }\n  .choiceBarHelper{\n      font-size: 20px;\n      margin-left: 19%;\n      \n  }\n  .choiceBarHelperContainer{\n      text-align: center;\n      margin-top: 3%;\n\n  }\n  .hide_search_text{\n  \n\n  }\n  .category_button_choiceBar{\n     width: 86%;     \n  }\n  .services{\n     \n  }\n  .search-engine{\n      \n  }\n  .profil{\n      margin-top: 20%;\n      font-size: 16px;\n  }\n  .profil-text{\n      margin-left: 20%;\n      text-transform: uppercase;\n      \n  }\n  #direct-acces{\n      background-color: #fff;\n      color: #000;\n      \n  }\n  .choiceBarItemText{\n     margin-left: 5%;\n  }\n  #category_button_choiceBar_service{\n      background-color: #fff;\n      color: #000;\n  }\n}\n@media screen and (min-width: 601px) and (max-width:899px){\n\n   #choiseBar{\n       display: none;\n   }\n   .category_button_choiceBar{\n    width: 60%;\n    border:1px solid;\n    border-radius: 10px;\n    height: 80px;\n    \n    margin-left: 20%;\n    margin-bottom: 3%;\n    font-size: 26px;\n    background-color: #E5112F;\n    color: #fff;\n  text-align: center; \n   }\n   .item{\n       margin-top:3%;\n       display: block;\n       width: 100%;\n   }\n   .profil,.acces_direct {\n       margin-top: 4%;\n       width: 60%;\n     \n      \n       height: 80px;\n       text-align: center;\n       margin-left: 20%;\n       margin-bottom: 3%;\n       font-size: 35px;\n       color:#000;\n   }\n   .service-subtitle{\n       display: block;\n       margin-left: 20%;\n       font-size: 24px;\n   }\n   .search_input{}\n   .search{\n     \n       height: 80px;\n\n       color: #E5112F;\n       outline: none;\n       margin-top: 5%;\n       margin-bottom: 5%;\n       width: 60%;\n     \n       height: 50px;\n       background-color: #eee;\n       margin-left: 20%;\n      \n   }\n\n   .search_input{\n     \n      \n    outline: none;\n    background-color: #eee;\n   margin-left: 10%;\n}\n\n.search_submit_button{\n   \n   \n    \n  \n}\n\n.search_icon{\n    \n    font-size: 33px;\n    background-color: #E5112F;\n    color: #fff;\n    display: block;\n    padding-top: 1.5%;\n \n    \n\n}\n#search_icon-size{\n    display: block;\n    padding-right: 50px;\n    background-color: #E5112F;\n    font-size: 100px;\n  \n}\n::-moz-placeholder{\n    font-size: 26px;\n}\n:-ms-input-placeholder{\n    font-size: 26px;\n}\n::placeholder{\n    font-size: 26px;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10336,7 +10844,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n  \r\n\r\n  \r\n \r\n  \r\n  \r\n  @media screen and (min-width: 900px) {\r\n\r\n    .pos{\r\n        position: fixed;\r\n        \r\n       \r\n    }\r\n    .bread{\r\n      margin-right: 100%    }\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 8.7vh;\r\n      width: 34vw;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:#666;\r\n    display: block;\r\n   \r\n    \r\n  }\r\n  .process-text-icon{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    text-align: center;\r\n    text-justify:center;\r\n     \r\n    margin-top: 4%;\r\n  }\r\n \r\n  .section_text{\r\n   display: inline-block;\r\n    margin-top: 2%;\r\n\r\n  }\r\n  .mobile-only-title{\r\n    margin-right: 100em;\r\n  }\r\n  .item-text{\r\n\r\n  \r\n  }\r\n  .chevron_icon{\r\n   \r\n  }\r\n  \r\n  .container_title{\r\n      font-size: 3vmin;\r\n      margin-top: 3%;\r\n    \r\n  }\r\n  .container_icon{\r\n     margin-left: 1%;\r\n     font-size: 3vmin;\r\n     \r\n  }\r\n  .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 8.7vh;\r\n      width: 34vw;\r\n      border-radius: 10px;\r\n      font-size: 2.7vmin;\r\n      display: block;\r\n      \r\n  }\r\n  \r\n  .process_title{\r\n    font-size: 3vmin;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n     \r\n  \r\n \r\n#first-item{\r\n    margin-top: 10%;\r\n}\r\n.process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 11vh;\r\n      width: 38vw;\r\n      border-radius: 10px;\r\n      font-size:15px;\r\n\r\n}\r\n\r\n.bread{\r\n    width:50%;\r\n    margin-left: 45%;\r\n    \r\n\r\n}\r\n.inactive,#inaction{\r\n  display: block;\r\n  height: 8.7vh;\r\n  width: 34vw;\r\n  text-decoration: none;\r\n  \r\n}\r\n.nav-position{\r\n  position: sticky;\r\n  z-index: 1;\r\n  width: inherit;\r\n\r\n\r\n }\r\n .mobile-only-title{\r\n  position: fixed;\r\n}\r\n     .sections{\r\n        border-left: solid 1px;\r\n        \r\n     }\r\n     .processes-position{\r\n       \r\n      margin-bottom: 10%;\r\n     }\r\n     .title{\r\n         margin-left: 4%;\r\n     }\r\n     .scroll-bar{\r\n       /* overflow-y:scroll;*/\r\n        \r\n        \r\n     }\r\n     \r\n     .section-position{\r\n       transform: none;\r\n       \r\n    }\r\n    \r\n     .phone-processes{display:none}\r\n     .desk-bread{\r\n        \r\n        \r\n         background-color: #FFF;\r\n         margin-bottom: 3%;\r\n        \r\n     }\r\n     .bread-text{\r\n        \r\n         background-color: #fff;\r\n     }\r\n     .desk-nav{\r\n      \r\n    }\r\n    .phone-processes{\r\n        display: none;\r\n    }\r\n    .subcontainer_name{\r\n      font-size: 20px;\r\n    }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n    .section-position{\r\n        position: fixed;\r\n      \r\n        \r\n        background-color: white;  \r\n        margin-top: 85px;\r\n        width: 100%;\r\n        \r\n       \r\n    \r\n    }\r\n    .sections{\r\n        z-index: 3;\r\n     height: -webkit-fit-content;\r\n     height: -moz-fit-content;\r\n     height: fit-content;\r\n    \r\n     \r\n    }\r\n\r\n    .title{\r\n       \r\n      background-color: white;\r\n      width: 100%;\r\n     \r\n      display: block;\r\n      \r\n      text-align: center;\r\n     \r\n      margin-top: -50px;\r\n      \r\n  }\r\n    .desk-bread{\r\n        background-color: white;\r\n        padding-top: 20%;\r\n        width: inherit;\r\n        height: 50px;\r\n      \r\n\r\n       \r\n\r\n\r\n    }\r\n    .process_item{\r\n        height: 90px;\r\n        border:1px solid;\r\n        margin-top: 2%;\r\n        font-size: 17px;\r\n       list-style-type: none;\r\n       width: 300px;\r\n       border-radius: 10px;\r\n      margin-right: 40px;\r\n     \r\n\r\n    }\r\n    .process-text-icon{\r\n      margin-top: 3%;\r\n    }\r\n    .processes-position{\r\n       height: -webkit-fit-content;\r\n       height: -moz-fit-content;\r\n       height: fit-content; \r\n       margin-top: 460px;\r\n     \r\n    }\r\n    .process_title{\r\n    \r\n     font-size: 20px;\r\n     margin-left: 20%;\r\n     font-weight: bold;\r\n    }\r\n    .process-section-title{\r\n      font-size: 19px;\r\n     margin-left: 26%;\r\n     font-weight: bold;\r\n      \r\n    }\r\n    .processes{\r\n        \r\n       \r\n    }\r\n    .cont-container{\r\n       \r\n    }\r\n\r\n\r\n    /* sections*/\r\n\r\n    .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 40px;\r\n      width: 300px;\r\n      border-radius: 10px;\r\n      font-size: 20px;\r\n      display: block;\r\n      margin-top: 5%;\r\n     \r\n      \r\n  }\r\n  .nav-position{\r\n    width: 100%;\r\n  }\r\n  /*footer style */\r\n  .container-footer{\r\n    margin-top: 10%;\r\n  }\r\n  }\r\n\r\n  \r\n  \r\n  @media screen and (max-width: 899px) and (min-width: 601px){\r\n    \r\n\r\n\r\n\r\n    .pos{\r\n        position: fixed;\r\n        \r\n       \r\n    }\r\n    .bread{\r\n      margin-right: 100%    }\r\n  .active {\r\n  \r\n    color: #FFF;\r\n    \r\n    height: 8.7vh;\r\n      width: 34vw;\r\n    border-radius: 10px;\r\n    text-decoration: none;\r\n    background-color:#666;\r\n    display: block;\r\n   \r\n    \r\n  }\r\n  .process-text-icon{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    text-align: center;\r\n    text-justify:center;\r\n     \r\n    margin-top: 4%;\r\n  }\r\n \r\n  .section_text{\r\n   display: inline-block;\r\n    margin-top: 2%;\r\n\r\n  }\r\n  .mobile-only-title{\r\n    margin-right: 100em;\r\n  }\r\n  .item-text{\r\n\r\n  \r\n  }\r\n  .chevron_icon{\r\n   \r\n  }\r\n  \r\n  .container_title{\r\n      font-size: 3vmin;\r\n      margin-top: 3%;\r\n    \r\n  }\r\n  .container_icon{\r\n     margin-left: 1%;\r\n     font-size: 3vmin;\r\n     \r\n  }\r\n  .section-items{\r\n      border:1px solid;\r\n      text-align: center;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 8.7vh;\r\n      width: 34vw;\r\n      border-radius: 10px;\r\n      font-size: 2.7vmin;\r\n      display: block;\r\n      \r\n  }\r\n  \r\n  .process_title{\r\n    font-size: 3vmin;\r\n    margin-left: 10%;\r\n    margin-bottom: 4%;\r\n    margin-top: 3%;\r\n  }\r\n     \r\n  \r\n \r\n#first-item{\r\n    margin-top: 10%;\r\n}\r\n.process_item{\r\n    border:1px solid;\r\n      text-align: left;\r\n      text-decoration: none;\r\n      list-style-type: none;\r\n      margin-bottom: 3%;\r\n      height: 150px;\r\n      width: 38vw;\r\n      border-radius: 10px;\r\n      font-size:22px;\r\n\r\n}\r\n\r\n.bread{\r\n    width:50%;\r\n    margin-left: 45%;\r\n    \r\n\r\n}\r\n.inactive,#inaction{\r\n  display: block;\r\n  height: 8.7vh;\r\n  width: 34vw;\r\n  text-decoration: none;\r\n  \r\n}\r\n.nav-position{\r\n  position: sticky;\r\n  z-index: 1;\r\n  width: inherit;\r\n\r\n\r\n }\r\n .mobile-only-title{\r\n  position: fixed;\r\n}\r\n     .sections{\r\n        border-left: solid 1px;\r\n        \r\n     }\r\n     .processes-position{\r\n       \r\n      margin-bottom: 10%;\r\n     }\r\n     .title{\r\n         margin-left: 4%;\r\n         margin-bottom: 10%;\r\n     }\r\n     .section-1{\r\n       margin-top: 22%;\r\n     }\r\n     .scroll-bar{\r\n       /* overflow-y:scroll;*/\r\n        \r\n        \r\n     }\r\n     \r\n     .section-position{\r\n       transform: none;\r\n       \r\n    }\r\n    \r\n     .phone-processes{display:none}\r\n     .desk-bread{\r\n        \r\n        \r\n         background-color: #FFF;\r\n         margin-bottom: 3%;\r\n        \r\n     }\r\n     .bread-text{\r\n        \r\n         background-color: #fff;\r\n     }\r\n     .desk-nav{\r\n      \r\n    }\r\n    .phone-processes{\r\n        display: none;\r\n    }\r\n    .subcontainer_name{\r\n      font-size: 20px;\r\n    }\r\n    \r\n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n  \n\n  \n \n  \n  \n  @media screen and (min-width: 900px) {\n\n    .pos{\n        position: fixed;\n        \n       \n    }\n    .bread{\n      margin-right: 100%    }\n  .active {\n  \n    color: #FFF;\n    \n    height: 8.7vh;\n      width: 34vw;\n    border-radius: 10px;\n    text-decoration: none;\n    background-color:#666;\n    display: block;\n   \n    \n  }\n  .process-text-icon{\n    display: inline-flex;\n    align-items: center;\n    text-align: center;\n    text-justify:center;\n     \n    margin-top: 4%;\n  }\n \n  .section_text{\n   display: inline-block;\n    margin-top: 2%;\n\n  }\n  .mobile-only-title{\n    margin-right: 100em;\n  }\n  .item-text{\n\n  \n  }\n  .chevron_icon{\n   \n  }\n  \n  .container_title{\n      font-size: 3vmin;\n      margin-top: 3%;\n    \n  }\n  .container_icon{\n     margin-left: 1%;\n     font-size: 3vmin;\n     \n  }\n  .section-items{\n      border:1px solid;\n      text-align: center;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 8.7vh;\n      width: 34vw;\n      border-radius: 10px;\n      font-size: 2.7vmin;\n      display: block;\n      \n  }\n  \n  .process_title{\n    font-size: 3vmin;\n    margin-left: 10%;\n    margin-bottom: 4%;\n    margin-top: 3%;\n  }\n     \n  \n \n#first-item{\n    margin-top: 10%;\n}\n.process_item{\n    border:1px solid;\n      text-align: left;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 11vh;\n      width: 38vw;\n      border-radius: 10px;\n      font-size:15px;\n\n}\n\n.bread{\n    width:50%;\n    margin-left: 45%;\n    \n\n}\n.inactive,#inaction{\n  display: block;\n  height: 8.7vh;\n  width: 34vw;\n  text-decoration: none;\n  \n}\n.nav-position{\n  position: sticky;\n  z-index: 1;\n  width: inherit;\n\n\n }\n .mobile-only-title{\n  position: fixed;\n}\n     .sections{\n        border-left: solid 1px;\n        \n     }\n     .processes-position{\n       \n      margin-bottom: 10%;\n     }\n     .title{\n         margin-left: 4%;\n     }\n     .scroll-bar{\n       /* overflow-y:scroll;*/\n        \n        \n     }\n     \n     .section-position{\n       transform: none;\n       \n    }\n    \n     .phone-processes{display:none}\n     .desk-bread{\n        \n        \n         background-color: #FFF;\n         margin-bottom: 3%;\n        \n     }\n     .bread-text{\n        \n         background-color: #fff;\n     }\n     .desk-nav{\n      \n    }\n    .phone-processes{\n        display: none;\n    }\n    .subcontainer_name{\n      font-size: 20px;\n    }\n    \n  }\n  @media screen and (max-width:600px) {\n    .section-position{\n        position: fixed;\n      \n        \n        background-color: white;  \n        margin-top: 85px;\n        width: 100%;\n        \n       \n    \n    }\n    .sections{\n        z-index: 3;\n     height: -webkit-fit-content;\n     height: -moz-fit-content;\n     height: fit-content;\n    \n     \n    }\n\n    .title{\n       \n      background-color: white;\n      width: 100%;\n     \n      display: block;\n      \n      text-align: center;\n     \n      margin-top: -50px;\n      \n  }\n    .desk-bread{\n        background-color: white;\n        padding-top: 20%;\n        width: inherit;\n        height: 50px;\n      \n\n       \n\n\n    }\n    .process_item{\n        height: 90px;\n        border:1px solid;\n        margin-top: 2%;\n        font-size: 17px;\n       list-style-type: none;\n       width: 300px;\n       border-radius: 10px;\n      margin-right: 40px;\n     \n\n    }\n    .process-text-icon{\n      margin-top: 3%;\n    }\n    .processes-position{\n       height: -webkit-fit-content;\n       height: -moz-fit-content;\n       height: fit-content; \n       margin-top: 460px;\n     \n    }\n    .process_title{\n    \n     font-size: 20px;\n     margin-left: 20%;\n     font-weight: bold;\n    }\n    .process-section-title{\n      font-size: 19px;\n     margin-left: 26%;\n     font-weight: bold;\n      \n    }\n    .processes{\n        \n       \n    }\n    .cont-container{\n       \n    }\n\n\n    /* sections*/\n\n    .section-items{\n      border:1px solid;\n      text-align: center;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 40px;\n      width: 300px;\n      border-radius: 10px;\n      font-size: 20px;\n      display: block;\n      margin-top: 5%;\n     \n      \n  }\n  .nav-position{\n    width: 100%;\n  }\n  /*footer style */\n  .container-footer{\n    margin-top: 10%;\n  }\n  }\n\n  \n  \n  @media screen and (max-width: 899px) and (min-width: 601px){\n    \n\n\n\n    .pos{\n        position: fixed;\n        \n       \n    }\n    .bread{\n      margin-right: 100%    }\n  .active {\n  \n    color: #FFF;\n    \n    height: 8.7vh;\n      width: 34vw;\n    border-radius: 10px;\n    text-decoration: none;\n    background-color:#666;\n    display: block;\n   \n    \n  }\n  .process-text-icon{\n    display: inline-flex;\n    align-items: center;\n    text-align: center;\n    text-justify:center;\n     \n    margin-top: 4%;\n  }\n \n  .section_text{\n   display: inline-block;\n    margin-top: 2%;\n\n  }\n  .mobile-only-title{\n    margin-right: 100em;\n  }\n  .item-text{\n\n  \n  }\n  .chevron_icon{\n   \n  }\n  \n  .container_title{\n      font-size: 3vmin;\n      margin-top: 3%;\n    \n  }\n  .container_icon{\n     margin-left: 1%;\n     font-size: 3vmin;\n     \n  }\n  .section-items{\n      border:1px solid;\n      text-align: center;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 8.7vh;\n      width: 34vw;\n      border-radius: 10px;\n      font-size: 2.7vmin;\n      display: block;\n      \n  }\n  \n  .process_title{\n    font-size: 3vmin;\n    margin-left: 10%;\n    margin-bottom: 4%;\n    margin-top: 3%;\n  }\n     \n  \n \n#first-item{\n    margin-top: 10%;\n}\n.process_item{\n    border:1px solid;\n      text-align: left;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 150px;\n      width: 38vw;\n      border-radius: 10px;\n      font-size:22px;\n\n}\n\n.bread{\n    width:50%;\n    margin-left: 45%;\n    \n\n}\n.inactive,#inaction{\n  display: block;\n  height: 8.7vh;\n  width: 34vw;\n  text-decoration: none;\n  \n}\n.nav-position{\n  position: sticky;\n  z-index: 1;\n  width: inherit;\n\n\n }\n .mobile-only-title{\n  position: fixed;\n}\n     .sections{\n        border-left: solid 1px;\n        \n     }\n     .processes-position{\n       \n      margin-bottom: 10%;\n     }\n     .title{\n         margin-left: 4%;\n         margin-bottom: 10%;\n     }\n     .section-1{\n       margin-top: 22%;\n     }\n     .scroll-bar{\n       /* overflow-y:scroll;*/\n        \n        \n     }\n     \n     .section-position{\n       transform: none;\n       \n    }\n    \n     .phone-processes{display:none}\n     .desk-bread{\n        \n        \n         background-color: #FFF;\n         margin-bottom: 3%;\n        \n     }\n     .bread-text{\n        \n         background-color: #fff;\n     }\n     .desk-nav{\n      \n    }\n    .phone-processes{\n        display: none;\n    }\n    .subcontainer_name{\n      font-size: 20px;\n    }\n    \n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10360,7 +10868,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, " \r\n  @media screen and (min-width: 900px) {\r\n    .section-position{\r\n      margin-top: 5%;\r\n    \r\n    }\r\n    .container-footer{\r\n      margin-top: 10%;\r\n    }\r\n   .sections{\r\n   \r\n   }\r\n    \r\n  }\r\n  @media screen and (max-width:600px) {\r\n  \r\n  }\r\n\r\n  @media only screen and (max-width:899px) and (min-width :601px) {\r\n    \r\n   \r\n  }\r\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, " \n  @media screen and (min-width: 900px) {\n    .section-position{\n      margin-top: 5%;\n    \n    }\n    .container-footer{\n      margin-top: 10%;\n    }\n   .sections{\n   \n   }\n    \n  }\n  @media screen and (max-width:600px) {\n  \n  }\n\n  @media only screen and (max-width:899px) and (min-width :601px) {\n    \n   \n  }\n ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10384,7 +10892,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* computer style*/\r\n@media screen and (min-width:900px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}\r\n\r\n/* phone style*/\r\n\r\n\r\n@media screen and (max-width:600px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n      \r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 90%;\r\n        height: 35%;\r\n        display:none;\r\n        margin-left: 4%;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n        text-align: left;\r\n        font-size: 20px;\r\n        margin-left: 1%;\r\n    }\r\n    .close-button-item{\r\n        margin-left: 10%;\r\n        \r\n    }\r\n    .close-button-icon{\r\n        display: block;\r\n    }\r\n    \r\n    .contrast-title{\r\n    \r\n      font-size: 18px;\r\n      margin-left: 1%;\r\n      margin-top: 4%;\r\n      \r\n    \r\n    }\r\n    .standard{\r\n        background-color: #E5112F;\r\n         text-align: left;\r\n         width: 40%;\r\n         margin-left: 1%;\r\n         border: 1px solid;\r\n         height: 25%;\r\n        border-color: #EEE;\r\n        color:#fff;\r\n        font-size: 18px;\r\n    }\r\n    .reinforced{\r\n        background-color: #fff;\r\n        border: 1px solid;\r\n        width: 40%;\r\n        height: 25%;\r\n        border-color: #EEE;\r\n        margin-left: 1%;\r\n        font-size: 18px;\r\n    }\r\n    #contrast{\r\n        height: 30%;\r\n        width:10;\r\n        position: fixed;\r\n        z-index: 1;\r\n        \r\n        \r\n       \r\n        right: 0;\r\n        background-color: #f1f1f1;\r\n        overflow-x: hidden;\r\n        transition: 0.5s;\r\n        padding-top: 60px;\r\n        color:#E5112F;\r\n    }\r\n}\r\n\r\n\r\n@media screen and (min-width:601px) and (max-width:899px){\r\n\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n/* computer style*/\n@media screen and (min-width:900px){\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n        margin-left: 35%;\n        margin-top: 10%;\n        background-color: #fff;\n        width: 40%;\n        height: 35%;\n        display:none;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n           text-align: left;\n           font-size: 3vmin;\n           margin-left: 1%;\n       }\n       .close-button-item{\n           margin-left: 10%;\n           \n       }\n       .close-button-icon{\n           display: block;\n       }\n       \n       .contrast-title{\n       \n         font-size: 3vmin;\n         margin-left: 1%;\n         margin-top: 4%;\n       \n       }\n       .standard{\n           background-color: #E5112F;\n            text-align: left;\n            width: 25%;\n            margin-left: 1%;\n            border: 1px solid;\n            height: 25%;\n           border-color: #EEE;\n           color:#fff;\n       }\n       .reinforced{\n           background-color: #000;\n           border: 1px solid;\n           width: 25%;\n           height: 25%;\n           border-color: #EEE;\n           margin-left: 1%;\n           color: #fff;\n       }\n       .darkWhite{\n        background-color: #fff;\n        text-align: left;\n        width: 25%;\n        margin-left: 1%;\n        border: 1px solid;\n        height: 25%;\n       border-color: #EEE;\n       color:#222;\n       }\n       #contrast{\n           height: 30%;\n           width:10;\n           position: fixed;\n           z-index: 1;\n            margin-top: 15em;\n            margin-right: 40%;\n          \n           right: 0;\n           background-color: #f1f1f1;\n           overflow-x: hidden;\n           transition: 0.5s;\n           padding-top: 60px;\n           color:#E5112F;\n       }\n    \n}\n\n/* phone style*/\n\n\n@media screen and (max-width:600px){\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n      \n        margin-top: 10%;\n        background-color: #fff;\n        width: 90%;\n        height: 35%;\n        display:none;\n        margin-left: 4%;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n        text-align: left;\n        font-size: 20px;\n        margin-left: 1%;\n    }\n    .close-button-item{\n        margin-left: 10%;\n        \n    }\n    .close-button-icon{\n        display: block;\n    }\n    \n    .contrast-title{\n    \n      font-size: 18px;\n      margin-left: 1%;\n      margin-top: 4%;\n      \n    \n    }\n    .standard{\n        background-color: #E5112F;\n         text-align: left;\n         width: 40%;\n         margin-left: 1%;\n         border: 1px solid;\n         height: 25%;\n        border-color: #EEE;\n        color:#fff;\n        font-size: 18px;\n    }\n    .reinforced{\n        background-color: #fff;\n        border: 1px solid;\n        width: 40%;\n        height: 25%;\n        border-color: #EEE;\n        margin-left: 1%;\n        font-size: 18px;\n    }\n    #contrast{\n        height: 30%;\n        width:10;\n        position: fixed;\n        z-index: 1;\n        \n        \n       \n        right: 0;\n        background-color: #f1f1f1;\n        overflow-x: hidden;\n        transition: 0.5s;\n        padding-top: 60px;\n        color:#E5112F;\n    }\n}\n\n\n@media screen and (min-width:601px) and (max-width:899px){\n\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n        margin-left: 35%;\n        margin-top: 10%;\n        background-color: #fff;\n        width: 40%;\n        height: 35%;\n        display:none;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n           text-align: left;\n           font-size: 3vmin;\n           margin-left: 1%;\n       }\n       .close-button-item{\n           margin-left: 10%;\n           \n       }\n       .close-button-icon{\n           display: block;\n       }\n       \n       .contrast-title{\n       \n         font-size: 3vmin;\n         margin-left: 1%;\n         margin-top: 4%;\n       \n       }\n       .standard{\n           background-color: #E5112F;\n            text-align: left;\n            width: 25%;\n            margin-left: 1%;\n            border: 1px solid;\n            height: 25%;\n           border-color: #EEE;\n           color:#fff;\n       }\n       .reinforced{\n           background-color: #000;\n           border: 1px solid;\n           width: 25%;\n           height: 25%;\n           border-color: #EEE;\n           margin-left: 1%;\n           color: #fff;\n       }\n       .darkWhite{\n        background-color: #fff;\n        text-align: left;\n        width: 25%;\n        margin-left: 1%;\n        border: 1px solid;\n        height: 25%;\n       border-color: #EEE;\n       color:#222;\n       }\n       #contrast{\n           height: 30%;\n           width:10;\n           position: fixed;\n           z-index: 1;\n            margin-top: 15em;\n            margin-right: 40%;\n          \n           right: 0;\n           background-color: #f1f1f1;\n           overflow-x: hidden;\n           transition: 0.5s;\n           padding-top: 60px;\n           color:#E5112F;\n       }\n    \n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10408,7 +10916,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n/*  computer footer style*/\r\n@media screen and (min-width:900px) {\r\n    .footer-container{\r\n     \r\n     margin-top: 1%;\r\n    }\r\n.footer{\r\n    margin-left: 10%;\r\n    \r\n}\r\n.footer-item{\r\n    margin-left: 3%;\r\n    font-size: 13px;\r\n}\r\n    \r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n/*  computer footer style*/\n@media screen and (min-width:900px) {\n    .footer-container{\n     \n     margin-top: 1%;\n    }\n.footer{\n    margin-left: 10%;\n    \n}\n.footer-item{\n    margin-left: 3%;\n    font-size: 13px;\n}\n    \n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10432,7 +10940,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {\r\n.homepage_button{\r\n    display: block;\r\n}\r\n.tablet{\r\n    display: none;\r\n}\r\n.state_containers{\r\n    width: 90%;\r\n   \r\n    margin-top: 2%;\r\n    border:2px solid;\r\n   \r\n    margin-left: 5%;\r\n    height: 220px;\r\n    border-radius: 20px;\r\n    border-color: #E5112F;\r\n    \r\n}\r\n.contain-title{\r\n    font-size: 20px;\r\n    text-align: center;\r\n    color: #E5112F;\r\n    font-weight: bold;\r\n}\r\n/*\r\n first group : ma vie admnistratiove\r\n*/\r\n.state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\r\n    \r\n}\r\n.category_title{\r\n    margin-bottom: 3%;\r\n    margin-top: 3%;\r\n\r\n}\r\n\r\n.category_button{\r\n\r\n    width: 29%;\r\n    height: 75px;\r\n    margin-left: 3%;\r\n    margin-bottom: 1%;\r\n    background-color:#577C90;\r\n    color:#FFF;\r\n    border: 1px solid;\r\n    border-color: #ddd;\r\n    border-radius: 10px;\r\n}\r\n.category_button:hover{\r\n\r\n   \r\n    background-color: #E5112F;\r\n    color:#fff;\r\n    text-decoration: none;\r\n   \r\n}\r\n.line{\r\n    height: 3px;\r\n}\r\n.name{\r\n    font-size: 17px;\r\n    width: 100%;\r\n    text-align: center;\r\n    margin-top: -2%;\r\n   \r\n    \r\n     \r\n}\r\n.description{\r\n    font-size: 13px;\r\n    display: block;\r\n    width: 100%;\r\n    text-align: center;\r\n    margin-top: -2%;\r\n}\r\n.home-icon{\r\n    font-size: 25px;\r\n    margin-top: 2%;\r\n    margin-right: 1%;\r\n}\r\n\r\n}\r\n.bread{\r\n    height: 5%;\r\n    margin-right: 500px;\r\n   \r\n    \r\n}\r\n@media screen and (max-width: 600px){\r\n     .category_button{\r\n         \r\n         width: 300px;\r\n         color: #fff;\r\n        \r\n         margin-bottom: 5%;\r\n         height: 105px;\r\n         text-decoration: none;\r\n          \r\n     word-wrap: break-word;\r\n    \r\n      border: 1px solid;\r\n      border-radius: 10px;\r\n      margin-right: 10%;\r\n      margin-left: 4%;\r\n      background-color: #577C90;\r\n        \r\n    \r\n        \r\n    }\r\n    .big-row-one {\r\n        margin-top:10%;\r\n    }\r\n    .state_containers{\r\n        margin-left: 2%;\r\n        border: 2px solid;\r\n        margin-bottom: 7%;\r\n        margin-right: 2%;\r\n        border-color: #E5112F;\r\n        border-radius: 10px;\r\n        width: 96%;\r\n    }\r\n    #button-phone{\r\n      \r\n     \r\n\r\n    }\r\n    .contain-title{\r\n      \r\n      color: #E5112F;\r\n      margin-left: 15%;\r\n      font-weight:bold;\r\n       margin-bottom: 3%;\r\n       font-size: 20px;\r\n    \r\n    }\r\n    .local_containers{\r\n      \r\n    }\r\n    .contain-home{\r\n        height: 2500px\r\n    }\r\n    .description{\r\n      display:block;\r\n    }\r\n    .home-icon{\r\n        font-size: 25px;\r\n        margin-top: 2%;\r\n        margin-right: 1%;\r\n    }\r\n    .tablet {\r\n        display: none;\r\n    }\r\n}\r\n\r\n@media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n\r\n    .homepage_button{\r\n        display: block;\r\n    }\r\n    .state_containers{\r\n        width: 90%;\r\n       \r\n        margin-top: 2%;\r\n        border:2px solid;\r\n       \r\n        margin-left: 5%;  \r\n        height: 900px;\r\n        border-radius: 20px;\r\n        border-color: #E5112F;\r\n        \r\n    }\r\n    .body{\r\n        overflow-x: scroll;\r\n    }\r\n    .contain-title{\r\n        font-size: 33px;\r\n        text-align: center;\r\n        color: #E5112F;\r\n        font-weight: bold;\r\n    }\r\n    /*\r\n     first group : ma vie admnistratiove\r\n    */\r\n    .state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\r\n        \r\n    }\r\n    .category_title{\r\n        margin-bottom: 3%;\r\n        margin-top: 3%;\r\n        \r\n    \r\n    }\r\n    \r\n    .category_button{\r\n    \r\n        width: 80%;\r\n        height: 120px;\r\n        margin-left: 9%;\r\n        margin-bottom: 2%;\r\n        background-color:#577C90;\r\n        color:#FFF;\r\n        border: 1px solid;\r\n        border-color: #ddd;\r\n        border-radius: 10px;\r\n       overflow-wrap: break-word;\r\n    }\r\n    .category_button:hover{\r\n    \r\n       \r\n        background-color: #E5112F;\r\n        color:#fff;\r\n        text-decoration: none;\r\n       \r\n    }\r\n    .line{\r\n        height: 3px;\r\n    }\r\n    .name{\r\n        font-size: 29px;\r\n        width: 100%;\r\n        text-align: center;\r\n        margin-top: -2%;\r\n       \r\n        \r\n         \r\n    }\r\n    .description{\r\n        font-size: 25px;\r\n        display: block;\r\n        width: 100%;\r\n        text-align: center;\r\n        margin-top: -2%;\r\n    }\r\n    .home-icon{\r\n        font-size: 40px;\r\n        margin-top: 2%;\r\n        margin-right: 1%;\r\n    }\r\n    \r\n    }\r\n    .bread{\r\n        height: 5%;\r\n        margin-right: 500px;\r\n       \r\n        \r\n    \r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {\n.homepage_button{\n    display: block;\n}\n.tablet{\n    display: none;\n}\n.state_containers{\n    width: 90%;\n   \n    margin-top: 2%;\n    border:2px solid;\n   \n    margin-left: 5%;\n    height: 220px;\n    border-radius: 20px;\n    border-color: #E5112F;\n    \n}\n.contain-title{\n    font-size: 20px;\n    text-align: center;\n    color: #E5112F;\n    font-weight: bold;\n}\n/*\n first group : ma vie admnistratiove\n*/\n.state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\n    \n}\n.category_title{\n    margin-bottom: 3%;\n    margin-top: 3%;\n\n}\n\n.category_button{\n\n    width: 29%;\n    height: 75px;\n    margin-left: 3%;\n    margin-bottom: 1%;\n    background-color:#577C90;\n    color:#FFF;\n    border: 1px solid;\n    border-color: #ddd;\n    border-radius: 10px;\n}\n.category_button:hover{\n\n   \n    background-color: #E5112F;\n    color:#fff;\n    text-decoration: none;\n   \n}\n.line{\n    height: 3px;\n}\n.name{\n    font-size: 17px;\n    width: 100%;\n    text-align: center;\n    margin-top: -2%;\n   \n    \n     \n}\n.description{\n    font-size: 13px;\n    display: block;\n    width: 100%;\n    text-align: center;\n    margin-top: -2%;\n}\n.home-icon{\n    font-size: 25px;\n    margin-top: 2%;\n    margin-right: 1%;\n}\n\n}\n.bread{\n    height: 5%;\n    margin-right: 500px;\n   \n    \n}\n@media screen and (max-width: 600px){\n     .category_button{\n         \n         width: 300px;\n         color: #fff;\n        \n         margin-bottom: 5%;\n         height: 105px;\n         text-decoration: none;\n          \n     word-wrap: break-word;\n    \n      border: 1px solid;\n      border-radius: 10px;\n      margin-right: 10%;\n      margin-left: 4%;\n      background-color: #577C90;\n        \n    \n        \n    }\n    .big-row-one {\n        margin-top:10%;\n    }\n    .state_containers{\n        margin-left: 2%;\n        border: 2px solid;\n        margin-bottom: 7%;\n        margin-right: 2%;\n        border-color: #E5112F;\n        border-radius: 10px;\n        width: 96%;\n    }\n    #button-phone{\n      \n     \n\n    }\n    .contain-title{\n      \n      color: #E5112F;\n      margin-left: 15%;\n      font-weight:bold;\n       margin-bottom: 3%;\n       font-size: 20px;\n    \n    }\n    .local_containers{\n      \n    }\n    .contain-home{\n        height: 2500px\n    }\n    .description{\n      display:block;\n    }\n    .home-icon{\n        font-size: 25px;\n        margin-top: 2%;\n        margin-right: 1%;\n    }\n    .tablet {\n        display: none;\n    }\n}\n\n@media screen and (min-width: 601px) and (max-width:899px){\n\n\n    .homepage_button{\n        display: block;\n    }\n    .state_containers{\n        width: 90%;\n       \n        margin-top: 2%;\n        border:2px solid;\n       \n        margin-left: 5%;  \n        height: 900px;\n        border-radius: 20px;\n        border-color: #E5112F;\n        \n    }\n    .body{\n        overflow-x: scroll;\n    }\n    .contain-title{\n        font-size: 33px;\n        text-align: center;\n        color: #E5112F;\n        font-weight: bold;\n    }\n    /*\n     first group : ma vie admnistratiove\n    */\n    .state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\n        \n    }\n    .category_title{\n        margin-bottom: 3%;\n        margin-top: 3%;\n        \n    \n    }\n    \n    .category_button{\n    \n        width: 80%;\n        height: 120px;\n        margin-left: 9%;\n        margin-bottom: 2%;\n        background-color:#577C90;\n        color:#FFF;\n        border: 1px solid;\n        border-color: #ddd;\n        border-radius: 10px;\n       overflow-wrap: break-word;\n    }\n    .category_button:hover{\n    \n       \n        background-color: #E5112F;\n        color:#fff;\n        text-decoration: none;\n       \n    }\n    .line{\n        height: 3px;\n    }\n    .name{\n        font-size: 29px;\n        width: 100%;\n        text-align: center;\n        margin-top: -2%;\n       \n        \n         \n    }\n    .description{\n        font-size: 25px;\n        display: block;\n        width: 100%;\n        text-align: center;\n        margin-top: -2%;\n    }\n    .home-icon{\n        font-size: 40px;\n        margin-top: 2%;\n        margin-right: 1%;\n    }\n    \n    }\n    .bread{\n        height: 5%;\n        margin-right: 500px;\n       \n        \n    \n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10456,7 +10964,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width:900px) {\r\n  \r\n\r\n.sidenav {\r\n    height: 100%;\r\n    width:0px;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    right: 0;\r\n\r\n    -webkit-backdrop-filter:brightness(0%);\r\n\r\n            backdrop-filter:brightness(0%);\r\n    background-color: #f1f1f1;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 60px;\r\n    color:#E5112F;\r\n  }\r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n  .menu_title_text{\r\n    margin-left: 26%;\r\n  }\r\n  .menu_btn{\r\n      background-color: #fff;\r\n      color:#E5112F;\r\n \r\n\r\n  }\r\n  \r\n  .sidenav a {\r\n  \r\n  \r\n    transition: 0.3s;\r\n  }\r\n  \r\n  .sidenav a:hover {\r\n    color: #f1f1f1;\r\n  }\r\n  #mySidenav{\r\n  \r\n  }\r\n  #contain{\r\n    \r\n  }/* bouton style*/\r\n  .sidenav .closebtn {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 25px;\r\n    \r\n   \r\n    margin-top: 450px;\r\n    \r\n   \r\n  }\r\n  .menu_btn{\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    margin-right: 40%;\r\n  \r\n  \r\n  }\r\n  .menu-home-icon{\r\n  \r\n    color: #E5112F;\r\n    height: 90%;\r\n    border-radius: 100%;  \r\n  }\r\n  .menu-item{\r\n   \r\n     border:1px solid;\r\n     border-color: #707070;\r\n     margin-top: 3%;\r\n     width: 90%;\r\n     margin-left: 7%;\r\n     border-radius: 10px;\r\n     text-justify: center;\r\n     align-items: center;\r\n     text-align: left;\r\n     \r\n     height: 50px;\r\n     display: inline-flex;\r\n     \r\n  }\r\n  .engine-icon\r\n  {\r\n   \r\n   color: #E5112F;\r\n   height: 90%;\r\n   border-radius: 100%;\r\n\r\n \r\n\r\n    }\r\n    .engine-text,.menu_home_text,.menu_scanner_text{\r\n      color:#E5112F;\r\n      font-size: 15px;\r\n     \r\n    }\r\n    .menu-accueil{\r\n      border-top: solid 1px;\r\n      border-color: #707070;\r\n      margin-top: 10%;\r\n    }\r\n}\r\n/* mobile style*/\r\n@media only screen and (max-width:600px){\r\n  \r\n.sidenav {\r\n  height: 100%;\r\n  width:0px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  right: 0;\r\n\r\n  -webkit-backdrop-filter:brightness(0%);\r\n\r\n          backdrop-filter:brightness(0%);\r\n  background-color: #f1f1f1;\r\n  overflow-x: hidden;\r\n  transition: 0.5s;\r\n  padding-top: 60px;\r\n  color:#E5112F;\r\n}\r\n\r\n.menu_title{\r\n  color:#fff;\r\n  \r\n  background-color: #E5112F;\r\n  width: 40%;\r\n  margin-left: 30%;\r\n  border-radius: 20px;\r\n  height: 50px;\r\n  text-align: center;\r\n  text-justify: center;\r\n  align-items: center;\r\n  display: inline-flex;\r\n  margin-top: -5%;\r\n \r\n}\r\n.menu_title_text{\r\n  margin-left: 10%;\r\n}\r\n.menu_btn{\r\n \r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    margin-top: 100px;\r\n    margin-left: 40%;\r\n  \r\n  \r\n\r\n}\r\n\r\n.menu-home-icon{\r\n  background-color: #E5112F;\r\n  color: #fff;\r\n  border-radius: 50%;\r\n  height: 40px;\r\n  text-justify: center;\r\n  align-items: center;\r\n  text-align: center;\r\n  display: inline-flex;\r\n  \r\n  font-size: 25px;\r\n\r\n\r\n  \r\n}\r\n.menu-item{\r\n \r\n   border:1px solid;\r\n   border-color: #707070;\r\n   margin-top: 6%;\r\n   width: 80%;\r\n   margin-left: 7%;\r\n   border-radius: 10px;\r\n  \r\n}\r\n.engine-icon\r\n{\r\n  background-color: #E5112F;\r\n  color: #fff;\r\n  border-radius: 50%;\r\n  height: 40px;\r\n  text-justify: center;\r\n  align-items: center;\r\n  text-align: center;\r\n  display: inline-flex;\r\n  font-size: 20px;\r\n  margin-left: 40%;\r\n\r\n  }\r\n  .scanner-icon{\r\n    margin-left: 40%;\r\n  }\r\n  .engine-text,.menu_home_text,.menu_scanner_text{\r\n    color:#E5112F;\r\n    font-size: 13px;\r\n    margin-right: 10%;\r\n    \r\n  \r\n  }\r\n  .menu-accueil{\r\n    border-top: solid 1px;\r\n    border-color: #707070;\r\n    margin-top: 10%;\r\n  }\r\n\r\n\r\n}\r\n@media screen and (min-width:601px) and(max-with:899px){\r\n  .sidenav {\r\n    height: 100%;\r\n    width:0px;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    right: 0;\r\n\r\n    -webkit-backdrop-filter:brightness(0%);\r\n\r\n            backdrop-filter:brightness(0%);\r\n    background-color: #f1f1f1;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 60px;\r\n    color:#E5112F;\r\n  }\r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n\r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n  .menu_title_text{\r\n    margin-left: 26%;\r\n  }\r\n  .menu_btn{\r\n      background-color: #fff;\r\n      color:#E5112F;\r\n \r\n\r\n  }\r\n  \r\n  .sidenav a {\r\n  \r\n  \r\n    transition: 0.3s;\r\n  }\r\n  \r\n  .sidenav a:hover {\r\n    color: #f1f1f1;\r\n  }\r\n  #mySidenav{\r\n  \r\n  }\r\n  #contain{\r\n    \r\n  }/* bouton style*/\r\n  .sidenav .closebtn {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 25px;\r\n    \r\n   \r\n    margin-top: 450px;\r\n    \r\n   \r\n  }\r\n  .menu_btn{\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    margin-right: 40%;\r\n  \r\n  \r\n  }\r\n  .menu-home-icon{\r\n  \r\n    color: #E5112F;\r\n    height: 90%;\r\n    border-radius: 100%;  \r\n  }\r\n  .menu-item{\r\n   \r\n     border:1px solid;\r\n     border-color: #707070;\r\n     margin-top: 3%;\r\n     width: 90%;\r\n     margin-left: 7%;\r\n     border-radius: 10px;\r\n     text-justify: center;\r\n     align-items: center;\r\n     text-align: left;\r\n     \r\n     height: 50px;\r\n     display: inline-flex;\r\n     \r\n  }\r\n  .engine-icon\r\n  {\r\n   \r\n   color: #E5112F;\r\n   height: 90%;\r\n   border-radius: 100%;\r\n\r\n \r\n\r\n    }\r\n    .engine-text,.menu_home_text,.menu_scanner_text{\r\n      color:#E5112F;\r\n      font-size: 15px;\r\n     \r\n    }\r\n    .menu-accueil{\r\n      border-top: solid 1px;\r\n      border-color: #707070;\r\n      margin-top: 10%;\r\n    }\r\n}\r\n  @media screen and (max-height: 450px) {\r\n    .sidenav {padding-top: 15px;}\r\n    .sidenav a {font-size: 18px;}\r\n  }\r\n  \r\n  @media only screen and (max-width:899px) and (min-width :601px){\r\n  .menu_btn{\r\n    margin-top: 50px;\r\n  }\r\n  .sidenav{\r\n    padding-top: 110px;\r\n    \r\n  }\r\n\r\n  \r\n.sidenav {\r\n  height: 100%;\r\n  width:0px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  right: 0;\r\n\r\n  -webkit-backdrop-filter:brightness(0%);\r\n\r\n          backdrop-filter:brightness(0%);\r\n  background-color: #f1f1f1;\r\n  overflow-x: hidden;\r\n  transition: 0.5s;\r\n  padding-top: 60px;\r\n  color:#E5112F;\r\n}\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width:900px) {\n  \n\n.sidenav {\n    height: 100%;\n    width:0px;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    right: 0;\n\n    -webkit-backdrop-filter:brightness(0%);\n\n            backdrop-filter:brightness(0%);\n    background-color: #f1f1f1;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n    color:#E5112F;\n  }\n  .menu_title{\n    color:#fff;\n    \n    background-color: #E5112F;\n    width: 40%;\n    margin-left: 30%;\n    border-radius: 20px;\n    height: 50px;\n    text-align: center;\n    text-justify: center;\n    align-items: center;\n    display: inline-flex;\n    margin-top: -5%;\n   \n  }\n  .menu_title_text{\n    margin-left: 26%;\n  }\n  .menu_btn{\n      background-color: #fff;\n      color:#E5112F;\n \n\n  }\n  \n  .sidenav a {\n  \n  \n    transition: 0.3s;\n  }\n  \n  .sidenav a:hover {\n    color: #f1f1f1;\n  }\n  #mySidenav{\n  \n  }\n  #contain{\n    \n  }/* bouton style*/\n  .sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    \n   \n    margin-top: 450px;\n    \n   \n  }\n  .menu_btn{\n    background-color: #E5112F;\n    color: #fff;\n    border-radius: 50%;\n    height: 40px;\n    text-justify: center;\n    align-items: center;\n    text-align: center;\n    display: inline-flex;\n    margin-right: 40%;\n  \n  \n  }\n  .menu-home-icon{\n  \n    color: #E5112F;\n    height: 90%;\n    border-radius: 100%;  \n  }\n  .menu-item{\n   \n     border:1px solid;\n     border-color: #707070;\n     margin-top: 3%;\n     width: 90%;\n     margin-left: 7%;\n     border-radius: 10px;\n     text-justify: center;\n     align-items: center;\n     text-align: left;\n     \n     height: 50px;\n     display: inline-flex;\n     \n  }\n  .engine-icon\n  {\n   \n   color: #E5112F;\n   height: 90%;\n   border-radius: 100%;\n\n \n\n    }\n    .engine-text,.menu_home_text,.menu_scanner_text{\n      color:#E5112F;\n      font-size: 15px;\n     \n    }\n    .menu-accueil{\n      border-top: solid 1px;\n      border-color: #707070;\n      margin-top: 10%;\n    }\n}\n/* mobile style*/\n@media only screen and (max-width:600px){\n  \n.sidenav {\n  height: 100%;\n  width:0px;\n  position: fixed;\n  z-index: 1;\n  top: 0;\n  right: 0;\n\n  -webkit-backdrop-filter:brightness(0%);\n\n          backdrop-filter:brightness(0%);\n  background-color: #f1f1f1;\n  overflow-x: hidden;\n  transition: 0.5s;\n  padding-top: 60px;\n  color:#E5112F;\n}\n\n.menu_title{\n  color:#fff;\n  \n  background-color: #E5112F;\n  width: 40%;\n  margin-left: 30%;\n  border-radius: 20px;\n  height: 50px;\n  text-align: center;\n  text-justify: center;\n  align-items: center;\n  display: inline-flex;\n  margin-top: -5%;\n \n}\n.menu_title_text{\n  margin-left: 10%;\n}\n.menu_btn{\n \n    background-color: #E5112F;\n    color: #fff;\n    border-radius: 50%;\n    height: 40px;\n    text-justify: center;\n    align-items: center;\n    text-align: center;\n    display: inline-flex;\n    margin-top: 100px;\n    margin-left: 40%;\n  \n  \n\n}\n\n.menu-home-icon{\n  background-color: #E5112F;\n  color: #fff;\n  border-radius: 50%;\n  height: 40px;\n  text-justify: center;\n  align-items: center;\n  text-align: center;\n  display: inline-flex;\n  \n  font-size: 25px;\n\n\n  \n}\n.menu-item{\n \n   border:1px solid;\n   border-color: #707070;\n   margin-top: 6%;\n   width: 80%;\n   margin-left: 7%;\n   border-radius: 10px;\n  \n}\n.engine-icon\n{\n  background-color: #E5112F;\n  color: #fff;\n  border-radius: 50%;\n  height: 40px;\n  text-justify: center;\n  align-items: center;\n  text-align: center;\n  display: inline-flex;\n  font-size: 20px;\n  margin-left: 40%;\n\n  }\n  .scanner-icon{\n    margin-left: 40%;\n  }\n  .engine-text,.menu_home_text,.menu_scanner_text{\n    color:#E5112F;\n    font-size: 13px;\n    margin-right: 10%;\n    \n  \n  }\n  .menu-accueil{\n    border-top: solid 1px;\n    border-color: #707070;\n    margin-top: 10%;\n  }\n\n\n}\n@media screen and (min-width:601px) and(max-with:899px){\n  .sidenav {\n    height: 100%;\n    width:0px;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    right: 0;\n\n    -webkit-backdrop-filter:brightness(0%);\n\n            backdrop-filter:brightness(0%);\n    background-color: #f1f1f1;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n    color:#E5112F;\n  }\n  .menu_title{\n    color:#fff;\n    \n    background-color: #E5112F;\n    width: 40%;\n    margin-left: 30%;\n    border-radius: 20px;\n    height: 50px;\n    text-align: center;\n    text-justify: center;\n    align-items: center;\n    display: inline-flex;\n    margin-top: -5%;\n   \n  }\n\n  .menu_title{\n    color:#fff;\n    \n    background-color: #E5112F;\n    width: 40%;\n    margin-left: 30%;\n    border-radius: 20px;\n    height: 50px;\n    text-align: center;\n    text-justify: center;\n    align-items: center;\n    display: inline-flex;\n    margin-top: -5%;\n   \n  }\n  .menu_title_text{\n    margin-left: 26%;\n  }\n  .menu_btn{\n      background-color: #fff;\n      color:#E5112F;\n \n\n  }\n  \n  .sidenav a {\n  \n  \n    transition: 0.3s;\n  }\n  \n  .sidenav a:hover {\n    color: #f1f1f1;\n  }\n  #mySidenav{\n  \n  }\n  #contain{\n    \n  }/* bouton style*/\n  .sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    \n   \n    margin-top: 450px;\n    \n   \n  }\n  .menu_btn{\n    background-color: #E5112F;\n    color: #fff;\n    border-radius: 50%;\n    height: 40px;\n    text-justify: center;\n    align-items: center;\n    text-align: center;\n    display: inline-flex;\n    margin-right: 40%;\n  \n  \n  }\n  .menu-home-icon{\n  \n    color: #E5112F;\n    height: 90%;\n    border-radius: 100%;  \n  }\n  .menu-item{\n   \n     border:1px solid;\n     border-color: #707070;\n     margin-top: 3%;\n     width: 90%;\n     margin-left: 7%;\n     border-radius: 10px;\n     text-justify: center;\n     align-items: center;\n     text-align: left;\n     \n     height: 50px;\n     display: inline-flex;\n     \n  }\n  .engine-icon\n  {\n   \n   color: #E5112F;\n   height: 90%;\n   border-radius: 100%;\n\n \n\n    }\n    .engine-text,.menu_home_text,.menu_scanner_text{\n      color:#E5112F;\n      font-size: 15px;\n     \n    }\n    .menu-accueil{\n      border-top: solid 1px;\n      border-color: #707070;\n      margin-top: 10%;\n    }\n}\n  @media screen and (max-height: 450px) {\n    .sidenav {padding-top: 15px;}\n    .sidenav a {font-size: 18px;}\n  }\n  \n  @media only screen and (max-width:899px) and (min-width :601px){\n  .menu_btn{\n    margin-top: 50px;\n  }\n  .sidenav{\n    padding-top: 110px;\n    \n  }\n\n  \n.sidenav {\n  height: 100%;\n  width:0px;\n  position: fixed;\n  z-index: 1;\n  top: 0;\n  right: 0;\n\n  -webkit-backdrop-filter:brightness(0%);\n\n          backdrop-filter:brightness(0%);\n  background-color: #f1f1f1;\n  overflow-x: hidden;\n  transition: 0.5s;\n  padding-top: 60px;\n  color:#E5112F;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10480,7 +10988,55 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {   \r\n    .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 12.5%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 8%;\r\n            background-color: #E5112F;\r\n            text-align: center;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 36%;\r\n           font-size: 33px;\r\n        \r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 33px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            margin-left: 29%;\r\n            font-size: 33px;\r\n           \r\n        \r\n        }\r\n        .page_title{\r\n            width: 50%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 35px;\r\n        }\r\n        \r\n    }\r\n\r\n    @media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n        .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 12.5%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 8%;\r\n            background-color: #E5112F;\r\n            text-align: center;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 36%;\r\n           font-size: 50px;\r\n        \r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 50px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            margin-left: 29%;\r\n            font-size: 50px;\r\n            margin-right:  19%;\r\n           \r\n        \r\n        }\r\n        .page_title{\r\n            width: 50%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 80px;\r\n        }\r\n        .back_text,.home_text{\r\n            font-size: 20px;\r\n        }\r\n        .menu_text{\r\n            font-size: 22px;\r\n            margin-left: 7%;\r\n        }\r\n        .accessibility_text{\r\n            font-size: 0px;\r\n        }\r\n        \r\n\r\n\r\n    }\r\n    @media screen and (max-width: 600px){\r\n\r\n        .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 15%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 13%;\r\n            background-color: #E5112F;\r\n           \r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 30%;\r\n           font-size: 33px;\r\n        \r\n        }\r\n        .navbar-text{\r\n            font-size: 12px;\r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 33px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            \r\n            font-size: 33px;\r\n           \r\n        \r\n        }\r\n        .menu_text{\r\n            margin-right: 50%;\r\n        }\r\n        .modenuit_text{\r\n           margin-right: 50%;\r\n        }\r\n        .accessibility_text{\r\n           font-size: 0px;\r\n        }\r\n      \r\n        .modenuit_icon{\r\n            padding-top: 6px;\r\n            \r\n        }\r\n        .menu_icon{\r\n            margin-left: 10%;\r\n        }\r\n        .page_title{\r\n            width: 30%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 20px;\r\n        }\r\n        \r\n\r\n    }\r\n\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {   \n    .navbar-container{\n            background-color: #E5112F;\n           \n        }\n        .nav_button{\n            background-color: #E5112F;\n           \n            width: 12%;\n            color:#fff;\n        }\n        .nav_button{\n            \n           \n            width: 12.5%;\n            color:#fff;\n            border-right: solid 1px;\n        }\n        .nav_tool_button{\n            width: 8%;\n            background-color: #E5112F;\n            text-align: center;\n            color:#fff;\n            border-right: solid 1px;\n          \n           \n        }\n        .navbar-retour-icon{\n           display: block;\n           margin-left: 36%;\n           font-size: 33px;\n        \n        }\n        .navbar-home-icon{\n            font-size: 33px;\n    \n        }\n        .navbar-icon{\n            display: block;\n            margin-left: 29%;\n            font-size: 33px;\n           \n        \n        }\n        .page_title{\n            width: 50%;\n            background-color: #FFF;\n            color:#E5112F;\n            text-align: center;\n          \n            align-items: center;\n            display: inline-flex;\n            border-right: 1px solid;\n        }\n        .title-simplici{\n            text-align: center;\n            width: 100%;\n            font-size: 35px;\n        }\n        \n    }\n\n    @media screen and (min-width: 601px) and (max-width:899px){\n\n        .navbar-container{\n            background-color: #E5112F;\n           \n        }\n        .nav_button{\n            background-color: #E5112F;\n           \n            width: 12%;\n            color:#fff;\n        }\n        .nav_button{\n            \n           \n            width: 12.5%;\n            color:#fff;\n            border-right: solid 1px;\n        }\n        .nav_tool_button{\n            width: 8%;\n            background-color: #E5112F;\n            text-align: center;\n            color:#fff;\n            border-right: solid 1px;\n          \n           \n        }\n        .navbar-retour-icon{\n           display: block;\n           margin-left: 36%;\n           font-size: 50px;\n        \n        }\n        .navbar-home-icon{\n            font-size: 50px;\n    \n        }\n        .navbar-icon{\n            display: block;\n            margin-left: 29%;\n            font-size: 50px;\n            margin-right:  19%;\n           \n        \n        }\n        .page_title{\n            width: 50%;\n            background-color: #FFF;\n            color:#E5112F;\n            text-align: center;\n          \n            align-items: center;\n            display: inline-flex;\n            border-right: 1px solid;\n        }\n        .title-simplici{\n            text-align: center;\n            width: 100%;\n            font-size: 80px;\n        }\n        .back_text,.home_text{\n            font-size: 20px;\n        }\n        .menu_text{\n            font-size: 22px;\n            margin-left: 7%;\n        }\n        .accessibility_text{\n            font-size: 0px;\n        }\n        \n\n\n    }\n    @media screen and (max-width: 600px){\n\n        .navbar-container{\n            background-color: #E5112F;\n           \n        }\n        .nav_button{\n            background-color: #E5112F;\n           \n            width: 12%;\n            color:#fff;\n        }\n        .nav_button{\n            \n           \n            width: 15%;\n            color:#fff;\n            border-right: solid 1px;\n        }\n        .nav_tool_button{\n            width: 13%;\n            background-color: #E5112F;\n           \n            color:#fff;\n            border-right: solid 1px;\n          \n           \n        }\n        .navbar-retour-icon{\n           display: block;\n           margin-left: 30%;\n           font-size: 33px;\n        \n        }\n        .navbar-text{\n            font-size: 12px;\n        }\n        .navbar-home-icon{\n            font-size: 33px;\n    \n        }\n        .navbar-icon{\n            display: block;\n            \n            font-size: 33px;\n           \n        \n        }\n        .menu_text{\n            margin-right: 50%;\n        }\n        .modenuit_text{\n           margin-right: 50%;\n        }\n        .accessibility_text{\n           font-size: 0px;\n        }\n      \n        .modenuit_icon{\n            padding-top: 6px;\n            \n        }\n        .menu_icon{\n            margin-left: 10%;\n        }\n        .page_title{\n            width: 30%;\n            background-color: #FFF;\n            color:#E5112F;\n            text-align: center;\n          \n            align-items: center;\n            display: inline-flex;\n            border-right: 1px solid;\n        }\n        .title-simplici{\n            text-align: center;\n            width: 100%;\n            font-size: 20px;\n        }\n        \n\n    }\n\n\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Process.css":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Process.css ***!
+  \*********************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".none {\n  display: none;\n}\n\n/*---------------------------------PROVIDER---------------------------------*/\n.providers {\n  border: 3px solid;\n}\n.providers > h3,\n.providers > p {\n  text-align: center;\n}\n\n.provider-text {\n  display: flex;\n  height: 100%;\n  text-align: center;\n}\n\n.provider-text > p {\n  margin: auto;\n}\n\n.provider-icons {\n  display: flex;\n  height: 100%;\n}\n\n.provider-icons > span {\n  margin: auto;\n}\n\n.providers > div > .row {\n  padding-bottom: 20px;\n}\n.provider-logo {\n  text-align: center;\n}\n.provider-logo > img {\n  width: 20%;\n  border: 1px solid;\n}\n.view-horaire {\n  display: flex;\n}\n.view-horaire > div {\n  text-align: center;\n  cursor: pointer;\n  display: flex;\n  margin: auto;\n  border: 1px solid;\n  border-radius: 1000px;\n  padding: 5px 10px 5px 10px;\n}\n.view-horaire > div > span {\n  margin: auto;\n}\n.provider_phone_timetable,\n.provider_postal_address_timetable > div > li {\n  list-style: none;\n}\n\n.provider_postal_address_timetable_rdv > p {\n  font-size: 12px;\n  text-align: center;\n}\n.provider_postal_address_timetable_rdv > p > a {\n  text-decoration: underline;\n}\n.provider_write_online {\n  display: flex;\n}\n.provider_write_online > div {\n  margin: auto;\n  border: 2px solid black;\n  border-radius: 1000px;\n  padding: 5px 10px 0px 10px;\n  background-color: #577c90;\n  color: white;\n}\n.provider_write_online > div > a > h4 {\n  text-align: center;\n}\n/*---------------------------------PROCESS---------------------------------*/\n.process {\n  width: 95%;\n}\n\n.process_name-title {\n  background-color: #e5112f;\n  color: white;\n  text-align: center;\n  margin-bottom: 40px;\n}\n\n.process_name-title > h1 {\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.process-body {\n  border: 3px solid;\n}\n\n.process-txt,\n.process-icon {\n  display: flex;\n  height: 100%;\n  margin-bottom: 50px;\n}\n\n.process-txt,\n.process-icon > span,\np {\n  margin: auto;\n}\n\n.process-txt > p {\n  width: 100%;\n}\n\n.process-icon-info {\n  font-size: 60px;\n}\n\n.process-body-text {\n  width: 95%;\n  margin: auto;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n.docAnnexe {\n  padding-left: inherit;\n}\n\np {\n  font-size: 1.25em;\n}\n\n.icons {\n  font-size: 2em;\n}\n\nli {\n  font-size: 1.25em;\n  color: black;\n}\n\n/*---------------------------------BUTTONS---------------------------------*/\n.process-body-text > .container {\n  height: auto;\n}\n\n.process-button {\n  background-color: #e5112f;\n  color: white;\n  width: 80%;\n  border-radius: 100px;\n  height: 12vh;\n  margin-left: 50%;\n  transform: translateX(-50%);\n  display: flex;\n  margin-bottom: 22px;\n}\n\n.process-button > div {\n  margin: auto;\n  width: 85%;\n}\n\n.process-button > div > p {\n  margin: 0;\n  text-align: center;\n}\n\n/*---------------------------------POUR TELEPHONE---------------------------------*/\n@media only screen and (max-width: 1200px) {\n  .providers {\n    margin-top: 0;\n  }\n  .provider-text {\n    width: 100%;\n  }\n\n  .view-horaire {\n    width: 100%;\n  }\n  .provider_postal_address_timetable_rdv {\n    width: 100%;\n  }\n\n  .process {\n    width: 100%;\n  }\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/SessionTimeoutDialog.css":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/SessionTimeoutDialog.css ***!
+  \**********************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n/* computer style*/\n@media screen and (min-width:900px){\n    .session-container{\n\n      background-color: #fff;\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n        margin-left: 35%;\n        margin-top: 10%;\n        background-color: #fff;\n        width: 40%;\n        height: 35%;\n        display:none;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n           text-align: left;\n           font-size: 3vmin;\n           margin-left: 1%;\n       }\n       .close-button-item{\n           margin-left: 10%;\n           \n       }\n       .close-button-icon{\n           display: block;\n       }\n       \n       .contrast-title{\n       \n         font-size: 3vmin;\n         margin-left: 1%;\n         margin-top: 4%;\n       \n       }\n       .standard{\n           background-color: #E5112F;\n            text-align: left;\n            width: 25%;\n            margin-left: 1%;\n            border: 1px solid;\n            height: 25%;\n           border-color: #EEE;\n           color:#fff;\n       }\n       .reinforced{\n           background-color: #000;\n           border: 1px solid;\n           width: 25%;\n           height: 25%;\n           border-color: #EEE;\n           margin-left: 1%;\n           color: #fff;\n       }\n       .darkWhite{\n        background-color: #fff;\n        text-align: left;\n        width: 25%;\n        margin-left: 1%;\n        border: 1px solid;\n        height: 25%;\n       border-color: #EEE;\n       color:#222;\n       }\n       #contrast{\n           height: 30%;\n           width:10;\n           position: fixed;\n           z-index: 1;\n            margin-top: 15em;\n            margin-right: 40%;\n          \n           right: 0;\n           background-color: #f1f1f1;\n           overflow-x: hidden;\n           transition: 0.5s;\n           padding-top: 60px;\n           color:#E5112F;\n       }\n    \n}\n\n/* phone style*/\n\n\n@media screen and (max-width:600px){\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n      \n        margin-top: 10%;\n        background-color: #fff;\n        width: 90%;\n        height: 35%;\n        display:none;\n        margin-left: 4%;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n        text-align: left;\n        font-size: 20px;\n        margin-left: 1%;\n    }\n    .close-button-item{\n        margin-left: 10%;\n        \n    }\n    .close-button-icon{\n        display: block;\n    }\n    \n    .contrast-title{\n    \n      font-size: 18px;\n      margin-left: 1%;\n      margin-top: 4%;\n      \n    \n    }\n    .standard{\n        background-color: #E5112F;\n         text-align: left;\n         width: 40%;\n         margin-left: 1%;\n         border: 1px solid;\n         height: 25%;\n        border-color: #EEE;\n        color:#fff;\n        font-size: 18px;\n    }\n    .reinforced{\n        background-color: #fff;\n        border: 1px solid;\n        width: 40%;\n        height: 25%;\n        border-color: #EEE;\n        margin-left: 1%;\n        font-size: 18px;\n    }\n    #contrast{\n        height: 30%;\n        width:10;\n        position: fixed;\n        z-index: 1;\n        \n        \n       \n        right: 0;\n        background-color: #f1f1f1;\n        overflow-x: hidden;\n        transition: 0.5s;\n        padding-top: 60px;\n        color:#E5112F;\n    }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10504,7 +11060,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* computer style*/\r\n\r\n@media screen  and (min-width:900px){\r\n    .subcontainer{\r\n  \r\n        height: 500px;\r\n        text-align: center;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-left: 35%;\r\n    }\r\n    .container_title{\r\n        font-size: 30px;\r\n        margin-top: -2%;\r\n    }\r\n    .icon-title{\r\n       \r\n    }\r\n    .topic-item{\r\n        width: 25%;\r\n        height: 20%;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:2%;\r\n        background-color: #fff;\r\n        border-radius: 15px;\r\n        border-color: #707070;\r\n     \r\n       \r\n       \r\n    }\r\n    .topic-item:hover{\r\n       \r\n     \r\n        -webkit-text-decoration-color: #E5112F;\r\n       \r\n     \r\n                text-decoration-color: #E5112F;\r\n        text-decoration: none;\r\n        color: #E5112F;\r\n       \r\n        border-color: #E5112F;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-right: 11%;\r\n        margin-top: 2%;\r\n        \r\n    }\r\n}\r\n@media screen and (max-width:600px){\r\n    .subcontainer{\r\n  \r\n      \r\n        text-align: center;\r\n        height: -webkit-fit-content;\r\n        height: -moz-fit-content;\r\n        height: fit-content;\r\n       \r\n       \r\n    }\r\n    .desk-bread-cont{\r\n        margin-top: 200px;\r\n       \r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-top: -60px;\r\n       \r\n    }\r\n    .container_title{\r\n        font-size: 25px;\r\n        margin-top: 26%;\r\n    }\r\n    .topic-item{\r\n        width: 80%;\r\n        height: 100px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:4%;\r\n        background-color: #577C90;;\r\n        border-radius: 15px;\r\n        color: #fff;\r\n        text-transform: uppercase;\r\n       \r\n      \r\n        font-weight: bold;\r\n      \r\n       \r\n    }\r\n    .desk-bread{\r\n     \r\n    \r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-top: 4%;\r\n    }\r\n    .nav-position{\r\n        z-index: 2;\r\n    }\r\n    .icon-title{\r\n        display: none;\r\n    }\r\n}\r\n\r\n@media screen  and (min-width:601px) and (max-width:899px){\r\n\r\n    .subcontainer{\r\n  \r\n       \r\n        text-align: center;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-left: 35%;\r\n    }\r\n    .container_title{\r\n        font-size: 30px;\r\n        margin-top: -2%;\r\n    }\r\n    .icon-title{\r\n       \r\n    }\r\n    .topic-item{\r\n        width: 40%;\r\n        height: 120px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:2%;\r\n        background-color: #fff;\r\n        border-radius: 15px;\r\n        border-color: #707070;\r\n        font-size: 29px;\r\n     \r\n       \r\n       \r\n    }\r\n    .desk-bread{\r\n        font-size: 20px;\r\n    }\r\n    .topic-item:hover{\r\n       \r\n     \r\n        -webkit-text-decoration-color: #E5112F;\r\n       \r\n     \r\n                text-decoration-color: #E5112F;\r\n        text-decoration: none;\r\n        color: #E5112F;\r\n       \r\n        border-color: #E5112F;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 33px;\r\n        margin-right: 11%;\r\n        margin-top: 2%;\r\n        \r\n    }\r\n}\r\n@media screen and (max-width:600px){\r\n    .subcontainer{\r\n  \r\n      \r\n        text-align: center;\r\n        height: -webkit-fit-content;\r\n        height: -moz-fit-content;\r\n        height: fit-content;\r\n       \r\n       \r\n    }\r\n    .desk-bread-cont{\r\n        margin-top: 200px;\r\n       \r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-top: -60px;\r\n       \r\n    }\r\n    .container_title{\r\n        font-size: 25px;\r\n        margin-top: 26%;\r\n    }\r\n    .topic-item{\r\n        width: 80%;\r\n        height: 100px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:4%;\r\n        background-color: #577C90;;\r\n        border-radius: 15px;\r\n        color: #fff;\r\n        text-transform: uppercase;\r\n       \r\n      \r\n        font-weight: bold;\r\n      \r\n       \r\n    }\r\n    .desk-bread{\r\n     \r\n    \r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-top: 4%;\r\n    }\r\n    .nav-position{\r\n        z-index: 2;\r\n    }\r\n    .icon-title{\r\n        display: none;\r\n    }\r\n\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* computer style*/\n\n@media screen  and (min-width:900px){\n    .subcontainer{\n  \n        height: 500px;\n        text-align: center;\n    }\n    .title-group{\n        text-align: center;\n        margin-left: 35%;\n    }\n    .container_title{\n        font-size: 30px;\n        margin-top: -2%;\n    }\n    .icon-title{\n       \n    }\n    .topic-item{\n        width: 25%;\n        height: 20%;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:2%;\n        background-color: #fff;\n        border-radius: 15px;\n        border-color: #707070;\n     \n       \n       \n    }\n    .topic-item:hover{\n       \n     \n        -webkit-text-decoration-color: #E5112F;\n       \n     \n                text-decoration-color: #E5112F;\n        text-decoration: none;\n        color: #E5112F;\n       \n        border-color: #E5112F;\n    }\n    .subcontainer-choose-title{\n        font-size: 22px;\n        margin-right: 11%;\n        margin-top: 2%;\n        \n    }\n}\n@media screen and (max-width:600px){\n    .subcontainer{\n  \n      \n        text-align: center;\n        height: -webkit-fit-content;\n        height: -moz-fit-content;\n        height: fit-content;\n       \n       \n    }\n    .desk-bread-cont{\n        margin-top: 200px;\n       \n    }\n    .title-group{\n        text-align: center;\n        margin-top: -60px;\n       \n    }\n    .container_title{\n        font-size: 25px;\n        margin-top: 26%;\n    }\n    .topic-item{\n        width: 80%;\n        height: 100px;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:4%;\n        background-color: #577C90;;\n        border-radius: 15px;\n        color: #fff;\n        text-transform: uppercase;\n       \n      \n        font-weight: bold;\n      \n       \n    }\n    .desk-bread{\n     \n    \n    }\n    .subcontainer-choose-title{\n        font-size: 22px;\n        margin-top: 4%;\n    }\n    .nav-position{\n        z-index: 2;\n    }\n    .icon-title{\n        display: none;\n    }\n}\n\n@media screen  and (min-width:601px) and (max-width:899px){\n\n    .subcontainer{\n  \n       \n        text-align: center;\n    }\n    .title-group{\n        text-align: center;\n        margin-left: 35%;\n    }\n    .container_title{\n        font-size: 30px;\n        margin-top: -2%;\n    }\n    .icon-title{\n       \n    }\n    .topic-item{\n        width: 40%;\n        height: 120px;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:2%;\n        background-color: #fff;\n        border-radius: 15px;\n        border-color: #707070;\n        font-size: 29px;\n     \n       \n       \n    }\n    .desk-bread{\n        font-size: 20px;\n    }\n    .topic-item:hover{\n       \n     \n        -webkit-text-decoration-color: #E5112F;\n       \n     \n                text-decoration-color: #E5112F;\n        text-decoration: none;\n        color: #E5112F;\n       \n        border-color: #E5112F;\n    }\n    .subcontainer-choose-title{\n        font-size: 33px;\n        margin-right: 11%;\n        margin-top: 2%;\n        \n    }\n}\n@media screen and (max-width:600px){\n    .subcontainer{\n  \n      \n        text-align: center;\n        height: -webkit-fit-content;\n        height: -moz-fit-content;\n        height: fit-content;\n       \n       \n    }\n    .desk-bread-cont{\n        margin-top: 200px;\n       \n    }\n    .title-group{\n        text-align: center;\n        margin-top: -60px;\n       \n    }\n    .container_title{\n        font-size: 25px;\n        margin-top: 26%;\n    }\n    .topic-item{\n        width: 80%;\n        height: 100px;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:4%;\n        background-color: #577C90;;\n        border-radius: 15px;\n        color: #fff;\n        text-transform: uppercase;\n       \n      \n        font-weight: bold;\n      \n       \n    }\n    .desk-bread{\n     \n    \n    }\n    .subcontainer-choose-title{\n        font-size: 22px;\n        margin-top: 4%;\n    }\n    .nav-position{\n        z-index: 2;\n    }\n    .icon-title{\n        display: none;\n    }\n\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10528,55 +11084,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n@media screen and(min-width:(900px)){\r\n.bread-items{\r\n    font-size:10%;\r\n}\r\n  .bread-icon{\r\n      margin-top: 16px;\r\n      display:block;\r\n      color: red;\r\n  }\r\n}\r\n\r\n\r\n.bread-items{\r\n  text-decoration: underline;\r\n   list-style-type: none;\r\n   display: inline;\r\n   margin-left: 2%;\r\n   font-size: 12px;\r\n   \r\n }\r\n.bread-container{\r\n    height: 20px;\r\n}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/process.css":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/process.css ***!
-  \*********************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".process-global {\r\n    display: flex;\r\n}\r\n\r\n.process {\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process_name-title {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    text-align: center;\r\n}\r\n\r\n.process-body {\r\n    border: 10px solid;\r\n}\r\n\r\n.process-body-text {\r\n    width: 95%;\r\n    margin: auto;\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.process-icon-txt {\r\n    display: flex;\r\n}\r\n\r\n.process-buttons {\r\n    display: flex;\r\n    height: 10vh;\r\n    width: 70%;\r\n    margin: auto;\r\n}\r\n\r\n.process-buttons>div {\r\n    flex: 1;\r\n}\r\n\r\n.process-button {\r\n    background-color: #E5112F;\r\n    color: white;\r\n    width: 20vw;\r\n    border-radius: 100px;\r\n    height: 100%;\r\n    margin-left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.process-scan>div {\r\n    display: flex;\r\n    height: 100%;\r\n}\r\n\r\n.process-scan>div>.process-scan-text {\r\n    margin: 0;\r\n    margin: auto;\r\n    width: 70%;\r\n}\r\n\r\n.process-scan>div>.process-scan-icon {\r\n    margin: 0;\r\n    margin: auto;\r\n}\r\n\r\n.process-demarche {\r\n    position: relative;\r\n}\r\n\r\n.process-demarche>a>div {\r\n    position: absolute;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n    width: 100%;\r\n}\r\n\r\n.process-demarche>a>div>p {\r\n    text-align: center;\r\n}\r\n\r\n.process-demarche>a>div>.process-demarche-icon {\r\n    margin: 0;\r\n}\r\n\r\n.description-icon>span {\r\n    font-size: 50px;\r\n}\r\n\r\n.process_doc {\r\n    padding-left: 5vw;\r\n}\r\n\r\n.process-icon {\r\n    width: 5vw;\r\n    text-align: center;\r\n}\r\n\r\nspan {\r\n    width: inherit;\r\n}\r\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/sessionTimeoutDialog.css":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/sessionTimeoutDialog.css ***!
-  \**********************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* computer style*/\r\n@media screen and (min-width:900px){\r\n    .session-container{\r\n\r\n      background-color: #fff;\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}\r\n\r\n/* phone style*/\r\n\r\n\r\n@media screen and (max-width:600px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n      \r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 90%;\r\n        height: 35%;\r\n        display:none;\r\n        margin-left: 4%;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n        text-align: left;\r\n        font-size: 20px;\r\n        margin-left: 1%;\r\n    }\r\n    .close-button-item{\r\n        margin-left: 10%;\r\n        \r\n    }\r\n    .close-button-icon{\r\n        display: block;\r\n    }\r\n    \r\n    .contrast-title{\r\n    \r\n      font-size: 18px;\r\n      margin-left: 1%;\r\n      margin-top: 4%;\r\n      \r\n    \r\n    }\r\n    .standard{\r\n        background-color: #E5112F;\r\n         text-align: left;\r\n         width: 40%;\r\n         margin-left: 1%;\r\n         border: 1px solid;\r\n         height: 25%;\r\n        border-color: #EEE;\r\n        color:#fff;\r\n        font-size: 18px;\r\n    }\r\n    .reinforced{\r\n        background-color: #fff;\r\n        border: 1px solid;\r\n        width: 40%;\r\n        height: 25%;\r\n        border-color: #EEE;\r\n        margin-left: 1%;\r\n        font-size: 18px;\r\n    }\r\n    #contrast{\r\n        height: 30%;\r\n        width:10;\r\n        position: fixed;\r\n        z-index: 1;\r\n        \r\n        \r\n       \r\n        right: 0;\r\n        background-color: #f1f1f1;\r\n        overflow-x: hidden;\r\n        transition: 0.5s;\r\n        padding-top: 60px;\r\n        color:#E5112F;\r\n    }\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media screen and(min-width:(900px)){\n.bread-items{\n    font-size:10%;\n}\n  .bread-icon{\n      margin-top: 16px;\n      display:block;\n      color: red;\n  }\n}\n\n\n.bread-items{\n  text-decoration: underline;\n   list-style-type: none;\n   display: inline;\n   margin-left: 2%;\n   font-size: 12px;\n   \n }\n.bread-container{\n    height: 20px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10656,6 +11164,21 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./public/images/Assurance retraite.svg":
+/*!**********************************************!*\
+  !*** ./public/images/Assurance retraite.svg ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Assurance retraite.svg?78bd8c41bf965516a2fba6ccbf5ab449");
 
 /***/ }),
 
@@ -68860,12 +69383,23 @@ var GoogleMaterilIcons = function (_PureComponent) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "useIdleTimer": () => (/* binding */ K)
+/* harmony export */   "useIdleTimer": () => (/* binding */ W)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-function o(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function s(e,t,n){return t&&a(e.prototype,t),n&&a(e,n),e}function u(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function c(e,t){return(c=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function l(e){return(l="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function h(e,t){return!t||"object"!==l(t)&&"function"!=typeof t?u(e):t}function f(e){return(f=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function d(e,t,n,r,i,o,a){try{var s=e[o](a),u=s.value}catch(e){return void n(e)}s.done?t(u):Promise.resolve(u).then(r,i)}function p(e){return function(){var t=this,n=arguments;return new Promise((function(r,i){var o=e.apply(t,n);function a(e){d(o,r,i,a,s,"next",e)}function s(e){d(o,r,i,a,s,"throw",e)}a(void 0)}))}}function v(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function m(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e)){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{r||null==s.return||s.return()}finally{if(i)throw o}}return n}}(e,t)||function(e,t){if(e){if("string"==typeof e)return v(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?v(e,t):void 0}}(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}var g,y=(function(e){var t=function(e){var t,n=Object.prototype,r=n.hasOwnProperty,i="function"==typeof Symbol?Symbol:{},o=i.iterator||"@@iterator",a=i.asyncIterator||"@@asyncIterator",s=i.toStringTag||"@@toStringTag";function u(e,t,n){return Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}),e[t]}try{u({},"")}catch(e){u=function(e,t,n){return e[t]=n}}function c(e,t,n,r){var i=t&&t.prototype instanceof m?t:m,o=Object.create(i.prototype),a=new O(r||[]);return o._invoke=function(e,t,n){var r=h;return function(i,o){if(r===d)throw new Error("Generator is already running");if(r===p){if("throw"===i)throw o;return S()}for(n.method=i,n.arg=o;;){var a=n.delegate;if(a){var s=E(a,n);if(s){if(s===v)continue;return s}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if(r===h)throw r=p,n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);r=d;var u=l(e,t,n);if("normal"===u.type){if(r=n.done?p:f,u.arg===v)continue;return{value:u.arg,done:n.done}}"throw"===u.type&&(r=p,n.method="throw",n.arg=u.arg)}}}(e,n,a),o}function l(e,t,n){try{return{type:"normal",arg:e.call(t,n)}}catch(e){return{type:"throw",arg:e}}}e.wrap=c;var h="suspendedStart",f="suspendedYield",d="executing",p="completed",v={};function m(){}function g(){}function y(){}var b={};b[o]=function(){return this};var w=Object.getPrototypeOf,_=w&&w(w(x([])));_&&_!==n&&r.call(_,o)&&(b=_);var T=y.prototype=m.prototype=Object.create(b);function k(e){["next","throw","return"].forEach((function(t){u(e,t,(function(e){return this._invoke(t,e)}))}))}function A(e,t){function n(i,o,a,s){var u=l(e[i],e,o);if("throw"!==u.type){var c=u.arg,h=c.value;return h&&"object"==typeof h&&r.call(h,"__await")?t.resolve(h.__await).then((function(e){n("next",e,a,s)}),(function(e){n("throw",e,a,s)})):t.resolve(h).then((function(e){c.value=e,a(c)}),(function(e){return n("throw",e,a,s)}))}s(u.arg)}var i;this._invoke=function(e,r){function o(){return new t((function(t,i){n(e,r,t,i)}))}return i=i?i.then(o,o):o()}}function E(e,n){var r=e.iterator[n.method];if(r===t){if(n.delegate=null,"throw"===n.method){if(e.iterator.return&&(n.method="return",n.arg=t,E(e,n),"throw"===n.method))return v;n.method="throw",n.arg=new TypeError("The iterator does not provide a 'throw' method")}return v}var i=l(r,e.iterator,n.arg);if("throw"===i.type)return n.method="throw",n.arg=i.arg,n.delegate=null,v;var o=i.arg;return o?o.done?(n[e.resultName]=o.value,n.next=e.nextLoc,"return"!==n.method&&(n.method="next",n.arg=t),n.delegate=null,v):o:(n.method="throw",n.arg=new TypeError("iterator result is not an object"),n.delegate=null,v)}function I(e){var t={tryLoc:e[0]};1 in e&&(t.catchLoc=e[1]),2 in e&&(t.finallyLoc=e[2],t.afterLoc=e[3]),this.tryEntries.push(t)}function L(e){var t=e.completion||{};t.type="normal",delete t.arg,e.completion=t}function O(e){this.tryEntries=[{tryLoc:"root"}],e.forEach(I,this),this.reset(!0)}function x(e){if(e){var n=e[o];if(n)return n.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var i=-1,a=function n(){for(;++i<e.length;)if(r.call(e,i))return n.value=e[i],n.done=!1,n;return n.value=t,n.done=!0,n};return a.next=a}}return{next:S}}function S(){return{value:t,done:!0}}return g.prototype=T.constructor=y,y.constructor=g,g.displayName=u(y,s,"GeneratorFunction"),e.isGeneratorFunction=function(e){var t="function"==typeof e&&e.constructor;return!!t&&(t===g||"GeneratorFunction"===(t.displayName||t.name))},e.mark=function(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,y):(e.__proto__=y,u(e,s,"GeneratorFunction")),e.prototype=Object.create(T),e},e.awrap=function(e){return{__await:e}},k(A.prototype),A.prototype[a]=function(){return this},e.AsyncIterator=A,e.async=function(t,n,r,i,o){void 0===o&&(o=Promise);var a=new A(c(t,n,r,i),o);return e.isGeneratorFunction(n)?a:a.next().then((function(e){return e.done?e.value:a.next()}))},k(T),u(T,s,"Generator"),T[o]=function(){return this},T.toString=function(){return"[object Generator]"},e.keys=function(e){var t=[];for(var n in e)t.push(n);return t.reverse(),function n(){for(;t.length;){var r=t.pop();if(r in e)return n.value=r,n.done=!1,n}return n.done=!0,n}},e.values=x,O.prototype={constructor:O,reset:function(e){if(this.prev=0,this.next=0,this.sent=this._sent=t,this.done=!1,this.delegate=null,this.method="next",this.arg=t,this.tryEntries.forEach(L),!e)for(var n in this)"t"===n.charAt(0)&&r.call(this,n)&&!isNaN(+n.slice(1))&&(this[n]=t)},stop:function(){this.done=!0;var e=this.tryEntries[0].completion;if("throw"===e.type)throw e.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var n=this;function i(r,i){return s.type="throw",s.arg=e,n.next=r,i&&(n.method="next",n.arg=t),!!i}for(var o=this.tryEntries.length-1;o>=0;--o){var a=this.tryEntries[o],s=a.completion;if("root"===a.tryLoc)return i("end");if(a.tryLoc<=this.prev){var u=r.call(a,"catchLoc"),c=r.call(a,"finallyLoc");if(u&&c){if(this.prev<a.catchLoc)return i(a.catchLoc,!0);if(this.prev<a.finallyLoc)return i(a.finallyLoc)}else if(u){if(this.prev<a.catchLoc)return i(a.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<a.finallyLoc)return i(a.finallyLoc)}}}},abrupt:function(e,t){for(var n=this.tryEntries.length-1;n>=0;--n){var i=this.tryEntries[n];if(i.tryLoc<=this.prev&&r.call(i,"finallyLoc")&&this.prev<i.finallyLoc){var o=i;break}}o&&("break"===e||"continue"===e)&&o.tryLoc<=t&&t<=o.finallyLoc&&(o=null);var a=o?o.completion:{};return a.type=e,a.arg=t,o?(this.method="next",this.next=o.finallyLoc,v):this.complete(a)},complete:function(e,t){if("throw"===e.type)throw e.arg;return"break"===e.type||"continue"===e.type?this.next=e.arg:"return"===e.type?(this.rval=this.arg=e.arg,this.method="return",this.next="end"):"normal"===e.type&&t&&(this.next=t),v},finish:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var n=this.tryEntries[t];if(n.finallyLoc===e)return this.complete(n.completion,n.afterLoc),L(n),v}},catch:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var n=this.tryEntries[t];if(n.tryLoc===e){var r=n.completion;if("throw"===r.type){var i=r.arg;L(n)}return i}}throw new Error("illegal catch attempt")},delegateYield:function(e,n,r){return this.delegate={iterator:x(e),resultName:n,nextLoc:r},"next"===this.method&&(this.arg=t),v}},e}(e.exports);try{regeneratorRuntime=t}catch(e){Function("r","regeneratorRuntime = r")(t)}}(g={exports:{}},g.exports),g.exports),b="object"===("undefined"==typeof window||"undefined"==typeof window?"undefined":l(window)),w=b?document:{},_=["mousemove","keydown","wheel","DOMMouseScroll","mousewheel","mousedown","touchstart","touchmove","MSPointerDown","MSPointerMove","visibilitychange"];function T(e,t){var n;function r(){for(var r=arguments.length,i=new Array(r),o=0;o<r;o++)i[o]=arguments[o];n&&clearTimeout(n),n=setTimeout((function(){e.apply(void 0,i),n=null}),t)}return r.cancel=function(){clearTimeout(n)},r}function k(e,t){var n=0;return function(){var r=(new Date).getTime();if(!(r-n<t))return n=r,e.apply(void 0,arguments)}}var A=0,E=0;function I(){var e=(new Date).getTime();return e===A?1e3*e+ ++E:(A=e,E=0,1e3*e)}function L(){return Math.random().toString(36).substring(2)}function O(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0;return new Promise((function(t){return setTimeout(t,e)}))}function x(){return(new Date).getTime()}var S={create:function(e){var t={messagesCallback:null,bc:new BroadcastChannel(e)};return t.bc.onmessage=function(e){t.messagesCallback&&t.messagesCallback(e.data)},t},close:function(e){e.bc.close()},onMessage:function(e,t){e.messagesCallback=t},postMessage:function(e,t){try{return e.bc.postMessage(t,!1),Promise.resolve()}catch(e){return Promise.reject(e)}},canBeUsed:function(){return"function"==typeof BroadcastChannel},type:"broadcastChannel",averageResponseTime:function(){return 150},microSeconds:I},M=function(){function e(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:6e4;o(this,e),this.ttl=t,this.set=new Set,this.timeMap=new Map}return s(e,[{key:"has",value:function(e){return this.set.has(e)}},{key:"add",value:function(e){this.timeMap.set(e,x()),this.set.add(e),this._removeTooOldValues()}},{key:"clear",value:function(){this.set.clear(),this.timeMap.clear()}},{key:"_removeTooOldValues",value:function(){for(var e=x()-this.ttl,t=this.set[Symbol.iterator]();;){var n=t.next().value;if(!n)return;if(!(this.timeMap.get(n)<e))return;this.timeMap.delete(n),this.set.delete(n)}}}]),e}();function D(){var e;if("undefined"==typeof window)return null;try{e=window.localStorage,e=window["ie8-eventlistener/storage"]||window.localStorage}catch(e){}return e}function P(e,t){var n=e,r=function(e){e.key===n&&t(JSON.parse(e.newValue))};return window.addEventListener("storage",r),r}function j(){var e=D();if(!e)return!1;try{var t="__check";e.setItem(t,"works"),e.removeItem(t)}catch(e){return!1}return!0}var C={create:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!j())throw new Error("❌ localStorage cannot be used.");var n=L(),r=new M(t.removeTimeout),i={channelName:e,uuid:n,eMIs:r};return i.listener=P(e,(function(e){i.messagesCallback&&e.uuid!==n&&e.token&&!r.has(e.token)&&(e.data.time&&e.data.time<i.messagesCallbackTime||(r.add(e.token),i.messagesCallback(e.data)))})),i},close:function(e){var t;t=e.listener,window.removeEventListener("storage",t)},onMessage:function(e,t,n){e.messagesCallbackTime=n,e.messagesCallback=t},postMessage:function(e,t){return new Promise((function(n){var r=e.channelName,i={token:L(),time:(new Date).getTime(),data:t,uuid:e.uuid},o=JSON.stringify(i);D().setItem(r,o);var a=document.createEvent("Event");a.initEvent("storage",!0,!0),a.key=r,a.newValue=o,window.dispatchEvent(a),n()}))},canBeUsed:j,type:"localStorage",averageResponseTime:function(){var e=navigator.userAgent.toLowerCase();return e.includes("safari")&&!e.includes("chrome")?240:120},microSeconds:I},N=new Set;var R={create:function(e){var t={name:e,messagesCallback:null};return N.add(t),t},close:function(e){N.delete(e)},onMessage:function(e,t){e.messagesCallback=t},postMessage:function(e,t){return new Promise((function(n){return setTimeout((function(){Array.from(N).filter((function(t){return t.name===e.name})).filter((function(t){return t!==e})).filter((function(e){return!!e.messagesCallback})).forEach((function(e){return e.messagesCallback(t)})),n()}),5)}))},canBeUsed:function(){return!0},type:"simulate",averageResponseTime:function(){return 5},microSeconds:I},B=[S,C];function Y(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(e.type){if("simulate"===e.type)return R;var t=B.find((function(t){return t.type===e.type}));if(t)return t;throw new Error("❌ Method ".concat(e.type," is not supported."))}var n=B.find((function(e){return e.canBeUsed()}));if(!n)throw new Error("❌ No method found ".concat(JSON.stringify(B.map((function(e){return e.type})))));return n}var F=function(){function e(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};o(this,e),this.name=t,this.options=n,this.method=Y(this.options),this.closed=!1,this._isListening=!1,this._onMessageListener=null,this._addEventListeners={message:[],internal:[]},this._unSendMessagePromises=new Set,this._beforeClose=[],this._preparePromises=null,X(this)}return s(e,[{key:"postMessage",value:function(e){if(this.closed)throw new Error("❌ Cannot post message after channel has closed");return U(this,"message",e)}},{key:"postInternal",value:function(e){return U(this,"internal",e)}},{key:"onmessage",get:function(){return this._onMessageListener},set:function(e){var t={time:this.method.microSeconds(),fn:e};J(this,"message",this._onMessageListener),e&&"function"==typeof e?(this._onMessageListener=t,V(this,"message",t)):this._onMessageListener=null}},{key:"addEventListener",value:function(e,t){V(this,e,{time:this.method.microSeconds(),fn:t})}},{key:"removeEventListener",value:function(e,t){J(this,e,this._addEventListeners[e].find((function(e){return e.fn===t})))}},{key:"close",value:function(){var e=this;if(!this.closed){this.closed=!0;var t=this._preparePromises?this._preparePromises:Promise.resolve();return this._onMessageListener=null,this._addEventListeners.message=[],t.then((function(){return Promise.all(Array.from(e._unSendMessagePromises))})).then((function(){return Promise.all(e._beforeClose.map((function(e){return e()})))})).then((function(){return e.method.close(e._state)}))}}},{key:"type",get:function(){return this.method.type}},{key:"isClosed",value:function(){return this.closed}}]),e}();function U(e,t,n){var r={time:e.method.microSeconds(),type:t,data:n};return(e._preparePromises?e._preparePromises:Promise.resolve()).then((function(){var t=e.method.postMessage(e._state,r);return e._unSendMessagePromises.add(t),t.catch().then((function(){return e._unSendMessagePromises.delete(t)})),t}))}function X(e){var t,n=e.method.create(e.name,e.options);(t=n)&&"function"==typeof t.then?(e._preparePromises=n,n.then((function(t){e._state=t}))):e._state=n}function G(e){return e._addEventListeners.message.length>0||e._addEventListeners.internal.length>0}function V(e,t,n){e._addEventListeners[t].push(n),function(e){if(!e._isListening&&G(e)){var t=function(t){e._addEventListeners[t.type].forEach((function(e){t.time>=e.time&&e.fn(t.data)}))},n=e.method.microSeconds();e._preparePromises?e._preparePromises.then((function(){e._isListening=!0,e.method.onMessage(e._state,t,n)})):(e._isListening=!0,e.method.onMessage(e._state,t,n))}}(e)}function J(e,t,n){e._addEventListeners[t]=e._addEventListeners[t].filter((function(e){return e!==n})),function(e){if(e._isListening&&!G(e)){e._isListening=!1;var t=e.method.microSeconds();e.method.onMessage(e._state,null,t)}}(e)}var W=function(){function e(t,n){var r=this;o(this,e),this._channel=t,this._options=n,this.isLeader=!1,this.isDead=!1,this.token=L(),this._isApplying=!1,this._reApply=!1,this._unloadFns=[],this._listeners=[],this._intervals=[],this._duplicateListeners=function(){},this._duplicateCalled=!1,this._onBeforeDie=p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:case"end":return e.stop()}}),e)})));var i=function(){var e=p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",r.die());case 1:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}();b&&(window.addEventListener("beforeUnload",i),window.addEventListener("unload",i),this._unloadFns.push(["beforeUnload",i]),this._unloadFns.push(["unload",i]))}var t;return s(e,[{key:"applyOnce",value:function(){var e=this;if(this.isLeader)return Promise.resolve(!1);if(this.isDead)return Promise.resolve(!1);if(this._isApplying)return this._reApply=!0,Promise.resolve(!1);this._isApplying=!0;var t=!1,n=function(n){"leader"===n.context&&n.token!==e.token&&("apply"===n.action&&n.token>e.token&&(t=!0),"tell"===n.action&&(t=!0))};return this._channel.addEventListener("internal",n),$(this,"apply").then((function(){return O(e._options.responseTime)})).then((function(){return t?Promise.reject(new Error):$(e,"apply")})).then((function(){return O(e._options.responseTime)})).then((function(){return t?Promise.reject(new Error):$(e)})).then((function(){return function(e){e.isLeader=!0;var t=function(t){"leader"===t.context&&"apply"===t.action&&$(e,"tell"),"leader"!==t.context||"tell"!==t.action||e._duplicateCalled||(e._duplicateCalled=!0,e._duplicateListeners(),$(e,"tell"))};return e._channel.addEventListener("internal",t),e._listeners.push(t),$(e,"tell")}(e)})).then((function(){return!0})).catch((function(){return!1})).then((function(t){return e._channel.removeEventListener("internal",n),e._isApplying=!1,!t&&e._reApply?(e._reApply=!1,e.applyOnce()):t}))}},{key:"awaitLeadership",value:function(){var e;return this._awaitLeadershipPromise||(this._awaitLeadershipPromise=(e=this).isLeader?Promise.resolve():new Promise((function(t){var n=!1;function r(){n||(n=!0,clearInterval(i),e._channel.removeEventListener("internal",o),t(!0))}e.applyOnce().then((function(){e.isLeader&&r()}));var i=setInterval((function(){e.applyOnce().then((function(){e.isLeader&&r()}))}),e._options.fallbackInterval);e._intervals.push(i);var o=function(t){"leader"===t.context&&"death"===t.action&&e.applyOnce().then((function(){e.isLeader&&r()}))};e._channel.addEventListener("internal",o),e._listeners.push(o)}))),this._awaitLeadershipPromise}},{key:"onDuplicate",get:function(){return this._duplicateListeners},set:function(e){this._duplicateListeners=e}},{key:"onBeforeDie",get:function(){return this._onBeforeDie},set:function(e){this._onBeforeDie=e}},{key:"die",value:(t=p(y.mark((function e(){var t=this;return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!this.isDead){e.next=2;break}return e.abrupt("return");case 2:return this.isDead=!0,e.next=5,this.onBeforeDie();case 5:return this._listeners.forEach((function(e){return t._channel.removeEventListener("internal",e)})),this._intervals.forEach((function(e){return clearInterval(e)})),this._unloadFns.forEach((function(e){b&&window.removeEventListener(e[0],e[1])})),e.abrupt("return",$(this,"death"));case 9:case"end":return e.stop()}}),e,this)}))),function(){return t.apply(this,arguments)})}]),e}();function $(e,t){var n={context:"leader",action:t,token:e.token};return e._channel.postInternal(n)}var q=function(e){var t=e.type,n=e.channelName,r=e.fallbackInterval,i=e.responseTime,o=e.emitOnAllTabs,a=e.callbacks,s=e.start,u=e.reset,c=e.pause,l=e.resume,h=new F(n,{type:t}),f=function(e,t){if(e._leaderElector)throw new Error("❌ MessageChannel already has a leader-elector");var n=new W(e,t);return e._beforeClose.push(p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",n.die());case 1:case"end":return e.stop()}}),e)})))),e._leaderElector=n,n}(h,{fallbackInterval:r,responseTime:i}),d={};d[f.token]=!1;var v=!1,g=!0,b=function(){return v};f.awaitLeadership().then((function(){v=!0})),h.addEventListener("message",(function(e){var t=m(e,2),n=t[0],r=t[1];switch(n){case"register":d[r]=!1;break;case"deregister":delete d[r];break;case"idle":w(r);break;case"active":_(r);break;case"emitIdle":a.onIdle();break;case"emitActive":a.onActive();break;case"start":s(!0);break;case"reset":u(!0);break;case"pause":c(!0);break;case"resume":l(!0)}}));var w=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:f.token;d[e]=!0;var t=Object.values(d).every((function(e){return e}));!g&&t&&(g=!0,b()?(a.onIdle(),o&&T("emitIdle")):T("idle"))},_=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:f.token;d[e]=!1;var t=Object.values(d).some((function(e){return!e}));g&&t&&(g=!1,b()?(a.onActive(),o&&T("emitActive")):T("active"))};f.onDuplicate=p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,f.die();case 2:return e.abrupt("return",e.sent);case 3:case"end":return e.stop()}}),e)}))),f.onBeforeDie=p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,T("deregister");case 2:return e.abrupt("return",e.sent);case 3:case"end":return e.stop()}}),e)})));var T=function(){var e=p(y.mark((function e(t){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",h.postMessage([t,f.token]));case 1:case"end":return e.stop()}}),e)})));return function(t){return e.apply(this,arguments)}}(),k=function(){var e=p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,f.die();case 2:return e.next=4,h.close();case 4:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}();return T("register"),{close:k,send:T,isLeader:b,idle:w,active:_,isAllIdle:function(){return g},setAllIdle:function(e){g=e}}};function z(e){var t=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(e){return!1}}();return function(){var n,r=f(e);if(t){var i=f(this).constructor;n=Reflect.construct(r,arguments,i)}else n=r.apply(this,arguments);return h(this,n)}}var H=function(t){!function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&c(e,t)}(r,react__WEBPACK_IMPORTED_MODULE_0__.Component);var n=z(r);function r(e){var t;if(o(this,r),(t=n.call(this,e)).state={idle:!1,oldDate:+new Date,lastActive:+new Date,lastIdle:null,idleTime:0,remaining:null,pageX:null,pageY:null},t.tId=null,t.eventsBound=!1,t.callbackRefs={},e.debounce>0&&e.throttle>0)throw new Error("onAction can either be throttled or debounced (not both)");return e.debounce>0?t._onAction=T(e.onAction,e.debounce):e.throttle>0?t._onAction=k(e.onAction,e.throttle):t._onAction=e.onAction,e.eventsThrottle>0?t.handleEvent=k(t._handleEvent.bind(u(t)),e.eventsThrottle):t.handleEvent=t._handleEvent.bind(u(t)),e.startOnMount&&!e.startManually||(t.state.idle=!0),t._toggleIdleState=t._toggleIdleState.bind(u(t)),t.start=t.start.bind(u(t)),t.reset=t.reset.bind(u(t)),t.pause=t.pause.bind(u(t)),t.resume=t.resume.bind(u(t)),t.isIdle=t.isIdle.bind(u(t)),t.getRemainingTime=t.getRemainingTime.bind(u(t)),t.getElapsedTime=t.getElapsedTime.bind(u(t)),t.getLastActiveTime=t.getLastActiveTime.bind(u(t)),t.getLastIdleTime=t.getLastIdleTime.bind(u(t)),t.getTotalIdleTime=t.getTotalIdleTime.bind(u(t)),t.getTotalActiveTime=t.getTotalActiveTime.bind(u(t)),t}return s(r,[{key:"componentDidMount",value:function(){var e=this.props,t=e.startOnMount,n=e.startManually;this._setupTabManager(),n||(t?this.start():this._bindEvents())}},{key:"componentDidUpdate",value:function(e){e.debounce!==this.props.debounce&&this.props.debounce>0?(this._onAction.cancel&&this._onAction.cancel(),this._onAction=T(this.props.onAction,this.props.debounce)):e.throttle!==this.props.throttle&&this.props.throttle>0?(this._onAction.cancel&&this._onAction.cancel(),this._onAction=k(this.props.onAction,this.props.throttle)):(e.throttle&&0===this.props.throttle||e.debounce&&0===this.props.debounce)&&(this._onAction.cancel&&this._onAction.cancel(),this._onAction=this.props.onAction),e.eventsThrottle!==this.props.eventsThrottle&&(this._unbindEvents(),this.handleEvent=k(this._handleEvent.bind(this),this.props.eventsThrottle),this._bindEvents()),e.timeout!==this.props.timeout&&this.state.idle&&this.reset(),e.onActive!==this.props.onActive&&(this.callbackRefs.onActive=this.props.onActive),e.onIdle!==this.props.onIdle&&(this.callbackRefs.onIdle=this.props.onIdle)}},{key:"componentWillUnmount",value:function(){clearTimeout(this.tId),this._unbindEvents(!0),this._onAction.cancel&&this._onAction.cancel(),this.manager&&this.manager.close().catch(console.error)}},{key:"render",value:function(){return this.props.children||null}},{key:"_setupTabManager",value:function(){var e=this.props,t=e.crossTab,n=e.onIdle,r=e.onActive;if(this.callbackRefs={onIdle:n,onActive:r},t){var i=Object.assign({channelName:"idle-timer",fallbackInterval:2e3,responseTime:100,removeTimeout:6e4,emitOnAllTabs:!1},!0===t?{}:t),o=i.type,a=i.channelName,s=i.fallbackInterval,u=i.responseTime,c=i.emitOnAllTabs;this.manager=q({type:o,channelName:a,fallbackInterval:s,responseTime:u,emitOnAllTabs:c,callbacks:this.callbackRefs,start:this.start,reset:this.reset,pause:this.pause,resume:this.resume})}}},{key:"_bindEvents",value:function(){var e=this;if(b){var t=this.props,n=t.element,r=t.events,i=t.passive,o=t.capture;this.eventsBound||(r.forEach((function(t){n.addEventListener(t,e.handleEvent,{capture:o,passive:i})})),this.eventsBound=!0)}}},{key:"_unbindEvents",value:function(){var e=this,t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(b){var n=this.props,r=n.element,i=n.events,o=n.passive,a=n.capture;(this.eventsBound||t)&&(i.forEach((function(t){r.removeEventListener(t,e.handleEvent,{capture:a,passive:o})})),this.eventsBound=!1)}}},{key:"_toggleIdleState",value:function(e){var t=this;this.setState((function(e){return{idle:!e.idle,lastIdle:e.idle?e.lastIdle:+new Date-t.props.timeout,idleTime:e.idle?e.idleTime+ +new Date-e.lastIdle:e.idleTime}}),(function(){var n=t.props,r=n.onActive,i=n.onIdle,o=n.stopOnIdle;t.state.idle?(o&&(clearTimeout(t.tId),t.tId=null,t._unbindEvents()),t.manager?t.manager.idle():i(e)):(t._bindEvents(),t.manager?t.manager.active():r(e))}))}},{key:"_handleEvent",value:function(e){var t=this.state,n=t.remaining,r=t.pageX,i=t.pageY,o=t.idle,a=this.props,s=a.timeout,u=a.stopOnIdle;if(this._onAction(e),!n){if("mousemove"===e.type){if(e.pageX===r&&e.pageY===i)return;if(void 0===e.pageX&&void 0===e.pageY)return;if(this.getElapsedTime()<200)return}clearTimeout(this.tId),this.tId=null;var c=+new Date-this.getLastActiveTime();(o&&!u||!o&&c>s)&&this._toggleIdleState(e),this.setState({lastActive:+new Date,pageX:e.pageX,pageY:e.pageY}),o&&u||(this.tId=setTimeout(this._toggleIdleState,s))}}},{key:"start",value:function(){var e=!(arguments.length>0&&void 0!==arguments[0])||arguments[0];clearTimeout(this.tId),this.tId=null,this._bindEvents(),this.setState({idle:!1,oldDate:+new Date,lastActive:+new Date,remaining:null}),this.manager&&(this.manager.setAllIdle(!1),!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("start"));var t=this.props.timeout;this.tId=setTimeout(this._toggleIdleState,t)}},{key:"reset",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];clearTimeout(this.tId),this.tId=null,this._bindEvents(),this.state.idle&&this.props.onActive(),this.manager&&(this.manager.setAllIdle(!1),!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("reset")),this.setState({idle:!1,oldDate:+new Date,lastActive:+new Date,remaining:null});var t=this.props.timeout;this.tId=setTimeout(this._toggleIdleState,t)}},{key:"pause",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=this.state.remaining;null===t&&(this._unbindEvents(),clearTimeout(this.tId),this.tId=null,this.manager&&!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("pause"),this.setState({remaining:this.getRemainingTime()}))}},{key:"resume",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=this.state,n=t.remaining,r=t.idle;null!==n&&(this._bindEvents(),this.manager&&!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("resume"),r||(this.tId=setTimeout(this._toggleIdleState,n),this.setState({remaining:null,lastActive:+new Date})))}},{key:"getRemainingTime",value:function(){var e=this.state,t=e.remaining,n=e.lastActive,r=this.props.timeout;if(null!==t)return t<0?0:t;var i=r-(+new Date-n);return i<0?0:i}},{key:"getElapsedTime",value:function(){var e=this.state.oldDate;return+new Date-e}},{key:"getLastIdleTime",value:function(){return this.state.lastIdle}},{key:"getTotalIdleTime",value:function(){var e=this.state,t=e.idle,n=e.lastIdle,r=e.idleTime;return t?+new Date-n+r:r}},{key:"getLastActiveTime",value:function(){return this.state.lastActive}},{key:"getTotalActiveTime",value:function(){return this.getElapsedTime()-this.getTotalIdleTime()}},{key:"isIdle",value:function(){return this.state.idle}},{key:"isLeader",value:function(){return!this.manager||this.manager.isLeader()}}]),r}();function K(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},i=e.timeout,o=void 0===i?12e5:i,a=e.element,s=void 0===a?w:a,u=e.events,c=void 0===u?_:u,l=e.onIdle,h=void 0===l?function(){}:l,f=e.onActive,d=void 0===f?function(){}:f,v=e.onAction,m=void 0===v?function(){}:v,g=e.debounce,A=void 0===g?0:g,E=e.throttle,I=void 0===E?0:E,L=e.eventsThrottle,O=void 0===L?200:L,x=e.startOnMount,S=void 0===x||x,M=e.startManually,D=void 0!==M&&M,P=e.stopOnIdle,j=void 0!==P&&P,C=e.capture,N=void 0===C||C,R=e.passive,B=void 0===R||R,Y=e.crossTab,F=void 0!==Y&&Y,U=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1),X=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!0),G=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(+new Date),V=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),J=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),W=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),$=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),z=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),H=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),K=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0),Q=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!0),Z=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(o),ee=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);F&&(!0===F&&(F={}),F=Object.assign({channelName:"idle-timer",fallbackInterval:2e3,responseTime:100,removeTimeout:6e4,emitOnAllTabs:!1},F));var te=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(h),ne=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(d),re=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(m);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((function(){te.current=h}),[h]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((function(){ne.current=d}),[d]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((function(){re.current=m}),[m]);var ie=(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)((function(){function e(e){re.current(e)}return e.cancel&&e.cancel(),A>0?T(e,A):I>0?k(e,I):e}),[I,A]),oe=function(e){var t=!X.current;X.current=t,t?(j&&(clearTimeout($.current),$.current=null,ce()),H.current=+new Date-Z.current,ee.current?ee.current.idle():te.current(e)):(K.current+=+new Date-H.current,ue(),ee.current?ee.current.active():ne.current(e))},ae=function(e){if(ie(e),!V.current){if("mousemove"===e.type){if(e.pageX===J&&e.pageY===W)return;if(void 0===e.pageX&&void 0===e.pageY)return;if(he()<200)return}clearTimeout($.current),$.current=null;var t=+new Date-pe();(X.current&&!j||!X.current&&t>Z.current)&&oe(e),z.current=+new Date,J.current=e.pageX,W.current=e.pageY,X.current||($.current=setTimeout(oe,Z.current))}},se=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(ae),ue=function(){b&&(U.current||(c.forEach((function(e){s.addEventListener(e,se.current,{capture:N,passive:B})})),U.current=!0))},ce=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];b&&(U.current||e)&&(c.forEach((function(e){s.removeEventListener(e,se.current,{capture:N,passive:B})})),U.current=!1)},le=function(){if(null!==V.current)return V.current<0?0:V.current;var e=Z.current-(+new Date-z.current);return e<0?0:e},he=function(){return+new Date-G.current},fe=function(){return H.current},de=function(){return X.current?+new Date-H.current+K.current:K.current},pe=function(){return z.current},ve=function(){return he()-de()},me=function(){return X.current},ge=function(){return!ee.current||ee.current.isLeader()},ye=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];clearTimeout($.current),$.current=null,ue(),X.current=!1,G.current=+new Date,z.current=+new Date,V.current=null,ee.current&&(ee.current.setAllIdle(!1),!e&&F.emitOnAllTabs&&ee.current.send("start")),$.current=setTimeout(oe,Z.current)},be=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];clearTimeout($.current),$.current=null,ue(),X.current&&ne.current(),X.current=!1,G.current=+new Date,z.current=+new Date,V.current=null,ee.current&&(ee.current.setAllIdle(!1),!e&&F.emitOnAllTabs&&ee.current.send("reset")),$.current=setTimeout(oe,Z.current)},we=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];null===V.current&&(ce(),clearTimeout($.current),$.current=null,V.current=le(),ee.current&&!e&&F.emitOnAllTabs&&ee.current.send("pause"))},_e=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];null!==V.current&&(ue(),X.current||($.current=setTimeout(oe,V.current),V.current=null,z.current=+new Date),ee.current&&!e&&F.emitOnAllTabs&&ee.current.send("resume"))};return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((function(){if(A>0&&I>0)throw new Error("onAction can either be throttled or debounced (not both)");return F&&(ee.current=q({type:F.type,channelName:F.channelName,fallbackInterval:F.fallbackInterval,responseTime:F.responseTime,emitOnAllTabs:F.emitOnAllTabs,callbacks:{onIdle:te.current,onActive:ne.current},start:ye,reset:be,pause:we,resume:_e})),D?p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(clearTimeout($.current),ce(!0),!F){e.next=5;break}return e.next=5,ee.current.close();case 5:case"end":return e.stop()}}),e)}))):(S?ye():ue(),p(y.mark((function e(){return y.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(clearTimeout($.current),ce(!0),ie.cancel&&ie.cancel(),!F){e.next=6;break}return e.next=6,ee.current.close();case 6:case"end":return e.stop()}}),e)}))))}),[]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((function(){var e=U.current;e&&ce(),se.current=O>0?k(ae,O):ae,e&&ue()}),[O]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((function(){Z.current=o,!Q.current&&X.current&&be(),Q.current=!1}),[o]),{isIdle:me,isLeader:ge,start:ye,pause:we,reset:be,resume:_e,getLastIdleTime:fe,getTotalIdleTime:de,getLastActiveTime:pe,getTotalActiveTime:ve,getElapsedTime:he,getRemainingTime:le}}H.propTypes={timeout:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),events:prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)),onIdle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),onActive:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),onAction:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),debounce:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),throttle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),eventsThrottle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),element:prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),(prop_types__WEBPACK_IMPORTED_MODULE_1___default().element)]),startOnMount:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),startManually:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),stopOnIdle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),passive:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),capture:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),crossTab:prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({type:prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(["broadcastChannel","localStorage","simulate"]),channelName:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),fallbackInterval:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),responseTime:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),removeTimeout:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),emitOnAllTabs:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool)})])},H.defaultProps={timeout:12e5,element:w,events:_,onIdle:function(){},onActive:function(){},onAction:function(){},debounce:0,throttle:0,eventsThrottle:200,startOnMount:!0,startManually:!1,stopOnIdle:!1,capture:!0,passive:!0,crossTab:!1},K.propTypes={timeout:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),events:prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_1___default().string)),onIdle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),onActive:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),onAction:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().func),debounce:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),throttle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),eventsThrottle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),element:prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),(prop_types__WEBPACK_IMPORTED_MODULE_1___default().element)]),startOnMount:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),startManually:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),stopOnIdle:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),passive:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),capture:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),crossTab:prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool),prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({type:prop_types__WEBPACK_IMPORTED_MODULE_1___default().oneOf(["broadcastChannel","localStorage","simulate"]),channelName:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),fallbackInterval:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),responseTime:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),removeTimeout:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),emitOnAllTabs:(prop_types__WEBPACK_IMPORTED_MODULE_1___default().bool)})])},K.defaultProps={timeout:12e5,element:w,events:_,onIdle:function(){},onActive:function(){},onAction:function(){},debounce:0,throttle:0,eventsThrottle:200,startOnMount:!0,startManually:!1,stopOnIdle:!1,capture:!0,passive:!0,crossTab:!1};/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (H);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+var f="object"===("undefined"==typeof window||"undefined"==typeof window?"undefined":(0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_11__.default)(window)),v=f?document:{},g=["mousemove","keydown","wheel","DOMMouseScroll","mousewheel","mousedown","touchstart","touchmove","MSPointerDown","MSPointerMove","visibilitychange"];function b(e,t){var n;function r(){for(var r=arguments.length,i=new Array(r),s=0;s<r;s++)i[s]=arguments[s];n&&clearTimeout(n),n=setTimeout((function(){e.apply(void 0,i),n=null}),t)}return r.cancel=function(){clearTimeout(n)},r}function T(e,t){var n=0;return function(){var r=(new Date).getTime();if(!(r-n<t))return n=r,e.apply(void 0,arguments)}}var _=0,y=0;function w(){var e=(new Date).getTime();return e===_?1e3*e+ ++y:(_=e,y=0,1e3*e)}function k(){return Math.random().toString(36).substring(2)}function A(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0;return new Promise((function(t){return setTimeout(t,e)}))}function I(){return(new Date).getTime()}var E={create:function(e){var t={messagesCallback:null,bc:new BroadcastChannel(e)};return t.bc.onmessage=function(e){t.messagesCallback&&t.messagesCallback(e.data)},t},close:function(e){e.bc.close()},onMessage:function(e,t){e.messagesCallback=t},postMessage:function(e,t){try{return e.bc.postMessage(t,!1),Promise.resolve()}catch(e){return Promise.reject(e)}},canBeUsed:function(){return"function"==typeof BroadcastChannel},type:"broadcastChannel",averageResponseTime:function(){return 150},microSeconds:w},L=function(){function n(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:6e4;(0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__.default)(this,n),this.ttl=t,this.set=new Set,this.timeMap=new Map}return (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(n,[{key:"has",value:function(e){return this.set.has(e)}},{key:"add",value:function(e){this.timeMap.set(e,I()),this.set.add(e),this._removeTooOldValues()}},{key:"clear",value:function(){this.set.clear(),this.timeMap.clear()}},{key:"_removeTooOldValues",value:function(){for(var e=I()-this.ttl,t=this.set[Symbol.iterator]();;){var n=t.next().value;if(!n)return;if(!(this.timeMap.get(n)<e))return;this.timeMap.delete(n),this.set.delete(n)}}}]),n}();function O(){var e;if("undefined"==typeof window)return null;try{e=window.localStorage,e=window["ie8-eventlistener/storage"]||window.localStorage}catch(e){}return e}function M(e,t){var n=e,r=function(e){e.key===n&&t(JSON.parse(e.newValue))};return window.addEventListener("storage",r),r}function D(){var e=O();if(!e)return!1;try{var t="__check";e.setItem(t,"works"),e.removeItem(t)}catch(e){return!1}return!0}var S={create:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(!D())throw new Error("❌ localStorage cannot be used.");var n=k(),r=new L(t.removeTimeout),i={channelName:e,uuid:n,eMIs:r};return i.listener=M(e,(function(e){i.messagesCallback&&e.uuid!==n&&e.token&&!r.has(e.token)&&(e.data.time&&e.data.time<i.messagesCallbackTime||(r.add(e.token),i.messagesCallback(e.data)))})),i},close:function(e){var t;t=e.listener,window.removeEventListener("storage",t)},onMessage:function(e,t,n){e.messagesCallbackTime=n,e.messagesCallback=t},postMessage:function(e,t){return new Promise((function(n){var r=e.channelName,i={token:k(),time:(new Date).getTime(),data:t,uuid:e.uuid},s=JSON.stringify(i);O().setItem(r,s);var a=document.createEvent("Event");a.initEvent("storage",!0,!0),a.key=r,a.newValue=s,window.dispatchEvent(a),n()}))},canBeUsed:D,type:"localStorage",averageResponseTime:function(){var e=navigator.userAgent.toLowerCase();return e.includes("safari")&&!e.includes("chrome")?240:120},microSeconds:w},P=new Set;var C={create:function(e){var t={name:e,messagesCallback:null};return P.add(t),t},close:function(e){P.delete(e)},onMessage:function(e,t){e.messagesCallback=t},postMessage:function(e,t){return new Promise((function(n){return setTimeout((function(){Array.from(P).filter((function(t){return t.name===e.name})).filter((function(t){return t!==e})).filter((function(e){return!!e.messagesCallback})).forEach((function(e){return e.messagesCallback(t)})),n()}),5)}))},canBeUsed:function(){return!0},type:"simulate",averageResponseTime:function(){return 5},microSeconds:w},x=[E,S];function B(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(e.type){if("simulate"===e.type)return C;var t=x.find((function(t){return t.type===e.type}));if(t)return t;throw new Error("❌ Method ".concat(e.type," is not supported."))}var n=x.find((function(e){return e.canBeUsed()}));if(!n)throw new Error("❌ No method found ".concat(JSON.stringify(x.map((function(e){return e.type})))));return n}var R=function(){function n(t){var r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};(0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__.default)(this,n),this.name=t,this.options=r,this.method=B(this.options),this.closed=!1,this._isListening=!1,this._onMessageListener=null,this._addEventListeners={message:[],internal:[]},this._unSendMessagePromises=new Set,this._beforeClose=[],this._preparePromises=null,j(this)}return (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(n,[{key:"postMessage",value:function(e){if(this.closed)throw new Error("❌ Cannot post message after channel has closed");return N(this,"message",e)}},{key:"postInternal",value:function(e){return N(this,"internal",e)}},{key:"onmessage",get:function(){return this._onMessageListener},set:function(e){var t={time:this.method.microSeconds(),fn:e};U(this,"message",this._onMessageListener),e&&"function"==typeof e?(this._onMessageListener=t,Y(this,"message",t)):this._onMessageListener=null}},{key:"addEventListener",value:function(e,t){Y(this,e,{time:this.method.microSeconds(),fn:t})}},{key:"removeEventListener",value:function(e,t){U(this,e,this._addEventListeners[e].find((function(e){return e.fn===t})))}},{key:"close",value:function(){var e=this;if(!this.closed){this.closed=!0;var t=this._preparePromises?this._preparePromises:Promise.resolve();return this._onMessageListener=null,this._addEventListeners.message=[],t.then((function(){return Promise.all(Array.from(e._unSendMessagePromises))})).then((function(){return Promise.all(e._beforeClose.map((function(e){return e()})))})).then((function(){return e.method.close(e._state)}))}}},{key:"type",get:function(){return this.method.type}},{key:"isClosed",value:function(){return this.closed}}]),n}();function N(e,t,n){var r={time:e.method.microSeconds(),type:t,data:n};return(e._preparePromises?e._preparePromises:Promise.resolve()).then((function(){var t=e.method.postMessage(e._state,r);return e._unSendMessagePromises.add(t),t.catch().then((function(){return e._unSendMessagePromises.delete(t)})),t}))}function j(e){var t,n=e.method.create(e.name,e.options);(t=n)&&"function"==typeof t.then?(e._preparePromises=n,n.then((function(t){e._state=t}))):e._state=n}function X(e){return e._addEventListeners.message.length>0||e._addEventListeners.internal.length>0}function Y(e,t,n){e._addEventListeners[t].push(n),function(e){if(!e._isListening&&X(e)){var t=function(t){e._addEventListeners[t.type].forEach((function(e){t.time>=e.time&&e.fn(t.data)}))},n=e.method.microSeconds();e._preparePromises?e._preparePromises.then((function(){e._isListening=!0,e.method.onMessage(e._state,t,n)})):(e._isListening=!0,e.method.onMessage(e._state,t,n))}}(e)}function U(e,t,n){e._addEventListeners[t]=e._addEventListeners[t].filter((function(e){return e!==n})),function(e){if(e._isListening&&!X(e)){e._isListening=!1;var t=e.method.microSeconds();e.method.onMessage(e._state,null,t)}}(e)}var F=function(){function n(t,r){var i=this;(0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__.default)(this,n),this._channel=t,this._options=r,this.isLeader=!1,this.isDead=!1,this.token=k(),this._isApplying=!1,this._reApply=!1,this._unloadFns=[],this._listeners=[],this._intervals=[],this._duplicateListeners=function(){},this._duplicateCalled=!1,this._onBeforeDie=(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:case"end":return e.stop()}}),e)})));var s=function(){var e=(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",i.die());case 1:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}();f&&(window.addEventListener("beforeUnload",s),window.addEventListener("unload",s),this._unloadFns.push(["beforeUnload",s]),this._unloadFns.push(["unload",s]))}var r;return (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(n,[{key:"applyOnce",value:function(){var e=this;if(this.isLeader)return Promise.resolve(!1);if(this.isDead)return Promise.resolve(!1);if(this._isApplying)return this._reApply=!0,Promise.resolve(!1);this._isApplying=!0;var t=!1,n=function(n){"leader"===n.context&&n.token!==e.token&&("apply"===n.action&&n.token>e.token&&(t=!0),"tell"===n.action&&(t=!0))};return this._channel.addEventListener("internal",n),V(this,"apply").then((function(){return A(e._options.responseTime)})).then((function(){return t?Promise.reject(new Error):V(e,"apply")})).then((function(){return A(e._options.responseTime)})).then((function(){return t?Promise.reject(new Error):V(e)})).then((function(){return function(e){e.isLeader=!0;var t=function(t){"leader"===t.context&&"apply"===t.action&&V(e,"tell"),"leader"!==t.context||"tell"!==t.action||e._duplicateCalled||(e._duplicateCalled=!0,e._duplicateListeners(),V(e,"tell"))};return e._channel.addEventListener("internal",t),e._listeners.push(t),V(e,"tell")}(e)})).then((function(){return!0})).catch((function(){return!1})).then((function(t){return e._channel.removeEventListener("internal",n),e._isApplying=!1,!t&&e._reApply?(e._reApply=!1,e.applyOnce()):t}))}},{key:"awaitLeadership",value:function(){var e;return this._awaitLeadershipPromise||(this._awaitLeadershipPromise=(e=this).isLeader?Promise.resolve():new Promise((function(t){var n=!1;function r(){n||(n=!0,clearInterval(i),e._channel.removeEventListener("internal",s),t(!0))}e.applyOnce().then((function(){e.isLeader&&r()}));var i=setInterval((function(){e.applyOnce().then((function(){e.isLeader&&r()}))}),e._options.fallbackInterval);e._intervals.push(i);var s=function(t){"leader"===t.context&&"death"===t.action&&e.applyOnce().then((function(){e.isLeader&&r()}))};e._channel.addEventListener("internal",s),e._listeners.push(s)}))),this._awaitLeadershipPromise}},{key:"onDuplicate",get:function(){return this._duplicateListeners},set:function(e){this._duplicateListeners=e}},{key:"onBeforeDie",get:function(){return this._onBeforeDie},set:function(e){this._onBeforeDie=e}},{key:"die",value:(r=(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){var t=this;return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!this.isDead){e.next=2;break}return e.abrupt("return");case 2:return this.isDead=!0,e.next=5,this.onBeforeDie();case 5:return this._listeners.forEach((function(e){return t._channel.removeEventListener("internal",e)})),this._intervals.forEach((function(e){return clearInterval(e)})),this._unloadFns.forEach((function(e){f&&window.removeEventListener(e[0],e[1])})),e.abrupt("return",V(this,"death"));case 9:case"end":return e.stop()}}),e,this)}))),function(){return r.apply(this,arguments)})}]),n}();function V(e,t){var n={context:"leader",action:t,token:e.token};return e._channel.postInternal(n)}var J=function(e){var t=e.type,n=e.channelName,r=e.fallbackInterval,i=e.responseTime,s=e.emitOnAllTabs,a=e.callbacks,o=e.start,u=e.reset,c=e.pause,l=e.resume,p=new R(n,{type:t}),f=function(e,t){if(e._leaderElector)throw new Error("❌ MessageChannel already has a leader-elector");var n=new F(e,t);return e._beforeClose.push((0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",n.die());case 1:case"end":return e.stop()}}),e)})))),e._leaderElector=n,n}(p,{fallbackInterval:r,responseTime:i}),v={};v[f.token]=!1;var g=!1,b=!0,T=function(){return g};f.awaitLeadership().then((function(){g=!0})),p.addEventListener("message",(function(e){var t=(0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_9__.default)(e,2),n=t[0],r=t[1];switch(n){case"register":v[r]=!1;break;case"deregister":delete v[r];break;case"idle":_(r);break;case"active":y(r);break;case"emitIdle":a.onIdle();break;case"emitActive":a.onActive();break;case"start":o(!0);break;case"reset":u(!0);break;case"pause":c(!0);break;case"resume":l(!0)}}));var _=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:f.token;v[e]=!0;var t=Object.values(v).every((function(e){return e}));!b&&t&&(b=!0,T()?(a.onIdle(),s&&w("emitIdle")):w("idle"))},y=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:f.token;v[e]=!1;var t=Object.values(v).some((function(e){return!e}));b&&t&&(b=!1,T()?(a.onActive(),s&&w("emitActive")):w("active"))};f.onDuplicate=(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,f.die();case 2:return e.abrupt("return",e.sent);case 3:case"end":return e.stop()}}),e)}))),f.onBeforeDie=(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,w("deregister");case 2:return e.abrupt("return",e.sent);case 3:case"end":return e.stop()}}),e)})));var w=function(){var e=(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(t){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",p.postMessage([t,f.token]));case 1:case"end":return e.stop()}}),e)})));return function(t){return e.apply(this,arguments)}}(),k=function(){var e=(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,f.die();case 2:return e.next=4,p.close();case 4:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}();return w("register"),{close:k,send:w,isLeader:T,idle:_,active:y,isAllIdle:function(){return b},setAllIdle:function(e){b=e}}};function z(e){var t=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(e){return!1}}();return function(){var n,r=(0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(e);if(t){var a=(0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(this).constructor;n=Reflect.construct(r,arguments,a)}else n=r.apply(this,arguments);return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__.default)(this,n)}}var G=function(i){(0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__.default)(o,react__WEBPACK_IMPORTED_MODULE_6__.Component);var s=z(o);function o(t){var r;if((0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__.default)(this,o),(r=s.call(this,t)).state={idle:!1,oldDate:+new Date,lastActive:+new Date,lastIdle:null,idleTime:0,remaining:null,pageX:null,pageY:null},r.tId=null,r.eventsBound=!1,r.callbackRefs={},t.debounce>0&&t.throttle>0)throw new Error("onAction can either be throttled or debounced (not both)");return t.debounce>0?r._onAction=b(t.onAction,t.debounce):t.throttle>0?r._onAction=T(t.onAction,t.throttle):r._onAction=t.onAction,t.eventsThrottle>0?r.handleEvent=T(r._handleEvent.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),t.eventsThrottle):r.handleEvent=r._handleEvent.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),t.startOnMount&&!t.startManually||(r.state.idle=!0),r._toggleIdleState=r._toggleIdleState.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.start=r.start.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.reset=r.reset.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.pause=r.pause.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.resume=r.resume.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.isIdle=r.isIdle.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.getRemainingTime=r.getRemainingTime.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.getElapsedTime=r.getElapsedTime.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.getLastActiveTime=r.getLastActiveTime.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.getLastIdleTime=r.getLastIdleTime.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.getTotalIdleTime=r.getTotalIdleTime.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r.getTotalActiveTime=r.getTotalActiveTime.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(r)),r}return (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(o,[{key:"componentDidMount",value:function(){var e=this.props,t=e.startOnMount,n=e.startManually;this._setupTabManager(),n||(t?this.start():this._bindEvents())}},{key:"componentDidUpdate",value:function(e){e.debounce!==this.props.debounce&&this.props.debounce>0?(this._onAction.cancel&&this._onAction.cancel(),this._onAction=b(this.props.onAction,this.props.debounce)):e.throttle!==this.props.throttle&&this.props.throttle>0?(this._onAction.cancel&&this._onAction.cancel(),this._onAction=T(this.props.onAction,this.props.throttle)):(e.throttle&&0===this.props.throttle||e.debounce&&0===this.props.debounce)&&(this._onAction.cancel&&this._onAction.cancel(),this._onAction=this.props.onAction),e.eventsThrottle!==this.props.eventsThrottle&&(this._unbindEvents(),this.handleEvent=T(this._handleEvent.bind(this),this.props.eventsThrottle),this._bindEvents()),e.timeout!==this.props.timeout&&this.state.idle&&this.reset(),e.onActive!==this.props.onActive&&(this.callbackRefs.onActive=this.props.onActive),e.onIdle!==this.props.onIdle&&(this.callbackRefs.onIdle=this.props.onIdle)}},{key:"componentWillUnmount",value:function(){clearTimeout(this.tId),this._unbindEvents(!0),this._onAction.cancel&&this._onAction.cancel(),this.manager&&this.manager.close().catch(console.error)}},{key:"render",value:function(){return this.props.children||null}},{key:"_setupTabManager",value:function(){var e=this.props,t=e.crossTab,n=e.onIdle,r=e.onActive;if(this.callbackRefs={onIdle:n,onActive:r},t){var i=Object.assign({channelName:"idle-timer",fallbackInterval:2e3,responseTime:100,removeTimeout:6e4,emitOnAllTabs:!1},!0===t?{}:t),s=i.type,a=i.channelName,o=i.fallbackInterval,u=i.responseTime,c=i.emitOnAllTabs;this.manager=J({type:s,channelName:a,fallbackInterval:o,responseTime:u,emitOnAllTabs:c,callbacks:this.callbackRefs,start:this.start,reset:this.reset,pause:this.pause,resume:this.resume})}}},{key:"_bindEvents",value:function(){var e=this;if(f){var t=this.props,n=t.element,r=t.events,i=t.passive,s=t.capture;this.eventsBound||(r.forEach((function(t){n.addEventListener(t,e.handleEvent,{capture:s,passive:i})})),this.eventsBound=!0)}}},{key:"_unbindEvents",value:function(){var e=this,t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(f){var n=this.props,r=n.element,i=n.events,s=n.passive,a=n.capture;(this.eventsBound||t)&&(i.forEach((function(t){r.removeEventListener(t,e.handleEvent,{capture:a,passive:s})})),this.eventsBound=!1)}}},{key:"_toggleIdleState",value:function(e){var t=this;this.setState((function(e){return{idle:!e.idle,lastIdle:e.idle?e.lastIdle:+new Date-t.props.timeout,idleTime:e.idle?e.idleTime+ +new Date-e.lastIdle:e.idleTime}}),(function(){var n=t.props,r=n.onActive,i=n.onIdle,s=n.stopOnIdle;t.state.idle?(s&&(clearTimeout(t.tId),t.tId=null,t._unbindEvents()),t.manager?t.manager.idle():i(e)):(t._bindEvents(),t.manager?t.manager.active():r(e))}))}},{key:"_handleEvent",value:function(e){var t=this.state,n=t.remaining,r=t.pageX,i=t.pageY,s=t.idle,a=this.props,o=a.timeout,u=a.stopOnIdle;if(this._onAction(e),!n){if("mousemove"===e.type){if(e.pageX===r&&e.pageY===i)return;if(void 0===e.pageX&&void 0===e.pageY)return;if(this.getElapsedTime()<200)return}clearTimeout(this.tId),this.tId=null;var c=+new Date-this.getLastActiveTime();(s&&!u||!s&&c>o)&&this._toggleIdleState(e),this.setState({lastActive:+new Date,pageX:e.pageX,pageY:e.pageY}),s&&u||(this.tId=setTimeout(this._toggleIdleState,o))}}},{key:"start",value:function(){var e=!(arguments.length>0&&void 0!==arguments[0])||arguments[0];clearTimeout(this.tId),this.tId=null,this._bindEvents(),this.setState({idle:!1,oldDate:+new Date,lastActive:+new Date,remaining:null}),this.manager&&(this.manager.setAllIdle(!1),!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("start"));var t=this.props.timeout;this.tId=setTimeout(this._toggleIdleState,t)}},{key:"reset",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];clearTimeout(this.tId),this.tId=null,this._bindEvents(),this.state.idle&&(this.manager?this.manager.active():this.props.onActive()),this.manager&&(this.manager.setAllIdle(!1),!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("reset")),this.setState({idle:!1,oldDate:+new Date,lastActive:+new Date,remaining:null});var t=this.props.timeout;this.tId=setTimeout(this._toggleIdleState,t)}},{key:"pause",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=this.state.remaining;null===t&&(this._unbindEvents(),clearTimeout(this.tId),this.tId=null,this.manager&&!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("pause"),this.setState({remaining:this.getRemainingTime()}))}},{key:"resume",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=this.state,n=t.remaining,r=t.idle;null!==n&&(this._bindEvents(),this.manager&&!e&&this.props.crossTab.emitOnAllTabs&&this.manager.send("resume"),r||(this.tId=setTimeout(this._toggleIdleState,n),this.setState({remaining:null,lastActive:+new Date})))}},{key:"getRemainingTime",value:function(){var e=this.state,t=e.remaining,n=e.lastActive,r=this.props.timeout;if(null!==t)return t<0?0:t;var i=r-(+new Date-n);return i<0?0:i}},{key:"getElapsedTime",value:function(){var e=this.state.oldDate;return+new Date-e}},{key:"getLastIdleTime",value:function(){return this.state.lastIdle}},{key:"getTotalIdleTime",value:function(){var e=this.state,t=e.idle,n=e.lastIdle,r=e.idleTime;return t?+new Date-n+r:r}},{key:"getLastActiveTime",value:function(){return this.state.lastActive}},{key:"getTotalActiveTime",value:function(){return this.getElapsedTime()-this.getTotalIdleTime()}},{key:"isIdle",value:function(){return this.state.idle}},{key:"isLeader",value:function(){return!this.manager||this.manager.isLeader()}}]),o}();function W(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.timeout,n=void 0===t?12e5:t,r=e.element,i=void 0===r?v:r,s=e.events,a=void 0===s?g:s,l=e.onIdle,h=void 0===l?function(){}:l,p=e.onActive,_=void 0===p?function(){}:p,y=e.onAction,w=void 0===y?function(){}:y,k=e.debounce,A=void 0===k?0:k,I=e.throttle,E=void 0===I?0:I,L=e.eventsThrottle,O=void 0===L?200:L,M=e.startOnMount,D=void 0===M||M,S=e.startManually,P=void 0!==S&&S,C=e.stopOnIdle,x=void 0!==C&&C,B=e.capture,R=void 0===B||B,N=e.passive,j=void 0===N||N,X=e.crossTab,Y=void 0!==X&&X,U=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(!1),F=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(!0),V=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(+new Date),z=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(null),G=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(null),W=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(null),q=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(null),H=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(null),K=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(null),Q=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(0),Z=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(!0),$=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(n),ee=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(null);Y&&(!0===Y&&(Y={}),Y=Object.assign({channelName:"idle-timer",fallbackInterval:2e3,responseTime:100,removeTimeout:6e4,emitOnAllTabs:!1},Y));var te=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(h),ne=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(_),re=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(w);(0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)((function(){te.current=h}),[h]),(0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)((function(){ne.current=_}),[_]),(0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)((function(){re.current=w}),[w]);var ie=(0,react__WEBPACK_IMPORTED_MODULE_6__.useMemo)((function(){function e(e){re.current(e)}return e.cancel&&e.cancel(),A>0?b(e,A):E>0?T(e,E):e}),[E,A]),se=function(e){var t=!F.current;F.current=t,t?(x&&(clearTimeout(q.current),q.current=null,ce()),K.current=+new Date-$.current,ee.current?ee.current.idle():te.current(e)):(Q.current+=+new Date-K.current,ue(),ee.current?ee.current.active():ne.current(e))},ae=function(e){if(ie(e),!z.current){if("mousemove"===e.type){if(e.pageX===G&&e.pageY===W)return;if(void 0===e.pageX&&void 0===e.pageY)return;if(de()<200)return}clearTimeout(q.current),q.current=null;var t=+new Date-pe();(F.current&&!x||!F.current&&t>$.current)&&se(e),H.current=+new Date,G.current=e.pageX,W.current=e.pageY,F.current||(q.current=setTimeout(se,$.current))}},oe=(0,react__WEBPACK_IMPORTED_MODULE_6__.useRef)(ae),ue=function(){f&&(U.current||(a.forEach((function(e){i.addEventListener(e,oe.current,{capture:R,passive:j})})),U.current=!0))},ce=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];f&&(U.current||e)&&(a.forEach((function(e){i.removeEventListener(e,oe.current,{capture:R,passive:j})})),U.current=!1)},le=function(){if(null!==z.current)return z.current<0?0:z.current;var e=$.current-(+new Date-H.current);return e<0?0:e},de=function(){return+new Date-V.current},he=function(){return K.current},me=function(){return F.current?+new Date-K.current+Q.current:Q.current},pe=function(){return H.current},fe=function(){return de()-me()},ve=function(){return F.current},ge=function(){return!ee.current||ee.current.isLeader()},be=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];clearTimeout(q.current),q.current=null,ue(),F.current=!1,V.current=+new Date,H.current=+new Date,z.current=null,ee.current&&(ee.current.setAllIdle(!1),!e&&Y.emitOnAllTabs&&ee.current.send("start")),q.current=setTimeout(se,$.current)},Te=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];clearTimeout(q.current),q.current=null,ue(),F.current&&(ee.current?ee.current.active():ne.current()),F.current=!1,V.current=+new Date,H.current=+new Date,z.current=null,ee.current&&(ee.current.setAllIdle(!1),!e&&Y.emitOnAllTabs&&ee.current.send("reset")),q.current=setTimeout(se,$.current)},_e=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];null===z.current&&(ce(),clearTimeout(q.current),q.current=null,z.current=le(),ee.current&&!e&&Y.emitOnAllTabs&&ee.current.send("pause"))},ye=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];null!==z.current&&(ue(),F.current||(q.current=setTimeout(se,z.current),z.current=null,H.current=+new Date),ee.current&&!e&&Y.emitOnAllTabs&&ee.current.send("resume"))};return (0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)((function(){if(A>0&&E>0)throw new Error("onAction can either be throttled or debounced (not both)");return Y&&(ee.current=J({type:Y.type,channelName:Y.channelName,fallbackInterval:Y.fallbackInterval,responseTime:Y.responseTime,emitOnAllTabs:Y.emitOnAllTabs,callbacks:{onIdle:te.current,onActive:ne.current},start:be,reset:Te,pause:_e,resume:ye})),P?(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(clearTimeout(q.current),ce(!0),!Y){e.next=5;break}return e.next=5,ee.current.close();case 5:case"end":return e.stop()}}),e)}))):(D?be():ue(),(0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_8__.default)(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().mark((function e(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_10___default().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(clearTimeout(q.current),ce(!0),ie.cancel&&ie.cancel(),!Y){e.next=6;break}return e.next=6,ee.current.close();case 6:case"end":return e.stop()}}),e)}))))}),[]),(0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)((function(){var e=U.current;e&&ce(),oe.current=O>0?T(ae,O):ae,e&&ue()}),[O]),(0,react__WEBPACK_IMPORTED_MODULE_6__.useEffect)((function(){$.current=n,!Z.current&&F.current&&Te(),Z.current=!1}),[n]),{isIdle:ve,isLeader:ge,start:be,pause:_e,reset:Te,resume:ye,getLastIdleTime:he,getTotalIdleTime:me,getLastActiveTime:pe,getTotalActiveTime:fe,getElapsedTime:de,getRemainingTime:le}}G.propTypes={timeout:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),events:prop_types__WEBPACK_IMPORTED_MODULE_7___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_7___default().string)),onIdle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),onActive:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),onAction:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),debounce:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),throttle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),eventsThrottle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),element:prop_types__WEBPACK_IMPORTED_MODULE_7___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),(prop_types__WEBPACK_IMPORTED_MODULE_7___default().element)]),startOnMount:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),startManually:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),stopOnIdle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),passive:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),capture:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),crossTab:prop_types__WEBPACK_IMPORTED_MODULE_7___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),prop_types__WEBPACK_IMPORTED_MODULE_7___default().shape({type:prop_types__WEBPACK_IMPORTED_MODULE_7___default().oneOf(["broadcastChannel","localStorage","simulate"]),channelName:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().string),fallbackInterval:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),responseTime:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),removeTimeout:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),emitOnAllTabs:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool)})])},G.defaultProps={timeout:12e5,element:v,events:g,onIdle:function(){},onActive:function(){},onAction:function(){},debounce:0,throttle:0,eventsThrottle:200,startOnMount:!0,startManually:!1,stopOnIdle:!1,capture:!0,passive:!0,crossTab:!1},W.propTypes={timeout:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),events:prop_types__WEBPACK_IMPORTED_MODULE_7___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_7___default().string)),onIdle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),onActive:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),onAction:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),debounce:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),throttle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),eventsThrottle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),element:prop_types__WEBPACK_IMPORTED_MODULE_7___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),(prop_types__WEBPACK_IMPORTED_MODULE_7___default().element)]),startOnMount:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),startManually:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),stopOnIdle:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),passive:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),capture:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),crossTab:prop_types__WEBPACK_IMPORTED_MODULE_7___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),prop_types__WEBPACK_IMPORTED_MODULE_7___default().shape({type:prop_types__WEBPACK_IMPORTED_MODULE_7___default().oneOf(["broadcastChannel","localStorage","simulate"]),channelName:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().string),fallbackInterval:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),responseTime:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),removeTimeout:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().number),emitOnAllTabs:(prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool)})])},W.defaultProps={timeout:12e5,element:v,events:g,onIdle:function(){},onActive:function(){},onAction:function(){},debounce:0,throttle:0,eventsThrottle:200,startOnMount:!0,startManually:!1,stopOnIdle:!1,capture:!0,passive:!0,crossTab:!1};/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (G);
 //# sourceMappingURL=index.es.js.map
 
 
@@ -76294,6 +76828,66 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./resources/css/Process.css":
+/*!***********************************!*\
+  !*** ./resources/css/Process.css ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Process_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./Process.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Process.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Process_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Process_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/css/SessionTimeoutDialog.css":
+/*!************************************************!*\
+  !*** ./resources/css/SessionTimeoutDialog.css ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_SessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./SessionTimeoutDialog.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/SessionTimeoutDialog.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_SessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_SessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./resources/css/Subcontainer.css":
 /*!****************************************!*\
   !*** ./resources/css/Subcontainer.css ***!
@@ -76351,66 +76945,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_breadcrumbs_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
-
-/***/ }),
-
-/***/ "./resources/css/process.css":
-/*!***********************************!*\
-  !*** ./resources/css/process.css ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_process_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./process.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/process.css");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_process_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_process_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
-
-/***/ }),
-
-/***/ "./resources/css/sessionTimeoutDialog.css":
-/*!************************************************!*\
-  !*** ./resources/css/sessionTimeoutDialog.css ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_sessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./sessionTimeoutDialog.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/sessionTimeoutDialog.css");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_sessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_sessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
