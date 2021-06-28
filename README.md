@@ -1,4 +1,4 @@
-Pour installer le projet en locale Il faut au préalable avoir php, nodejs et composer installé sur votre machine.
+Pour installer le projet en locale Il faudra au préalable avoir php, nodejs et composer installé sur votre machine.
 Si c'est n'est pas encore le cas vous pouvez consulter ces liens.
 https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/4237816-preparez-votre-environnement-de-travail
 https://nodejs.org/en/
