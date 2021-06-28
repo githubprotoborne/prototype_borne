@@ -44,10 +44,10 @@ Sur le terminal toujours  Lancer la commande   $ php artisan key:generate
      2.1.6 La page de pré démarche est implémentée dans le composant Process
  3. les services.
    les fonctions qui gèrent   le contrast, le mode nuit, la luminosité se trouvent dans dossier Services.
-      Pour la gestion de la luminosité les fonctions handleBright et handleBrightSuppression
-      Pour le contrast 
+      -Pour la gestion de la luminosité les fonctions handleBright et handleBrightSuppression
+      - Pour le contrast 
            - reinforceContrast pour le contraste renforcé
-            - standardContrast pour le contrast standard
+           - standardContrast pour le contrast standard
            - DarkWhiteContrast pour le contrast noir sur blanc
             
  
