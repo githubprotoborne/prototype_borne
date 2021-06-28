@@ -49,6 +49,8 @@ Sur le terminal toujours  Lancer la commande   $ php artisan key:generate
            - reinforceContrast pour le contraste renforcé
            - standardContrast pour le contrast standard
            - DarkWhiteContrast pour le contrast noir sur blanc
+
+
             
  
  
