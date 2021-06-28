@@ -34,13 +34,13 @@ Sur le terminal toujours  Lancer la commande   $ php artisan key:generate
 2. structure du code
     les composants React se trouvent dans le dossier ressources/js.
     2.1 description des composants.
-     2.1.1 la barre de navigation
+     - la barre de navigation
           La barre de navigation est implementée dans le composant NavBar dans le fichier NavBar.js
-     2.1.2 Le menu est implementé dans le composant SideBar dans le fichier SiderBar.js
-     2.1.3 La page d'accueil est implementée dans le composant Home dans le fichier Home.js
-     2.1.4 l'entrée par profil (Je choisis mon profil) est implementée dans le composant ChoiceBar 
-     2.1.5 la page des sous catégorie est implémentée dans le composant SubContainer
-     2.1.6 la page de la liste des démarches est implémentée dans le composant Container. (le filtre par sous catégories à gauche set trouve dans le composant Sections dans le dossier Container et la liste des démarches dans le composant Prossesses du même dossier)
+     - Le menu est implementé dans le composant SideBar dans le fichier SiderBar.js
+     - La page d'accueil est implementée dans le composant Home dans le fichier Home.js
+     - l'entrée par profil (Je choisis mon profil) est implementée dans le composant ChoiceBar 
+     - la page des sous catégorie est implémentée dans le composant SubContainer
+     - la page de la liste des démarches est implémentée dans le composant Container. (le filtre par sous catégories à gauche set trouve dans le composant Sections dans le dossier Container et la liste des démarches dans le composant Prossesses du même dossier)
      2.1.6 La page de pré démarche est implémentée dans le composant Process
  3. les services.
    les fonctions qui gèrent   le contrast, le mode nuit, la luminosité se trouvent dans dossier Services.
