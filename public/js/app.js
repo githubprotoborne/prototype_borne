@@ -2331,6 +2331,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "sub_container_processes": () => (/* binding */ sub_container_processes),
 /* harmony export */   "scroll": () => (/* binding */ scroll)
 /* harmony export */ });
+// this function get sub-containers list  from the request array  response
 function extractsSubCategories() {
   var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Array();
   var array = [];
@@ -2357,12 +2358,11 @@ function extractsSubCategories() {
   }
 
   return array;
-} // group processes  by sub containers and return a new array
+} // group processes  from the request response by sub containers and return a new array
 
 function sub_container_processes() {
   var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Array();
   var array = this.extractsSubCategories(data);
-  console.log(array, "array");
 
   for (var i = 0; i < data.length; i++) {
     for (var y = 0; y < array.length; y++) {
@@ -2411,6 +2411,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DarkWhiteContrast": () => (/* binding */ DarkWhiteContrast)
 /* harmony export */ });
+// set the contrast to black color on white background
 function DarkWhiteContrast() {
   $("body").css("background-color", "#fff"); //breadscrumb
   // home style
@@ -2424,6 +2425,10 @@ function DarkWhiteContrast() {
   $(".col_margin").css("background-color", "#fffafa");
   $(".col_margin").css("color", "#222");
   $(".col_margin").css("border-color", "#333");
+  $(".profil").css("background-color", "");
+  $(".cont").css("color", "#222");
+  $(".cont").css("background-color", "#fff");
+  $(".cont").css("border-color", "#333");
   $(".page_title").css("color", "#222");
   $(".page_title").css("border-color", "#222");
   $(".page_title").css("background-color", "#fffafa");
@@ -2442,14 +2447,16 @@ function DarkWhiteContrast() {
     color: "#222"
   }); //footer style
 
-  $(".footer-container").css("background-color", "#fff"); // Container style
+  $(".footer-container").css("background-color", "#fff");
+  $(".administration-title").css("color", ""); // Container style
 
   $(".processes-position").css("color", "#222");
   $(".sections").css("color", "#222");
   $(".bread-text").css("background-color", "#eff"); //subcontainer style
 
-  $(".subcontainer").css("color", "#000");
-  $(".topic-item").css("background-color", "#fff"); // menu style
+  $(".subcontainer").css("color", "");
+  $(".topic-item").css("background-color", "#fff");
+  $(".topic-item").css("color", "#222"); // menu style
 
   $(".sidenav").css("background-color", "#fff");
   $(".style").css("background-color", "#fff");
@@ -2461,6 +2468,15 @@ function DarkWhiteContrast() {
   $(".contrast-container").css("color", "#222");
   $(".close-button-icon").css("color", "#222");
   $(".close-button-text").css("color", "#222"); // $(".close-button-item").css("background-color", "#333")
+  // administration style
+
+  $(".administration-item").css("background-color", "#333");
+  $(".administration-title").css("color", "#fff"); // process title
+
+  $(".process_name-title").css("background-color", "#577C90");
+  $(".process-button").css("background-color", "#577C90");
+  $(".providers").css("color", "#222");
+  $(".process-txt").css("color", "#222");
 }
 
 /***/ }),
@@ -2476,6 +2492,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "reinforceContrast": () => (/* binding */ reinforceContrast)
 /* harmony export */ });
+// set contrast to dark mode
 function reinforceContrast() {
   $("body").css("background-color", "#222"); // home style
 
@@ -2498,8 +2515,10 @@ function reinforceContrast() {
   $("#direct-acces").css("color", "#fff");
   $("#direct-acces").css("background-color", "#222");
   $(".search_icon").css("background-color", "#333");
-  $(".search_input").css("background-color", "#333");
+  $(".search_input").css("background-color", "");
+  $(".search").css("background-color", "");
   $(".search_icon").css("border", "none");
+  $(".search_icon").css("background-color", "");
   $(".page_title ").css("background-color", "#222");
   $(".page_title").css("border-color", "#fff");
   $(".bread-items").css({
@@ -2509,7 +2528,8 @@ function reinforceContrast() {
     color: "#fff"
   }); //footer style
 
-  $(".footer-container").css("background-color", "#fff"); // Container style
+  $(".footer-container").css("background-color", "#222");
+  $(".footer-container").css("color", "#fff"); // Container style
 
   $(".processes-position").css("color", "#fff");
   $(".sections").css("color", "#fff");
@@ -2519,7 +2539,8 @@ function reinforceContrast() {
   $(".title").css("background-color", "#333"); //subcontainer style
 
   $(".subcontainer").css("color", "#fff");
-  $(".topic-item").css("background-color", "#333"); // menu style
+  $(".topic-item").css("background-color", "#333");
+  $(".topic-item").css("color", "#fff"); // menu style
 
   $(".sidenav").css("background-color", "#222");
   $(".style").css("background-color", "#333");
@@ -2531,6 +2552,15 @@ function reinforceContrast() {
   $(".contrast-container").css("color", "#fff");
   $(".close-button-icon").css("color", "#fff");
   $(".close-button-text").css("color", "#fff"); // $(".close-button-item").css("background-color", "#333")
+  // administration style
+
+  $(".administration-item").css("background-color", "#333");
+  $(".administration-title").css("color", "#fff"); // process title
+
+  $(".process_name-title").css("background-color", "#333");
+  $(".process-button").css("background-color", "#333");
+  $(".providers").css("color", "#fff");
+  $(".process-txt").css("color", "#fff");
 }
 
 /***/ }),
@@ -2546,6 +2576,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "StandardContrast": () => (/* binding */ StandardContrast)
 /* harmony export */ });
+// set the contrast to the standard mode
 function StandardContrast() {
   $("body").css("background-color", ""); // home style
 
@@ -2565,6 +2596,7 @@ function StandardContrast() {
   $(".search_icon").css("background-color", "");
   $(".search_icon").css("border", "");
   $("#category_button_choiceBar_service").css("color", "");
+  $(".col_margin").css("border-color", "");
   $(".search_input").css("background-color", ""); //navbar
 
   $(".nav_tool_button").css("background-color", "");
@@ -2584,7 +2616,9 @@ function StandardContrast() {
 
   $(".contain-title").css("color", ""); // footer 
 
-  $(".footer-container").css("background-color", ""); // Container style
+  $(".footer-container").css("background-color", "");
+  $(".footer-container").css("color", "");
+  $(".administration-title").css("color", ""); // Container style
 
   $(".processes-position").css("color", "");
   $(".sections").css("color", "");
@@ -2594,7 +2628,8 @@ function StandardContrast() {
   $(".title").css("background-color", ""); //subcontainer style
 
   $(".subcontainer").css("color", "");
-  $(".topic-item").css("background-color", ""); // menu style
+  $(".topic-item").css("background-color", "");
+  $(".topic-item").css("color", ""); // menu style
 
   $(".sidenav").css("background-color", "");
   $(".style").css("background-color", "");
@@ -2605,6 +2640,15 @@ function StandardContrast() {
   $(".contrast-container").css("color", "");
   $(".close-button-icon").css("color", "");
   $(".close-button-text").css("color", ""); // $(".close-button-item").css("background-color", "#333")
+  // administration style
+
+  $(".administration-item").css("background-color", "");
+  $(".administration-title").css("color", ""); // process title
+
+  $(".process_name-title").css("background-color", "");
+  $(".process-button").css("background-color", "");
+  $(".providers").css("color", "");
+  $(".process-txt").css("color", "");
 }
 
 /***/ }),
@@ -2620,7 +2664,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "handleBright": () => (/* binding */ handleBright)
 /* harmony export */ });
-// handle the menu close
+// handle the filter brightness 
 function handleBright() {
   document.getElementById("contain").style.opacity = "0.9";
   document.getElementById("contain").style.setProperty("background", "#555", "important"); // the div witch contain the component render except the sidebar
@@ -2647,6 +2691,11 @@ function handleBright() {
   $(".contain-title").css("filter", "brightness(30%)"); //subcontainer style
 
   $(".subcontainer").css("filter", "brightness(50%)"); // $(".topic-item").css("filter", "brightness(100%)");
+  // administration style
+
+  $(".administration-item").css("filter", "brightness(30%)"); //body style
+
+  $("body").css("background-color", "#777");
 }
 
 /***/ }),
@@ -2662,6 +2711,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "handleBrightSupression": () => (/* binding */ handleBrightSupression)
 /* harmony export */ });
+// set the bright to standard
 function handleBrightSupression() {
   document.getElementById("contain").style.opacity = "1";
   document.getElementById("contain").style.setProperty("background", ""); // the div witch contain the component render except the sidebar
@@ -2688,7 +2738,15 @@ function handleBrightSupression() {
   $(".desk-bread").css("filter", "brightness(100%)"); //subcontainer style
 
   $(".subcontainer").css("filter", "brightness(100%)");
-  $(".topic-item").csscss("filter", "brightness(100%)");
+  $(".topic-item").css("filter", "brightness(100%)"); // administration style
+
+  $(".administration-item").css("filter", "brightness(100%)"); //body style
+
+  if (sessionStorage.getItem("contrast") === "reinforced") {
+    $("body").css("background-color", "#222");
+  } else {
+    $("body").css("background-color", "#fff");
+  }
 }
 
 /***/ }),
@@ -2760,6 +2818,162 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/Administration/Administration.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/Administration/Administration.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Breadcrumbs/Breadcrumbs */ "./resources/js/components/Breadcrumbs/Breadcrumbs.js");
+/* harmony import */ var _Contrast_Contrast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Contrast/Contrast */ "./resources/js/components/Contrast/Contrast.js");
+/* harmony import */ var _NavBar_Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavBar/Menu */ "./resources/js/components/NavBar/Menu.js");
+/* harmony import */ var _NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
+/* harmony import */ var _logos_Grand_Chambery_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./logos/Grand-Chambery.svg */ "./resources/js/components/Administration/logos/Grand-Chambery.svg");
+/* harmony import */ var _css_Administration_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../css/Administration.css */ "./resources/css/Administration.css");
+/* harmony import */ var _logos_chambery_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./logos/chambery.svg */ "./resources/js/components/Administration/logos/chambery.svg");
+/* harmony import */ var _logos_pole_emploi_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logos/pole-emploi.svg */ "./resources/js/components/Administration/logos/pole-emploi.svg");
+/* harmony import */ var _logos_caf_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./logos/caf.svg */ "./resources/js/components/Administration/logos/caf.svg");
+/* harmony import */ var _logos_poste_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./logos/poste.svg */ "./resources/js/components/Administration/logos/poste.svg");
+/* harmony import */ var _logos_maladie_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./logos/maladie.svg */ "./resources/js/components/Administration/logos/maladie.svg");
+/* harmony import */ var _logos_retraite_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./logos/retraite.svg */ "./resources/js/components/Administration/logos/retraite.svg");
+/* harmony import */ var _LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../LegalInfo/Footer */ "./resources/js/components/LegalInfo/Footer.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+
+
+
+ // "site d'une administration" component  
+
+
+
+
+var Administration = function Administration() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+    className: "admin-wall-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+        id: "side",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_1__.default, {})]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+      id: "contain",
+      className: "contain-administration",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+        className: "bread-text",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_0__.default, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+        className: "administration-container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("h2", {
+          className: "administration-title",
+          children: "Je choisis une administration"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+          className: "top-botom admin",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
+            className: "grand-chambery  top-botom administration-item",
+            href: "https://www.grandchambery.fr/",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
+              className: "administration-text",
+              children: "Grand Chamb\xE9ry"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
+              className: "administration-image",
+              src: _logos_Grand_Chambery_svg__WEBPACK_IMPORTED_MODULE_4__.default,
+              alt: "logo Grand Chamb\xE9ry"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
+            className: "chambery  administration-item",
+            href: "https://simplici.chambery.fr/",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
+              className: "administration-text",
+              children: "Ville de Chamb\xE9ry"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
+              className: "administration-image",
+              src: _logos_chambery_svg__WEBPACK_IMPORTED_MODULE_6__.default,
+              alt: "logo ville de Chamb\xE9ry"
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
+            className: "chambery administration-item",
+            href: "https://www.pole-emploi.fr/",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
+              className: "administration-text",
+              children: "P\xF4le Emploi"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
+              className: "administration-image",
+              src: _logos_pole_emploi_svg__WEBPACK_IMPORTED_MODULE_7__.default,
+              alt: "logo p\xF4le emploi"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
+            className: "chambery administration-item",
+            href: "https://www.caf.fr/",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
+              className: "administration-text",
+              children: "Caisse Nationale des Allocations Familiales"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
+              className: "administration-image",
+              src: _logos_caf_svg__WEBPACK_IMPORTED_MODULE_8__.default,
+              alt: "logo de la Caf"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
+            className: "chambery administration-item",
+            href: "https://www.laposte.fr/",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
+              className: "administration-text",
+              children: "La Poste"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
+              className: "administration-image",
+              alt: "logo de la poste",
+              src: _logos_poste_svg__WEBPACK_IMPORTED_MODULE_9__.default
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+          className: "top-botom",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
+            className: "chambery administration-item",
+            href: "https://www.ameli.fr/",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
+              className: "administration-text",
+              children: "L'Assurance Maladie"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
+              className: "administration-image",
+              alt: "logo de l'assurance maladie",
+              src: _logos_maladie_svg__WEBPACK_IMPORTED_MODULE_10__.default
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
+            className: "chambery administration-item",
+            href: "https://www.lassuranceretraite.fr/",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
+              className: "administration-text",
+              children: "L'Assurance Retraite"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
+              className: "administration-image",
+              src: _logos_retraite_svg__WEBPACK_IMPORTED_MODULE_11__.default,
+              alt: "logo de l'assurance retraite"
+            })]
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_12__.default, {})]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Administration);
+
+/***/ }),
+
 /***/ "./resources/js/components/Breadcrumbs/Breadcrumbs.js":
 /*!************************************************************!*\
   !*** ./resources/js/components/Breadcrumbs/Breadcrumbs.js ***!
@@ -2779,6 +2993,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // breadcrumbs component
 
 
 
@@ -2791,18 +3006,18 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
     breadcrumbs.map(function (_ref2, index) {
       var match = _ref2.match,
           breadcrumb = _ref2.breadcrumb;
-      return breadcrumbs.length - 1 !== index ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+      return breadcrumbs.length - 1 !== index ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
         className: "bread-items row",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
           to: match.url,
           children: [breadcrumb, ' >']
-        }), console.log()]
-      }, match.url) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+        })
+      }, match.url) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
         className: "bread-items row",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
           to: match.url,
           children: [breadcrumb, " "]
-        }), console.log()]
+        })
       }, match.url);
     })
   });
@@ -2864,6 +3079,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+ // Je choisi mon profil component
 
 
 
@@ -2880,11 +3096,7 @@ var ChoiceBar = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      containers: [],
-      services: [{
-        container_id: 5,
-        container_name: "Accès direct à un service"
-      }]
+      containers: []
     };
     return _this;
   } //get container items from the database
@@ -2964,14 +3176,16 @@ var ChoiceBar = /*#__PURE__*/function (_React$Component) {
                 textJustify: "center",
                 alignItems: "center"
               },
-              children: container.container_name
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "choisebar_process_name",
+                children: container.container_name
+              })
             }, index.toString());
-          }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
-            className: "category_button_choiceBar cont search-engine  col-md",
-            id: "category_button_choiceBar_service",
-            href: "https://google.fr",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-              className: "service-title",
+          }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "col  profil",
+            id: "tablet-profil",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+              className: "profil-text",
               children: "J'acc\xE8de directement \xE0 un site ou une d\xE9marche"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
@@ -3204,277 +3418,6 @@ var ChoiceBarTablet = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Container/Cont.js":
-/*!***************************************************!*\
-  !*** ./resources/js/components/Container/Cont.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Cont)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _NavBar_Menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../NavBar/Menu */ "./resources/js/components/NavBar/Menu.js");
-/* harmony import */ var _NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var _css_Cont_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/Cont.css */ "./resources/css/Cont.css");
-/* harmony import */ var _Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Breadcrumbs/Breadcrumbs */ "./resources/js/components/Breadcrumbs/Breadcrumbs.js");
-/* harmony import */ var _Title__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Title */ "./resources/js/components/Container/Title.js");
-/* harmony import */ var _Processes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Processes */ "./resources/js/components/Container/Processes.js");
-/* harmony import */ var _Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Section */ "./resources/js/components/Container/Section.js");
-/* harmony import */ var _Contrast_Contrast__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Contrast/Contrast */ "./resources/js/components/Contrast/Contrast.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var Cont = /*#__PURE__*/function (_Component) {
-  _inherits(Cont, _Component);
-
-  var _super = _createSuper(Cont);
-
-  function Cont(props) {
-    var _this;
-
-    _classCallCheck(this, Cont);
-
-    _this = _super.call(this, props);
-    _this = _super.call(this, props);
-    _this.state = {
-      processes: [],
-      id: props.location.id,
-      sub_container: []
-    };
-    _this.extractsSubCategories = _this.extractsSubCategories.bind(_assertThisInitialized(_this));
-
-    _this.sub_container_processes.bind(_assertThisInitialized(_this));
-    /* check if the process_id coming through the url is 
-      set on the current session,if not use the session process_id
-    
-    */
-
-
-    if (props.location.id) {
-      sessionStorage.setItem("process_id", props.location.id);
-      sessionStorage.setItem("container_name", props.location.name);
-      sessionStorage.setItem("container_icon", props.location.icon);
-    }
-
-    return _this;
-  }
-
-  _createClass(Cont, [{
-    key: "extractsSubCategories",
-    value: function extractsSubCategories() {
-      var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Array();
-      var array = [];
-      array.push({
-        subcontainer_name: data[0].subcontainer_name,
-        processes: []
-      });
-
-      for (var i = 0; i < data.length; i++) {
-        var found = false;
-
-        for (var y = 0; y < array.length; y++) {
-          if (array[y].subcontainer_name === data[i].subcontainer_name) {
-            found = true;
-          }
-        }
-
-        if (found === false) {
-          array.push({
-            subcontainer_name: data[i].subcontainer_name,
-            processes: []
-          });
-        }
-      }
-
-      return array;
-    } // group processes by sub containers and return a new array
-
-  }, {
-    key: "sub_container_processes",
-    value: function sub_container_processes() {
-      var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Array();
-      var array = this.extractsSubCategories(data);
-      console.log(array, "array");
-
-      for (var i = 0; i < data.length; i++) {
-        for (var y = 0; y < array.length; y++) {
-          if (data[i].subcontainer_name === array[y].subcontainer_name) {
-            array[y].processes.push(data[i]);
-          }
-        }
-      }
-
-      return array;
-    } // get processes from the database
-
-  }, {
-    key: "getContainerProcesses",
-    value: function getContainerProcesses() {
-      var _this2 = this;
-
-      axios.get("/get-processes", {
-        params: {
-          id: sessionStorage.getItem("process_id")
-        }
-      }).then(function (response) {
-        _this2.setState({
-          processes: _this2.sub_container_processes(response.data),
-          sub_container: _this2.extractsSubCategories(response.data)
-        });
-      });
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.getContainerProcesses.bind(this)();
-      this.scroll.bind(this)();
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      this.scroll.bind(this)();
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      // fix Warning: Can't perform a React state update on an unmounted component
-      this.setState = function (state, callback) {
-        return;
-      };
-    } // handle section choose on scrolling
-
-  }, {
-    key: "scroll",
-    value: function scroll() {
-      (function () {
-        'use strict';
-
-        var section = document.querySelectorAll(".section");
-        var sections = {};
-        var i = 0;
-        Array.prototype.forEach.call(section, function (e) {
-          sections[e.id] = e.offsetTop;
-        });
-
-        window.onscroll = function () {
-          var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-          for (i in sections) {
-            if (sections[i] <= scrollPosition) {
-              document.querySelector('.active').setAttribute('class', 'inactive');
-              document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-            }
-          }
-        };
-      })();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-          id: "side",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            className: "",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_8__.default, {})]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          id: "contain",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-            className: " sticky-top ",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-              className: "tablet-nav ",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "nav-position fixed ",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__.default, {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "desk-bread desk-bread-cont",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "bread-text",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_4__.default, {})
-                })
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-            className: "desk-top ",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-              className: "row cont-container",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "col sections sections-cont",
-                id: "sec",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-                  className: "sticky-top",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                    className: " title position-fixed ",
-                    id: "t",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Title__WEBPACK_IMPORTED_MODULE_5__.default, {})
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                    className: "section-position fixed",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Section__WEBPACK_IMPORTED_MODULE_7__.default, {
-                      processes: this.state.processes,
-                      sub_container: this.state.sub_container
-                    })
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                className: "col processes-position",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-                  className: "scroll-bar",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Processes__WEBPACK_IMPORTED_MODULE_6__.default, {
-                    processes: this.state.processes
-                  })
-                })
-              })]
-            })
-          })]
-        })]
-      });
-    }
-  }]);
-
-  return Cont;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-
-
-/***/ }),
-
 /***/ "./resources/js/components/Container/Container.js":
 /*!********************************************************!*\
   !*** ./resources/js/components/Container/Container.js ***!
@@ -3598,10 +3541,7 @@ var Container = /*#__PURE__*/function (_Component) {
       this.firstItem.bind(this)();
       this.setState({
         subcontainer_index: this.state.subcontainer_index
-      }); // this.setIndex.bind(this)()
-      // this.scroll.bind(this)()
-      // this.setState({subcontainer_index:0})
-      //set style for the active section item
+      });
     }
   }, {
     key: "componentDidUpdate",
@@ -3624,6 +3564,7 @@ var Container = /*#__PURE__*/function (_Component) {
       var _this3 = this;
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "container-container",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
           id: "side",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
@@ -3740,7 +3681,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _css_Cont_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../css/Cont.css */ "./resources/css/Cont.css");
+/* harmony import */ var _css_Container_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../css/Container.css */ "./resources/css/Container.css");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -3809,66 +3750,6 @@ var Processes = function Processes(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Container/Section.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/Container/Section.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _css_Cont_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../css/Cont.css */ "./resources/css/Cont.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-var Section = function Section(_ref) {
-  var sub_container = _ref.sub_container,
-      processes = _ref.processes;
-  return (
-    /*#__PURE__*/
-    // section begin/////////////////////////////////
-    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-      className: "",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: ""
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-        className: "section-items ",
-        id: "first-item",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-          className: "active",
-          href: "#section0",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            className: "section_text",
-            children: processes.length > 0 ? processes[0].subcontainer_name : ""
-          })
-        })
-      }), sub_container.slice(1, sub_container.length).map(function (value, index) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-          className: "section-items  ",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "#section" + (index + 1),
-            className: "inactive",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "section_text",
-              children: value.subcontainer_name
-            })
-          })
-        }, index);
-      })]
-    }) //section end
-
-  );
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Section);
-
-/***/ }),
-
 /***/ "./resources/js/components/Container/Title.js":
 /*!****************************************************!*\
   !*** ./resources/js/components/Container/Title.js ***!
@@ -3933,7 +3814,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Services_handleBrightSupression__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Services/handleBrightSupression */ "./resources/js/Services/handleBrightSupression.js");
 /* harmony import */ var _Services_StandardContrast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Services/StandardContrast */ "./resources/js/Services/StandardContrast.js");
 /* harmony import */ var _Services_DarkWhiteContrast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Services/DarkWhiteContrast */ "./resources/js/Services/DarkWhiteContrast.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -3986,12 +3869,12 @@ var Contrast = function Contrast() {
 
   var darkWhite = function darkWhite() {
     $(".standard").css({
-      backgroundColor: "#fff",
-      color: "#000"
+      backgroundColor: "#E5112F",
+      color: "#fff"
     });
     $(".reinforced").css({
-      backgroundColor: "#fff",
-      color: "#000"
+      backgroundColor: "#000",
+      color: "#fff"
     });
     $(".darkWhite").css({
       backgroundColor: "#fff",
@@ -4001,46 +3884,52 @@ var Contrast = function Contrast() {
     (0,_Services_DarkWhiteContrast__WEBPACK_IMPORTED_MODULE_4__.DarkWhiteContrast)();
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "contrast-container",
     role: "dialog",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       className: "row",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
         className: "contrast-title col-7",
         children: "Option d'acc\xE9ssibilit\xE9"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
         className: "btn col close-button-item",
         role: "button",
         onClick: handleClose,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
           className: "material-icons-outlined close-button-icon",
           "aria-hidden": "true",
           children: "close"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
           className: "close-button-text",
           "aria-hidden": "true",
           children: "Fermer"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
       className: "contrast-subtitle",
       children: "Contraste"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-      className: "standard",
-      role: "button",
-      onClick: handleStandardClick,
-      children: "Standard"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-      className: "reinforced",
-      role: "button",
-      onClick: handleReinforcedClick,
-      children: "Renforc\xE9"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-      className: "darkWhite",
-      role: "button",
-      onClick: darkWhite,
-      children: "Noir sur blanc"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "row",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+        className: "standard col",
+        id: "standardId",
+        role: "button",
+        onClick: handleStandardClick,
+        children: "Standard"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+        className: "reinforced col",
+        id: "reinforcedId",
+        role: "button",
+        onClick: handleReinforcedClick,
+        children: "Renforc\xE9"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+        className: "darkWhite col",
+        id: "darkWhiteId",
+        role: "button",
+        onClick: darkWhite,
+        children: "Noir sur blanc"
+      })]
     })]
   });
 };
@@ -4521,9 +4410,9 @@ var Home = /*#__PURE__*/function (_React$Component) {
                   })
                 })]
               })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_7__.default, {
+              children: "     "
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_7__.default, {
-            children: "     "
           })]
         })]
       });
@@ -4676,7 +4565,7 @@ var Donnees = function Donnees() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "data-container",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
-          children: "Donn\xE9es"
+          children: "Page"
         })
       })]
     })]
@@ -4717,20 +4606,12 @@ var Footer = function Footer() {
         children: "Plan du site"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "footer-item",
-        to: "/accessibilite",
-        children: "Acc\xE9ssibilit\xE9"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-        className: "footer-item",
         to: "/mentions-legales",
         children: "Mentions L\xE9gales"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
         className: "footer-item",
-        to: "/donnees-personnelles",
-        children: "Donn\xE9es personnelles"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-        className: "footer-item",
-        to: "/gestion-des-cookies",
-        children: "Gestion des cookies"
+        to: "/accessibilite",
+        children: "Accessibilit\xE9"
       })]
     })
   });
@@ -4755,9 +4636,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Contrast_Contrast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Contrast/Contrast */ "./resources/js/components/Contrast/Contrast.js");
 /* harmony import */ var _NavBar_Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavBar/Menu */ "./resources/js/components/NavBar/Menu.js");
 /* harmony import */ var _NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
-/* harmony import */ var _file_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./file.png */ "./resources/js/components/LegalInfo/file.png");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -4766,31 +4645,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Mentions = function Mentions() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         id: "side",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_1__.default, {})]
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_1__.default, {})]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       id: "contain",
       className: "contain-home",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "bread-text",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_0__.default, {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_0__.default, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "mentions-container",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
           children: "Mentions"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
-          href: "file:///C:\\Users\\divin\\Downloads\\",
-          style: {
-            marginLeft: "50%"
-          },
-          children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-            src: _file_png__WEBPACK_IMPORTED_MODULE_4__.default
-          })]
-        })]
+        })
       })]
     })]
   });
@@ -4902,22 +4773,9 @@ var Menu = function Menu() {
         className: "material-icons-outlined col-2 menu-home-icon style engine-icon",
         children: " email"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-      className: "row menu-item style",
-      to: "/scanner",
-      style: {
-        color: "#E5112F"
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-        className: "menu_scanner_text col style",
-        children: "Je num\xE9rise un document"
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-        className: "material-icons-outlined  style col-2 scanner-icon menu-home-icon",
-        children: "scanner"
-      }), " "]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
       className: "row menu-item style",
-      href: "file:///C:/Users/divin/Documents/",
+      href: "file:///C:/Users/Downloads",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
         className: " engine-text col style",
         children: "J'imprime un document"
@@ -5035,9 +4893,21 @@ var NavBar2 = function NavBar2() {
     }
   };
 
+  var controlbackround = function controlbackround() {
+    //alert($("#mySidenav").css("width"))
+    if ($("#mySidenav").css("width") === "0px") {
+      $("body").css("background-color", "#FFF");
+    }
+
+    if (sessionStorage.getItem("contrast") === "reinforced" && $("#mySidenav").css("width") === "0px") {
+      $("body").css("background-color", "#222");
+    }
+  };
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     close();
     reinforceContrastCall();
+    controlbackround();
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("nav", {
     className: "navbar-container sticky-top",
@@ -5046,7 +4916,7 @@ var NavBar2 = function NavBar2() {
       className: "row",
       id: "menu-container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("button", {
-        className: "nav_button",
+        className: "nav_button phone-back",
         role: "button",
         title: "Retour en arri\xE8re",
         onClick: back,
@@ -5076,8 +4946,7 @@ var NavBar2 = function NavBar2() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Link, {
           to: "/",
           style: {
-            textDecoration: "none",
-            display: "block"
+            textDecoration: "none"
           },
           className: "home_text",
           children: "Accueil"
@@ -5091,7 +4960,7 @@ var NavBar2 = function NavBar2() {
           }), " "]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("button", {
-        className: "nav_tool_button",
+        className: "nav_tool_button navbar-menu",
         onClick: openNav,
         title: "menu",
         role: "button",
@@ -5138,75 +5007,6 @@ var NavBar2 = function NavBar2() {
 
 /***/ }),
 
-/***/ "./resources/js/components/NavBar/Test.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/NavBar/Test.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _css_Process_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/Process.css */ "./resources/css/Process.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-var Test = function Test(props) {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      infoprocess = _useState2[0],
-      setProcess = _useState2[1];
-
-  var _useParams = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useParams)(),
-      id = _useParams.id;
-
-  var process = function process() {
-    axios__WEBPACK_IMPORTED_MODULE_2___default().get('/get-process', {
-      params: {
-        id: id //props.location.process.process_id
-
-      }
-    }).then(function (response) {
-      console.log(response.data);
-      setProcess(response.data);
-    });
-  };
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    process();
-    console.log(id);
-  }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {});
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Test);
-
-/***/ }),
-
 /***/ "./resources/js/components/NotFound/NotFound.js":
 /*!******************************************************!*\
   !*** ./resources/js/components/NotFound/NotFound.js ***!
@@ -5218,14 +5018,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Breadcrumbs/Breadcrumbs */ "./resources/js/components/Breadcrumbs/Breadcrumbs.js");
+/* harmony import */ var _Contrast_Contrast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Contrast/Contrast */ "./resources/js/components/Contrast/Contrast.js");
+/* harmony import */ var _NavBar_Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavBar/Menu */ "./resources/js/components/NavBar/Menu.js");
+/* harmony import */ var _NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavBar/NavBar */ "./resources/js/components/NavBar/NavBar.js");
+/* harmony import */ var _css_NotFound_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/NotFound.css */ "./resources/css/NotFound.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
 
 
 var NotFound = function NotFound() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", {
-      children: "Non trouv\xE9"
-    })
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "notFound-container",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        id: "side",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_NavBar_Menu__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Contrast_Contrast__WEBPACK_IMPORTED_MODULE_1__.default, {})]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      id: "contain",
+      className: "contain-notFound",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "bread-text",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Breadcrumbs_Breadcrumbs__WEBPACK_IMPORTED_MODULE_0__.default, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "notfound-container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
+          children: "Cette page n\u2019existe pas"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+          className: "notfound-description",
+          children: "Peut-\xEAtre a-t-elle \xE9t\xE9 supprim\xE9e, peut-\xEAtre un lien est-il mauvais, par chance la page d\u2019accueil reste bien pr\xE9sente."
+        })]
+      })]
+    })]
   });
 };
 
@@ -5775,67 +5605,6 @@ var Scanner = function Scanner() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Session/SessionTimeoutDialog.js":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/Session/SessionTimeoutDialog.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _css_SessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/SessionTimeoutDialog.css */ "./resources/css/SessionTimeoutDialog.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-var SessionTimeoutDialog = function SessionTimeoutDialog(_ref) {
-  var time = _ref.time;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(time),
-      _useState2 = _slicedToArray(_useState, 2),
-      chrono = _useState2[0],
-      setChrono = _useState2[1];
-
-  var chronoUpdate = function chronoUpdate() {
-    setTimeout(function () {
-      setChrono(chrono - 1);
-      if (chrono <= 1) setChrono(20);
-    }, 500);
-  };
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    chronoUpdate();
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "session-container",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-      children: chrono
-    })
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SessionTimeoutDialog);
-
-/***/ }),
-
 /***/ "./resources/js/components/SessionTimeout.js":
 /*!***************************************************!*\
   !*** ./resources/js/components/SessionTimeout.js ***!
@@ -5913,6 +5682,67 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     })
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/Session/SessionTimeoutDialog.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/Session/SessionTimeoutDialog.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _css_SessionTimeoutDialog_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../css/SessionTimeoutDialog.css */ "./resources/css/SessionTimeoutDialog.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var SessionTimeoutDialog = function SessionTimeoutDialog(_ref) {
+  var time = _ref.time;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(time),
+      _useState2 = _slicedToArray(_useState, 2),
+      chrono = _useState2[0],
+      setChrono = _useState2[1];
+
+  var chronoUpdate = function chronoUpdate() {
+    setTimeout(function () {
+      setChrono(chrono - 1);
+      if (chrono <= 1) setChrono(20);
+    }, 500);
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    chronoUpdate();
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "session-container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      children: chrono
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SessionTimeoutDialog);
 
 /***/ }),
 
@@ -5996,23 +5826,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Container_Cont__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Container/Cont */ "./resources/js/components/Container/Cont.js");
-/* harmony import */ var _Container_Container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Container/Container */ "./resources/js/components/Container/Container.js");
-/* harmony import */ var _Home_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Home/Home */ "./resources/js/components/Home/Home.js");
-/* harmony import */ var _LegalInfo_Accessibilite__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LegalInfo/Accessibilite */ "./resources/js/components/LegalInfo/Accessibilite.js");
-/* harmony import */ var _LegalInfo_Cookies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LegalInfo/Cookies */ "./resources/js/components/LegalInfo/Cookies.js");
-/* harmony import */ var _LegalInfo_Donnees__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LegalInfo/Donnees */ "./resources/js/components/LegalInfo/Donnees.js");
-/* harmony import */ var _LegalInfo_Mentions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./LegalInfo/Mentions */ "./resources/js/components/LegalInfo/Mentions.js");
-/* harmony import */ var _LegalInfo_PlanDuSite__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./LegalInfo/PlanDuSite */ "./resources/js/components/LegalInfo/PlanDuSite.js");
-/* harmony import */ var _NavBar_Test__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./NavBar/Test */ "./resources/js/components/NavBar/Test.js");
-/* harmony import */ var _NotFound_NotFound__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./NotFound/NotFound */ "./resources/js/components/NotFound/NotFound.js");
-/* harmony import */ var _Process_Process__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Process/Process */ "./resources/js/components/Process/Process.js");
-/* harmony import */ var _Scanner_Scanner__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Scanner/Scanner */ "./resources/js/components/Scanner/Scanner.js");
-/* harmony import */ var _subcontainer_Subcontainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./subcontainer/Subcontainer */ "./resources/js/components/subcontainer/Subcontainer.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
+/* harmony import */ var _Administration_Administration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Administration/Administration */ "./resources/js/components/Administration/Administration.js");
+/* harmony import */ var _Container_Container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Container/Container */ "./resources/js/components/Container/Container.js");
+/* harmony import */ var _Home_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home/Home */ "./resources/js/components/Home/Home.js");
+/* harmony import */ var _LegalInfo_Accessibilite__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LegalInfo/Accessibilite */ "./resources/js/components/LegalInfo/Accessibilite.js");
+/* harmony import */ var _LegalInfo_Cookies__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LegalInfo/Cookies */ "./resources/js/components/LegalInfo/Cookies.js");
+/* harmony import */ var _LegalInfo_Donnees__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LegalInfo/Donnees */ "./resources/js/components/LegalInfo/Donnees.js");
+/* harmony import */ var _LegalInfo_Mentions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./LegalInfo/Mentions */ "./resources/js/components/LegalInfo/Mentions.js");
+/* harmony import */ var _LegalInfo_PlanDuSite__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./LegalInfo/PlanDuSite */ "./resources/js/components/LegalInfo/PlanDuSite.js");
+/* harmony import */ var _NotFound_NotFound__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./NotFound/NotFound */ "./resources/js/components/NotFound/NotFound.js");
+/* harmony import */ var _Process_Process__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Process/Process */ "./resources/js/components/Process/Process.js");
+/* harmony import */ var _Scanner_Scanner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Scanner/Scanner */ "./resources/js/components/Scanner/Scanner.js");
+/* harmony import */ var _subcontainer_Subcontainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./subcontainer/Subcontainer */ "./resources/js/components/subcontainer/Subcontainer.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/*
+import AdminContainer from "./Admin/Container-Admin/AdminContainer";
+import Admin from "./Admin/Process-Admin/Admin";
+import AdminProcess from "./Admin/Process-Admin/AdminProcess";
+import NewProcess from "./Admin/Process-Admin/NewProcess";
+import ProcessContainer from "./Admin/Process-Admin/ProcessContainer";
+*/
 
 
 
@@ -6029,71 +5862,108 @@ __webpack_require__.r(__webpack_exports__);
 
 var DynamicSubContainerBreadcrumb = function DynamicSubContainerBreadcrumb(_ref) {
   var match = _ref.match;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
     children: match.params.name
   });
 };
 
 var DynamicContainerBreadcrumb = function DynamicContainerBreadcrumb(_ref2) {
   var match = _ref2.match;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
     children: match.params.ContainerName
   });
 };
 
 var DynamicProcessBreadcrumb = function DynamicProcessBreadcrumb(_ref3) {
   var match = _ref3.match;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
     children: match.params.processName
   });
 };
 
 var routesConfig = [{
   path: "/",
-  component: _Home_Home__WEBPACK_IMPORTED_MODULE_3__.default,
+  component: _Home_Home__WEBPACK_IMPORTED_MODULE_2__.default,
   exact: true,
   breadcrumb: "Accueil"
-}, {
-  path: "/test",
-  component: _NavBar_Test__WEBPACK_IMPORTED_MODULE_9__.default
+},
+/*
+{
+  path: "/admin/categories",
+  component:Admin,
+  },
+{
+  path: "/admin/demarche",
+  component: AdminProcess,
+  },
+{
+  path: "/admin/categorie",
+  component: AdminContainer,
+  },
+
+
+{
+  path: "/nouvelle-demarche",
+  component: NewProcess,
+  },
+
+
+  
+{
+  path: "/admin",
+  component: ProcessContainer,
+  },
+
+*/
+{
+  path: "/mes-demarches",
+  component: _Administration_Administration__WEBPACK_IMPORTED_MODULE_0__.default,
+  breadcrumb: "Accès aux sites des administrations"
 }, {
   path: "/sous-categories/:id/:ContainerName/:name/:category_index/:process_name",
-  component: _Process_Process__WEBPACK_IMPORTED_MODULE_11__.default
+  component: _Process_Process__WEBPACK_IMPORTED_MODULE_9__.default
 }, {
   path: "/sous-categories/:id/:ContainerName/:name/:category_index",
-  component: _Container_Container__WEBPACK_IMPORTED_MODULE_2__.default,
+  component: _Container_Container__WEBPACK_IMPORTED_MODULE_1__.default,
   breadcrumb: DynamicSubContainerBreadcrumb
 }, {
   path: "/sous-categories/:id/:ContainerName",
-  component: _subcontainer_Subcontainer__WEBPACK_IMPORTED_MODULE_13__.default,
+  component: _subcontainer_Subcontainer__WEBPACK_IMPORTED_MODULE_11__.default,
   breadcrumb: DynamicContainerBreadcrumb
-}, {
+},
+/*
+{
   path: "/plan-du-site",
-  component: _LegalInfo_PlanDuSite__WEBPACK_IMPORTED_MODULE_8__.default,
+  component: PlanDuSite,
   breadcrumb: "Plan du site"
-}, {
+},
+{
   path: "/accessibilite",
-  component: _LegalInfo_Accessibilite__WEBPACK_IMPORTED_MODULE_4__.default,
+  component: Accessibilite,
   breadcrumb: "Accéssibilité"
-}, {
+},
+{
   path: "/mentions-legales",
-  component: _LegalInfo_Mentions__WEBPACK_IMPORTED_MODULE_7__.default,
+  component: Mentions,
   breadcrumb: "Mentions légales"
-}, {
-  path: "/gestion-des-cookies",
-  component: _LegalInfo_Cookies__WEBPACK_IMPORTED_MODULE_5__.default,
-  breadcrumb: "Gestion des cookies"
-}, {
+},
+
+
+{
   path: "/donnees-personnelles",
-  component: _LegalInfo_Donnees__WEBPACK_IMPORTED_MODULE_6__.default,
+  component: Donnees,
   breadcrumb: "Données personnelles"
-}, {
+},
+
+{
   path: "/scanner",
-  component: _Scanner_Scanner__WEBPACK_IMPORTED_MODULE_12__.default,
+  component: Scanner,
   breadcrumb: "numériser un document"
-}, {
+},
+*/
+{
   path: "*",
-  component: _NotFound_NotFound__WEBPACK_IMPORTED_MODULE_10__.default,
+  component: _NotFound_NotFound__WEBPACK_IMPORTED_MODULE_8__.default,
   breadcrumb: null
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routesConfig);
@@ -6225,7 +6095,6 @@ var Subcontainer = /*#__PURE__*/function (_Component) {
     value: function sub_container_processes() {
       var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Array();
       var array = this.extractsSubCategories(data);
-      console.log(array, "array");
 
       for (var i = 0; i < data.length; i++) {
         for (var y = 0; y < array.length; y++) {
@@ -6257,7 +6126,6 @@ var Subcontainer = /*#__PURE__*/function (_Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(this.props.location.id);
       this.getContainerProcesses.bind(this)();
     }
   }, {
@@ -6276,6 +6144,7 @@ var Subcontainer = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        className: "subcontainer-container",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           id: "side",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -6305,7 +6174,7 @@ var Subcontainer = /*#__PURE__*/function (_Component) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
                   className: "subcontainer-choose-title",
                   children: "Choisissez une rubrique"
-                }), console.log(this.state.processes.length > 0 ? this.state.processes[0].processes.container_id : ""), this.state.processes.map(function (value, index) {
+                }), this.state.processes.map(function (value, index) {
                   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
                     className: "topic-item",
                     to: {
@@ -6341,9 +6210,12 @@ var Subcontainer = /*#__PURE__*/function (_Component) {
                     textAlign: "center",
                     textDecoration: "none"
                   },
-                  children: "Montrez moi l'ensemble des services"
+                  children: "Montrez moi l'ensemble des d\xE9marches"
                 }) : "", "                "]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_7__.default, {})]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "subcontainer-footer",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_LegalInfo_Footer__WEBPACK_IMPORTED_MODULE_7__.default, {})
+              })]
             })
           })
         })]
@@ -10824,6 +10696,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".material-icons {\n    font-family: 'M
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Administration.css":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Administration.css ***!
+  \****************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width:900px) {\r\n    .administration-image{\r\n        width: 80px;\r\n        height: 60px;\r\n        text-align: center;\r\n        margin-top: 3%;\r\n        margin-bottom: 3%;\r\n       \r\n      \r\n    }\r\n    .poste-maladie-retraite{\r\n    \r\n\r\n      \r\n        margin-top: 3%;\r\n        text-align: center;\r\n    \r\n    }\r\n    .top-botom{\r\n      text-align: center;\r\n    }\r\n    .administration-title{\r\n        text-align: center;\r\n        font: 20px;\r\n    }\r\n    .administration-item{\r\n        display: inline-block;\r\n        width: 30%;\r\n        border: 1px solid;\r\n        margin-top: 2%;\r\n        margin-left: 3%;\r\n        border-radius: 12px;\r\n        height: 30%;\r\n        text-decoration: none;\r\n        text-align: center;\r\n        \r\n    }\r\n    .administration-text{\r\n        font-size: 17px;\r\n        background-color: #577C90;\r\n        \r\n        text-align: center;\r\n       border-top-right-radius: 12px;\r\n       border-top-left-radius: 12px;\r\n       color: #fff;\r\n    }\r\n    \r\n}\r\n@media  screen and (max-width:600px) {\r\n    .administration-image{\r\n        width: 80px;\r\n        height: 60px;\r\n        margin-left: 40%;\r\n        margin-top: 3%;\r\n        margin-bottom: 3%;\r\n       \r\n      \r\n    }\r\n    .poste-maladie-retraite{\r\n    \r\n        width: 100px;\r\n        height: 125px;\r\n        margin-left: 40%;\r\n        margin-top: 3%;\r\n    \r\n    }\r\n    .top-botom{\r\n       \r\n    }\r\n    .administration-title{\r\n        text-align: center;\r\n        font-size: 18px;\r\n        margin-top: 6%;\r\n    }\r\n    .administration-item{\r\n        display: inline-block;\r\n        width: 91%;\r\n        border: 1px solid;\r\n        margin-top: 2%;\r\n        margin-left: 3%;\r\n        border-radius: 12px;\r\n        height: 30%;\r\n        text-decoration: none;\r\n        margin-bottom: 3%;\r\n        \r\n    }\r\n    .administration-text{\r\n        font-size: 15px;\r\n        background-color: #577C90;\r\n        \r\n        text-align: center;\r\n       border-top-right-radius: 12px;\r\n       border-top-left-radius: 12px;\r\n       color: #fff;\r\n    }\r\n   .bread-text{\r\n       display: none;\r\n   }\r\n   .contain-administration{\r\n      height: 160vh;\r\n   }\r\n}\r\n@media  screen and (min-width:601px)  and (max-width:899px){\r\n    .administration-image{\r\n        width: 100px;\r\n        height: 80px;\r\n        margin-left: 20%;\r\n        margin-top: 3%;\r\n        margin-bottom: 3%;\r\n       \r\n      \r\n    }\r\n    .poste-maladie-retraite{\r\n    \r\n        width: 100px;\r\n        height: 125px;\r\n        margin-left: 40%;\r\n        margin-top: 3%;\r\n    \r\n    }\r\n    .top-botom{\r\n        margin-left: 20%;\r\n    }\r\n    .administration-title{\r\n        text-align: center;\r\n        font: 20px;\r\n    }\r\n    .administration-item{\r\n        display: inline-block;\r\n        width: 29%;\r\n        border: 1px solid;\r\n        margin-top: 2%;\r\n        margin-left: 3%;\r\n        border-radius: 12px;\r\n        height: 30%;\r\n        text-decoration: none;\r\n        \r\n    }\r\n    .administration-text{\r\n        font-size: 17px;\r\n        background-color: #577C90;\r\n        \r\n        text-align: center;\r\n       border-top-right-radius: 5px;\r\n       border-top-left-radius: 5px;\r\n       color: #fff;\r\n       height: 50px;\r\n    }\r\n    \r\n\r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/ChoiceBar.css":
 /*!***********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/ChoiceBar.css ***!
@@ -10841,31 +10737,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\n@media screen and (min-width: 900px) {\n    \n   \n   \n    .collapse.dont-collapse-sm {\n        display: block;\n        height: auto !important;\n        visibility: visible;\n      }\n      .whole_container{\n          background-color:#707070;\n           color:#ffff;\n           height: 8.5vh;\n          \n          \n      }\n    ::-moz-placeholder{\n        font-size: 10.8px;\n        height: 100%;\n        color: #fff;\n        width: -moz-fit-content;\n        width: fit-content;\n        margin-right: 10px;\n       \n    }\n    :-ms-input-placeholder{\n        font-size: 10.8px;\n        height: 100%;\n        color: #fff;\n        width: fit-content;\n        margin-right: 10px;\n       \n    }\n    ::placeholder{\n        font-size: 10.8px;\n        height: 100%;\n        color: #fff;\n        width: -webkit-fit-content;\n        width: -moz-fit-content;\n        width: fit-content;\n        margin-right: 10px;\n       \n    }\n    \n   .choicebar-icon{\n       font-size: 2.6vmin;\n   }\n   \n    \n    .search_input{\n        height: 8.5vh;\n        border:none;\n        outline: none;\n        background-color: #707070;\n        width: 100%;\n    }\n    .search_submit_button{\n        height: 8.5vh;\n        background-color: #707070;\n      \n    }\n    \n    .search_icon{\n        margin-top: 8%;\n        margin-left: -11px;\n        font-size: 18px;\n\n    }\n    .category_button_choiceBar:hover{\n       \n      \n        \n        width: 100%;\n        text-decoration: none;\n       \n\n    }\n    .search-engine{\n        background-color: #fff;\n        color: #222;\n        display: inline-flex;\n        text-align: center;\n        text-justify: center;\n        align-items: center;\n     \n    }\n    #category_button_choiceBar_service:hover{\n       \n      \n      \n      \n        text-decoration: none;\n       -webkit-text-decoration-color: \"\";\n               text-decoration-color: \"\";\n        \n\n    }\n    .hide_search_text{\n       \n    }\n    .research{\n       outline: none;\n    }\n    .back{\n        background-color: gray;\n       \n    }\n    .search_hidden{\n    \n    }\n    .cont{\n        border-right: 1px solid #fff;\n        font-size: 11.8px;\n\n    }\n    .profil{\n        font-size: 11.8px;\n        background-color: #fff;\n        color:#222;\n       \n    }\n    .services-button{\n        font-size: 19px;\n        \n        text-align: center;\n        \n\n    }\n    .profil-text{\n        margin-top: 11%;\n    }\n    .service-subtitle{\n        font-size: 11px;\n        display: block;\n        text-align: center;\n    }\n    .service-title{\n        font-size: 12px;\n        display: inline-block;\n        margin-top: 15px;\n       \n    }\n  }\n  \n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\n  @media screen and (max-width: 600px) {\n    .search_hidden{\n         display: normal!important;\n         border: none;\n         text-decoration: none;\n    }\n    .whole_container{\n      \n      \n  }\n  .research{\n      outline: none;\n   }\n   .hide_icon{\n       display: none;\n   }\n  ::-moz-placeholder{\n      font-size: 16px;\n  }\n  :-ms-input-placeholder{\n      font-size: 16px;\n  }\n  ::placeholder{\n      font-size: 16px;\n  }\n  .container{\n      font-size: 11px;\n       \n      height: 100px;\n      word-wrap: break-word;\n      \n  \n  }\n  .back{\n      width: 400px;\n      background-color: #ffff;\n  }\n \n  .search{\n    z-index: 1;\n   \n    height: 20px;\n\n    color: #E5112F;\n    outline: none;\n    margin-top: 5%;\n    width: 99%;\n  \n    height: 50px;\n    background-color: #eee;\n    margin-left: 5%;\n  }\n  .search_input{\n     \n      \n      outline: none;\n      background-color: #eee;\n     margin-left: 10%;\n  }\n  .search_submit_button{\n     \n     \n      \n    \n  }\n  \n  .search_icon{\n      \n      font-size: 20px;\n      background-color: #E5112F;\n      color: #fff;\n      display: block;\n   \n      \n\n  }\n  #search_icon-size{\n      display: block;\n      padding-right: 50px;\n      background-color: #E5112F;\n    \n  }\n  .cont{\n   margin-top :4%;\n  \n   \n  margin-left: 10%;\n  \n   height: 60px;\n   border-radius: 10px;\n   width: 250px;\n   text-align: center;\n   font-size: 16px;\n   text-transform: uppercase;\n   line-break: loose;\n   color: #fff;\n   background-color: #E5112F;\n  }\n  .service-subtitle{\n      font-size: 13px;\n      display: block;\n\n      margin-left: 12%;\n  }\n  .service-title{\n      font-size: 15px;\n      display: inline-block;\n      margin-top: 15px;\n     \n      \n     \n     \n  }\n  .choiceBarHelper{\n      font-size: 20px;\n      margin-left: 19%;\n      \n  }\n  .choiceBarHelperContainer{\n      text-align: center;\n      margin-top: 3%;\n\n  }\n  .hide_search_text{\n  \n\n  }\n  .category_button_choiceBar{\n     width: 86%;     \n  }\n  .services{\n     \n  }\n  .search-engine{\n      \n  }\n  .profil{\n      margin-top: 20%;\n      font-size: 16px;\n  }\n  .profil-text{\n      margin-left: 20%;\n      text-transform: uppercase;\n      \n  }\n  #direct-acces{\n      background-color: #fff;\n      color: #000;\n      \n  }\n  .choiceBarItemText{\n     margin-left: 5%;\n  }\n  #category_button_choiceBar_service{\n      background-color: #fff;\n      color: #000;\n  }\n}\n@media screen and (min-width: 601px) and (max-width:899px){\n\n   #choiseBar{\n       display: none;\n   }\n   .category_button_choiceBar{\n    width: 60%;\n    border:1px solid;\n    border-radius: 10px;\n    height: 80px;\n    \n    margin-left: 20%;\n    margin-bottom: 3%;\n    font-size: 26px;\n    background-color: #E5112F;\n    color: #fff;\n  text-align: center; \n   }\n   .item{\n       margin-top:3%;\n       display: block;\n       width: 100%;\n   }\n   .profil,.acces_direct {\n       margin-top: 4%;\n       width: 60%;\n     \n      \n       height: 80px;\n       text-align: center;\n       margin-left: 20%;\n       margin-bottom: 3%;\n       font-size: 35px;\n       color:#000;\n   }\n   .service-subtitle{\n       display: block;\n       margin-left: 20%;\n       font-size: 24px;\n   }\n   .search_input{}\n   .search{\n     \n       height: 80px;\n\n       color: #E5112F;\n       outline: none;\n       margin-top: 5%;\n       margin-bottom: 5%;\n       width: 60%;\n     \n       height: 50px;\n       background-color: #eee;\n       margin-left: 20%;\n      \n   }\n\n   .search_input{\n     \n      \n    outline: none;\n    background-color: #eee;\n   margin-left: 10%;\n}\n\n.search_submit_button{\n   \n   \n    \n  \n}\n\n.search_icon{\n    \n    font-size: 33px;\n    background-color: #E5112F;\n    color: #fff;\n    display: block;\n    padding-top: 1.5%;\n \n    \n\n}\n#search_icon-size{\n    display: block;\n    padding-right: 50px;\n    background-color: #E5112F;\n    font-size: 100px;\n  \n}\n::-moz-placeholder{\n    font-size: 26px;\n}\n:-ms-input-placeholder{\n    font-size: 26px;\n}\n::placeholder{\n    font-size: 26px;\n}\n}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Cont.css":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Cont.css ***!
-  \******************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n  \n\n  \n \n  \n  \n  @media screen and (min-width: 900px) {\n\n    .pos{\n        position: fixed;\n        \n       \n    }\n    .bread{\n      margin-right: 100%    }\n  .active {\n  \n    color: #FFF;\n    \n    height: 8.7vh;\n      width: 34vw;\n    border-radius: 10px;\n    text-decoration: none;\n    background-color:#666;\n    display: block;\n   \n    \n  }\n  .process-text-icon{\n    display: inline-flex;\n    align-items: center;\n    text-align: center;\n    text-justify:center;\n     \n    margin-top: 4%;\n  }\n \n  .section_text{\n   display: inline-block;\n    margin-top: 2%;\n\n  }\n  .mobile-only-title{\n    margin-right: 100em;\n  }\n  .item-text{\n\n  \n  }\n  .chevron_icon{\n   \n  }\n  \n  .container_title{\n      font-size: 3vmin;\n      margin-top: 3%;\n    \n  }\n  .container_icon{\n     margin-left: 1%;\n     font-size: 3vmin;\n     \n  }\n  .section-items{\n      border:1px solid;\n      text-align: center;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 8.7vh;\n      width: 34vw;\n      border-radius: 10px;\n      font-size: 2.7vmin;\n      display: block;\n      \n  }\n  \n  .process_title{\n    font-size: 3vmin;\n    margin-left: 10%;\n    margin-bottom: 4%;\n    margin-top: 3%;\n  }\n     \n  \n \n#first-item{\n    margin-top: 10%;\n}\n.process_item{\n    border:1px solid;\n      text-align: left;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 11vh;\n      width: 38vw;\n      border-radius: 10px;\n      font-size:15px;\n\n}\n\n.bread{\n    width:50%;\n    margin-left: 45%;\n    \n\n}\n.inactive,#inaction{\n  display: block;\n  height: 8.7vh;\n  width: 34vw;\n  text-decoration: none;\n  \n}\n.nav-position{\n  position: sticky;\n  z-index: 1;\n  width: inherit;\n\n\n }\n .mobile-only-title{\n  position: fixed;\n}\n     .sections{\n        border-left: solid 1px;\n        \n     }\n     .processes-position{\n       \n      margin-bottom: 10%;\n     }\n     .title{\n         margin-left: 4%;\n     }\n     .scroll-bar{\n       /* overflow-y:scroll;*/\n        \n        \n     }\n     \n     .section-position{\n       transform: none;\n       \n    }\n    \n     .phone-processes{display:none}\n     .desk-bread{\n        \n        \n         background-color: #FFF;\n         margin-bottom: 3%;\n        \n     }\n     .bread-text{\n        \n         background-color: #fff;\n     }\n     .desk-nav{\n      \n    }\n    .phone-processes{\n        display: none;\n    }\n    .subcontainer_name{\n      font-size: 20px;\n    }\n    \n  }\n  @media screen and (max-width:600px) {\n    .section-position{\n        position: fixed;\n      \n        \n        background-color: white;  \n        margin-top: 85px;\n        width: 100%;\n        \n       \n    \n    }\n    .sections{\n        z-index: 3;\n     height: -webkit-fit-content;\n     height: -moz-fit-content;\n     height: fit-content;\n    \n     \n    }\n\n    .title{\n       \n      background-color: white;\n      width: 100%;\n     \n      display: block;\n      \n      text-align: center;\n     \n      margin-top: -50px;\n      \n  }\n    .desk-bread{\n        background-color: white;\n        padding-top: 20%;\n        width: inherit;\n        height: 50px;\n      \n\n       \n\n\n    }\n    .process_item{\n        height: 90px;\n        border:1px solid;\n        margin-top: 2%;\n        font-size: 17px;\n       list-style-type: none;\n       width: 300px;\n       border-radius: 10px;\n      margin-right: 40px;\n     \n\n    }\n    .process-text-icon{\n      margin-top: 3%;\n    }\n    .processes-position{\n       height: -webkit-fit-content;\n       height: -moz-fit-content;\n       height: fit-content; \n       margin-top: 460px;\n     \n    }\n    .process_title{\n    \n     font-size: 20px;\n     margin-left: 20%;\n     font-weight: bold;\n    }\n    .process-section-title{\n      font-size: 19px;\n     margin-left: 26%;\n     font-weight: bold;\n      \n    }\n    .processes{\n        \n       \n    }\n    .cont-container{\n       \n    }\n\n\n    /* sections*/\n\n    .section-items{\n      border:1px solid;\n      text-align: center;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 40px;\n      width: 300px;\n      border-radius: 10px;\n      font-size: 20px;\n      display: block;\n      margin-top: 5%;\n     \n      \n  }\n  .nav-position{\n    width: 100%;\n  }\n  /*footer style */\n  .container-footer{\n    margin-top: 10%;\n  }\n  }\n\n  \n  \n  @media screen and (max-width: 899px) and (min-width: 601px){\n    \n\n\n\n    .pos{\n        position: fixed;\n        \n       \n    }\n    .bread{\n      margin-right: 100%    }\n  .active {\n  \n    color: #FFF;\n    \n    height: 8.7vh;\n      width: 34vw;\n    border-radius: 10px;\n    text-decoration: none;\n    background-color:#666;\n    display: block;\n   \n    \n  }\n  .process-text-icon{\n    display: inline-flex;\n    align-items: center;\n    text-align: center;\n    text-justify:center;\n     \n    margin-top: 4%;\n  }\n \n  .section_text{\n   display: inline-block;\n    margin-top: 2%;\n\n  }\n  .mobile-only-title{\n    margin-right: 100em;\n  }\n  .item-text{\n\n  \n  }\n  .chevron_icon{\n   \n  }\n  \n  .container_title{\n      font-size: 3vmin;\n      margin-top: 3%;\n    \n  }\n  .container_icon{\n     margin-left: 1%;\n     font-size: 3vmin;\n     \n  }\n  .section-items{\n      border:1px solid;\n      text-align: center;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 8.7vh;\n      width: 34vw;\n      border-radius: 10px;\n      font-size: 2.7vmin;\n      display: block;\n      \n  }\n  \n  .process_title{\n    font-size: 3vmin;\n    margin-left: 10%;\n    margin-bottom: 4%;\n    margin-top: 3%;\n  }\n     \n  \n \n#first-item{\n    margin-top: 10%;\n}\n.process_item{\n    border:1px solid;\n      text-align: left;\n      text-decoration: none;\n      list-style-type: none;\n      margin-bottom: 3%;\n      height: 150px;\n      width: 38vw;\n      border-radius: 10px;\n      font-size:22px;\n\n}\n\n.bread{\n    width:50%;\n    margin-left: 45%;\n    \n\n}\n.inactive,#inaction{\n  display: block;\n  height: 8.7vh;\n  width: 34vw;\n  text-decoration: none;\n  \n}\n.nav-position{\n  position: sticky;\n  z-index: 1;\n  width: inherit;\n\n\n }\n .mobile-only-title{\n  position: fixed;\n}\n     .sections{\n        border-left: solid 1px;\n        \n     }\n     .processes-position{\n       \n      margin-bottom: 10%;\n     }\n     .title{\n         margin-left: 4%;\n         margin-bottom: 10%;\n     }\n     .section-1{\n       margin-top: 22%;\n     }\n     .scroll-bar{\n       /* overflow-y:scroll;*/\n        \n        \n     }\n     \n     .section-position{\n       transform: none;\n       \n    }\n    \n     .phone-processes{display:none}\n     .desk-bread{\n        \n        \n         background-color: #FFF;\n         margin-bottom: 3%;\n        \n     }\n     .bread-text{\n        \n         background-color: #fff;\n     }\n     .desk-nav{\n      \n    }\n    .phone-processes{\n        display: none;\n    }\n    .subcontainer_name{\n      font-size: 20px;\n    }\n    \n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n\r\n/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */\r\n@media screen and (min-width: 900px) {\r\n    \r\n   \r\n   \r\n    .collapse.dont-collapse-sm {\r\n        display: block;\r\n        height: auto !important;\r\n        visibility: visible;\r\n      }\r\n      .whole_container{\r\n          background-color:#707070;\r\n           color:#ffff;\r\n           height: 8.5vh;\r\n          \r\n          \r\n      }\r\n    ::-moz-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    :-ms-input-placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    ::placeholder{\r\n        font-size: 10.8px;\r\n        height: 100%;\r\n        color: #fff;\r\n        width: -webkit-fit-content;\r\n        width: -moz-fit-content;\r\n        width: fit-content;\r\n        margin-right: 10px;\r\n       \r\n    }\r\n    \r\n   .choicebar-icon{\r\n       font-size: 2.6vmin;\r\n   }\r\n   \r\n    \r\n    .search_input{\r\n        height: 8.5vh;\r\n        border:none;\r\n        outline: none;\r\n        background-color: #707070;\r\n        width: 100%;\r\n        color: #fff;\r\n    }\r\n    .search_submit_button{\r\n        height: 8.5vh;\r\n        background-color: #707070;\r\n      \r\n    }\r\n    \r\n    .search_icon{\r\n        margin-top: 8%;\r\n        margin-left: -11px;\r\n        font-size: 18px;\r\n\r\n    }\r\n    .category_button_choiceBar:hover{\r\n       \r\n      \r\n        \r\n        width: 100%;\r\n        text-decoration: none;\r\n       \r\n\r\n    }\r\n    .search-engine{\r\n        background-color: #fff;\r\n        color: #222;\r\n        display: inline-flex;\r\n        text-align: center;\r\n        text-justify: center;\r\n        align-items: center;\r\n     \r\n    }\r\n    #category_button_choiceBar_service:hover{\r\n       \r\n      \r\n      \r\n      \r\n        text-decoration: none;\r\n       -webkit-text-decoration-color: \"\";\r\n               text-decoration-color: \"\";\r\n        \r\n\r\n    }\r\n    .hide_search_text{\r\n       \r\n    }\r\n    .research{\r\n       outline: none;\r\n    }\r\n    .back{\r\n        background-color: gray;\r\n       \r\n    }\r\n    .search_hidden{\r\n    \r\n    }\r\n    .cont{\r\n        border-right: 1px solid #fff;\r\n        font-size: 11.8px;\r\n\r\n    }\r\n    .profil{\r\n        font-size: 11px;\r\n        background-color: #fff;\r\n        color:#222;\r\n       \r\n    }\r\n    .services-button{\r\n        font-size: 19px;\r\n        \r\n        text-align: center;\r\n        \r\n\r\n    }\r\n    .profil-text{\r\n        margin-top: 11%;\r\n    }\r\n    .service-subtitle{\r\n        font-size: 11px;\r\n        display: block;\r\n        text-align: center;\r\n    }\r\n    .service-title{\r\n        font-size: 12px;\r\n        display: inline-block;\r\n        margin-top: 15px;\r\n       \r\n    }\r\n  }\r\n  \r\n  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */\r\n  @media screen and (max-width: 600px) {\r\n    .search_hidden{\r\n        \r\n         border: none;\r\n         text-decoration: none;\r\n    }\r\n  \r\n  .research{\r\n      outline: none;\r\n   }\r\n   .hide_icon{\r\n       display: none;\r\n   }\r\n  ::-moz-placeholder{\r\n      font-size: 16px;\r\n  }\r\n  :-ms-input-placeholder{\r\n      font-size: 16px;\r\n  }\r\n  ::placeholder{\r\n      font-size: 16px;\r\n  }\r\n  .container{\r\n      font-size: 2vh;\r\n       \r\n      height: 100px;\r\n      word-wrap: break-word;\r\n      \r\n  \r\n  }\r\n\r\n  .back{\r\n      width: 400px;\r\n      background-color: #ffff;\r\n  }\r\n \r\n  .search{\r\n    z-index: 1;\r\n   \r\n    height: 20px;\r\n\r\n    \r\n    outline: none;\r\n    margin-top: 5%;\r\n    width: 95%;\r\n  \r\n    height: 50px;\r\n    background-color: #eee;\r\n    margin-left: 5%;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n  }\r\n  .search_input{\r\n     \r\n      \r\n      outline: none;\r\n      background-color: #eee;\r\n     \r\n  }\r\n  \r\n  \r\n  .search_icon{\r\n      \r\n      font-size: 30px;\r\n    \r\n      color: #E5112F;\r\n      display: block;\r\n      margin-right: 3%;\r\n   \r\n      \r\n\r\n  }\r\n \r\n  .cont{\r\n   margin-top :4%;\r\n  \r\n   \r\n  margin-left: 10%;\r\n  \r\n   height: 7vh;\r\n   border-radius: 10px;\r\n   width:30vw;\r\n   text-align: center;\r\n   font-size: 16px;\r\n   border:1px solid;\r\n  \r\n   line-break: loose;\r\n   color: #fff;\r\n   background-color: #E5112F;\r\n  }\r\n  .service-subtitle{\r\n      font-size: 13px;\r\n      display: block;\r\n\r\n      margin-left: 12%;\r\n  }\r\n  .service-title{\r\n      font-size: 15px;\r\n      display: inline-block;\r\n      margin-top: 15px;\r\n     \r\n      \r\n     \r\n     \r\n  }\r\n  .choiceBarHelper{\r\n      font-size: 20px;\r\n      margin-left: 19%;\r\n      \r\n  }\r\n  .choiceBarHelperContainer{\r\n      text-align: center;\r\n      margin-top: 3%;\r\n\r\n  }\r\n \r\n  .category_button_choiceBar{\r\n     width: 86%;\r\n  \r\n  }\r\n  \r\n  \r\n  .profil{\r\n \r\n      text-align: center;\r\n      margin-top: 5%;\r\n  }\r\n  .profil-text{\r\n    \r\n     font-size: 2.3vh;\r\n      \r\n  }\r\n  #direct-acces{\r\n      background-color: #fff;\r\n      color: #000;\r\n      \r\n  }\r\n  .choiceBarItemText{\r\n     margin-left: 5%;\r\n  }\r\n  #category_button_choiceBar_service{\r\n      background-color: #fff;\r\n      color: #000;\r\n  }\r\n  .choisebar_process_name{\r\n      display: block;\r\n    \r\n    width: 100%;\r\n    text-align: center;\r\n  }\r\n  .category_button_choiceBar_service{\r\n      border:none;\r\n  }\r\n}\r\n@media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n   #choiseBar{\r\n       display: none;\r\n   }\r\n   .category_button_choiceBar{\r\n    width: 60%;\r\n    border:1px solid;\r\n    border-radius: 10px;\r\n    height: 80px;\r\n    \r\n    margin-left: 20%;\r\n    margin-bottom: 3%;\r\n    font-size: 26px;\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n  text-align: center; \r\n   }\r\n   .item{\r\n       margin-top:3%;\r\n       display: block;\r\n       width: 100%;\r\n   }\r\n   .profil,.acces_direct {\r\n       margin-top: 4%;\r\n       width: 60%;\r\n     \r\n      \r\n       height: 80px;\r\n       text-align: center;\r\n       margin-left: 20%;\r\n       margin-bottom: 3%;\r\n       font-size: 35px;\r\n       color:#000;\r\n   }\r\n   .service-subtitle{\r\n       display: block;\r\n       margin-left: 20%;\r\n       font-size: 24px;\r\n   }\r\n   .search_input{}\r\n   .search{\r\n     \r\n       height: 80px;\r\n\r\n       color: #E5112F;\r\n       outline: none;\r\n       margin-top: 5%;\r\n       margin-bottom: 5%;\r\n       width: 60%;\r\n     \r\n       height: 50px;\r\n       background-color: #eee;\r\n       margin-left: 20%;\r\n      \r\n   }\r\n\r\n   .search_input{\r\n     \r\n      \r\n    outline: none;\r\n    background-color: #eee;\r\n   margin-left: 10%;\r\n}\r\n\r\n.search_submit_button{\r\n   \r\n   \r\n    \r\n  \r\n}\r\n\r\n.search_icon{\r\n    \r\n    font-size: 33px;\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    display: block;\r\n    padding-top: 1.5%;\r\n \r\n    \r\n\r\n}\r\n#search_icon-size{\r\n    display: block;\r\n    padding-right: 50px;\r\n    background-color: #E5112F;\r\n    font-size: 100px;\r\n  \r\n}\r\n::-moz-placeholder{\r\n    font-size: 26px;\r\n}\r\n:-ms-input-placeholder{\r\n    font-size: 26px;\r\n}\r\n::placeholder{\r\n    font-size: 26px;\r\n}\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10889,7 +10761,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, " \n  @media screen and (min-width: 900px) {\n    .section-position{\n      margin-top: 5%;\n    \n    }\n    .container-footer{\n      margin-top: 10%;\n    }\n   .sections{\n   \n   }\n    \n  }\n  @media screen and (max-width:600px) {\n  \n  }\n\n  @media only screen and (max-width:899px) and (min-width :601px) {\n    \n   \n  }\n ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, " \r\n \r\n/* here the style applied to Container.js component*/\r\n/* computer style*/\r\n@media screen and (min-width: 900px) {\r\n\r\n   \r\n  .pos{\r\n      position: fixed;   /*  fixe the left side which content the filter by sub-categories' items*/ \r\n  }\r\n  .contain{\r\n    height: 100%;\r\n  }\r\n .cont-container{\r\n   height: -webkit-fit-content;\r\n   height: -moz-fit-content;\r\n   height: fit-content;\r\n }\r\n .section-position{\r\n  margin-top: 5%;\r\n\r\n}\r\n.container-footer{\r\n  margin-top: 20%;\r\n}\r\n\r\n  .bread{\r\n    margin-right: 100%    }\r\n    \r\n\r\n\r\n.process-text-icon{\r\n  display: inline-flex;\r\n  align-items: center;\r\n  text-align: center;\r\n  text-justify:center;\r\n   \r\n  margin-top: 4%;\r\n}\r\n\r\n.section_text{\r\n display: inline-block;\r\n  margin-top: 2%;\r\n\r\n}\r\n\r\n\r\n\r\n.container_title{\r\n    font-size: 3vmin;\r\n    margin-top: 3%;\r\n  \r\n}\r\n.container_icon{\r\n   margin-left: 1%;\r\n   font-size: 3vmin;\r\n   \r\n}\r\n.section-items{\r\n   /* style for left side filter item */\r\n    border:1px solid;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    list-style-type: none;\r\n    margin-bottom: 1.2%;\r\n    height: 7vh;\r\n    width: 34vw;\r\n    border-radius: 10px;\r\n    font-size: 2.4vmin;\r\n    display: block;\r\n    \r\n}\r\n\r\n.process_title{\r\n  font-size: 3vmin;\r\n  margin-left: 10%;\r\n  margin-bottom: 4%;\r\n  margin-top: 3%;\r\n}\r\n   \r\n\r\n\r\n#first-item{\r\n /* style form the first item ensemble des démarches */\r\n  margin-top: 1%;\r\n}\r\n.process_item{\r\n /*  style for processes item in the Processes component in Container/Processes.js*/\r\n  border:1px solid;\r\n    text-align: left;\r\n    text-decoration: none;\r\n    list-style-type: none;\r\n    margin-bottom: 3%;\r\n    height: 11vh;\r\n    width: 38vw;\r\n    border-radius: 10px;\r\n    font-size:15px;\r\n\r\n}\r\n\r\n.bread{\r\n /* breadcrumb style*/\r\n  width:50%;\r\n  margin-left: 45%;\r\n  \r\n\r\n}\r\n.desk-bread{\r\n      \r\n      \r\nbackground-color: #FFF;\r\nmargin-bottom: 3%;\r\n\r\n}\r\n.bread-text{\r\n/* breadcrumb style */\r\nbackground-color: #fff;\r\n}\r\n.inactive,#inaction{\r\ndisplay: block;\r\nheight: 8.7vh;\r\nwidth: 34vw;\r\ntext-decoration: none;\r\n\r\n}\r\n.nav-position{\r\nposition: sticky;\r\nz-index: 1;\r\nwidth: inherit;\r\n\r\n\r\n}\r\n.mobile-only-title{\r\nposition: fixed;\r\n}\r\n   .sections{\r\n      border-left: solid 1px;\r\n      \r\n   }\r\n   .processes-position{\r\n     \r\n    margin-bottom: 10%;\r\n   }\r\n   .title{\r\n       margin-left: 4%;\r\n   }\r\n   \r\n   .section-position{\r\n     transform: none;\r\n     \r\n  }\r\n  \r\n  .process-section-title{\r\n    font-size: 3vh;\r\n   \r\n  }\r\n   .phone-processes{display:none}\r\n  \r\n \r\n  .phone-processes{\r\n      display: none;\r\n  }\r\n  .subcontainer_name{\r\n    font-size: 20px;\r\n  }\r\n  \r\n}\r\n/* style for mobile  device*/\r\n @media screen and (max-width:600px) {\r\n       /* style for the filter on the top */\r\n  .section-position{\r\n     position: relative;\r\n    \r\n      \r\n      background-color: white;  \r\n      margin-top: 85px;\r\n      width: 100%;\r\n     }\r\n \r\n  .sections{\r\n      z-index: 3;\r\n   height: -webkit-fit-content;\r\n   height: -moz-fit-content;\r\n   height: fit-content;\r\n  \r\n   \r\n  }\r\n.container-container{\r\n  height:250vh;\r\n}\r\n  .title{\r\n     \r\n    background-color: white;\r\n    width: 100%;\r\n     z-index: 1;\r\n    display: block;\r\n    \r\n   text-align: center;\r\n    font-size: 15px;\r\n   \r\n    margin-top: -150px;\r\n    position: relative;\r\n    \r\n}\r\n    /* breadcrumb style */\r\n  .desk-bread{\r\n      background-color: white;\r\n      padding-top: 20%;\r\n      width: inherit;\r\n      height: 50px;\r\n    \r\n\r\n     \r\n\r\n\r\n  }\r\n      /*  style applied to processes in processes component in Container directory */\r\n  .process_item{\r\n      height:-webkit-max-content;\r\n      height:-moz-max-content;\r\n      height:max-content;\r\n      border:1px solid;\r\n      margin-top: 2%;\r\n      font-size: 2vh;\r\n     list-style-type: none;\r\n     width: 80vw;\r\n     border-radius: 10px;\r\n    \r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n   \r\n\r\n  }\r\n  .processes-position{\r\n    margin-right: 100px;\r\n  }\r\n  .process-text-icon{\r\n    margin-top: 3%;\r\n  }\r\n  .processes-position{\r\n     height: -webkit-fit-content;\r\n     height: -moz-fit-content;\r\n     height: fit-content; \r\n    \r\n   \r\n  }\r\n  .process_title{\r\n  \r\n   font-size: 20px;\r\n  text-align: center;\r\n   font-weight: bold;\r\n  }\r\n  .process-section-title{\r\n    font-size: 19px;\r\n      text-align: center;\r\n   font-weight: bold;\r\n    \r\n  }\r\n \r\n  /* sections*/\r\n\r\n  .section-items{\r\n    border:1px solid;\r\n   \r\n\r\n    text-decoration: none;\r\n    list-style-type: none;\r\n    margin-bottom: 3%;\r\n    height: 60px;\r\n    width: 80vw;\r\n    border-radius: 10px;\r\n    font-size: 15px;\r\n   \r\n    margin-top: 5%;\r\n  \r\n   \r\n    text-justify: center;\r\n    align-items: center;\r\n   \r\n    display: inline-flex;\r\n    text-align: center;\r\n    \r\n}\r\n.nav-position{\r\n  width: 100%;\r\n}\r\n/*footer style */\r\n.container-footer{\r\n  margin-top: 10%;\r\n}\r\n}\r\n\r\n\r\n    /*style for tablet */\r\n@media screen and (max-width: 899px) and (min-width: 601px){\r\n  \r\n\r\n\r\n\r\n  .pos{\r\n      position: fixed;\r\n      \r\n     \r\n  }\r\n  .bread{\r\n    margin-right: 100%    }\r\n.active {\r\n\r\n  color: #FFF;\r\n  \r\n  height: 8.7vh;\r\n    width: 34vw;\r\n  border-radius: 10px;\r\n  text-decoration: none;\r\n  background-color:#666;\r\n  display: block;\r\n \r\n  \r\n}\r\n.process-text-icon{\r\n  display: inline-flex;\r\n  align-items: center;\r\n  text-align: center;\r\n  text-justify:center;\r\n   \r\n  margin-top: 4%;\r\n}\r\n\r\n.section_text{\r\n display: inline-block;\r\n  margin-top: 2%;\r\n\r\n}\r\n.mobile-only-title{\r\n  margin-right: 100em;\r\n}\r\n\r\n\r\n.container_title{\r\n    font-size: 3vmin;\r\n    margin-top: 3%;\r\n  \r\n}\r\n.container_icon{\r\n   margin-left: 1%;\r\n   font-size: 3vmin;\r\n   \r\n}\r\n.section-items{\r\n    border:1px solid;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    list-style-type: none;\r\n    margin-bottom: 3%;\r\n    height: 8.7vh;\r\n    width: 34vw;\r\n    border-radius: 10px;\r\n    font-size: 2.7vmin;\r\n    display: block;\r\n    \r\n    \r\n}\r\n\r\n.process_title{\r\n  font-size: 3vmin;\r\n  margin-left: 10%;\r\n  margin-bottom: 4%;\r\n  margin-top: 3%;\r\n}\r\n   \r\n\r\n\r\n#first-item{\r\n  margin-top: 10%;\r\n}\r\n.process_item{\r\n  border:1px solid;\r\n    text-align: left;\r\n    text-decoration: none;\r\n    list-style-type: none;\r\n    margin-bottom: 3%;\r\n    height: 150px;\r\n    width: 38vw;\r\n    border-radius: 10px;\r\n    font-size:22px;\r\n\r\n}\r\n\r\n.bread{\r\n  width:50%;\r\n  margin-left: 45%;\r\n  \r\n\r\n}\r\n.inactive,#inaction{\r\ndisplay: block;\r\nheight: 8.7vh;\r\nwidth: 34vw;\r\ntext-decoration: none;\r\n\r\n}\r\n.nav-position{\r\nposition: sticky;\r\nz-index: 1;\r\nwidth: inherit;\r\n\r\n\r\n}\r\n.mobile-only-title{\r\nposition: fixed;\r\n}\r\n   .sections{\r\n      border-left: solid 1px;\r\n      \r\n   }\r\n   .processes-position{\r\n     \r\n    margin-bottom: 10%;\r\n   }\r\n   .title{\r\n       margin-left: 4%;\r\n       margin-bottom: 10%;\r\n   }\r\n   .section-1{\r\n     margin-top: 22%;\r\n   }\r\n   .scroll-bar{\r\n     /* overflow-y:scroll;*/\r\n      \r\n      \r\n   }\r\n   \r\n   .section-position{\r\n     transform: none;\r\n     \r\n  }\r\n  \r\n   .phone-processes{display:none}\r\n   .desk-bread{\r\n      \r\n      \r\n       background-color: #FFF;\r\n       margin-bottom: 3%;\r\n      \r\n   }\r\n   .bread-text{\r\n      \r\n       background-color: #fff;\r\n   }\r\n  \r\n  .phone-processes{\r\n      display: none;\r\n  }\r\n  .subcontainer_name{\r\n    font-size: 20px;\r\n  }\r\n  \r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10913,7 +10785,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n/* computer style*/\n@media screen and (min-width:900px){\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n        margin-left: 35%;\n        margin-top: 10%;\n        background-color: #fff;\n        width: 40%;\n        height: 35%;\n        display:none;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n           text-align: left;\n           font-size: 3vmin;\n           margin-left: 1%;\n       }\n       .close-button-item{\n           margin-left: 10%;\n           \n       }\n       .close-button-icon{\n           display: block;\n       }\n       \n       .contrast-title{\n       \n         font-size: 3vmin;\n         margin-left: 1%;\n         margin-top: 4%;\n       \n       }\n       .standard{\n           background-color: #E5112F;\n            text-align: left;\n            width: 25%;\n            margin-left: 1%;\n            border: 1px solid;\n            height: 25%;\n           border-color: #EEE;\n           color:#fff;\n       }\n       .reinforced{\n           background-color: #000;\n           border: 1px solid;\n           width: 25%;\n           height: 25%;\n           border-color: #EEE;\n           margin-left: 1%;\n           color: #fff;\n       }\n       .darkWhite{\n        background-color: #fff;\n        text-align: left;\n        width: 25%;\n        margin-left: 1%;\n        border: 1px solid;\n        height: 25%;\n       border-color: #EEE;\n       color:#222;\n       }\n       #contrast{\n           height: 30%;\n           width:10;\n           position: fixed;\n           z-index: 1;\n            margin-top: 15em;\n            margin-right: 40%;\n          \n           right: 0;\n           background-color: #f1f1f1;\n           overflow-x: hidden;\n           transition: 0.5s;\n           padding-top: 60px;\n           color:#E5112F;\n       }\n    \n}\n\n/* phone style*/\n\n\n@media screen and (max-width:600px){\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n      \n        margin-top: 10%;\n        background-color: #fff;\n        width: 90%;\n        height: 35%;\n        display:none;\n        margin-left: 4%;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n        text-align: left;\n        font-size: 20px;\n        margin-left: 1%;\n    }\n    .close-button-item{\n        margin-left: 10%;\n        \n    }\n    .close-button-icon{\n        display: block;\n    }\n    \n    .contrast-title{\n    \n      font-size: 18px;\n      margin-left: 1%;\n      margin-top: 4%;\n      \n    \n    }\n    .standard{\n        background-color: #E5112F;\n         text-align: left;\n         width: 40%;\n         margin-left: 1%;\n         border: 1px solid;\n         height: 25%;\n        border-color: #EEE;\n        color:#fff;\n        font-size: 18px;\n    }\n    .reinforced{\n        background-color: #fff;\n        border: 1px solid;\n        width: 40%;\n        height: 25%;\n        border-color: #EEE;\n        margin-left: 1%;\n        font-size: 18px;\n    }\n    #contrast{\n        height: 30%;\n        width:10;\n        position: fixed;\n        z-index: 1;\n        \n        \n       \n        right: 0;\n        background-color: #f1f1f1;\n        overflow-x: hidden;\n        transition: 0.5s;\n        padding-top: 60px;\n        color:#E5112F;\n    }\n}\n\n\n@media screen and (min-width:601px) and (max-width:899px){\n\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n        margin-left: 35%;\n        margin-top: 10%;\n        background-color: #fff;\n        width: 40%;\n        height: 35%;\n        display:none;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n           text-align: left;\n           font-size: 3vmin;\n           margin-left: 1%;\n       }\n       .close-button-item{\n           margin-left: 10%;\n           \n       }\n       .close-button-icon{\n           display: block;\n       }\n       \n       .contrast-title{\n       \n         font-size: 3vmin;\n         margin-left: 1%;\n         margin-top: 4%;\n       \n       }\n       .standard{\n           background-color: #E5112F;\n            text-align: left;\n            width: 25%;\n            margin-left: 1%;\n            border: 1px solid;\n            height: 25%;\n           border-color: #EEE;\n           color:#fff;\n       }\n       .reinforced{\n           background-color: #000;\n           border: 1px solid;\n           width: 25%;\n           height: 25%;\n           border-color: #EEE;\n           margin-left: 1%;\n           color: #fff;\n       }\n       .darkWhite{\n        background-color: #fff;\n        text-align: left;\n        width: 25%;\n        margin-left: 1%;\n        border: 1px solid;\n        height: 25%;\n       border-color: #EEE;\n       color:#222;\n       }\n       #contrast{\n           height: 30%;\n           width:10;\n           position: fixed;\n           z-index: 1;\n            margin-top: 15em;\n            margin-right: 40%;\n          \n           right: 0;\n           background-color: #f1f1f1;\n           overflow-x: hidden;\n           transition: 0.5s;\n           padding-top: 60px;\n           color:#E5112F;\n       }\n    \n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* computer style*/\r\n@media screen and (min-width:900px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 100px;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 100px;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n       #darkWhiteId{\r\n           height: 8vh;\r\n       }\r\n       #reinforcedId{\r\n        height: 8vh;\r\n       }\r\n       #standardId{\r\n           height: 8vh;\r\n       }\r\n       \r\n}\r\n\r\n/* phone style*/\r\n\r\n\r\n@media screen and (max-width:600px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n      \r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 90%;\r\n        height: 35%;\r\n        display:none;\r\n        margin-left: 4%;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n        text-align: left;\r\n        font-size: 20px;\r\n        margin-left: 1%;\r\n    }\r\n    .close-button-item{\r\n        margin-left: 10%;\r\n        \r\n    }\r\n    .close-button-icon{\r\n        display: block;\r\n    }\r\n    \r\n    .contrast-title{\r\n    \r\n      font-size: 18px;\r\n      margin-left: 1%;\r\n      margin-top: 4%;\r\n      \r\n    \r\n    }\r\n    \r\n    #darkWhiteId{\r\n        width: 30%;\r\n        height: 60px;\r\n        margin-left: 1%;\r\n       margin-bottom: 40px;\r\n      \r\n\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 30%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        border-color: #EEE;\r\n      \r\n      \r\n       \r\n      \r\n       color:#222;\r\n    }\r\n    #reinforcedId{\r\n        width: 30%;\r\n        height: 60px;\r\n        margin-left: 1%;\r\n    }\r\n    #standardId{\r\n        width: 30%;\r\n        height: 60px;\r\n        margin-left: 1%;\r\n    }\r\n    #contrast{\r\n        height: 30%;\r\n       \r\n        position: fixed;\r\n        z-index: 1;\r\n        \r\n        \r\n       \r\n        right: 0;\r\n        background-color: #f1f1f1;\r\n        overflow-x: hidden;\r\n        transition: 0.5s;\r\n        padding-top: 60px;\r\n        color:#E5112F;\r\n    }\r\n    .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n}\r\n\r\n\r\n@media screen and (min-width:601px) and (max-width:899px){\r\n\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10937,7 +10809,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n/*  computer footer style*/\n@media screen and (min-width:900px) {\n    .footer-container{\n     \n     margin-top: 1%;\n    }\n.footer{\n    margin-left: 10%;\n    \n}\n.footer-item{\n    margin-left: 3%;\n    font-size: 13px;\n}\n    \n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n/*  computer footer style*/\r\n@media screen and (min-width:900px) {\r\n    .footer-container{\r\n     \r\n     margin-top: 1%;\r\n   \r\n    }\r\n.footer{\r\n    margin-left: 40%;\r\n    \r\n}\r\n.footer-item{\r\n    margin-left: 3%;\r\n    font-size: 13px;\r\n}\r\n    \r\n}\r\n\r\n\r\n/*  computer  style*/\r\n@media screen and (max-width:600px) {\r\n    .footer-container{\r\n     \r\n     margin-top: 1%;\r\n    }\r\n.footer{\r\n    margin-left: 10%;\r\n    \r\n}\r\n.footer-item{\r\n    margin-left: 3%;\r\n    font-size: 12px;\r\n}\r\n    \r\n}\r\n\r\n/*  computer tablet style*/\r\n@media screen and (min-width:601px) and (max-width:899px) {\r\n    .footer-container{\r\n     \r\n     margin-top: 6%;\r\n    }\r\n.footer{\r\n    margin-left: 30%;\r\n    \r\n}\r\n.footer-item{\r\n    margin-left: 3%;\r\n    font-size: 14px;\r\n}\r\n    \r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10961,7 +10833,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {\n.homepage_button{\n    display: block;\n}\n.tablet{\n    display: none;\n}\n.state_containers{\n    width: 90%;\n   \n    margin-top: 2%;\n    border:2px solid;\n   \n    margin-left: 5%;\n    height: 220px;\n    border-radius: 20px;\n    border-color: #E5112F;\n    \n}\n.contain-title{\n    font-size: 20px;\n    text-align: center;\n    color: #E5112F;\n    font-weight: bold;\n}\n/*\n first group : ma vie admnistratiove\n*/\n.state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\n    \n}\n.category_title{\n    margin-bottom: 3%;\n    margin-top: 3%;\n\n}\n\n.category_button{\n\n    width: 29%;\n    height: 75px;\n    margin-left: 3%;\n    margin-bottom: 1%;\n    background-color:#577C90;\n    color:#FFF;\n    border: 1px solid;\n    border-color: #ddd;\n    border-radius: 10px;\n}\n.category_button:hover{\n\n   \n    background-color: #E5112F;\n    color:#fff;\n    text-decoration: none;\n   \n}\n.line{\n    height: 3px;\n}\n.name{\n    font-size: 17px;\n    width: 100%;\n    text-align: center;\n    margin-top: -2%;\n   \n    \n     \n}\n.description{\n    font-size: 13px;\n    display: block;\n    width: 100%;\n    text-align: center;\n    margin-top: -2%;\n}\n.home-icon{\n    font-size: 25px;\n    margin-top: 2%;\n    margin-right: 1%;\n}\n\n}\n.bread{\n    height: 5%;\n    margin-right: 500px;\n   \n    \n}\n@media screen and (max-width: 600px){\n     .category_button{\n         \n         width: 300px;\n         color: #fff;\n        \n         margin-bottom: 5%;\n         height: 105px;\n         text-decoration: none;\n          \n     word-wrap: break-word;\n    \n      border: 1px solid;\n      border-radius: 10px;\n      margin-right: 10%;\n      margin-left: 4%;\n      background-color: #577C90;\n        \n    \n        \n    }\n    .big-row-one {\n        margin-top:10%;\n    }\n    .state_containers{\n        margin-left: 2%;\n        border: 2px solid;\n        margin-bottom: 7%;\n        margin-right: 2%;\n        border-color: #E5112F;\n        border-radius: 10px;\n        width: 96%;\n    }\n    #button-phone{\n      \n     \n\n    }\n    .contain-title{\n      \n      color: #E5112F;\n      margin-left: 15%;\n      font-weight:bold;\n       margin-bottom: 3%;\n       font-size: 20px;\n    \n    }\n    .local_containers{\n      \n    }\n    .contain-home{\n        height: 2500px\n    }\n    .description{\n      display:block;\n    }\n    .home-icon{\n        font-size: 25px;\n        margin-top: 2%;\n        margin-right: 1%;\n    }\n    .tablet {\n        display: none;\n    }\n}\n\n@media screen and (min-width: 601px) and (max-width:899px){\n\n\n    .homepage_button{\n        display: block;\n    }\n    .state_containers{\n        width: 90%;\n       \n        margin-top: 2%;\n        border:2px solid;\n       \n        margin-left: 5%;  \n        height: 900px;\n        border-radius: 20px;\n        border-color: #E5112F;\n        \n    }\n    .body{\n        overflow-x: scroll;\n    }\n    .contain-title{\n        font-size: 33px;\n        text-align: center;\n        color: #E5112F;\n        font-weight: bold;\n    }\n    /*\n     first group : ma vie admnistratiove\n    */\n    .state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\n        \n    }\n    .category_title{\n        margin-bottom: 3%;\n        margin-top: 3%;\n        \n    \n    }\n    \n    .category_button{\n    \n        width: 80%;\n        height: 120px;\n        margin-left: 9%;\n        margin-bottom: 2%;\n        background-color:#577C90;\n        color:#FFF;\n        border: 1px solid;\n        border-color: #ddd;\n        border-radius: 10px;\n       overflow-wrap: break-word;\n    }\n    .category_button:hover{\n    \n       \n        background-color: #E5112F;\n        color:#fff;\n        text-decoration: none;\n       \n    }\n    .line{\n        height: 3px;\n    }\n    .name{\n        font-size: 29px;\n        width: 100%;\n        text-align: center;\n        margin-top: -2%;\n       \n        \n         \n    }\n    .description{\n        font-size: 25px;\n        display: block;\n        width: 100%;\n        text-align: center;\n        margin-top: -2%;\n    }\n    .home-icon{\n        font-size: 40px;\n        margin-top: 2%;\n        margin-right: 1%;\n    }\n    \n    }\n    .bread{\n        height: 5%;\n        margin-right: 500px;\n       \n        \n    \n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {\r\n    .homepage_button{\r\n        display: block;\r\n    }\r\n    .tablet{\r\n        display: none;\r\n    }\r\n    .presentation{\r\n    \r\n    }\r\n    \r\n    .contain-home{\r\n        \r\n       \r\n        height: 100%;\r\n    }\r\n    .state_containers{\r\n        width: 90%;\r\n       \r\n        margin-top: 2%;\r\n        border:2px solid;\r\n       \r\n        margin-left: 5%;\r\n        height: 37vh;\r\n        border-radius: 20px;\r\n        border-color: #E5112F;\r\n        \r\n    }\r\n    .contain-title{\r\n        font-size: 20px;\r\n        text-align: center;\r\n        color: #E5112F;\r\n        font-weight: bold;\r\n    }\r\n    /*\r\n     first group : ma vie admnistratiove\r\n    */\r\n    .state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\r\n        \r\n    }\r\n    .category_title{\r\n        margin-bottom: 3%;\r\n        margin-top: 3%;\r\n    \r\n    }\r\n    \r\n    .category_button{\r\n    \r\n        width: 29%;\r\n        height: 12vh;\r\n        margin-left: 3%;\r\n        margin-bottom: 1%;\r\n        background-color:#577C90;\r\n        color:#FFF;\r\n        border: 1px solid;\r\n        border-color: #ddd;\r\n        border-radius: 10px;\r\n    }\r\n    .category_button:hover{\r\n    \r\n       \r\n        background-color: #E5112F;\r\n        color:#fff;\r\n        text-decoration: none;\r\n       \r\n    }\r\n    .line{\r\n        height: 3px;\r\n    }\r\n    .name{\r\n        font-size: 17px;\r\n        width: 100%;\r\n        text-align: center;\r\n        margin-top: -2%;\r\n       \r\n        \r\n         \r\n    }\r\n    \r\n    .description{\r\n        font-size: 13px;\r\n        display: block;\r\n        width: 100%;\r\n        text-align: center;\r\n        margin-top: -1%;\r\n    }\r\n    .home-icon{\r\n        font-size: 25px;\r\n        margin-top: 2%;\r\n        margin-right: 1%;\r\n    }\r\n    \r\n    }\r\n    .bread{\r\n        height: 5%;\r\n        margin-right: 500px;\r\n       \r\n        \r\n    }\r\n    @media screen and (max-width: 600px){\r\n         .category_button{\r\n             \r\n             width: 100vw;\r\n             color: #fff;\r\n            \r\n             margin-bottom: 5%;\r\n             height: 105px;\r\n             text-decoration: none;\r\n              \r\n         word-wrap: break-word;\r\n        \r\n          border: 1px solid;\r\n          border-radius: 10px;\r\n          margin-right: 10%;\r\n          margin-left: 4%;\r\n          background-color: #577C90;\r\n            \r\n        \r\n            \r\n        }\r\n        .big-row-one {\r\n            margin-top:10%;\r\n        }\r\n        .state_containers{\r\n            margin-left: 2%;\r\n            border: 2px solid;\r\n            margin-bottom: 7%;\r\n            margin-right: 2%;\r\n            border-color: #E5112F;\r\n            border-radius: 10px;\r\n            width: 96%;\r\n        }\r\n        \r\n        .contain-title{\r\n          \r\n          color: #E5112F;\r\n          margin-left: 15%;\r\n          font-weight:bold;\r\n           margin-bottom: 3%;\r\n           font-size: 20px;\r\n        \r\n        }\r\n        \r\n        .contain-home{\r\n            height: 280vh;\r\n        }\r\n        .description{\r\n          display:block;\r\n        }\r\n        .home-icon{\r\n            font-size: 25px;\r\n            margin-top: 2%;\r\n            margin-right: 1%;\r\n        }\r\n        .tablet {\r\n            display: none;\r\n        }\r\n    }\r\n    \r\n    @media screen and (min-width: 601px) and (max-width:899px){\r\n    \r\n    \r\n        .homepage_button{\r\n            display: block;\r\n        }\r\n        .state_containers{\r\n            width: 90%;\r\n           \r\n            margin-top: 2%;\r\n            border:2px solid;\r\n           \r\n            margin-left: 5%;  \r\n            height: 900px;\r\n            border-radius: 20px;\r\n            border-color: #E5112F;\r\n            \r\n        }\r\n        .body{\r\n            overflow-x: scroll;\r\n        }\r\n        .contain-title{\r\n            font-size: 33px;\r\n            text-align: center;\r\n            color: #E5112F;\r\n            font-weight: bold;\r\n        }\r\n        /*\r\n         first group : ma vie admnistratiove\r\n        */\r\n        .state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{\r\n            \r\n        }\r\n        .category_title{\r\n            margin-bottom: 3%;\r\n            margin-top: 3%;\r\n            \r\n        \r\n        }\r\n        \r\n        .category_button{\r\n        \r\n            width: 80%;\r\n            height: 120px;\r\n            margin-left: 9%;\r\n            margin-bottom: 2%;\r\n            background-color:#577C90;\r\n            color:#FFF;\r\n            border: 1px solid;\r\n            border-color: #ddd;\r\n            border-radius: 10px;\r\n           overflow-wrap: break-word;\r\n        }\r\n        .category_button:hover{\r\n        \r\n           \r\n            background-color: #E5112F;\r\n            color:#fff;\r\n            text-decoration: none;\r\n           \r\n        }\r\n        .line{\r\n            height: 3px;\r\n        }\r\n        .name{\r\n            font-size: 29px;\r\n            width: 100%;\r\n            text-align: center;\r\n            margin-top: -2%;\r\n           \r\n            \r\n             \r\n        }\r\n        .description{\r\n            font-size: 25px;\r\n            display: block;\r\n            width: 100%;\r\n            text-align: center;\r\n            margin-top: -2%;\r\n        }\r\n        .home-icon{\r\n            font-size: 40px;\r\n            margin-top: 2%;\r\n            margin-right: 1%;\r\n        }\r\n        \r\n        }\r\n        .bread{\r\n            height: 5%;\r\n            margin-right: 500px;\r\n           \r\n            \r\n        \r\n    }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10985,7 +10857,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width:900px) {\n  \n\n.sidenav {\n    height: 100%;\n    width:0px;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    right: 0;\n\n    -webkit-backdrop-filter:brightness(0%);\n\n            backdrop-filter:brightness(0%);\n    background-color: #f1f1f1;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n    color:#E5112F;\n  }\n  .menu_title{\n    color:#fff;\n    \n    background-color: #E5112F;\n    width: 40%;\n    margin-left: 30%;\n    border-radius: 20px;\n    height: 50px;\n    text-align: center;\n    text-justify: center;\n    align-items: center;\n    display: inline-flex;\n    margin-top: -5%;\n   \n  }\n  .menu_title_text{\n    margin-left: 26%;\n  }\n  .menu_btn{\n      background-color: #fff;\n      color:#E5112F;\n \n\n  }\n  \n  .sidenav a {\n  \n  \n    transition: 0.3s;\n  }\n  \n  .sidenav a:hover {\n    color: #f1f1f1;\n  }\n  #mySidenav{\n  \n  }\n  #contain{\n    \n  }/* bouton style*/\n  .sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    \n   \n    margin-top: 450px;\n    \n   \n  }\n  .menu_btn{\n    background-color: #E5112F;\n    color: #fff;\n    border-radius: 50%;\n    height: 40px;\n    text-justify: center;\n    align-items: center;\n    text-align: center;\n    display: inline-flex;\n    margin-right: 40%;\n  \n  \n  }\n  .menu-home-icon{\n  \n    color: #E5112F;\n    height: 90%;\n    border-radius: 100%;  \n  }\n  .menu-item{\n   \n     border:1px solid;\n     border-color: #707070;\n     margin-top: 3%;\n     width: 90%;\n     margin-left: 7%;\n     border-radius: 10px;\n     text-justify: center;\n     align-items: center;\n     text-align: left;\n     \n     height: 50px;\n     display: inline-flex;\n     \n  }\n  .engine-icon\n  {\n   \n   color: #E5112F;\n   height: 90%;\n   border-radius: 100%;\n\n \n\n    }\n    .engine-text,.menu_home_text,.menu_scanner_text{\n      color:#E5112F;\n      font-size: 15px;\n     \n    }\n    .menu-accueil{\n      border-top: solid 1px;\n      border-color: #707070;\n      margin-top: 10%;\n    }\n}\n/* mobile style*/\n@media only screen and (max-width:600px){\n  \n.sidenav {\n  height: 100%;\n  width:0px;\n  position: fixed;\n  z-index: 1;\n  top: 0;\n  right: 0;\n\n  -webkit-backdrop-filter:brightness(0%);\n\n          backdrop-filter:brightness(0%);\n  background-color: #f1f1f1;\n  overflow-x: hidden;\n  transition: 0.5s;\n  padding-top: 60px;\n  color:#E5112F;\n}\n\n.menu_title{\n  color:#fff;\n  \n  background-color: #E5112F;\n  width: 40%;\n  margin-left: 30%;\n  border-radius: 20px;\n  height: 50px;\n  text-align: center;\n  text-justify: center;\n  align-items: center;\n  display: inline-flex;\n  margin-top: -5%;\n \n}\n.menu_title_text{\n  margin-left: 10%;\n}\n.menu_btn{\n \n    background-color: #E5112F;\n    color: #fff;\n    border-radius: 50%;\n    height: 40px;\n    text-justify: center;\n    align-items: center;\n    text-align: center;\n    display: inline-flex;\n    margin-top: 100px;\n    margin-left: 40%;\n  \n  \n\n}\n\n.menu-home-icon{\n  background-color: #E5112F;\n  color: #fff;\n  border-radius: 50%;\n  height: 40px;\n  text-justify: center;\n  align-items: center;\n  text-align: center;\n  display: inline-flex;\n  \n  font-size: 25px;\n\n\n  \n}\n.menu-item{\n \n   border:1px solid;\n   border-color: #707070;\n   margin-top: 6%;\n   width: 80%;\n   margin-left: 7%;\n   border-radius: 10px;\n  \n}\n.engine-icon\n{\n  background-color: #E5112F;\n  color: #fff;\n  border-radius: 50%;\n  height: 40px;\n  text-justify: center;\n  align-items: center;\n  text-align: center;\n  display: inline-flex;\n  font-size: 20px;\n  margin-left: 40%;\n\n  }\n  .scanner-icon{\n    margin-left: 40%;\n  }\n  .engine-text,.menu_home_text,.menu_scanner_text{\n    color:#E5112F;\n    font-size: 13px;\n    margin-right: 10%;\n    \n  \n  }\n  .menu-accueil{\n    border-top: solid 1px;\n    border-color: #707070;\n    margin-top: 10%;\n  }\n\n\n}\n@media screen and (min-width:601px) and(max-with:899px){\n  .sidenav {\n    height: 100%;\n    width:0px;\n    position: fixed;\n    z-index: 1;\n    top: 0;\n    right: 0;\n\n    -webkit-backdrop-filter:brightness(0%);\n\n            backdrop-filter:brightness(0%);\n    background-color: #f1f1f1;\n    overflow-x: hidden;\n    transition: 0.5s;\n    padding-top: 60px;\n    color:#E5112F;\n  }\n  .menu_title{\n    color:#fff;\n    \n    background-color: #E5112F;\n    width: 40%;\n    margin-left: 30%;\n    border-radius: 20px;\n    height: 50px;\n    text-align: center;\n    text-justify: center;\n    align-items: center;\n    display: inline-flex;\n    margin-top: -5%;\n   \n  }\n\n  .menu_title{\n    color:#fff;\n    \n    background-color: #E5112F;\n    width: 40%;\n    margin-left: 30%;\n    border-radius: 20px;\n    height: 50px;\n    text-align: center;\n    text-justify: center;\n    align-items: center;\n    display: inline-flex;\n    margin-top: -5%;\n   \n  }\n  .menu_title_text{\n    margin-left: 26%;\n  }\n  .menu_btn{\n      background-color: #fff;\n      color:#E5112F;\n \n\n  }\n  \n  .sidenav a {\n  \n  \n    transition: 0.3s;\n  }\n  \n  .sidenav a:hover {\n    color: #f1f1f1;\n  }\n  #mySidenav{\n  \n  }\n  #contain{\n    \n  }/* bouton style*/\n  .sidenav .closebtn {\n    position: absolute;\n    top: 0;\n    right: 25px;\n    \n   \n    margin-top: 450px;\n    \n   \n  }\n  .menu_btn{\n    background-color: #E5112F;\n    color: #fff;\n    border-radius: 50%;\n    height: 40px;\n    text-justify: center;\n    align-items: center;\n    text-align: center;\n    display: inline-flex;\n    margin-right: 40%;\n  \n  \n  }\n  .menu-home-icon{\n  \n    color: #E5112F;\n    height: 90%;\n    border-radius: 100%;  \n  }\n  .menu-item{\n   \n     border:1px solid;\n     border-color: #707070;\n     margin-top: 3%;\n     width: 90%;\n     margin-left: 7%;\n     border-radius: 10px;\n     text-justify: center;\n     align-items: center;\n     text-align: left;\n     \n     height: 50px;\n     display: inline-flex;\n     \n  }\n  .engine-icon\n  {\n   \n   color: #E5112F;\n   height: 90%;\n   border-radius: 100%;\n\n \n\n    }\n    .engine-text,.menu_home_text,.menu_scanner_text{\n      color:#E5112F;\n      font-size: 15px;\n     \n    }\n    .menu-accueil{\n      border-top: solid 1px;\n      border-color: #707070;\n      margin-top: 10%;\n    }\n}\n  @media screen and (max-height: 450px) {\n    .sidenav {padding-top: 15px;}\n    .sidenav a {font-size: 18px;}\n  }\n  \n  @media only screen and (max-width:899px) and (min-width :601px){\n  .menu_btn{\n    margin-top: 50px;\n  }\n  .sidenav{\n    padding-top: 110px;\n    \n  }\n\n  \n.sidenav {\n  height: 100%;\n  width:0px;\n  position: fixed;\n  z-index: 1;\n  top: 0;\n  right: 0;\n\n  -webkit-backdrop-filter:brightness(0%);\n\n          backdrop-filter:brightness(0%);\n  background-color: #f1f1f1;\n  overflow-x: hidden;\n  transition: 0.5s;\n  padding-top: 60px;\n  color:#E5112F;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width:900px) {\r\n  \r\n\r\n  .sidenav {\r\n      height: 100%;\r\n      width:0px;\r\n      position: fixed;\r\n      z-index: 1;\r\n      top: 0;\r\n      right: 0;\r\n  \r\n      -webkit-backdrop-filter:brightness(0%);\r\n  \r\n              backdrop-filter:brightness(0%);\r\n      background-color: #f1f1f1;\r\n      overflow-x: hidden;\r\n      transition: 0.5s;\r\n      padding-top: 60px;\r\n      color:#E5112F;\r\n    }\r\n    .menu_title{\r\n      color:#fff;\r\n      \r\n      background-color: #E5112F;\r\n      width: 40%;\r\n      margin-left: 30%;\r\n      border-radius: 20px;\r\n      height: 50px;\r\n      text-align: center;\r\n      text-justify: center;\r\n      align-items: center;\r\n      display: inline-flex;\r\n      margin-top: -5%;\r\n     \r\n    }\r\n    .menu_title_text{\r\n      margin-left: 26%;\r\n    }\r\n    .menu_btn{\r\n        background-color: #fff;\r\n        color:#E5112F;\r\n   \r\n  \r\n    }\r\n    \r\n    .sidenav a {\r\n    \r\n    \r\n      transition: 0.3s;\r\n    }\r\n    \r\n    .sidenav a:hover {\r\n      color: #f1f1f1;\r\n    }\r\n    #mySidenav{\r\n    \r\n    }\r\n    #contain{\r\n      \r\n    }/* bouton style*/\r\n    .sidenav .closebtn {\r\n      position: absolute;\r\n      top: 0;\r\n      right: 25px;\r\n      \r\n     \r\n      margin-top: 450px;\r\n      \r\n     \r\n    }\r\n    .menu_btn{\r\n      background-color: #E5112F;\r\n      color: #fff;\r\n      border-radius: 50%;\r\n      height: 40px;\r\n      text-justify: center;\r\n      align-items: center;\r\n      text-align: center;\r\n      display: inline-flex;\r\n      margin-right: 40%;\r\n    \r\n    \r\n    }\r\n    .menu-home-icon{\r\n    \r\n      color: #E5112F;\r\n      height: 90%;\r\n      border-radius: 100%;  \r\n    }\r\n    .menu-item{\r\n     \r\n       border:1px solid;\r\n       border-color: #707070;\r\n       margin-top: 3%;\r\n       width: 90%;\r\n       margin-left: 7%;\r\n       border-radius: 10px;\r\n       text-justify: center;\r\n       align-items: center;\r\n       text-align: left;\r\n       \r\n       height: 50px;\r\n       display: inline-flex;\r\n       \r\n    }\r\n    .engine-icon\r\n    {\r\n     \r\n     color: #E5112F;\r\n     height: 90%;\r\n     border-radius: 100%;\r\n  \r\n   \r\n  \r\n      }\r\n      .engine-text,.menu_home_text,.menu_scanner_text{\r\n        color:#E5112F;\r\n        font-size: 15px;\r\n       \r\n      }\r\n      .menu-accueil{\r\n        border-top: solid 1px;\r\n        border-color: #707070;\r\n        margin-top: 10%;\r\n      }\r\n  }\r\n  /* mobile style*/\r\n  @media only screen and (max-width:600px){\r\n    \r\n  .sidenav {\r\n    height: 100%;\r\n    width:0px;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    right: 0;\r\n  \r\n    -webkit-backdrop-filter:brightness(0%);\r\n  \r\n            backdrop-filter:brightness(0%);\r\n    background-color: #f1f1f1;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 60px;\r\n    color:#E5112F;\r\n  }\r\n  \r\n  .menu_title{\r\n    color:#fff;\r\n    \r\n    background-color: #E5112F;\r\n    width: 40%;\r\n    margin-left: 30%;\r\n    border-radius: 20px;\r\n    height: 50px;\r\n    text-align: center;\r\n    text-justify: center;\r\n    align-items: center;\r\n    display: inline-flex;\r\n    margin-top: -5%;\r\n   \r\n  }\r\n  .menu_title_text{\r\n    margin-left: 10%;\r\n  }\r\n  .menu_btn{\r\n   \r\n      background-color: #E5112F;\r\n      color: #fff;\r\n      border-radius: 50%;\r\n      height: 40px;\r\n      text-justify: center;\r\n      align-items: center;\r\n      text-align: center;\r\n      display: inline-flex;\r\n      margin-top: 100px;\r\n      margin-left: 40%;\r\n    \r\n    \r\n  \r\n  }\r\n  \r\n  .menu-home-icon{\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    \r\n    font-size: 25px;\r\n  \r\n  \r\n    \r\n  }\r\n  .menu-item{\r\n   \r\n     border:1px solid;\r\n     border-color: #707070;\r\n     margin-top: 6%;\r\n     width: 80%;\r\n     margin-left: 7%;\r\n     border-radius: 10px;\r\n    \r\n  }\r\n  .engine-icon\r\n  {\r\n    background-color: #E5112F;\r\n    color: #fff;\r\n    border-radius: 50%;\r\n    height: 40px;\r\n    text-justify: center;\r\n    align-items: center;\r\n    text-align: center;\r\n    display: inline-flex;\r\n    font-size: 20px;\r\n    margin-left: 40%;\r\n  \r\n    }\r\n    .scanner-icon{\r\n      margin-left: 40%;\r\n    }\r\n    .engine-text,.menu_home_text,.menu_scanner_text{\r\n      color:#E5112F;\r\n      font-size: 13px;\r\n      margin-right: 10%;\r\n      \r\n    \r\n    }\r\n    .menu-accueil{\r\n      border-top: solid 1px;\r\n      border-color: #707070;\r\n      margin-top: 10%;\r\n    }\r\n  \r\n  \r\n  }\r\n  @media screen and (min-width:601px) and(max-with:899px){\r\n    .sidenav {\r\n      height: 100%;\r\n      width:0px;\r\n      position: fixed;\r\n      z-index: 1;\r\n      top: 0;\r\n      right: 0;\r\n  \r\n      -webkit-backdrop-filter:brightness(0%);\r\n  \r\n              backdrop-filter:brightness(0%);\r\n      background-color: #f1f1f1;\r\n      overflow-x: hidden;\r\n      transition: 0.5s;\r\n      padding-top: 60px;\r\n      color:#E5112F;\r\n    }\r\n    .menu_title{\r\n      color:#fff;\r\n      \r\n      background-color: #E5112F;\r\n      width: 40%;\r\n      margin-left: 30%;\r\n      border-radius: 20px;\r\n      height: 50px;\r\n      text-align: center;\r\n      text-justify: center;\r\n      align-items: center;\r\n      display: inline-flex;\r\n      margin-top: -5%;\r\n     \r\n    }\r\n  \r\n    .menu_title{\r\n      color:#fff;\r\n      \r\n      background-color: #E5112F;\r\n      width: 40%;\r\n      margin-left: 30%;\r\n      border-radius: 20px;\r\n      height: 50px;\r\n      text-align: center;\r\n      text-justify: center;\r\n      align-items: center;\r\n      display: inline-flex;\r\n      margin-top: -5%;\r\n     \r\n    }\r\n    .menu_title_text{\r\n      margin-left: 26%;\r\n    }\r\n    .menu_btn{\r\n        background-color: #fff;\r\n        color:#E5112F;\r\n   \r\n  \r\n    }\r\n    \r\n    .sidenav a {\r\n    \r\n    \r\n      transition: 0.3s;\r\n    }\r\n    \r\n    .sidenav a:hover {\r\n      color: #f1f1f1;\r\n    }\r\n    #mySidenav{\r\n    \r\n    }\r\n    #contain{\r\n      \r\n    }/* bouton style*/\r\n    .sidenav .closebtn {\r\n      position: absolute;\r\n      top: 0;\r\n      right: 25px;\r\n      \r\n     \r\n      margin-top: 450px;\r\n      \r\n     \r\n    }\r\n    .menu_btn{\r\n      background-color: #E5112F;\r\n      color: #fff;\r\n      border-radius: 50%;\r\n      height: 40px;\r\n      text-justify: center;\r\n      align-items: center;\r\n      text-align: center;\r\n      display: inline-flex;\r\n      margin-right: 40%;\r\n    \r\n    \r\n    }\r\n    .menu-home-icon{\r\n    \r\n      color: #E5112F;\r\n      height: 90%;\r\n      border-radius: 100%;  \r\n    }\r\n    .menu-item{\r\n     \r\n       border:1px solid;\r\n       border-color: #707070;\r\n       margin-top: 3%;\r\n       width: 90%;\r\n       margin-left: 7%;\r\n       border-radius: 10px;\r\n       text-justify: center;\r\n       align-items: center;\r\n       text-align: left;\r\n       \r\n       height: 50px;\r\n       display: inline-flex;\r\n       \r\n    }\r\n    .engine-icon\r\n    {\r\n     \r\n     color: #E5112F;\r\n     height: 90%;\r\n     border-radius: 100%;\r\n  \r\n   \r\n  \r\n      }\r\n      .engine-text,.menu_home_text,.menu_scanner_text{\r\n        color:#E5112F;\r\n        font-size: 15px;\r\n       \r\n      }\r\n      .menu-accueil{\r\n        border-top: solid 1px;\r\n        border-color: #707070;\r\n        margin-top: 10%;\r\n      }\r\n  }\r\n    @media screen and (max-height: 450px) {\r\n      .sidenav {padding-top: 15px;}\r\n      .sidenav a {font-size: 18px;}\r\n    }\r\n    \r\n    @media only screen and (max-width:899px) and (min-width :601px){\r\n    .menu_btn{\r\n      margin-top: 50px;\r\n    }\r\n    .sidenav{\r\n      padding-top: 110px;\r\n      \r\n    }\r\n  \r\n    \r\n  .sidenav {\r\n    height: 100%;\r\n    width:0px;\r\n    position: fixed;\r\n    z-index: 1;\r\n    top: 0;\r\n    right: 0;\r\n  \r\n    -webkit-backdrop-filter:brightness(0%);\r\n  \r\n            backdrop-filter:brightness(0%);\r\n    background-color: #f1f1f1;\r\n    overflow-x: hidden;\r\n    transition: 0.5s;\r\n    padding-top: 60px;\r\n    color:#E5112F;\r\n  }\r\n  }\r\n  ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11009,7 +10881,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {   \n    .navbar-container{\n            background-color: #E5112F;\n           \n        }\n        .nav_button{\n            background-color: #E5112F;\n           \n            width: 12%;\n            color:#fff;\n        }\n        .nav_button{\n            \n           \n            width: 12.5%;\n            color:#fff;\n            border-right: solid 1px;\n        }\n        .nav_tool_button{\n            width: 8%;\n            background-color: #E5112F;\n            text-align: center;\n            color:#fff;\n            border-right: solid 1px;\n          \n           \n        }\n        .navbar-retour-icon{\n           display: block;\n           margin-left: 36%;\n           font-size: 33px;\n        \n        }\n        .navbar-home-icon{\n            font-size: 33px;\n    \n        }\n        .navbar-icon{\n            display: block;\n            margin-left: 29%;\n            font-size: 33px;\n           \n        \n        }\n        .page_title{\n            width: 50%;\n            background-color: #FFF;\n            color:#E5112F;\n            text-align: center;\n          \n            align-items: center;\n            display: inline-flex;\n            border-right: 1px solid;\n        }\n        .title-simplici{\n            text-align: center;\n            width: 100%;\n            font-size: 35px;\n        }\n        \n    }\n\n    @media screen and (min-width: 601px) and (max-width:899px){\n\n        .navbar-container{\n            background-color: #E5112F;\n           \n        }\n        .nav_button{\n            background-color: #E5112F;\n           \n            width: 12%;\n            color:#fff;\n        }\n        .nav_button{\n            \n           \n            width: 12.5%;\n            color:#fff;\n            border-right: solid 1px;\n        }\n        .nav_tool_button{\n            width: 8%;\n            background-color: #E5112F;\n            text-align: center;\n            color:#fff;\n            border-right: solid 1px;\n          \n           \n        }\n        .navbar-retour-icon{\n           display: block;\n           margin-left: 36%;\n           font-size: 50px;\n        \n        }\n        .navbar-home-icon{\n            font-size: 50px;\n    \n        }\n        .navbar-icon{\n            display: block;\n            margin-left: 29%;\n            font-size: 50px;\n            margin-right:  19%;\n           \n        \n        }\n        .page_title{\n            width: 50%;\n            background-color: #FFF;\n            color:#E5112F;\n            text-align: center;\n          \n            align-items: center;\n            display: inline-flex;\n            border-right: 1px solid;\n        }\n        .title-simplici{\n            text-align: center;\n            width: 100%;\n            font-size: 80px;\n        }\n        .back_text,.home_text{\n            font-size: 20px;\n        }\n        .menu_text{\n            font-size: 22px;\n            margin-left: 7%;\n        }\n        .accessibility_text{\n            font-size: 0px;\n        }\n        \n\n\n    }\n    @media screen and (max-width: 600px){\n\n        .navbar-container{\n            background-color: #E5112F;\n           \n        }\n        .nav_button{\n            background-color: #E5112F;\n           \n            width: 12%;\n            color:#fff;\n        }\n        .nav_button{\n            \n           \n            width: 15%;\n            color:#fff;\n            border-right: solid 1px;\n        }\n        .nav_tool_button{\n            width: 13%;\n            background-color: #E5112F;\n           \n            color:#fff;\n            border-right: solid 1px;\n          \n           \n        }\n        .navbar-retour-icon{\n           display: block;\n           margin-left: 30%;\n           font-size: 33px;\n        \n        }\n        .navbar-text{\n            font-size: 12px;\n        }\n        .navbar-home-icon{\n            font-size: 33px;\n    \n        }\n        .navbar-icon{\n            display: block;\n            \n            font-size: 33px;\n           \n        \n        }\n        .menu_text{\n            margin-right: 50%;\n        }\n        .modenuit_text{\n           margin-right: 50%;\n        }\n        .accessibility_text{\n           font-size: 0px;\n        }\n      \n        .modenuit_icon{\n            padding-top: 6px;\n            \n        }\n        .menu_icon{\n            margin-left: 10%;\n        }\n        .page_title{\n            width: 30%;\n            background-color: #FFF;\n            color:#E5112F;\n            text-align: center;\n          \n            align-items: center;\n            display: inline-flex;\n            border-right: 1px solid;\n        }\n        .title-simplici{\n            text-align: center;\n            width: 100%;\n            font-size: 20px;\n        }\n        \n\n    }\n\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@media screen and (min-width: 900px) {   \r\n    .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 12.5%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 8%;\r\n            background-color: #E5112F;\r\n            text-align: center;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n        \r\n           font-size: 33px;\r\n        \r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 33px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n           \r\n            font-size: 33px;\r\n           \r\n        \r\n        }\r\n        .page_title{\r\n            width: 50%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 35px;\r\n        }\r\n        \r\n    }\r\n\r\n    @media screen and (min-width: 601px) and (max-width:899px){\r\n\r\n        .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 12%;\r\n            color:#fff;\r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n            width: 12.5%;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        }\r\n        .nav_tool_button{\r\n            width: 8%;\r\n            background-color: #E5112F;\r\n            text-align: center;\r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: block;\r\n           margin-left: 36%;\r\n           font-size: 50px;\r\n        \r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 50px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            margin-left: 29%;\r\n            font-size: 50px;\r\n            margin-right:  19%;\r\n           \r\n        \r\n        }\r\n        .page_title{\r\n            width: 50%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 80px;\r\n        }\r\n        .back_text,.home_text{\r\n            font-size: 20px;\r\n        }\r\n        .menu_text{\r\n            font-size: 22px;\r\n            margin-left: 7%;\r\n        }\r\n        .accessibility_text{\r\n            font-size: 0px;\r\n        }\r\n        \r\n\r\n\r\n    }\r\n    @media screen and (max-width: 600px){\r\n\r\n        .navbar-container{\r\n            background-color: #E5112F;\r\n           \r\n           \r\n        }\r\n        .nav_button{\r\n            background-color: #E5112F;\r\n           \r\n            width: 22%;\r\n            color:#fff;\r\n           \r\n        }\r\n        .home_text{\r\n\r\n            font-size: 13px;\r\n            \r\n           \r\n        }\r\n        .nav_button{\r\n            \r\n           \r\n           \r\n            color:#fff;\r\n            border-right: solid 1px;\r\n        \r\n        }\r\n        .nav_tool_button{\r\n            width: 20%;\r\n            background-color: #E5112F;\r\n           \r\n            color:#fff;\r\n            border-right: solid 1px;\r\n          \r\n          \r\n           \r\n        }\r\n        .navbar-retour-icon{\r\n           display: none;\r\n           margin-left: 30%;\r\n           font-size: 33px;\r\n\r\n        \r\n        }\r\n        .navbar-text{\r\n            font-size: 12px;\r\n            display: none;\r\n        }\r\n        .navbar-home-icon{\r\n            font-size: 40px;\r\n    \r\n        }\r\n        .navbar-icon{\r\n            display: block;\r\n            \r\n            font-size: 40px;\r\n           \r\n        \r\n        }\r\n        .menu_text{\r\n            margin-right: 50%;\r\n            display: none;\r\n        }\r\n        .modenuit_text{\r\n           margin-right: 50%;\r\n           display: none;\r\n        }\r\n        .accessibility_text{\r\n           font-size: 13px;\r\n           \r\n        }\r\n      \r\n        .modenuit_icon{\r\n            padding-top: 6px;\r\n            \r\n        }\r\n        .menu_icon{\r\n            margin-left: 10%;\r\n        }\r\n        .page_title{\r\n            width: 35%;\r\n            background-color: #FFF;\r\n            color:#E5112F;\r\n            text-align: center;\r\n          \r\n            align-items: center;\r\n            display: inline-flex;\r\n            border-right: 1px solid;\r\n            \r\n        }\r\n        .title-simplici{\r\n            text-align: center;\r\n            width: 100%;\r\n            font-size: 20px;\r\n        }\r\n        .phone-back{\r\n            display: none;\r\n        }\r\n        .navbar-menu{\r\n            display: none;\r\n        }\r\n  .desk-bread{\r\n      display: none;\r\n  }\r\n    }\r\n\r\n\r\n\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/NotFound.css":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/NotFound.css ***!
+  \**********************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n@media screen and (min-width:601px) {\r\n    .notfound-container{\r\n        text-align: center;\r\n        \r\n    }\r\n    .notfound-description{\r\n        margin-top: 5%;\r\n    }\r\n    \r\n}\r\n\r\n\r\n@media screen and (max-width:600px) {\r\n    .notfound-container{\r\n        text-align: center;\r\n    }\r\n    .notfound-description{\r\n        margin-top: 10%;\r\n    }\r\n    .notFound-container{\r\n        height: -webkit-max-content;\r\n        height: -moz-max-content;\r\n        height: max-content;\r\n    }\r\n    \r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11033,7 +10929,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".none {\n  display: none;\n}\n\n/*---------------------------------PROVIDER---------------------------------*/\n.providers {\n  border: 3px solid;\n}\n.providers > h3,\n.providers > p {\n  text-align: center;\n}\n\n.provider-text {\n  display: flex;\n  height: 100%;\n  text-align: center;\n}\n\n.provider-text > p {\n  margin: auto;\n}\n\n.provider-icons {\n  display: flex;\n  height: 100%;\n}\n\n.provider-icons > span {\n  margin: auto;\n}\n\n.providers > div > .row {\n  padding-bottom: 20px;\n}\n.provider-logo {\n  text-align: center;\n}\n.provider-logo > img {\n  width: 20%;\n  border: 1px solid;\n}\n.view-horaire {\n  display: flex;\n}\n.view-horaire > div {\n  text-align: center;\n  cursor: pointer;\n  display: flex;\n  margin: auto;\n  border: 1px solid;\n  border-radius: 1000px;\n  padding: 5px 10px 5px 10px;\n}\n.view-horaire > div > span {\n  margin: auto;\n}\n.provider_phone_timetable,\n.provider_postal_address_timetable > div > li {\n  list-style: none;\n}\n\n.provider_postal_address_timetable_rdv > p {\n  font-size: 12px;\n  text-align: center;\n}\n.provider_postal_address_timetable_rdv > p > a {\n  text-decoration: underline;\n}\n.provider_write_online {\n  display: flex;\n}\n.provider_write_online > div {\n  margin: auto;\n  border: 2px solid black;\n  border-radius: 1000px;\n  padding: 5px 10px 0px 10px;\n  background-color: #577c90;\n  color: white;\n}\n.provider_write_online > div > a > h4 {\n  text-align: center;\n}\n/*---------------------------------PROCESS---------------------------------*/\n.process {\n  width: 95%;\n}\n\n.process_name-title {\n  background-color: #e5112f;\n  color: white;\n  text-align: center;\n  margin-bottom: 40px;\n}\n\n.process_name-title > h1 {\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.process-body {\n  border: 3px solid;\n}\n\n.process-txt,\n.process-icon {\n  display: flex;\n  height: 100%;\n  margin-bottom: 50px;\n}\n\n.process-txt,\n.process-icon > span,\np {\n  margin: auto;\n}\n\n.process-txt > p {\n  width: 100%;\n}\n\n.process-icon-info {\n  font-size: 60px;\n}\n\n.process-body-text {\n  width: 95%;\n  margin: auto;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n.docAnnexe {\n  padding-left: inherit;\n}\n\np {\n  font-size: 1.25em;\n}\n\n.icons {\n  font-size: 2em;\n}\n\nli {\n  font-size: 1.25em;\n  color: black;\n}\n\n/*---------------------------------BUTTONS---------------------------------*/\n.process-body-text > .container {\n  height: auto;\n}\n\n.process-button {\n  background-color: #e5112f;\n  color: white;\n  width: 80%;\n  border-radius: 100px;\n  height: 12vh;\n  margin-left: 50%;\n  transform: translateX(-50%);\n  display: flex;\n  margin-bottom: 22px;\n}\n\n.process-button > div {\n  margin: auto;\n  width: 85%;\n}\n\n.process-button > div > p {\n  margin: 0;\n  text-align: center;\n}\n\n/*---------------------------------POUR TELEPHONE---------------------------------*/\n@media only screen and (max-width: 1200px) {\n  .providers {\n    margin-top: 0;\n  }\n  .provider-text {\n    width: 100%;\n  }\n\n  .view-horaire {\n    width: 100%;\n  }\n  .provider_postal_address_timetable_rdv {\n    width: 100%;\n  }\n\n  .process {\n    width: 100%;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".none {\r\n  display: none;\r\n}\r\n\r\n/*---------------------------------PROVIDER---------------------------------*/\r\n.providers {\r\n  border: 3px solid;\r\n}\r\n.providers > h3,\r\n.providers > p {\r\n  text-align: center;\r\n}\r\n\r\n.provider-text {\r\n  display: flex;\r\n  height: 100%;\r\n  text-align: center;\r\n}\r\n\r\n.provider-text > p {\r\n  margin: auto;\r\n}\r\n\r\n.provider-icons {\r\n  display: flex;\r\n  height: 100%;\r\n}\r\n\r\n.provider-icons > span {\r\n  margin: auto;\r\n}\r\n\r\n.providers > div > .row {\r\n  padding-bottom: 20px;\r\n}\r\n.provider-logo {\r\n  text-align: center;\r\n}\r\n.provider-logo > img {\r\n  width: 20%;\r\n  border: 1px solid;\r\n}\r\n.view-horaire {\r\n  display: flex;\r\n}\r\n.view-horaire > div {\r\n  text-align: center;\r\n  cursor: pointer;\r\n  display: flex;\r\n  margin: auto;\r\n  border: 1px solid;\r\n  border-radius: 1000px;\r\n  padding: 5px 10px 5px 10px;\r\n}\r\n.view-horaire > div > span {\r\n  margin: auto;\r\n}\r\n.provider_phone_timetable,\r\n.provider_postal_address_timetable > div > li {\r\n  list-style: none;\r\n}\r\n\r\n.provider_postal_address_timetable_rdv > p {\r\n  font-size: 12px;\r\n  text-align: center;\r\n}\r\n.provider_postal_address_timetable_rdv > p > a {\r\n  text-decoration: underline;\r\n}\r\n.provider_write_online {\r\n  display: flex;\r\n}\r\n.provider_write_online > div {\r\n  margin: auto;\r\n  border: 2px solid black;\r\n  border-radius: 1000px;\r\n  padding: 5px 10px 0px 10px;\r\n  background-color: #577c90;\r\n  color: white;\r\n}\r\n.provider_write_online > div > a > h4 {\r\n  text-align: center;\r\n}\r\n/*---------------------------------PROCESS---------------------------------*/\r\n.process {\r\n  width: 95%;\r\n}\r\n\r\n.process_name-title {\r\n  background-color: #e5112f;\r\n  color: white;\r\n  text-align: center;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.process_name-title > h1 {\r\n  padding-top: 20px;\r\n  padding-bottom: 20px;\r\n}\r\n\r\n.process-body {\r\n  border: 3px solid;\r\n}\r\n\r\n.process-txt,\r\n.process-icon {\r\n  display: flex;\r\n  height: 100%;\r\n  margin-bottom: 50px;\r\n}\r\n\r\n.process-txt,\r\n.process-icon > span,\r\np {\r\n  margin: auto;\r\n}\r\n\r\n.process-txt > p {\r\n  width: 100%;\r\n}\r\n\r\n.process-icon-info {\r\n  font-size: 60px;\r\n}\r\n\r\n.process-body-text {\r\n  width: 95%;\r\n  margin: auto;\r\n  margin-top: 20px;\r\n  margin-bottom: 20px;\r\n}\r\n.docAnnexe {\r\n  padding-left: inherit;\r\n}\r\n\r\np {\r\n  font-size: 1.25em;\r\n}\r\n\r\n.icons {\r\n  font-size: 2em;\r\n}\r\n\r\nli {\r\n  font-size: 1.25em;\r\n  color: black;\r\n}\r\n\r\n/*---------------------------------BUTTONS---------------------------------*/\r\n.process-body-text > .container {\r\n  height: auto;\r\n}\r\n\r\n.process-button {\r\n  background-color: #e5112f;\r\n  color: white;\r\n  width: 80%;\r\n  border-radius: 100px;\r\n  height: 12vh;\r\n  margin-left: 50%;\r\n  transform: translateX(-50%);\r\n  display: flex;\r\n  margin-bottom: 22px;\r\n}\r\n\r\n.process-button > div {\r\n  margin: auto;\r\n  width: 85%;\r\n}\r\n\r\n.process-button > div > p {\r\n  margin: 0;\r\n  text-align: center;\r\n}\r\n\r\n/*---------------------------------POUR TELEPHONE---------------------------------*/\r\n@media only screen and (max-width: 1200px) {\r\n  .providers {\r\n    margin-top: 0;\r\n  }\r\n  .provider-text {\r\n    width: 100%;\r\n  }\r\n\r\n  .view-horaire {\r\n    width: 100%;\r\n  }\r\n  .provider_postal_address_timetable_rdv {\r\n    width: 100%;\r\n  }\r\n\r\n  .process {\r\n    width: 100%;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11057,7 +10953,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n/* computer style*/\n@media screen and (min-width:900px){\n    .session-container{\n\n      background-color: #fff;\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n        margin-left: 35%;\n        margin-top: 10%;\n        background-color: #fff;\n        width: 40%;\n        height: 35%;\n        display:none;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n           text-align: left;\n           font-size: 3vmin;\n           margin-left: 1%;\n       }\n       .close-button-item{\n           margin-left: 10%;\n           \n       }\n       .close-button-icon{\n           display: block;\n       }\n       \n       .contrast-title{\n       \n         font-size: 3vmin;\n         margin-left: 1%;\n         margin-top: 4%;\n       \n       }\n       .standard{\n           background-color: #E5112F;\n            text-align: left;\n            width: 25%;\n            margin-left: 1%;\n            border: 1px solid;\n            height: 25%;\n           border-color: #EEE;\n           color:#fff;\n       }\n       .reinforced{\n           background-color: #000;\n           border: 1px solid;\n           width: 25%;\n           height: 25%;\n           border-color: #EEE;\n           margin-left: 1%;\n           color: #fff;\n       }\n       .darkWhite{\n        background-color: #fff;\n        text-align: left;\n        width: 25%;\n        margin-left: 1%;\n        border: 1px solid;\n        height: 25%;\n       border-color: #EEE;\n       color:#222;\n       }\n       #contrast{\n           height: 30%;\n           width:10;\n           position: fixed;\n           z-index: 1;\n            margin-top: 15em;\n            margin-right: 40%;\n          \n           right: 0;\n           background-color: #f1f1f1;\n           overflow-x: hidden;\n           transition: 0.5s;\n           padding-top: 60px;\n           color:#E5112F;\n       }\n    \n}\n\n/* phone style*/\n\n\n@media screen and (max-width:600px){\n    .contrast-container{\n\n        overflow-x: hidden;\n        position: fixed;\n        z-index: 1;\n      \n        margin-top: 10%;\n        background-color: #fff;\n        width: 90%;\n        height: 35%;\n        display:none;\n        margin-left: 4%;\n       }\n       body{\n           overflow-x: hidden;\n       }\n       .contrast-subtitle{\n        text-align: left;\n        font-size: 20px;\n        margin-left: 1%;\n    }\n    .close-button-item{\n        margin-left: 10%;\n        \n    }\n    .close-button-icon{\n        display: block;\n    }\n    \n    .contrast-title{\n    \n      font-size: 18px;\n      margin-left: 1%;\n      margin-top: 4%;\n      \n    \n    }\n    .standard{\n        background-color: #E5112F;\n         text-align: left;\n         width: 40%;\n         margin-left: 1%;\n         border: 1px solid;\n         height: 25%;\n        border-color: #EEE;\n        color:#fff;\n        font-size: 18px;\n    }\n    .reinforced{\n        background-color: #fff;\n        border: 1px solid;\n        width: 40%;\n        height: 25%;\n        border-color: #EEE;\n        margin-left: 1%;\n        font-size: 18px;\n    }\n    #contrast{\n        height: 30%;\n        width:10;\n        position: fixed;\n        z-index: 1;\n        \n        \n       \n        right: 0;\n        background-color: #f1f1f1;\n        overflow-x: hidden;\n        transition: 0.5s;\n        padding-top: 60px;\n        color:#E5112F;\n    }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n/* computer style*/\r\n@media screen and (min-width:900px){\r\n    .session-container{\r\n\r\n      background-color: #fff;\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n        margin-left: 35%;\r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 40%;\r\n        height: 35%;\r\n        display:none;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n           text-align: left;\r\n           font-size: 3vmin;\r\n           margin-left: 1%;\r\n       }\r\n       .close-button-item{\r\n           margin-left: 10%;\r\n           \r\n       }\r\n       .close-button-icon{\r\n           display: block;\r\n       }\r\n       \r\n       .contrast-title{\r\n       \r\n         font-size: 3vmin;\r\n         margin-left: 1%;\r\n         margin-top: 4%;\r\n       \r\n       }\r\n       .standard{\r\n           background-color: #E5112F;\r\n            text-align: left;\r\n            width: 25%;\r\n            margin-left: 1%;\r\n            border: 1px solid;\r\n            height: 25%;\r\n           border-color: #EEE;\r\n           color:#fff;\r\n       }\r\n       .reinforced{\r\n           background-color: #000;\r\n           border: 1px solid;\r\n           width: 25%;\r\n           height: 25%;\r\n           border-color: #EEE;\r\n           margin-left: 1%;\r\n           color: #fff;\r\n       }\r\n       .darkWhite{\r\n        background-color: #fff;\r\n        text-align: left;\r\n        width: 25%;\r\n        margin-left: 1%;\r\n        border: 1px solid;\r\n        height: 25%;\r\n       border-color: #EEE;\r\n       color:#222;\r\n       }\r\n       #contrast{\r\n           height: 30%;\r\n           width:10;\r\n           position: fixed;\r\n           z-index: 1;\r\n            margin-top: 15em;\r\n            margin-right: 40%;\r\n          \r\n           right: 0;\r\n           background-color: #f1f1f1;\r\n           overflow-x: hidden;\r\n           transition: 0.5s;\r\n           padding-top: 60px;\r\n           color:#E5112F;\r\n       }\r\n    \r\n}\r\n\r\n/* phone style*/\r\n\r\n\r\n@media screen and (max-width:600px){\r\n    .contrast-container{\r\n\r\n        overflow-x: hidden;\r\n        position: fixed;\r\n        z-index: 1;\r\n      \r\n        margin-top: 10%;\r\n        background-color: #fff;\r\n        width: 90%;\r\n        height: 35%;\r\n        display:none;\r\n        margin-left: 4%;\r\n       }\r\n       body{\r\n           overflow-x: hidden;\r\n       }\r\n       .contrast-subtitle{\r\n        text-align: left;\r\n        font-size: 20px;\r\n        margin-left: 1%;\r\n    }\r\n    .close-button-item{\r\n        margin-left: 10%;\r\n        \r\n    }\r\n    .close-button-icon{\r\n        display: block;\r\n    }\r\n    \r\n    .contrast-title{\r\n    \r\n      font-size: 18px;\r\n      margin-left: 1%;\r\n      margin-top: 4%;\r\n      \r\n    \r\n    }\r\n    .standard{\r\n        background-color: #E5112F;\r\n         text-align: left;\r\n         width: 40%;\r\n         margin-left: 1%;\r\n         border: 1px solid;\r\n         height: 25%;\r\n        border-color: #EEE;\r\n        color:#fff;\r\n        font-size: 18px;\r\n    }\r\n    .reinforced{\r\n        background-color: #fff;\r\n        border: 1px solid;\r\n        width: 40%;\r\n        height: 25%;\r\n        border-color: #EEE;\r\n        margin-left: 1%;\r\n        font-size: 18px;\r\n    }\r\n    #contrast{\r\n        height: 30%;\r\n        width:10;\r\n        position: fixed;\r\n        z-index: 1;\r\n        \r\n        \r\n       \r\n        right: 0;\r\n        background-color: #f1f1f1;\r\n        overflow-x: hidden;\r\n        transition: 0.5s;\r\n        padding-top: 60px;\r\n        color:#E5112F;\r\n    }\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11081,7 +10977,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* computer style*/\n\n@media screen  and (min-width:900px){\n    .subcontainer{\n  \n        height: 500px;\n        text-align: center;\n    }\n    .title-group{\n        text-align: center;\n        margin-left: 35%;\n    }\n    .container_title{\n        font-size: 30px;\n        margin-top: -2%;\n    }\n    .icon-title{\n       \n    }\n    .topic-item{\n        width: 25%;\n        height: 20%;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:2%;\n        background-color: #fff;\n        border-radius: 15px;\n        border-color: #707070;\n     \n       \n       \n    }\n    .topic-item:hover{\n       \n     \n        -webkit-text-decoration-color: #E5112F;\n       \n     \n                text-decoration-color: #E5112F;\n        text-decoration: none;\n        color: #E5112F;\n       \n        border-color: #E5112F;\n    }\n    .subcontainer-choose-title{\n        font-size: 22px;\n        margin-right: 11%;\n        margin-top: 2%;\n        \n    }\n}\n@media screen and (max-width:600px){\n    .subcontainer{\n  \n      \n        text-align: center;\n        height: -webkit-fit-content;\n        height: -moz-fit-content;\n        height: fit-content;\n       \n       \n    }\n    .desk-bread-cont{\n        margin-top: 200px;\n       \n    }\n    .title-group{\n        text-align: center;\n        margin-top: -60px;\n       \n    }\n    .container_title{\n        font-size: 25px;\n        margin-top: 26%;\n    }\n    .topic-item{\n        width: 80%;\n        height: 100px;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:4%;\n        background-color: #577C90;;\n        border-radius: 15px;\n        color: #fff;\n        text-transform: uppercase;\n       \n      \n        font-weight: bold;\n      \n       \n    }\n    .desk-bread{\n     \n    \n    }\n    .subcontainer-choose-title{\n        font-size: 22px;\n        margin-top: 4%;\n    }\n    .nav-position{\n        z-index: 2;\n    }\n    .icon-title{\n        display: none;\n    }\n}\n\n@media screen  and (min-width:601px) and (max-width:899px){\n\n    .subcontainer{\n  \n       \n        text-align: center;\n    }\n    .title-group{\n        text-align: center;\n        margin-left: 35%;\n    }\n    .container_title{\n        font-size: 30px;\n        margin-top: -2%;\n    }\n    .icon-title{\n       \n    }\n    .topic-item{\n        width: 40%;\n        height: 120px;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:2%;\n        background-color: #fff;\n        border-radius: 15px;\n        border-color: #707070;\n        font-size: 29px;\n     \n       \n       \n    }\n    .desk-bread{\n        font-size: 20px;\n    }\n    .topic-item:hover{\n       \n     \n        -webkit-text-decoration-color: #E5112F;\n       \n     \n                text-decoration-color: #E5112F;\n        text-decoration: none;\n        color: #E5112F;\n       \n        border-color: #E5112F;\n    }\n    .subcontainer-choose-title{\n        font-size: 33px;\n        margin-right: 11%;\n        margin-top: 2%;\n        \n    }\n}\n@media screen and (max-width:600px){\n    .subcontainer{\n  \n      \n        text-align: center;\n        height: -webkit-fit-content;\n        height: -moz-fit-content;\n        height: fit-content;\n       \n       \n    }\n    .desk-bread-cont{\n        margin-top: 200px;\n       \n    }\n    .title-group{\n        text-align: center;\n        margin-top: -60px;\n       \n    }\n    .container_title{\n        font-size: 25px;\n        margin-top: 26%;\n    }\n    .topic-item{\n        width: 80%;\n        height: 100px;\n        border:solid 2px;\n        margin-left:2%;\n        margin-top:4%;\n        background-color: #577C90;;\n        border-radius: 15px;\n        color: #fff;\n        text-transform: uppercase;\n       \n      \n        font-weight: bold;\n      \n       \n    }\n    .desk-bread{\n     \n    \n    }\n    .subcontainer-choose-title{\n        font-size: 22px;\n        margin-top: 4%;\n    }\n    .nav-position{\n        z-index: 2;\n    }\n    .icon-title{\n        display: none;\n    }\n\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* computer style*/\r\n\r\n@media screen  and (min-width:900px){\r\n    .subcontainer{\r\n  \r\n        height: 500px;\r\n        text-align: center;\r\n    }\r\n    .subcontainer-footer{\r\n        margin-top: 50px;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-left: 35%;\r\n    }\r\n    .container_title{\r\n        font-size: 30px;\r\n        margin-top: -2%;\r\n    }\r\n    .icon-title{\r\n       \r\n    }\r\n    .topic-item{\r\n        width: 25%;\r\n        height: 20%;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:2%;\r\n        background-color: #fff;\r\n        border-radius: 15px;\r\n        border-color: #707070;\r\n     \r\n       \r\n       \r\n    }\r\n    .topic-item:hover{\r\n       \r\n     \r\n        -webkit-text-decoration-color: #E5112F;\r\n       \r\n     \r\n                text-decoration-color: #E5112F;\r\n        text-decoration: none;\r\n        color: #E5112F;\r\n       \r\n        border-color: #E5112F;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-right: 11%;\r\n        margin-top: 2%;\r\n        \r\n    }\r\n}\r\n@media screen and (max-width:600px){\r\n    .subcontainer{\r\n  \r\n      \r\n        text-align: center;\r\n        height: -webkit-fit-content;\r\n        height: -moz-fit-content;\r\n        height: fit-content;\r\n       \r\n       \r\n    }\r\n    .desk-bread-cont{\r\n        margin-top: 200px;\r\n       \r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-top: -60px;\r\n       \r\n    }\r\n    .container_title{\r\n        font-size: 25px;\r\n        margin-top: 26%;\r\n    }\r\n    .topic-item{\r\n        width: 80%;\r\n        height: 100px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:4%;\r\n        background-color: #577C90;;\r\n        border-radius: 15px;\r\n        color: #fff;\r\n        \r\n       \r\n      \r\n        font-weight: bold;\r\n      \r\n       \r\n    }\r\n    .desk-bread{\r\n     \r\n    \r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-top: 4%;\r\n    }\r\n    .nav-position{\r\n        z-index: 2;\r\n    }\r\n    .icon-title{\r\n        display: none;\r\n    }\r\n}\r\n\r\n@media screen  and (min-width:601px) and (max-width:899px){\r\n\r\n    .subcontainer{\r\n  \r\n       \r\n        text-align: center;\r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-left: 35%;\r\n    }\r\n    .container_title{\r\n        font-size: 30px;\r\n        margin-top: -2%;\r\n    }\r\n    .icon-title{\r\n       \r\n    }\r\n    .topic-item{\r\n        width: 40%;\r\n        height: 120px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:2%;\r\n        background-color: #fff;\r\n        border-radius: 15px;\r\n        border-color: #707070;\r\n        font-size: 29px;\r\n     \r\n       \r\n       \r\n    }\r\n    .desk-bread{\r\n        font-size: 20px;\r\n    }\r\n    .topic-item:hover{\r\n       \r\n     \r\n        -webkit-text-decoration-color: #E5112F;\r\n       \r\n     \r\n                text-decoration-color: #E5112F;\r\n        text-decoration: none;\r\n        color: #E5112F;\r\n       \r\n        border-color: #E5112F;\r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 33px;\r\n        margin-right: 11%;\r\n        margin-top: 2%;\r\n        \r\n    }\r\n}\r\n@media screen and (max-width:600px){\r\n    .subcontainer{\r\n  \r\n      \r\n        text-align: center;\r\n        height: -webkit-fit-content;\r\n        height: -moz-fit-content;\r\n        height: fit-content;\r\n       \r\n       \r\n    }\r\n    .desk-bread-cont{\r\n        margin-top: 200px;\r\n       \r\n    }\r\n    .title-group{\r\n        text-align: center;\r\n        margin-top: -60px;\r\n       \r\n    }\r\n    .container_title{\r\n        font-size: 25px;\r\n        margin-top: 26%;\r\n    }\r\n    .topic-item{\r\n        width: 80%;\r\n        height: 100px;\r\n        border:solid 2px;\r\n        margin-left:2%;\r\n        margin-top:4%;\r\n        background-color: #577C90;;\r\n        border-radius: 15px;\r\n        color: #fff;\r\n     \r\n       \r\n      \r\n        font-weight: bold;\r\n      \r\n       \r\n    }\r\n    .desk-bread{\r\n     \r\n    \r\n    }\r\n    .subcontainer-choose-title{\r\n        font-size: 22px;\r\n        margin-top: 4%;\r\n    }\r\n    .nav-position{\r\n        z-index: 2;\r\n    }\r\n    .icon-title{\r\n        display: none;\r\n    }\r\n    .subcontainer-container{\r\n        height: 160vh;\r\n    }\r\n\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11105,7 +11001,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n@media screen and(min-width:(900px)){\n.bread-items{\n    font-size:10%;\n}\n  .bread-icon{\n      margin-top: 16px;\n      display:block;\n      color: red;\n  }\n}\n\n\n.bread-items{\n  text-decoration: underline;\n   list-style-type: none;\n   display: inline;\n   margin-left: 2%;\n   font-size: 12px;\n   \n }\n.bread-container{\n    height: 20px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n\r\n@media screen and(min-width:600px){\r\n  .bread-items{\r\n      font-size:10%;\r\n  }\r\n    .bread-icon{\r\n        margin-top: 16px;\r\n        display:block;\r\n        color: red;\r\n    }\r\n  }\r\n  \r\n  \r\n  .bread-items{\r\n    text-decoration: underline;\r\n     list-style-type: none;\r\n     display: none;\r\n     margin-left: 2%;\r\n     \r\n     font-size: 12px;\r\n    \r\n     \r\n   }\r\n  .bread-container{\r\n      height: 20px;\r\n  }\r\n  @media screen and(min-width: 900px){\r\n    .bread-items{\r\n        font-size:10%;\r\n    }\r\n      .bread-icon{\r\n          margin-top: 16px;\r\n          display:block;\r\n          color: red;\r\n      }\r\n    }\r\n    \r\n    \r\n    .bread-items{\r\n      text-decoration: underline;\r\n       list-style-type: none;\r\n       display: inline;\r\n       margin-left: 2%;\r\n       font-size: 12px;\r\n       \r\n     }\r\n    .bread-container{\r\n        height: 20px;\r\n    }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11188,10 +11084,10 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ "./resources/js/components/LegalInfo/file.png":
-/*!****************************************************!*\
-  !*** ./resources/js/components/LegalInfo/file.png ***!
-  \****************************************************/
+/***/ "./resources/js/components/Administration/logos/Grand-Chambery.svg":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Administration/logos/Grand-Chambery.svg ***!
+  \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11199,7 +11095,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/file.png?f7e17b7e881fb25db997d2e10c520f81");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Grand-Chambery.svg?f1abfb0c6383fc69d6fe013240d165b2");
+
+/***/ }),
+
+/***/ "./resources/js/components/Administration/logos/caf.svg":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/Administration/logos/caf.svg ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/caf.svg?d57edc0e98b0ff31fded2bb8a45f5d91");
+
+/***/ }),
+
+/***/ "./resources/js/components/Administration/logos/chambery.svg":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Administration/logos/chambery.svg ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/chambery.svg?7dcd5a994815e04ac847e876bf184cc1");
+
+/***/ }),
+
+/***/ "./resources/js/components/Administration/logos/maladie.svg":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/Administration/logos/maladie.svg ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/maladie.svg?18c22bd7d4474a7471110c409005cf0d");
+
+/***/ }),
+
+/***/ "./resources/js/components/Administration/logos/pole-emploi.svg":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Administration/logos/pole-emploi.svg ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/pole-emploi.svg?1efa2ce8b5945ec83a5d4d337b54ca8d");
+
+/***/ }),
+
+/***/ "./resources/js/components/Administration/logos/poste.svg":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/Administration/logos/poste.svg ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/poste.svg?75b4402002d941971bf6e7b7168d9b1a");
+
+/***/ }),
+
+/***/ "./resources/js/components/Administration/logos/retraite.svg":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Administration/logos/retraite.svg ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/retraite.svg?78bd8c41bf965516a2fba6ccbf5ab449");
 
 /***/ }),
 
@@ -76594,6 +76580,36 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 /***/ }),
 
+/***/ "./resources/css/Administration.css":
+/*!******************************************!*\
+  !*** ./resources/css/Administration.css ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Administration_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./Administration.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Administration.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Administration_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Administration_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./resources/css/ChoiceBar.css":
 /*!*************************************!*\
   !*** ./resources/css/ChoiceBar.css ***!
@@ -76621,36 +76637,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_ChoiceBar_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
-
-/***/ }),
-
-/***/ "./resources/css/Cont.css":
-/*!********************************!*\
-  !*** ./resources/css/Cont.css ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Cont_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./Cont.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/Cont.css");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Cont_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Cont_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -76831,6 +76817,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_NavBar_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/css/NotFound.css":
+/*!************************************!*\
+  !*** ./resources/css/NotFound.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_NotFound_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./NotFound.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/css/NotFound.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_NotFound_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_NotFound_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 

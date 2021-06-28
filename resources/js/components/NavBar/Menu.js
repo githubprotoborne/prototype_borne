@@ -13,9 +13,8 @@ const Menu = () => {
                 <span className=" engine-text col style">Je récupère un document par courier électronique</span>
                 <button className="material-icons-outlined col-2 menu-home-icon style engine-icon"> email</button>
             </a>
-            <Link className="row menu-item style" to="/scanner"
-                style={{ color: "#E5112F" }} ><span className="menu_scanner_text col style">Je numérise un document</span > <span className="material-icons-outlined  style col-2 scanner-icon menu-home-icon" >scanner</span> </Link>
-             <a className="row menu-item style" href="file:///C:/Users/divin/Documents/">
+           
+             <a className="row menu-item style" href="file:///C:/Users/Downloads">
                 <span className=" engine-text col style">J'imprime un document</span>
                 <button className="material-icons-outlined col-2 menu-home-icon style engine-icon">print</button>
             </a>

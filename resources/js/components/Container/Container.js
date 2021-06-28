@@ -56,12 +56,7 @@ export default class Container extends Component {
     this.getContainerProcesses.bind(this)()
     this.firstItem.bind(this)()
     this.setState({ subcontainer_index: this.state.subcontainer_index })
-    // this.setIndex.bind(this)()
-
-    // this.scroll.bind(this)()
-    // this.setState({subcontainer_index:0})
-    //set style for the active section item
-
+    
 
   }
   componentDidUpdate() {
@@ -80,7 +75,7 @@ export default class Container extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container-container">
 
         <div id="side" >
           <div className="">

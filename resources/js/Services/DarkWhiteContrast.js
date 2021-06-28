@@ -1,4 +1,4 @@
-
+// set the contrast to black color on white background
 export function DarkWhiteContrast(){
 
      $("body").css("background-color", "#fff")
@@ -13,8 +13,12 @@ export function DarkWhiteContrast(){
     $(".col_margin").css("background-color", "#fffafa")
     $(".col_margin").css("color", "#222")
     $(".col_margin").css("border-color", "#333")
-    
+    $(".profil").css("background-color", "")
 
+    
+    $(".cont").css("color", "#222")
+    $(".cont").css("background-color", "#fff")
+    $(".cont").css("border-color", "#333")
     $(".page_title").css("color", "#222")
     $(".page_title").css("border-color", "#222")
     $(".page_title").css("background-color", "#fffafa")
@@ -33,13 +37,15 @@ export function DarkWhiteContrast(){
     $(".contain-title").css({ color: "#222" });
     //footer style
     $(".footer-container").css("background-color", "#fff")
+    $(".administration-title").css("color", "");
     // Container style
     $(".processes-position").css("color", "#222")
     $(".sections").css("color", "#222")
     $(".bread-text").css("background-color", "#eff")
     //subcontainer style
-    $(".subcontainer").css("color", "#000")
+    $(".subcontainer").css("color", "")
     $(".topic-item").css("background-color", "#fff")
+    $(".topic-item").css("color", "#222")
     // menu style
 
     $(".sidenav").css("background-color", "#fff")
@@ -55,6 +61,21 @@ export function DarkWhiteContrast(){
     $(".close-button-icon").css("color", "#222")
     $(".close-button-text").css("color", "#222")
     // $(".close-button-item").css("background-color", "#333")
+
+   // administration style
+   $(".administration-item").css("background-color", "#333");
+   $(".administration-title").css("color", "#fff");
+
+   // process title
+  
+   $(".process_name-title").css("background-color", "#577C90");
+    
+   $(".process-button").css("background-color", "#577C90")
+      
+   $(".providers").css("color", "#222");
+      
+   $(".process-txt").css("color", "#222");
+  
 
 
 

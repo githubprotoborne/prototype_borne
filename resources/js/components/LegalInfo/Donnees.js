@@ -20,7 +20,7 @@ const Donnees = () => {
                 </div>
                 <div className="data-container">
 
-                    <h2>Données</h2>
+                    <h2>Page</h2>
 
 
                 </div>

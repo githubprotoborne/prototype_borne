@@ -42,7 +42,7 @@
             width: 25%;
             margin-left: 1%;
             border: 1px solid;
-            height: 25%;
+            height: 100px;
            border-color: #EEE;
            color:#fff;
        }
@@ -61,7 +61,7 @@
         width: 25%;
         margin-left: 1%;
         border: 1px solid;
-        height: 25%;
+        height: 100px;
        border-color: #EEE;
        color:#222;
        }
@@ -80,7 +80,16 @@
            padding-top: 60px;
            color:#E5112F;
        }
-    
+       #darkWhiteId{
+           height: 8vh;
+       }
+       #reinforcedId{
+        height: 8vh;
+       }
+       #standardId{
+           height: 8vh;
+       }
+       
 }
 
 /* phone style*/
@@ -124,29 +133,39 @@
       
     
     }
-    .standard{
-        background-color: #E5112F;
-         text-align: left;
-         width: 40%;
-         margin-left: 1%;
-         border: 1px solid;
-         height: 25%;
-        border-color: #EEE;
-        color:#fff;
-        font-size: 18px;
-    }
-    .reinforced{
-        background-color: #fff;
-        border: 1px solid;
-        width: 40%;
-        height: 25%;
-        border-color: #EEE;
+    
+    #darkWhiteId{
+        width: 30%;
+        height: 60px;
         margin-left: 1%;
-        font-size: 18px;
+       margin-bottom: 40px;
+      
+
+        background-color: #fff;
+        text-align: left;
+        width: 30%;
+        margin-left: 1%;
+        border: 1px solid;
+        border-color: #EEE;
+      
+      
+       
+      
+       color:#222;
+    }
+    #reinforcedId{
+        width: 30%;
+        height: 60px;
+        margin-left: 1%;
+    }
+    #standardId{
+        width: 30%;
+        height: 60px;
+        margin-left: 1%;
     }
     #contrast{
         height: 30%;
-        width:10;
+       
         position: fixed;
         z-index: 1;
         
@@ -159,6 +178,16 @@
         padding-top: 60px;
         color:#E5112F;
     }
+    .darkWhite{
+        background-color: #fff;
+        text-align: left;
+        width: 25%;
+        margin-left: 1%;
+        border: 1px solid;
+        height: 25%;
+       border-color: #EEE;
+       color:#222;
+       }
 }
 
 

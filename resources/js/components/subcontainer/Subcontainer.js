@@ -54,7 +54,7 @@ export default class Subcontainer extends Component {
     // group processes by sub containers and return a new array
     sub_container_processes(data = Array()) {
         let array = this.extractsSubCategories(data)
-        console.log(array, "array")
+      
         for (let i = 0; i < data.length; i++) {
             for (let y = 0; y < array.length; y++) {
                 if (data[i].subcontainer_name === array[y].subcontainer_name) {
@@ -87,8 +87,7 @@ export default class Subcontainer extends Component {
             })
     }
     componentDidMount() {
-        console.log(this.
-            props.location.id)
+        
         this.getContainerProcesses.bind(this)()
 
     }
@@ -105,7 +104,7 @@ export default class Subcontainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="subcontainer-container">
                 <div id="side" >
                     <div className="">
                         <Menu></Menu>
@@ -133,7 +132,7 @@ export default class Subcontainer extends Component {
 
                                 </div>
                                 <h3 className="subcontainer-choose-title">Choisissez une rubrique</h3>
-                                {console.log(this.state.processes.length > 0 ? this.state.processes[0].processes.container_id : "")}
+                                
                                 {
 
 
@@ -164,10 +163,12 @@ export default class Subcontainer extends Component {
                                             icon: this.state.processes[0].container_icon,
                                             category_index: 0
 
-                                        }} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", textAlign: "center", textDecoration: "none" }}>Montrez moi l'ensemble des services
+                                        }} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", textAlign: "center", textDecoration: "none" }}>Montrez moi l'ensemble des démarches
                            </Link> : ""
                                 }                </div>
+                            <div className="subcontainer-footer">
                             <Footer></Footer>
+                            </div>
                         </div>
                     </div>
 

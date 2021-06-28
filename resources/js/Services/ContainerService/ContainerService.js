@@ -1,3 +1,7 @@
+
+
+
+// this function get sub-containers list  from the request array  response
 export function extractsSubCategories(data = Array()) {
     let array = []
     array.push({ subcontainer_name: data[0].subcontainer_name, processes: [] })
@@ -15,10 +19,10 @@ export function extractsSubCategories(data = Array()) {
     }
     return array
 }
-// group processes  by sub containers and return a new array
+// group processes  from the request response by sub containers and return a new array
 export function sub_container_processes(data = Array()) {
     let array = this.extractsSubCategories(data)
-    console.log(array, "array")
+   
     for (let i = 0; i < data.length; i++) {
         for (let y = 0; y < array.length; y++) {
             if (data[i].subcontainer_name === array[y].subcontainer_name) {

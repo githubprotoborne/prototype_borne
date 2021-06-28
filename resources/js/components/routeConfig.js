@@ -1,5 +1,12 @@
-import react from "react";
-import Cont from "./Container/Cont";
+/*
+import AdminContainer from "./Admin/Container-Admin/AdminContainer";
+import Admin from "./Admin/Process-Admin/Admin";
+import AdminProcess from "./Admin/Process-Admin/AdminProcess";
+import NewProcess from "./Admin/Process-Admin/NewProcess";
+import ProcessContainer from "./Admin/Process-Admin/ProcessContainer";
+*/
+import Administration from "./Administration/Administration";
+
 import Container from "./Container/Container";
 import Home from "./Home/Home";
 import Accessibilite from "./LegalInfo/Accessibilite";
@@ -7,7 +14,7 @@ import Cookies from "./LegalInfo/Cookies";
 import Donnees from "./LegalInfo/Donnees";
 import Mentions from "./LegalInfo/Mentions";
 import PlanDuSite from "./LegalInfo/PlanDuSite";
-import Test from "./NavBar/Test";
+
 import NotFound from "./NotFound/NotFound";
 import Process from "./Process/Process";
 import Scanner from "./Scanner/Scanner";
@@ -24,6 +31,7 @@ const DynamicProcessBreadcrumb = ({ match }) => (
 
 
 
+
 const routesConfig = [
   {
     path: "/",
@@ -31,10 +39,46 @@ const routesConfig = [
     exact: true,
     breadcrumb: "Accueil"
   },
+  /*
+  {
+    path: "/admin/categories",
+    component:Admin,
+
+  },
+  {
+    path: "/admin/demarche",
+    component: AdminProcess,
+
+  },
+  {
+    path: "/admin/categorie",
+    component: AdminContainer,
+
+  },
+  
+  
+  {
+    path: "/nouvelle-demarche",
+    component: NewProcess,
+
+  },
+  
+  
+
+  
+  {
+    path: "/admin",
+    component: ProcessContainer,
+
+  },
+  
+*/
+  
 
   {
-    path: "/test",
-    component: Test,
+    path: "/mes-demarches",
+    component: Administration,
+    breadcrumb:"Accès aux sites des administrations"
 
   },
   {
@@ -56,6 +100,7 @@ const routesConfig = [
     component: Subcontainer,
     breadcrumb: DynamicContainerBreadcrumb
   },
+  /*
   {
     path: "/plan-du-site",
     component: PlanDuSite,
@@ -71,22 +116,20 @@ const routesConfig = [
     component: Mentions,
     breadcrumb: "Mentions légales"
   },
-  {
-    path: "/gestion-des-cookies",
-    component: Cookies,
-    breadcrumb: "Gestion des cookies"
-  },
+  
+ 
   {
     path: "/donnees-personnelles",
     component: Donnees,
     breadcrumb: "Données personnelles"
   },
+  
   {
     path: "/scanner",
     component: Scanner,
     breadcrumb: "numériser un document"
   },
-
+*/
 
 
 

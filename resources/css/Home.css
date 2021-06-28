@@ -1,163 +1,18 @@
 @media screen and (min-width: 900px) {
-.homepage_button{
-    display: block;
-}
-.tablet{
-    display: none;
-}
-.state_containers{
-    width: 90%;
-   
-    margin-top: 2%;
-    border:2px solid;
-   
-    margin-left: 5%;
-    height: 220px;
-    border-radius: 20px;
-    border-color: #E5112F;
-    
-}
-.contain-title{
-    font-size: 20px;
-    text-align: center;
-    color: #E5112F;
-    font-weight: bold;
-}
-/*
- first group : ma vie admnistratiove
-*/
-.state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{
-    
-}
-.category_title{
-    margin-bottom: 3%;
-    margin-top: 3%;
-
-}
-
-.category_button{
-
-    width: 29%;
-    height: 75px;
-    margin-left: 3%;
-    margin-bottom: 1%;
-    background-color:#577C90;
-    color:#FFF;
-    border: 1px solid;
-    border-color: #ddd;
-    border-radius: 10px;
-}
-.category_button:hover{
-
-   
-    background-color: #E5112F;
-    color:#fff;
-    text-decoration: none;
-   
-}
-.line{
-    height: 3px;
-}
-.name{
-    font-size: 17px;
-    width: 100%;
-    text-align: center;
-    margin-top: -2%;
-   
-    
-     
-}
-.description{
-    font-size: 13px;
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: -2%;
-}
-.home-icon{
-    font-size: 25px;
-    margin-top: 2%;
-    margin-right: 1%;
-}
-
-}
-.bread{
-    height: 5%;
-    margin-right: 500px;
-   
-    
-}
-@media screen and (max-width: 600px){
-     .category_button{
-         
-         width: 300px;
-         color: #fff;
-        
-         margin-bottom: 5%;
-         height: 105px;
-         text-decoration: none;
-          
-     word-wrap: break-word;
-    
-      border: 1px solid;
-      border-radius: 10px;
-      margin-right: 10%;
-      margin-left: 4%;
-      background-color: #577C90;
-        
-    
-        
-    }
-    .big-row-one {
-        margin-top:10%;
-    }
-    .state_containers{
-        margin-left: 2%;
-        border: 2px solid;
-        margin-bottom: 7%;
-        margin-right: 2%;
-        border-color: #E5112F;
-        border-radius: 10px;
-        width: 96%;
-    }
-    #button-phone{
-      
-     
-
-    }
-    .contain-title{
-      
-      color: #E5112F;
-      margin-left: 15%;
-      font-weight:bold;
-       margin-bottom: 3%;
-       font-size: 20px;
-    
-    }
-    .local_containers{
-      
-    }
-    .contain-home{
-        height: 2500px
-    }
-    .description{
-      display:block;
-    }
-    .home-icon{
-        font-size: 25px;
-        margin-top: 2%;
-        margin-right: 1%;
-    }
-    .tablet {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width:899px){
-
-
     .homepage_button{
         display: block;
+    }
+    .tablet{
+        display: none;
+    }
+    .presentation{
+    
+    }
+    
+    .contain-home{
+        
+       
+        height: 100%;
     }
     .state_containers{
         width: 90%;
@@ -165,17 +20,14 @@
         margin-top: 2%;
         border:2px solid;
        
-        margin-left: 5%;  
-        height: 900px;
+        margin-left: 5%;
+        height: 37vh;
         border-radius: 20px;
         border-color: #E5112F;
         
     }
-    .body{
-        overflow-x: scroll;
-    }
     .contain-title{
-        font-size: 33px;
+        font-size: 20px;
         text-align: center;
         color: #E5112F;
         font-weight: bold;
@@ -189,22 +41,20 @@
     .category_title{
         margin-bottom: 3%;
         margin-top: 3%;
-        
     
     }
     
     .category_button{
     
-        width: 80%;
-        height: 120px;
-        margin-left: 9%;
-        margin-bottom: 2%;
+        width: 29%;
+        height: 12vh;
+        margin-left: 3%;
+        margin-bottom: 1%;
         background-color:#577C90;
         color:#FFF;
         border: 1px solid;
         border-color: #ddd;
         border-radius: 10px;
-       overflow-wrap: break-word;
     }
     .category_button:hover{
     
@@ -218,7 +68,7 @@
         height: 3px;
     }
     .name{
-        font-size: 29px;
+        font-size: 17px;
         width: 100%;
         text-align: center;
         margin-top: -2%;
@@ -226,15 +76,16 @@
         
          
     }
+    
     .description{
-        font-size: 25px;
+        font-size: 13px;
         display: block;
         width: 100%;
         text-align: center;
-        margin-top: -2%;
+        margin-top: -1%;
     }
     .home-icon{
-        font-size: 40px;
+        font-size: 25px;
         margin-top: 2%;
         margin-right: 1%;
     }
@@ -245,5 +96,158 @@
         margin-right: 500px;
        
         
+    }
+    @media screen and (max-width: 600px){
+         .category_button{
+             
+             width: 100vw;
+             color: #fff;
+            
+             margin-bottom: 5%;
+             height: 105px;
+             text-decoration: none;
+              
+         word-wrap: break-word;
+        
+          border: 1px solid;
+          border-radius: 10px;
+          margin-right: 10%;
+          margin-left: 4%;
+          background-color: #577C90;
+            
+        
+            
+        }
+        .big-row-one {
+            margin-top:10%;
+        }
+        .state_containers{
+            margin-left: 2%;
+            border: 2px solid;
+            margin-bottom: 7%;
+            margin-right: 2%;
+            border-color: #E5112F;
+            border-radius: 10px;
+            width: 96%;
+        }
+        
+        .contain-title{
+          
+          color: #E5112F;
+          margin-left: 15%;
+          font-weight:bold;
+           margin-bottom: 3%;
+           font-size: 20px;
+        
+        }
+        
+        .contain-home{
+            height: 280vh;
+        }
+        .description{
+          display:block;
+        }
+        .home-icon{
+            font-size: 25px;
+            margin-top: 2%;
+            margin-right: 1%;
+        }
+        .tablet {
+            display: none;
+        }
+    }
     
-}
+    @media screen and (min-width: 601px) and (max-width:899px){
+    
+    
+        .homepage_button{
+            display: block;
+        }
+        .state_containers{
+            width: 90%;
+           
+            margin-top: 2%;
+            border:2px solid;
+           
+            margin-left: 5%;  
+            height: 900px;
+            border-radius: 20px;
+            border-color: #E5112F;
+            
+        }
+        .body{
+            overflow-x: scroll;
+        }
+        .contain-title{
+            font-size: 33px;
+            text-align: center;
+            color: #E5112F;
+            font-weight: bold;
+        }
+        /*
+         first group : ma vie admnistratiove
+        */
+        .state_containers_one,.local_containers_one,.state_containers_two,.local_containers_two{
+            
+        }
+        .category_title{
+            margin-bottom: 3%;
+            margin-top: 3%;
+            
+        
+        }
+        
+        .category_button{
+        
+            width: 80%;
+            height: 120px;
+            margin-left: 9%;
+            margin-bottom: 2%;
+            background-color:#577C90;
+            color:#FFF;
+            border: 1px solid;
+            border-color: #ddd;
+            border-radius: 10px;
+           overflow-wrap: break-word;
+        }
+        .category_button:hover{
+        
+           
+            background-color: #E5112F;
+            color:#fff;
+            text-decoration: none;
+           
+        }
+        .line{
+            height: 3px;
+        }
+        .name{
+            font-size: 29px;
+            width: 100%;
+            text-align: center;
+            margin-top: -2%;
+           
+            
+             
+        }
+        .description{
+            font-size: 25px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: -2%;
+        }
+        .home-icon{
+            font-size: 40px;
+            margin-top: 2%;
+            margin-right: 1%;
+        }
+        
+        }
+        .bread{
+            height: 5%;
+            margin-right: 500px;
+           
+            
+        
+    }

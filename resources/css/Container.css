@@ -1,23 +1,452 @@
  
-  @media screen and (min-width: 900px) {
-    .section-position{
-      margin-top: 5%;
-    
-    }
-    .container-footer{
-      margin-top: 10%;
-    }
-   .sections{
-   
-   }
-    
-  }
-  @media screen and (max-width:600px) {
-  
-  }
+ 
+/* here the style applied to Container.js component*/
+/* computer style*/
+@media screen and (min-width: 900px) {
 
-  @media only screen and (max-width:899px) and (min-width :601px) {
+   
+  .pos{
+      position: fixed;   /*  fixe the left side which content the filter by sub-categories' items*/ 
+  }
+  .contain{
+    height: 100%;
+  }
+ .cont-container{
+   height: fit-content;
+ }
+ .section-position{
+  margin-top: 5%;
+
+}
+.container-footer{
+  margin-top: 20%;
+}
+
+  .bread{
+    margin-right: 100%    }
+    
+
+
+.process-text-icon{
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-justify:center;
+   
+  margin-top: 4%;
+}
+
+.section_text{
+ display: inline-block;
+  margin-top: 2%;
+
+}
+
+
+
+.container_title{
+    font-size: 3vmin;
+    margin-top: 3%;
+  
+}
+.container_icon{
+   margin-left: 1%;
+   font-size: 3vmin;
+   
+}
+.section-items{
+   /* style for left side filter item */
+    border:1px solid;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 1.2%;
+    height: 7vh;
+    width: 34vw;
+    border-radius: 10px;
+    font-size: 2.4vmin;
+    display: block;
+    
+}
+
+.process_title{
+  font-size: 3vmin;
+  margin-left: 10%;
+  margin-bottom: 4%;
+  margin-top: 3%;
+}
+   
+
+
+#first-item{
+ /* style form the first item ensemble des démarches */
+  margin-top: 1%;
+}
+.process_item{
+ /*  style for processes item in the Processes component in Container/Processes.js*/
+  border:1px solid;
+    text-align: left;
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 3%;
+    height: 11vh;
+    width: 38vw;
+    border-radius: 10px;
+    font-size:15px;
+
+}
+
+.bread{
+ /* breadcrumb style*/
+  width:50%;
+  margin-left: 45%;
+  
+
+}
+.desk-bread{
+      
+      
+background-color: #FFF;
+margin-bottom: 3%;
+
+}
+.bread-text{
+/* breadcrumb style */
+background-color: #fff;
+}
+.inactive,#inaction{
+display: block;
+height: 8.7vh;
+width: 34vw;
+text-decoration: none;
+
+}
+.nav-position{
+position: sticky;
+z-index: 1;
+width: inherit;
+
+
+}
+.mobile-only-title{
+position: fixed;
+}
+   .sections{
+      border-left: solid 1px;
+      
+   }
+   .processes-position{
+     
+    margin-bottom: 10%;
+   }
+   .title{
+       margin-left: 4%;
+   }
+   
+   .section-position{
+     transform: none;
+     
+  }
+  
+  .process-section-title{
+    font-size: 3vh;
+   
+  }
+   .phone-processes{display:none}
+  
+ 
+  .phone-processes{
+      display: none;
+  }
+  .subcontainer_name{
+    font-size: 20px;
+  }
+  
+}
+/* style for mobile  device*/
+ @media screen and (max-width:600px) {
+       /* style for the filter on the top */
+  .section-position{
+     position: relative;
+    
+      
+      background-color: white;  
+      margin-top: 85px;
+      width: 100%;
+     }
+ 
+  .sections{
+      z-index: 3;
+   height: fit-content;
+  
+   
+  }
+.container-container{
+  height:250vh;
+}
+  .title{
+     
+    background-color: white;
+    width: 100%;
+     z-index: 1;
+    display: block;
+    
+   text-align: center;
+    font-size: 15px;
+   
+    margin-top: -150px;
+    position: relative;
+    
+}
+    /* breadcrumb style */
+  .desk-bread{
+      background-color: white;
+      padding-top: 20%;
+      width: inherit;
+      height: 50px;
+    
+
+     
+
+
+  }
+      /*  style applied to processes in processes component in Container directory */
+  .process_item{
+      height:max-content;
+      border:1px solid;
+      margin-top: 2%;
+      font-size: 2vh;
+     list-style-type: none;
+     width: 80vw;
+     border-radius: 10px;
+    
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    display: inline-flex;
+   
+
+  }
+  .processes-position{
+    margin-right: 100px;
+  }
+  .process-text-icon{
+    margin-top: 3%;
+  }
+  .processes-position{
+     height: fit-content; 
     
    
+  }
+  .process_title{
+  
+   font-size: 20px;
+  text-align: center;
+   font-weight: bold;
+  }
+  .process-section-title{
+    font-size: 19px;
+      text-align: center;
+   font-weight: bold;
+    
   }
  
+  /* sections*/
+
+  .section-items{
+    border:1px solid;
+   
+
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 3%;
+    height: 60px;
+    width: 80vw;
+    border-radius: 10px;
+    font-size: 15px;
+   
+    margin-top: 5%;
+  
+   
+    text-justify: center;
+    align-items: center;
+   
+    display: inline-flex;
+    text-align: center;
+    
+}
+.nav-position{
+  width: 100%;
+}
+/*footer style */
+.container-footer{
+  margin-top: 10%;
+}
+}
+
+
+    /*style for tablet */
+@media screen and (max-width: 899px) and (min-width: 601px){
+  
+
+
+
+  .pos{
+      position: fixed;
+      
+     
+  }
+  .bread{
+    margin-right: 100%    }
+.active {
+
+  color: #FFF;
+  
+  height: 8.7vh;
+    width: 34vw;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color:#666;
+  display: block;
+ 
+  
+}
+.process-text-icon{
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-justify:center;
+   
+  margin-top: 4%;
+}
+
+.section_text{
+ display: inline-block;
+  margin-top: 2%;
+
+}
+.mobile-only-title{
+  margin-right: 100em;
+}
+
+
+.container_title{
+    font-size: 3vmin;
+    margin-top: 3%;
+  
+}
+.container_icon{
+   margin-left: 1%;
+   font-size: 3vmin;
+   
+}
+.section-items{
+    border:1px solid;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 3%;
+    height: 8.7vh;
+    width: 34vw;
+    border-radius: 10px;
+    font-size: 2.7vmin;
+    display: block;
+    
+    
+}
+
+.process_title{
+  font-size: 3vmin;
+  margin-left: 10%;
+  margin-bottom: 4%;
+  margin-top: 3%;
+}
+   
+
+
+#first-item{
+  margin-top: 10%;
+}
+.process_item{
+  border:1px solid;
+    text-align: left;
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 3%;
+    height: 150px;
+    width: 38vw;
+    border-radius: 10px;
+    font-size:22px;
+
+}
+
+.bread{
+  width:50%;
+  margin-left: 45%;
+  
+
+}
+.inactive,#inaction{
+display: block;
+height: 8.7vh;
+width: 34vw;
+text-decoration: none;
+
+}
+.nav-position{
+position: sticky;
+z-index: 1;
+width: inherit;
+
+
+}
+.mobile-only-title{
+position: fixed;
+}
+   .sections{
+      border-left: solid 1px;
+      
+   }
+   .processes-position{
+     
+    margin-bottom: 10%;
+   }
+   .title{
+       margin-left: 4%;
+       margin-bottom: 10%;
+   }
+   .section-1{
+     margin-top: 22%;
+   }
+   .scroll-bar{
+     /* overflow-y:scroll;*/
+      
+      
+   }
+   
+   .section-position{
+     transform: none;
+     
+  }
+  
+   .phone-processes{display:none}
+   .desk-bread{
+      
+      
+       background-color: #FFF;
+       margin-bottom: 3%;
+      
+   }
+   .bread-text{
+      
+       background-color: #fff;
+   }
+  
+  .phone-processes{
+      display: none;
+  }
+  .subcontainer_name{
+    font-size: 20px;
+  }
+  
+}

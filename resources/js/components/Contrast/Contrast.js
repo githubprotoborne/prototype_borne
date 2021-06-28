@@ -3,10 +3,12 @@ import { reinforceContrast } from "../../Services/ReinforceContrast"
 import { handleBrightSupression } from "../../Services/handleBrightSupression"
 import {StandardContrast} from '../../Services/StandardContrast'
 import { DarkWhiteContrast } from "../../Services/DarkWhiteContrast"
+import { useEffect, useState } from "react"
 
 const Contrast = () => {
 
-    let handleClose = () => {
+
+let handleClose = () => {
         $(".contrast-container").css({ display: "none" })
         handleBrightSupression()
     }
@@ -26,8 +28,8 @@ const Contrast = () => {
         reinforceContrast()
     }
     let darkWhite= () => {
-        $(".standard").css({ backgroundColor: "#fff", color: "#000" })
-        $(".reinforced").css({ backgroundColor: "#fff", color: "#000" })
+        $(".standard").css({ backgroundColor: "#E5112F", color: "#fff" })
+        $(".reinforced").css({ backgroundColor: "#000", color: "#fff" })
         $(".darkWhite").css({ backgroundColor: "#fff", color: "#000" })
         sessionStorage.setItem("contrast", "dark_white")
         DarkWhiteContrast()
@@ -45,9 +47,11 @@ const Contrast = () => {
             <hr />
             <h2 className="contrast-subtitle">Contraste</h2>
 
-            <button className="standard" role="button" onClick={handleStandardClick}>Standard</button>
-            <button className="reinforced" role="button" onClick={handleReinforcedClick}>Renforcé</button>
-            <button className="darkWhite" role="button" onClick={darkWhite}>Noir sur blanc</button>
+              <div className="row">
+              <button className="standard col" id="standardId"role="button" onClick={handleStandardClick}>Standard</button>
+            <button className="reinforced col" id="reinforcedId" role="button" onClick={handleReinforcedClick}>Renforcé</button>
+            <button className="darkWhite col" id="darkWhiteId" role="button" onClick={darkWhite}>Noir sur blanc</button>
+              </div>
 
 
         </div>

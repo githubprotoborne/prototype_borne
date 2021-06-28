@@ -68,9 +68,19 @@ let setNightMode =()=>{
      reinforceContrast()
   }
 }
+let controlbackround=()=>{
+  //alert($("#mySidenav").css("width"))
+  if($("#mySidenav").css("width")==="0px"){
+    $("body").css("background-color", "#FFF");
+  }
+  if(sessionStorage.getItem("contrast")==="reinforced" && $("#mySidenav").css("width")==="0px"){
+    $("body").css("background-color", "#222");
+  }
+}
   useEffect(() => {
     close()
     reinforceContrastCall()
+    controlbackround()
 
   })
 
@@ -82,7 +92,7 @@ let setNightMode =()=>{
 
       <div className="row" id="menu-container" >
 
-        <button className="nav_button" role="button" title="Retour en arrière" onClick={back}>
+        <button className="nav_button phone-back" role="button" title="Retour en arrière" onClick={back}>
           <span className="material-icons-outlined  navbarspan navbar-retour-icon" aria-hidden="true">arrow_back</span>
           <span className="back_text  navbarspan">Retour</span>
         </button>
@@ -90,13 +100,13 @@ let setNightMode =()=>{
 
         <button className="nav_button" title="Retour à l'accueil" role="button" >
           <Link to="/" style={{ textDecoration: "none", display: "block" }}><span className="material-icons-outlined home_icon navbar-home-icon" aria-hidden="true">home</span></Link>
-          <Link to="/" style={{ textDecoration: "none",  display: "block" }} className="home_text">Accueil</Link>
+          <Link to="/" style={{ textDecoration: "none" }} className="home_text">Accueil</Link>
         </button>
         <div className="page_title" >
           <p className="title-simplici" >Simpl'ici <sup>+</sup> </p>
         </div>
 
-        <button className="nav_tool_button" onClick={openNav} title="menu" role="button">
+        <button className="nav_tool_button navbar-menu" onClick={openNav} title="menu" role="button">
           <span className="material-icons-outlined navbar-icon navbarspan menu_icon" aria-hidden="true">menu</span>
           <span className="menu_text  navbarspan">Menu</span>
         </button>

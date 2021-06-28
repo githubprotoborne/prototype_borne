@@ -38,6 +38,7 @@
         outline: none;
         background-color: #707070;
         width: 100%;
+        color: #fff;
     }
     .search_submit_button{
         height: 8.5vh;
@@ -98,7 +99,7 @@
 
     }
     .profil{
-        font-size: 11.8px;
+        font-size: 11px;
         background-color: #fff;
         color:#222;
        
@@ -129,14 +130,11 @@
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
   @media screen and (max-width: 600px) {
     .search_hidden{
-         display: normal!important;
+        
          border: none;
          text-decoration: none;
     }
-    .whole_container{
-      
-      
-  }
+  
   .research{
       outline: none;
    }
@@ -147,13 +145,14 @@
       font-size: 16px;
   }
   .container{
-      font-size: 11px;
+      font-size: 2vh;
        
       height: 100px;
       word-wrap: break-word;
       
   
   }
+
   .back{
       width: 400px;
       background-color: #ffff;
@@ -164,57 +163,53 @@
    
     height: 20px;
 
-    color: #E5112F;
+    
     outline: none;
     margin-top: 5%;
-    width: 99%;
+    width: 95%;
   
     height: 50px;
     background-color: #eee;
     margin-left: 5%;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    display: inline-flex;
   }
   .search_input{
      
       
       outline: none;
       background-color: #eee;
-     margin-left: 10%;
-  }
-  .search_submit_button{
      
-     
-      
-    
   }
+  
   
   .search_icon{
       
-      font-size: 20px;
-      background-color: #E5112F;
-      color: #fff;
+      font-size: 30px;
+    
+      color: #E5112F;
       display: block;
+      margin-right: 3%;
    
       
 
   }
-  #search_icon-size{
-      display: block;
-      padding-right: 50px;
-      background-color: #E5112F;
-    
-  }
+ 
   .cont{
    margin-top :4%;
   
    
   margin-left: 10%;
   
-   height: 60px;
+   height: 7vh;
    border-radius: 10px;
-   width: 250px;
+   width:30vw;
    text-align: center;
    font-size: 16px;
-   text-transform: uppercase;
+   border:1px solid;
+  
    line-break: loose;
    color: #fff;
    background-color: #E5112F;
@@ -244,26 +239,21 @@
       margin-top: 3%;
 
   }
-  .hide_search_text{
-  
-
-  }
+ 
   .category_button_choiceBar{
-     width: 86%;     
+     width: 86%;
+  
   }
-  .services{
-     
-  }
-  .search-engine{
-      
-  }
+  
+  
   .profil{
-      margin-top: 20%;
-      font-size: 16px;
+ 
+      text-align: center;
+      margin-top: 5%;
   }
   .profil-text{
-      margin-left: 20%;
-      text-transform: uppercase;
+    
+     font-size: 2.3vh;
       
   }
   #direct-acces{
@@ -277,6 +267,15 @@
   #category_button_choiceBar_service{
       background-color: #fff;
       color: #000;
+  }
+  .choisebar_process_name{
+      display: block;
+    
+    width: 100%;
+    text-align: center;
+  }
+  .category_button_choiceBar_service{
+      border:none;
   }
 }
 @media screen and (min-width: 601px) and (max-width:899px){

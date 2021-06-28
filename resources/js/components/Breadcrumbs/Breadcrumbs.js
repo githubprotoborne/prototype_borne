@@ -4,7 +4,7 @@ import "../../../css/breadcrumbs.css"
 import {Link, NavLink} from 'react-router-dom';
 import routeConfig from '../routeConfig'
 
-
+// breadcrumbs component
 const Breadcrumbs = ({ breadcrumbs }) => (
   <ol>
     {
@@ -19,11 +19,11 @@ const Breadcrumbs = ({ breadcrumbs }) => (
       breadcrumbs.length-1 !==index?
       <li key={match.url} className="bread-items row">
         <Link to={match.url}>{breadcrumb}{' >'}</Link>
-        {console.log()}
+     
         
       </li>:<li key={match.url} className="bread-items row">
         <Link to={match.url}>{breadcrumb} </Link>
-        {console.log()}
+       
         
       </li>
     ))}

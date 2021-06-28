@@ -1,4 +1,4 @@
-import "../../../css/Cont.css"
+import "../../../css/Container.css"
 
 import { Link, useParams } from "react-router-dom"
 

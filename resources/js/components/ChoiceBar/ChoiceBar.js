@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react"
 import "../../../css/ChoiceBar.css"
 import { Link } from "react-router-dom"
 import axios from "axios"
+
+// Je choisi mon profil component
 class ChoiceBar extends React.Component {
    constructor(props) {
       super(props)
       this.state = {
          containers: [],
-         services: [{ container_id: 5, container_name: "Accès direct à un service" }]
+        
 
       }
    }
@@ -53,21 +55,20 @@ class ChoiceBar extends React.Component {
                      id: container.container_id,
                      name: container.container_name,
                      icon: container.container_icon
-                  }} style={{   display: "inline-flex", textAlign: "center", textJustify: "center", alignItems: "center" }}>{container.container_name}</Link>
+                  }} style={{   display: "inline-flex", textAlign: "center", textJustify: "center", alignItems: "center" }}><span className="choisebar_process_name">{container.container_name}</span></Link>
 
                ) : ""}
 
+            
+
+                 <div className="col  profil"  id="tablet-profil">
+                  <p className="profil-text">J'accède directement à un site ou une démarche</p>
+               </div>
+
+              
+
                {
-                  ///  moteur de recherche
-               }
-
-               <a className="category_button_choiceBar cont search-engine  col-md" id="category_button_choiceBar_service" href="https://google.fr" >
-                  <span className="service-title">J'accède directement à un site ou une démarche</span>
-
-               </a>
-
-               {
-                  ///////////////////////////////// accès direct à un service
+                  ///////////////////////////////// accès direct à une démarche
                }
 
                <Link className="category_button_choiceBar services  cont col-md" to={{

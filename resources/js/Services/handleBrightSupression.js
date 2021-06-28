@@ -1,3 +1,7 @@
+
+
+// set the bright to standard
+
 export function handleBrightSupression() {
     document.getElementById("contain").style.opacity = "1"
     document.getElementById("contain").style.setProperty("background", "")// the div witch contain the component render except the sidebar
@@ -20,6 +24,15 @@ export function handleBrightSupression() {
     $(".desk-bread").css("filter", "brightness(100%)");
     //subcontainer style
     $(".subcontainer").css("filter", "brightness(100%)");
-    $(".topic-item").csscss("filter", "brightness(100%)");
+    $(".topic-item").css("filter", "brightness(100%)");
+    // administration style
+   $(".administration-item").css("filter", "brightness(100%)");
+   //body style
+  if(sessionStorage.getItem("contrast")==="reinforced"){
+    $("body").css("background-color", "#222");
+  }else{
+    $("body").css("background-color", "#fff");
+  }
+
 
 }

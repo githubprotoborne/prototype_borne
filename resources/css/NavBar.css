@@ -27,7 +27,7 @@
         }
         .navbar-retour-icon{
            display: block;
-           margin-left: 36%;
+        
            font-size: 33px;
         
         }
@@ -37,7 +37,7 @@
         }
         .navbar-icon{
             display: block;
-            margin-left: 29%;
+           
             font-size: 33px;
            
         
@@ -140,57 +140,72 @@
         .navbar-container{
             background-color: #E5112F;
            
+           
         }
         .nav_button{
             background-color: #E5112F;
            
-            width: 12%;
+            width: 22%;
             color:#fff;
+           
+        }
+        .home_text{
+
+            font-size: 13px;
+            
+           
         }
         .nav_button{
             
            
-            width: 15%;
+           
             color:#fff;
             border-right: solid 1px;
+        
         }
         .nav_tool_button{
-            width: 13%;
+            width: 20%;
             background-color: #E5112F;
            
             color:#fff;
             border-right: solid 1px;
           
+          
            
         }
         .navbar-retour-icon{
-           display: block;
+           display: none;
            margin-left: 30%;
            font-size: 33px;
+
         
         }
         .navbar-text{
             font-size: 12px;
+            display: none;
         }
         .navbar-home-icon{
-            font-size: 33px;
+            font-size: 40px;
     
         }
         .navbar-icon{
             display: block;
             
-            font-size: 33px;
+            font-size: 40px;
            
         
         }
         .menu_text{
             margin-right: 50%;
+            display: none;
         }
         .modenuit_text{
            margin-right: 50%;
+           display: none;
         }
         .accessibility_text{
-           font-size: 0px;
+           font-size: 13px;
+           
         }
       
         .modenuit_icon{
@@ -201,7 +216,7 @@
             margin-left: 10%;
         }
         .page_title{
-            width: 30%;
+            width: 35%;
             background-color: #FFF;
             color:#E5112F;
             text-align: center;
@@ -209,14 +224,22 @@
             align-items: center;
             display: inline-flex;
             border-right: 1px solid;
+            
         }
         .title-simplici{
             text-align: center;
             width: 100%;
             font-size: 20px;
         }
-        
-
+        .phone-back{
+            display: none;
+        }
+        .navbar-menu{
+            display: none;
+        }
+  .desk-bread{
+      display: none;
+  }
     }
 
 

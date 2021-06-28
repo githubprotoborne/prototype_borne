@@ -4,6 +4,25 @@
     .footer-container{
      
      margin-top: 1%;
+   
+    }
+.footer{
+    margin-left: 40%;
+    
+}
+.footer-item{
+    margin-left: 3%;
+    font-size: 13px;
+}
+    
+}
+
+
+/*  computer  style*/
+@media screen and (max-width:600px) {
+    .footer-container{
+     
+     margin-top: 1%;
     }
 .footer{
     margin-left: 10%;
@@ -11,7 +30,24 @@
 }
 .footer-item{
     margin-left: 3%;
-    font-size: 13px;
+    font-size: 12px;
+}
+    
+}
+
+/*  computer tablet style*/
+@media screen and (min-width:601px) and (max-width:899px) {
+    .footer-container{
+     
+     margin-top: 6%;
+    }
+.footer{
+    margin-left: 30%;
+    
+}
+.footer-item{
+    margin-left: 3%;
+    font-size: 14px;
 }
     
 }

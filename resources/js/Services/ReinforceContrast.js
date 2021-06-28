@@ -1,3 +1,4 @@
+// set contrast to dark mode
 export function reinforceContrast() {
 
     $("body").css("background-color", "#222")
@@ -21,8 +22,10 @@ export function reinforceContrast() {
     $("#direct-acces").css("color", "#fff")
     $("#direct-acces").css("background-color", "#222")
     $(".search_icon").css("background-color", "#333")
-    $(".search_input").css("background-color", "#333")
+    $(".search_input").css("background-color", "")
+    $(".search").css("background-color", "")
     $(".search_icon").css("border", "none")
+    $(".search_icon").css("background-color", "")
 
     
     
@@ -32,7 +35,8 @@ export function reinforceContrast() {
     $(".bread-items").css({ color: "#fff" });
     $(".contain-title").css({ color: "#fff" });
     //footer style
-    $(".footer-container").css("background-color", "#fff")
+    $(".footer-container").css("background-color", "#222")
+    $(".footer-container").css("color", "#fff")
     // Container style
     $(".processes-position").css("color", "#fff")
     $(".sections").css("color", "#fff")
@@ -45,6 +49,8 @@ export function reinforceContrast() {
     //subcontainer style
     $(".subcontainer").css("color", "#fff")
     $(".topic-item").css("background-color", "#333")
+    
+    $(".topic-item").css("color", "#fff")
     // menu style
 
     $(".sidenav").css("background-color", "#222")
@@ -60,7 +66,20 @@ export function reinforceContrast() {
     $(".close-button-icon").css("color", "#fff")
     $(".close-button-text").css("color", "#fff")
     // $(".close-button-item").css("background-color", "#333")
+    // administration style
+   $(".administration-item").css("background-color", "#333");
+   $(".administration-title").css("color", "#fff");
 
+   // process title
+  
+   $(".process_name-title").css("background-color", "#333");
+    
+   $(".process-button").css("background-color", "#333");
+      
+   $(".providers").css("color", "#fff");
+      
+   $(".process-txt").css("color", "#fff");
+  
 
 
 

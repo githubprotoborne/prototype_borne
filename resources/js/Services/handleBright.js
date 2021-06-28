@@ -1,4 +1,4 @@
-// handle the menu close
+// handle the filter brightness 
 export function handleBright() {
     document.getElementById("contain").style.opacity = "0.9"
     document.getElementById("contain").style.setProperty("background", "#555", "important")// the div witch contain the component render except the sidebar
@@ -24,7 +24,11 @@ export function handleBright() {
     //subcontainer style
     $(".subcontainer").css("filter", "brightness(50%)");
     // $(".topic-item").css("filter", "brightness(100%)");
-
+  
+   // administration style
+   $(".administration-item").css("filter", "brightness(30%)");
+//body style
+$("body").css("background-color", "#777");
 
 
 }

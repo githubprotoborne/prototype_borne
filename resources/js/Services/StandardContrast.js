@@ -1,3 +1,5 @@
+
+// set the contrast to the standard mode
 export function StandardContrast (){
 
     $("body").css("background-color", "")
@@ -18,6 +20,7 @@ export function StandardContrast (){
     $(".search_icon").css("background-color", "")
     $(".search_icon").css("border", "")
     $("#category_button_choiceBar_service").css("color", "")
+    $(".col_margin").css("border-color", "")
     
     
     $(".search_input").css("background-color", "")
@@ -37,6 +40,8 @@ export function StandardContrast (){
     $(".contain-title").css("color", "")
     // footer 
     $(".footer-container").css("background-color", "")
+    $(".footer-container").css("color", "")
+    $(".administration-title").css("color", "");
     // Container style
     $(".processes-position").css("color", "")
     $(".sections").css("color", "")
@@ -48,6 +53,7 @@ export function StandardContrast (){
     //subcontainer style
     $(".subcontainer").css("color", "")
     $(".topic-item").css("background-color", "")
+    $(".topic-item").css("color", "")
 
     // menu style
 
@@ -62,8 +68,19 @@ export function StandardContrast (){
     $(".close-button-icon").css("color", "")
     $(".close-button-text").css("color", "")
     // $(".close-button-item").css("background-color", "#333")
-
-
+    // administration style
+    $(".administration-item").css("background-color", "");
+    $(".administration-title").css("color", "");
+     // process title
+  
+   $(".process_name-title").css("background-color", "");
+    
+   $(".process-button").css("background-color", "");
+      
+   $(".providers").css("color", "");
+      
+   $(".process-txt").css("color", "");
+ 
 
 
 
