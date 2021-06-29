@@ -20,15 +20,20 @@ export function handleBright() {
     $(".desk-bread").css("filter", "brightness(30%)");
     $(".state_containers").css("filter", "brightness(30%)");
     $(".contain-title").css("filter", "brightness(30%)");
-   
+
     //subcontainer style
     $(".subcontainer").css("filter", "brightness(50%)");
     // $(".topic-item").css("filter", "brightness(100%)");
-  
-   // administration style
-   $(".administration-item").css("filter", "brightness(30%)");
-//body style
-$("body").css("background-color", "#777");
+
+    // administration style
+    $(".administration-item").css("filter", "brightness(30%)");
+
+    //body style
+    $("body").css("background-color", "#777");
+
+    // Process style
+    $(".providers").css("filter", "brightness(30%)");
+    $(".process").css("filter", "brightness(30%)");
 
 
 }
