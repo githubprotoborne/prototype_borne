@@ -230,6 +230,10 @@
       border-color: #707070;
       margin-top: 10%;
     }
+    .bread-home{
+      display: none;
+    }
+      
   
   
   }

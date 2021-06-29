@@ -17,13 +17,10 @@ export default function (props) {
   location("/")
     }
 
-    console.log('user is idle', event)
-    console.log('last active', getLastActiveTime())
   }
 
   const handleOnActive = event => {
-    console.log('user is active', event)
-    console.log('time remaining', getRemainingTime())
+   
     
 
 
@@ -31,7 +28,7 @@ export default function (props) {
   }
 
   const handleOnAction = event => {
-    console.log('user did something', event)
+    
     let time = getRemainingTime()
    
 

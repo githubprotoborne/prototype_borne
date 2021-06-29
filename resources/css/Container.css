@@ -220,7 +220,7 @@ position: fixed;
      width: 80vw;
      border-radius: 10px;
     
-    text-align: center;
+    text-align: left;
     text-justify: center;
     align-items: center;
     display: inline-flex;
@@ -272,7 +272,7 @@ position: fixed;
     align-items: center;
    
     display: inline-flex;
-    text-align: center;
+    text-align: left;
     
 }
 .nav-position{
@@ -302,7 +302,7 @@ position: fixed;
 
   color: #FFF;
   
-  height: 8.7vh;
+  height: fit-content;
     width: 34vw;
   border-radius: 10px;
   text-decoration: none;
@@ -343,20 +343,22 @@ position: fixed;
 .section-items{
     border:1px solid;
     text-align: center;
+    text-justify: center;
+    align-items: center;
     text-decoration: none;
     list-style-type: none;
-    margin-bottom: 3%;
-    height: 8.7vh;
-    width: 34vw;
+    margin-bottom: 6%;
+    height: fit-content;
+    width: 39vw;
     border-radius: 10px;
-    font-size: 2.7vmin;
+    font-size: 20px;
     display: block;
     
     
 }
 
 .process_title{
-  font-size: 3vmin;
+  font-size: 20px;
   margin-left: 10%;
   margin-bottom: 4%;
   margin-top: 3%;
@@ -372,9 +374,9 @@ position: fixed;
     text-align: left;
     text-decoration: none;
     list-style-type: none;
-    margin-bottom: 3%;
-    height: 150px;
-    width: 38vw;
+    margin-bottom: 6%;
+    height: fit-content;
+    width: 39vw;
     border-radius: 10px;
     font-size:22px;
 
@@ -423,7 +425,10 @@ position: fixed;
       
       
    }
-   
+   .container-footer{
+     margin-top: 300px;
+     margin-bottom: 50px;
+   }
    .section-position{
      transform: none;
      

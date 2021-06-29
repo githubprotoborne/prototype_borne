@@ -11,6 +11,9 @@
         height: auto !important;
         visibility: visible;
       }
+      .red-color{
+          background-color: #E5112F;
+      }
       .whole_container{
           background-color:#707070;
            color:#ffff;
@@ -203,7 +206,7 @@
    
   margin-left: 10%;
   
-   height: 7vh;
+   height: 8vh;
    border-radius: 10px;
    width:30vw;
    text-align: center;

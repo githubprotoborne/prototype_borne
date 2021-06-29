@@ -49,7 +49,7 @@ class ChoiceBar extends React.Component {
                {this.state.containers.length !== 0 ? this.state.containers.map((container, index) =>
 
 
-                  <Link key={index.toString()} className="col-md cont category_button_choiceBar"  id={"tablet-pro"+index} to={{
+                  <Link key={index.toString()} className="col-md cont red-color category_button_choiceBar"  id={"tablet-pro"+index} to={{
                      pathname: "/sous-categories/" + container.container_id + "/" + container.container_name,
                      // pass data through react -router
                      id: container.container_id,

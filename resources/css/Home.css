@@ -5,10 +5,7 @@
     .tablet{
         display: none;
     }
-    .presentation{
-    
-    }
-    
+   
     .contain-home{
         
        
@@ -21,7 +18,7 @@
         border:2px solid;
        
         margin-left: 5%;
-        height: 37vh;
+        height: 220px;
         border-radius: 20px;
         border-color: #E5112F;
         
@@ -47,7 +44,7 @@
     .category_button{
     
         width: 29%;
-        height: 12vh;
+        height: 90px;
         margin-left: 3%;
         margin-bottom: 1%;
         background-color:#577C90;
