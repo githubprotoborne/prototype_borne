@@ -7,7 +7,7 @@
                       minimum-scale=1.0, maximum-scale=1.0, 
                       user-scalable=no, target-densitydpi=device-dpi">
 
-        <title>Laravel</title>
+        <title>Simplici+</title>
         <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"

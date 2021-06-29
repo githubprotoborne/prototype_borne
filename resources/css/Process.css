@@ -132,6 +132,9 @@ p {
 .docAnnexe {
   padding-left: inherit;
 }
+.docAnnexe > li > a {
+  text-decoration: underline;
+}
 
 p {
   font-size: 1.25em;
@@ -156,7 +159,7 @@ li {
   color: white;
   width: 80%;
   border-radius: 100px;
-  height: 12vh;
+  height: 100%;
   margin-left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -191,5 +194,8 @@ li {
 
   .process {
     width: 100%;
+  }
+  .process-button-scanner {
+    margin-bottom: 10%;
   }
 }

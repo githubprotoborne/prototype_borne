@@ -1,62 +1,56 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+1. installation
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Pour installer le projet en locale Il faudra au préalable avoir php, nodejs et composer installé sur votre machine.
+Si c'est n'est pas encore le cas vous pouvez consulter ces liens.
+https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/4237816-preparez-votre-environnement-de-travail
+https://nodejs.org/en/
+https://getcomposer.org/doc/00-intro.md
 
-## About Laravel
+- Une fois ces installations réalisées, sur le terminal vous placer dans le dossier dans le que vous souhaitez installer le projet  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Lancer la commande $ Git clone https://github.com/githubprotoborne/prototype_borne.git
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Ouvrir le projet avec un éditeur de code tel que visual studio code ou sublimetext par exemple. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Copier le ficher .env.exemple qui se trouve à la racine du projet  et renommer la copie en .env 
 
-## Learning Laravel
+- Sur le terminal Lancer la commande    
+        $ composer install 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Sur le terminal toujours  Lancer la commande   $ php artisan key:generate 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+       Pour générer la clé aléatoire de l’application 
 
-## Laravel Sponsors
+   - compléter le fichier .env avec les informations de connexion à la base des données.
+   
+   - installer la  migration pour créer les tables de la base des données.
+   avec la commande $ php artisan migrate:install
+   - lancerla migration avec la commande php artisan migrate:fresh
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+   - Sur le terminal Lancer la commande npm install 
+   -  Toujours sur le terminal lancer le projet  avec la commande
+      php artisan serve  
+      
+2. structure du code
+    les composants React se trouvent dans le dossier ressources/js.
+    2.1 description des composants.
+     - la barre de navigation
+          La barre de navigation est implementée dans le composant NavBar dans le fichier NavBar.js
+     - Le menu est implementé dans le composant SideBar dans le fichier SiderBar.js
+     - La page d'accueil est implementée dans le composant Home dans le fichier Home.js
+     - l'entrée par profil (Je choisis mon profil) est implementée dans le composant ChoiceBar 
+     - la page des sous catégorie est implémentée dans le composant SubContainer
+     - la page de la liste des démarches est implémentée dans le composant Container. (le filtre par sous catégories à gauche set trouve dans le composant Sections dans le dossier Container et la liste des démarches dans le composant Prossesses du même dossier)
+     2.1.6 La page de pré démarche est implémentée dans le composant Process
+ 3. les services.
+   les fonctions qui gèrent   le contrast, le mode nuit, la luminosité se trouvent dans dossier Services.
+      -Pour la gestion de la luminosité les fonctions handleBright et handleBrightSuppression
+      - Pour le contrast 
+           - reinforceContrast pour le contraste renforcé
+           - standardContrast pour le contrast standard
+           - DarkWhiteContrast pour le contrast noir sur blanc
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+            
+ 
+ 
