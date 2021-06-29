@@ -91,6 +91,32 @@ const Process = function (props) {
     }
 
 
+    function dispaly_horaire(valeur) {
+        if (valeur.includes('"')) {
+            let tab = valeur.split('"')
+            tab.splice(0, 1)
+            return (
+                tab.map((texte) =>
+                    !texte.includes(";") ?
+                        (<h4>{texte}</h4>) :
+                        (texte.split(";", 7).map((phone_horaire_value, phone_horaire_index) =>
+                            <div key={phone_horaire_index} className="row">
+                                <li className="col-4">{phone_horaire[phone_horaire_index]}</li> <li className="col-8">{!phone_horaire_value ? "fermé" : phone_horaire_value}</li>
+                            </div>)
+                        )
+                )
+            )
+        } else {
+            return (
+
+                valeur.split(";", 7).map((phone_horaire_value, phone_horaire_index) =>
+                    <div key={phone_horaire_index} className="row">
+                        <li className="col-4">{phone_horaire[phone_horaire_index]}</li> <li className="col-8">{!phone_horaire_value ? "fermé" : phone_horaire_value}</li>
+                    </div>)
+            )
+        }
+    }
+
 
     useEffect(() => { process() }, [])
 
@@ -113,7 +139,7 @@ const Process = function (props) {
             {infoprocess.map((value, index) => <div key={index}>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-xl-4 ">
+                        <div className="col-xl-3 ">
 
                             <div className="providers" style={position_process_body()}>
 
@@ -133,8 +159,8 @@ const Process = function (props) {
                                     {/* AFFICHAGE DU TELEPHONE + HORAIRE  */}
                                     <div className={displayProcess(value.provider_phone) + " row"}>
 
-                                        <div className="col-xl-3 col-lg-12"><p className="provider-icons"><span class="material-icons-outlined icons">call</span></p></div>
-                                        <div className="col-xl-6 col-lg-12">
+                                        <div className="col-xl-2 col-lg-12"><p className="provider-icons"><span class="material-icons-outlined icons">call</span></p></div>
+                                        <div className="col-xl-8 col-lg-12">
                                             <div className="container">
                                                 <div className="row">
                                                     <div className="col-xl-12 col-lg-12"><div className="provider-text"><p>{value.provider_phone}</p></div></div>
@@ -149,13 +175,10 @@ const Process = function (props) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-xl-3 col-lg-12"></div>
+                                        <div className="col-xl-2 col-lg-12"></div>
 
                                         <div className="provider_phone_timetable none container-fluid">
-                                            {value.provider_phone_timetable.split(";", 7).map((phone_horaire_value, phone_horaire_index) =>
-                                                <div key={phone_horaire_index} className="row">
-                                                    <li className="col-4">{phone_horaire[phone_horaire_index]}</li> <li className="col-8">{phone_horaire_value}</li>
-                                                </div>)}
+                                            {dispaly_horaire(value.provider_phone_timetable)}
                                         </div>
                                     </div>
                                     {/* FIN AFFICHAGE DU TELEPHONE + HORAIRE  */}
@@ -165,8 +188,8 @@ const Process = function (props) {
                                     {/* AFFICHAGE DU LIEU + HORAIRE  */}
                                     <div className={displayProcess(value.provider_postal_address) + " row"}>
 
-                                        <div className="col-xl-3 col-lg-12"><p className="provider-icons"><span class="material-icons-outlined icons">place</span></p></div>
-                                        <div className="col-xl-6 col-lg-12">
+                                        <div className="col-xl-2 col-lg-12"><p className="provider-icons"><span class="material-icons-outlined icons">place</span></p></div>
+                                        <div className="col-xl-8 col-lg-12">
                                             <div className="container">
                                                 <div className="row">
                                                     <div className="col-xl-12 col-lg-12"><div className="provider-text"><p>{value.provider_postal_address}</p></div></div>
@@ -182,13 +205,10 @@ const Process = function (props) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-xl-3 col-lg-12"></div>
+                                        <div className="col-xl-2 col-lg-12"></div>
 
                                         <div className="provider_postal_address_timetable none container-fluid">
-                                            {value.provider_postal_address_timetable.split(";", 7).map((postal_address_horaire_value, postal_address_horaire_index) =>
-                                                <div key={postal_address_horaire_index} className="row">
-                                                    <li className="col-4">{phone_horaire[postal_address_horaire_index]}</li> <li className="col-8">{postal_address_horaire_value}</li>
-                                                </div>)}
+                                            {dispaly_horaire(value.provider_postal_address_timetable)}
                                         </div>
                                     </div>
                                     {/* FIN AFFICHAGE DU LIEU + HORAIRE  */}
@@ -196,9 +216,9 @@ const Process = function (props) {
 
 
                                     <div className={displayProcess(value.provider_write_online) + " row"}>
-                                        <div className="col-xl-3 col-lg-12"><p className="provider-icons"><span class="material-icons-outlined icons">edit</span></p></div>
-                                        <div className="col-xl-6 col-lg-12"><div className="provider_write_online"><div><a href={value.provider_write_online}><h4>Nous écrire en ligne</h4></a></div></div></div>
-                                        <div className="col-xl-3 col-lg-12"></div>
+                                        <div className="col-xl-2 col-lg-12"><p className="provider-icons"><span class="material-icons-outlined icons">edit</span></p></div>
+                                        <div className="col-xl-8 col-lg-12"><div className="provider_write_online"><div><a href={value.provider_write_online}><h4>Nous écrire en ligne</h4></a></div></div></div>
+                                        <div className="col-xl-2 col-lg-12"></div>
                                     </div>
 
 
@@ -207,7 +227,7 @@ const Process = function (props) {
                             </div>
                         </div>
 
-                        <div className="col-xl-8">
+                        <div className="col-xl-9">
                             <div>
                                 <div className="process">
 
@@ -237,6 +257,8 @@ const Process = function (props) {
                                                                 <li key={i}>
 
                                                                     {docAnnexe.annex_document_name}
+                                                                    {docAnnexe.annex_document_link !== "" ? ' : ' : ""}
+                                                                    {docAnnexe.annex_document_link !== "" ? < a href={docAnnexe.annex_document_link}>Disponible ici</a> : ""}
 
                                                                 </li>)}
                                                         </ul>
@@ -259,7 +281,7 @@ const Process = function (props) {
 
                                             <div className="container" >
                                                 <div className="row">
-                                                    <div className="col-xl-6">
+                                                    <div className="col-xl-6 process-button-scanner">
                                                         <div className="process-button">
                                                             <div>
                                                                 <p className="">Je numérise un document avec le scanner</p>
@@ -291,7 +313,7 @@ const Process = function (props) {
                 </div>
             </div>)}
         </div>
-    </div>)
+    </div >)
 }
 
 
